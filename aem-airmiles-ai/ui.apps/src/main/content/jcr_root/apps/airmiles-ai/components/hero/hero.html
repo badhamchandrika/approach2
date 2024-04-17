@@ -1,0 +1,24 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.heroModel="ai.aem.airmiles.core.models.HeroModel"
+  data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component" id="${component.id}"
+  class="cmp-hero-${heroModel.alignment} cmp-hero-${heroModel.cssClass}">
+
+    <div class="cmp-hero-maincontainer" style="background-image: url(' ${heroModel.backgroundImage @ context='uri'} ');">
+      <!-- <img class="cmp-hero__backgroundImage" src="${heroModel.backgroundImage}"
+        alt="${heroModel.backgroundImageAltText}">
+      </img> -->
+
+      <div class="cmp-hero-content__container">
+        <h1 class="cmp-hero__title" id="main_title">${heroModel.headerText @context='html'}</h1>
+        <h2 class="cmp-hero__subtitle">${heroModel.midText @context='html'} </h2>
+        <sly data-sly-test.link="${'formportal' in heroModel.cta.ctaUrl}"></sly>
+
+ 
+        <button data-sly-test="${heroModel.cta.ctaText && link}" type="button" onclick="formportal();" class="cmp-hero__button"> ${heroModel.cta.ctaText}</button>
+        <button data-sly-test="${heroModel.cta.ctaText && !link}" type="button" class="cmp-hero__button"> ${heroModel.cta.ctaText}</button>
+      </div>
+
+      <img class="cmp-hero__productImage" src="${heroModel.productImage}" alt="${heroModel.productImageAltText}">
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

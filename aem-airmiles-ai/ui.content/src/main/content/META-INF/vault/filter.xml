@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/airmiles-ai" mode="replace"/>
+
+	<!-- <filter root="/content/airmiles-ai" mode="update"/> -->
+	<filter root="/content/experience-fragments/airmiles-ai" mode="update"/>
+	<filter root="/content/dam/airmiles-ai" mode="update"/>		
+
+    <filter root="/etc/map/https/dev.airmiles.ai" mode="update" />
+    <filter root="/etc/map/https/test.airmiles.ai" mode="update" />
+    <filter root="/etc/map/https/cert.airmiles.ai" mode="update"/>
+    <filter root="/etc/map/https/airmiles.ai" mode="update" />
+    <filter root="/etc/notification/email/acs-commons/mailregistration.html" />
+</workspaceFilter>

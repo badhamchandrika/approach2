@@ -1,0 +1,17 @@
+<!--/* <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.linksModel="ai.aem.airmiles.core.models.FooterLinksModel"
+	 data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}">               
+    <ul data-sly-list.site="${linksModel.sites}">     	
+	    <li> <a href="${site.linkURL}"> ${site.linkText}</a></li>   
+    </ul>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
+ */-->
+<sly data-sly-use.linksModel="ai.aem.airmiles.core.models.FooterLinksModel">               
+    <ul data-sly-list.site="${linksModel.sites}">     	
+	    <li> <a href="${site.linkURL}"> ${site.linkText}</a></li>   
+    </ul>
+
+</sly>

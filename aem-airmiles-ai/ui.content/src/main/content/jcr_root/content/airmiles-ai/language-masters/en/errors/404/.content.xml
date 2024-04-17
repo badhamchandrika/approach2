@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-10-14T11:00:44.288-05:00"
+        cq:lastModifiedBy="admin"
+        cq:robotsTags="[noindex,nofollow]"
+        cq:template="/conf/airmiles-ai/settings/wcm/templates/error-ai-page"
+        jcr:language="en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="404"
+        sling:resourceType="airmiles-ai/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="airmiles-ai/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:lastModified="{Date}2022-10-13T12:10:17.376-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="airmiles-ai/components/container"
+                layout="simple">
+                <errorcontentpage
+                    jcr:created="{Date}2022-10-13T12:10:19.954-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-14T10:55:09.199-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/errorcontentpage"
+                    backgroundImage="/content/dam/airmiles-ai/video_airmiles_bn.gif"
+                    backgroundImageAltText="error"
+                    headerText="&lt;p>Oops! We couldn't find that page&lt;/p>&#xd;&#xa;"
+                    midText="&lt;p>Please check again the URL may be misspelled or return to the home page.&lt;/p>&#xd;&#xa;"
+                    textIsRich="[true,true]">
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        ctaTarget="_self"
+                        ctaText="Back to Home Page"
+                        ctaUrl="/content/airmiles-ai/ca/en"/>
+                </errorcontentpage>
+            </container>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2022-10-14T11:00:44.285-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>

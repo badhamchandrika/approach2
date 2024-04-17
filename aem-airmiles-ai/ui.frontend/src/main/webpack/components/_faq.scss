@@ -1,0 +1,153 @@
+.cmp-faqs{
+    background-color: #3a92e914;
+    
+    &__mainContainer{
+        padding: 16px 0px;
+     margin: 0 auto;
+     //background-color: #fff;
+     &>p{
+        text-align: end; 
+        font-weight: 600;
+        & a{
+            color: #153382;
+            :visited{
+                color: #0A6FB3 ; 
+            }
+        }
+     }
+    }
+    &__cardContainer{
+        margin: 16px 0px;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 20px 8px 20px rgba(16, 24, 40, 0.06);
+        a{
+            color: #0A6FB3!important;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+    & dl{
+        margin-block-start: 0px;
+    }
+    & dt{
+        color: rgb(10, 111, 178);
+        font-size: 20px ;
+    }
+    & dd{
+        margin-inline-start: 0px;
+        a{
+            color: #153382;
+            :visited{
+                color: #0A6FB3 ; 
+            }
+        }
+    }
+}
+ /*----------------------------------------------*/ 
+    /*-------------------Mobile Devices-------------*/ 
+    
+    /* Custom, iPhone Retina */ 
+    @media screen and (min-width : 320px) {
+        .cmp-faqs{
+            &__mainContainer{
+                //padding: 16px 0px;
+                /* background-color: grey; */
+                width: calc(100vw - 32px);
+                &>p{
+                    text-align: center; 
+                 }
+            }
+          /*   &__cardContainer{
+                margin: 16px 0px;
+                border-radius: 16px;
+                padding: 16px;
+                box-shadow: 20px 8px 20px rgba(16, 24, 40, 0.06);
+            } */
+        }
+     }
+   
+   /* Extra Small Devices, Phones */ 
+   @media screen and (min-width : 360px) and (max-width : 599px){
+       
+       
+       .cmp-faqs{
+            &__mainContainer{
+               // padding: 16px 0px;
+              /*  background-color: yellow; */
+               width: calc(100vw - 32px);
+               &>p{
+                text-align: center; 
+             }
+            }
+  /*           &__cardContainer{
+                margin: 16px 0px;
+                border-radius: 16px;
+                padding: 16px;
+                box-shadow: 20px 8px 20px rgba(16, 24, 40, 0.06);
+            } */
+          }
+        } 
+   /* Small Devices, Phones */ 
+   @media screen and (min-width : 600px) and (max-width : 1199px){
+       
+       .cmp-faqs{
+           &__mainContainer{
+            //padding: 16px 0px;
+              /*  background-color: red; */
+               width: calc(100vw - 102px);
+               &>p{
+                text-align: center; 
+             }
+           }
+         /*   &__cardContainer{
+            margin: 16px 0px;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 20px 8px 20px rgba(16, 24, 40, 0.06);
+           }  */
+          }
+   
+        }
+/*-------------------------------------------------*/ 
+
+/*-------------------------------------------------*/ 
+/*-------------------Desktop Devices----------------*/ 
+
+   /*   Large Devices   */ 
+   @media screen and (min-width : 1200px) and (max-width : 1599px){
+      
+       .cmp-faqs{
+           &__mainContainer{
+            //padding: 16px 0px;
+               /* background-color: blue; */
+               width: calc(100vw - 207px);
+               &>p{
+                text-align: right; 
+             }
+        } 
+      }
+   }
+
+   /*  Extra Large Devices  */ 
+   @media screen and (min-width : 1600px){
+       .cmp-faqs{
+           &__mainContainer{
+            //padding: 16px 0px;
+               /* background-color: green; */
+               width: calc(100vw - 207px);
+               &>p{
+                text-align: right; 
+             }
+           } 
+         /*   &__cardContainer{
+            margin: 16px 0px;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 20px 8px 20px rgba(16, 24, 40, 0.06);
+           }  */
+         }
+   }
+

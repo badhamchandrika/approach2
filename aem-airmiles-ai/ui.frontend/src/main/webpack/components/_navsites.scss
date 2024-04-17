@@ -1,0 +1,27 @@
+.cmp-navsites {
+}
+.cmp-navsites__group {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.cmp-navsites__item {
+  list-style: none;
+  margin-right: 35px;
+  color: #ffffff;
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #3a92e9;
+  color: white!important;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  left: 0;
+  top:0;
+  opacity: 1;
+}

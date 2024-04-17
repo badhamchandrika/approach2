@@ -1,0 +1,48 @@
+.cmp-storycard{
+    
+    backgorund-color:'link-blue';
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    &__title{
+        font-family: Open Sans;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: -0.75px;
+        text-align: center;
+    }
+    &__image{
+        width:80px
+    }
+    &__body{
+        font-family: Open Sans;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.15000000596046448px;
+        text-align: center;
+    }
+    &__collabName{
+        font-family: Open Sans;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+    &__job{
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+}
+
+
+
+

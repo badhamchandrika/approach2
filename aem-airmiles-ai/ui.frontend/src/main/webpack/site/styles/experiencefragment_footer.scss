@@ -1,0 +1,181 @@
+//== XF Footer style, used on page template
+footer.experiencefragment {
+    color: white;
+    background-color: #135582; 
+    .cmp-separator__horizontal-rule {
+        margin: 0;
+        border: 0;
+    }
+    
+    div.text{
+        text-align: center;
+        font-size: 18px;
+    }
+    /*     padding: 21px 0; */
+    
+   ul{ 
+        padding-inline-start:0px
+   }
+   a{
+        text-decoration:none;
+        color: white;
+   }
+
+    /*----------------------------------------------*/ 
+    /*-------------------Mobile Devices-------------*/ 
+    
+    /* Custom, iPhone Retina */ 
+     @media screen and (min-width : 320px) {
+         /* background-color: grey; */
+         .cmp-experiencefragment--footer{
+            width: calc(100vw - 32px); 
+            margin: 0px auto;
+
+            .footerlinks {
+                ul{    
+                    display: flex;
+                    flex-direction: column ;
+                }
+                li{
+                 text-align: center;   
+                 margin-bottom:24px;
+                }
+               
+            }   
+        }
+        
+    }
+    
+    /* Extra Small Devices, Phones */ 
+    @media screen and (min-width : 360px) and (max-width : 599px){
+        /* background-color: yellow; */
+        .cmp-experiencefragment--footer{
+            width: calc(100vw - 32px); 
+            margin: 0px auto;
+             
+            .cmp-container{         
+                display: flex;
+                flex-direction: column ;
+            }
+
+             .footerlinks {
+                ul{    
+                    display: flex;
+                    flex-direction: column;
+                }
+                li{
+                 text-align: center;
+                 margin-bottom:24px;   
+                }
+            }   
+        }
+    }
+    
+    /* Small Devices, Phones */ 
+    @media screen and (min-width : 600px) and (max-width : 1199px){
+       /*  background-color: red; */
+        .cmp-experiencefragment--footer{
+            width: calc(100vw - 122px);
+            margin: 0px auto;
+            
+            .cmp-container{         
+                display: flex;
+                flex-direction: column;
+            }
+            .footerlinks {
+                ul{    
+                    display: flex;
+                    flex-direction: column;
+                }
+                li{
+                    text-align: center;  
+                    margin-bottom:24px; 
+                }
+            }   
+        }
+    }
+    
+    /* large mobile  landscape*/
+/*     @media screen and (min-width : 1024px) and (orientation: landscape) {
+        background-color: black
+    } */
+ /*-------------------------------------------------*/ 
+ 
+ /*-------------------------------------------------*/ 
+ /*-------------------Desktop Devices----------------*/ 
+ 
+    /*   Large Devices   */ 
+    @media screen and (min-width : 1200px) and (max-width : 1599px){
+        div.text{
+            text-align: left;
+            font-size: 12px;
+        }
+       /*  background-color: blue; */
+        .cmp-experiencefragment--footer{
+            width: calc(100vw - 206px);
+            margin: 0 auto;
+            padding: 56px 0px;
+            
+            &>div>div{
+                &:nth-child(2){
+                margin: auto 0px auto auto;
+                 }
+            }
+            .cmp-container{         
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .footerlinks {
+                ul{    
+                    display: flex;
+                    flex-direction: row;
+                }
+                li{
+                    text-align: left;
+                    display: block;
+                    margin: auto 0px;
+                    margin-left: 48px;
+                }
+            }   
+        }
+    }
+
+    /*  Extra Large Devices  */ 
+    @media screen and (min-width : 1600px){
+        /* background-color: green; */
+        div.text{
+            text-align: left;
+            font-size: 12px;
+        }
+        .cmp-experiencefragment--footer{
+            width: calc(100vw - 274px);
+            margin: 0 auto;
+            padding: 56px 0px;
+            
+            &>div>div{
+                &:nth-child(2){
+                margin: auto 0px auto auto;
+                 }
+            }
+            .cmp-container{         
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .footerlinks {
+                ul{    
+                    display: flex;
+                    flex-direction: row;
+                }
+                li{
+                    text-align: left;
+                    display: block;
+                    margin: auto 0px;   
+                    margin-left: 48px;
+                }
+            }   
+        } 
+    }
+    
+}

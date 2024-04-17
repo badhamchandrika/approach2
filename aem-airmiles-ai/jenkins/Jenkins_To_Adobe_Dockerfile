@@ -1,0 +1,16 @@
+FROM 277983268692.dkr.ecr.us-east-1.amazonaws.com/ubuntu-22-slim
+
+ARG user=ec2-user
+ARG group=${user}
+ARG uid=1000
+ARG gid=${uid}
+ENV HOME=/home/${user}
+
+# To be maintained in future by the ATS Devops Engineer.
+
+#=============================================
+# Install Adobe's aio-cli
+#==============================================
+RUN echo n | npm install -g @adobe/aio-cli@8.3.0
+RUN aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+RUN aio plugins:update

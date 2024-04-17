@@ -1,0 +1,28 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.block="ai.aem.airmiles.core.models.SolutionBlockModel"
+	 data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}" 
+     class="cmp-solutionblock">      
+     <div class="cmp-solutionblock__mainContainer">
+         <div class="cmp-solutionblock__dataContainer" data-sly-list.tab="${block.tabs}">
+            <div class="cmp-solutionblock__rowContainer${tabList.first?' show':''}">
+                <div class="cmp-solutionblock__title">
+                    <h2><span class="cmp-solutionblock-arrow-right am-icon-chev-right${tabList.first?' turn':''}"></span>${tab.title}</h2>
+                    <div class="cmp-solutionblock__body">
+                        ${tab.body @context="html"}
+                        <p class="cmp-solutionblock__linkContainer">                        	
+                            <a class="cmp-solutionblock__link"  href="${tab.cta.ctaUrl @ extension = 'html'}"  target="${tab.cta.ctaTarget}" aria-label="Discover More about ${tab.title}">${tab.cta.ctaText} <span class="am-icon-share"></span> </a>                            
+                        </p>    
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="cmp-solutionblock__imageContainer">
+                <img class="cmp-solutionblock__image" src="${block.image}"
+                alt="${block.imageAltText}"></img>
+                ${block.imageDesc @context="html"}               
+            </div>
+     </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

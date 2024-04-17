@@ -1,0 +1,204 @@
+  .quotes{ 
+    position: absolute;
+    margin-top: 55px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  
+}
+
+.cmp-carousel{
+/*     &__innerControlsContainer{
+        display: flex;    
+        justify-content: center;
+        align-items: center;
+    }
+
+    & button.cmp-carousel__action{
+        border: 0;
+        background-color: transparent;
+
+        .am-icon-arrow-right, .am-icon-arrow-left{    
+            border: 0px;
+            font-size: 32px;
+            color: white;
+        }      
+    } */
+  }
+    
+.cmp-quotecard{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    color: color('white');
+    
+    cite{
+    font-style: normal;    
+    }
+    &__title{
+        color: color('light-blue');
+        font-family: Open Sans;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-top: 40px;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+         p{
+            letter-spacing: 0.5px;
+            text-align: center;
+            text-align: center;
+            font-weight: 200;
+            color: color('white');
+            font-size: 20px;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+    }
+    &__image{
+        width:64px;
+        margin-top:40px;
+        margin-bottom: 16px;
+    }
+    &__body{
+        font-family: Open Sans;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.15000000596046448px;
+        text-align: center;
+    }
+    &__collabName{
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-top: 20px;
+    }
+    &__job{
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        min-width: 250px;
+    }
+}
+
+
+
+
+ /*----------------------------------------------*/ 
+ /*-------------------Mobile Devices-------------*/ 
+ 
+ /* Custom, iPhone Retina */ 
+ @media screen and (min-width : 320px) {
+     /* background-color: grey; */
+     .cmp-quotecard{
+         &__title{
+             width: calc(100vw - 32px); 
+             font-size: 30px;
+             margin-top: 24px;
+             p{
+                 width: calc(100vw - 32px); 
+                 font-size: 16px;
+             }
+        }   
+        &__collabName{
+            width: calc(100vw - 32px); 
+            margin-top: 40px;
+        }
+        &__job{
+            width: calc(100vw - 32px); 
+        }          
+        
+    }
+ }
+   
+   /* Extra Small Devices, Phones */ 
+@media screen and (min-width : 360px) and (max-width : 599px){
+    /* background-color: yellow; */
+    
+    .cmp-quotecard{
+        &__title{
+            width: calc(100vw - 32px); 
+            font-size: 30px;
+            margin-top: 24px;
+            p{
+                width: calc(100vw - 32px); 
+                font-size: 16px;
+            } 
+        }
+        &__collabName{
+            width: calc(100vw - 32px); 
+            margin-top: 40px;
+        }
+        &__job{
+            width: calc(100vw - 32px); 
+        }          
+    }  
+} 
+   /* Small Devices, Phones */ 
+   @media screen and (min-width : 600px) and (max-width : 1199px){
+      /*  background-color: red; */
+      .cmp-quotecard{
+          &__title{
+              width: calc(100vw - 102px); 
+              font-size: 30px;
+              margin-top: 24px;
+              p{
+                width: calc(100vw - 102px); 
+                font-size: 16px;
+              }
+        }   
+        &__collabName{
+          width: calc(100vw - 32px); 
+          margin-top: 40px;
+        }
+        &__job{
+          width: calc(100vw - 32px); 
+        }     
+  }  
+    
+        }
+/*-------------------------------------------------*/ 
+
+/*-------------------------------------------------*/ 
+/*-------------------Desktop Devices----------------*/ 
+
+   /*   Large Devices   */ 
+   @media screen and (min-width : 1200px){
+      
+      /*  background-color: blue; */
+    
+      .cmp-quotecard{
+          &__title{
+              width: calc(100vw - 206px); 
+              font-size: 30px;
+              margin-top: 40px;
+              p{
+                width: calc(100vw - 206px); 
+                font-size: 16px;
+              }
+          }   
+          &__collabName{
+            width: calc(100vw - 566px); 
+            margin-top: 40px;
+          }
+          &__job{
+            width: calc(100vw - 566px); 
+          }     
+        }  
+    }

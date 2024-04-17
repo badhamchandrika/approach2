@@ -1,0 +1,22 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.faqsModel="ai.aem.airmiles.core.models.FAQsModel"
+	 data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}"
+     class="cmp-faqs">
+
+     <div class="cmp-faqs__mainContainer" id="faqContainer" >
+        <sly data-sly-list.item="${faqsModel.questionsAnswers}">
+            <div  class="cmp-faqs__cardContainer">          
+                <dl>
+                    <dt>${item.question @context="html"}</dt>
+                    <dd>
+                        ${item.answer @context="html"}
+                    </dd>
+                </dl>
+            </div>
+        </sly>
+     ${faqsModel.moreInfoText @context="html" }
+     </div>
+</div>
+        
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

@@ -1,0 +1,13 @@
+<form data-sly-use.servlet="ai.aem.airmiles.core.models.ServletCallModel"
+	  data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+      data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+      method="${servlet.method}" action="${servlet.url}" id="${servlet.formId}-${component.id}"
+      enctype="${servlet.enctype}"
+      class="servletcall ${servlet.ajax} cmp-form ${grid.cssClass}">
+    
+    <input type="hidden" name="_charset_" value="utf-8"/>    
+    <sly data-sly-repeat.paragraph="${grid.paragraphs}"
+         data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}"></sly>
+    <sly data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+         data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+</form>

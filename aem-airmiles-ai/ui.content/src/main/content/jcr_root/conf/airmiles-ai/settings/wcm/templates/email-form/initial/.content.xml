@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-08-08T12:21:08.985-05:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/airmiles-ai/settings/wcm/templates/email-form"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="airmiles-ai/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="airmiles-ai/components/container"
+            layout="responsiveGrid">
+            <text
+                jcr:created="{Date}2022-08-08T12:14:59.291-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-08-08T12:15:31.435-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="airmiles-ai/components/text"
+                text="&lt;p>We've got your numbers&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
+            <text_1693096905
+                jcr:created="{Date}2022-08-08T12:15:36.616-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-08-08T12:16:59.005-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="airmiles-ai/components/text"
+                text="&lt;p>See how you can start making a difference today&lt;/p>&#xd;&#xa;&lt;p>Enter your contact information to get started with AIR MILES Panorama&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
+            <container
+                jcr:created="{Date}2022-08-08T12:17:20.660-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-08-08T12:17:20.660-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="airmiles-ai/components/form/container"
+                action="/content/usergenerated/conf/airmiles-ai/settings/wcm/templates/email-form/initial/cq-gen1659979040663/"
+                actionType="foundation/components/form/actions/store">
+                <text
+                    jcr:created="{Date}2022-08-08T12:17:40.020-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-08T12:18:57.905-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="First Name"
+                    sling:resourceType="airmiles-ai/components/form/text"
+                    helpMessage="First Name"
+                    hideTitle="true"
+                    name="firstName"
+                    rows="2"
+                    type="text"
+                    usePlaceholder="true"/>
+                <text_477030645
+                    jcr:created="{Date}2022-08-08T12:19:26.694-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-08T12:20:04.860-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Last Name"
+                    sling:resourceType="airmiles-ai/components/form/text"
+                    helpMessage="Last Name"
+                    hideTitle="true"
+                    name="lastName"
+                    rows="2"
+                    type="text"
+                    usePlaceholder="true"/>
+                <text_2083888770
+                    jcr:created="{Date}2022-08-08T12:20:18.111-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-08T12:20:43.767-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Email address"
+                    sling:resourceType="airmiles-ai/components/form/text"
+                    helpMessage="Email Address"
+                    hideTitle="true"
+                    name="email"
+                    rows="2"
+                    type="email"
+                    usePlaceholder="true"/>
+                <button
+                    jcr:created="{Date}2022-08-08T12:21:00.224-05:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-08T12:21:08.983-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/form/button"
+                    type="submit"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

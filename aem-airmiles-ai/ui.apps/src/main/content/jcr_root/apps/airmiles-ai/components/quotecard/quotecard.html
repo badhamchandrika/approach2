@@ -1,0 +1,13 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.storyModel="ai.aem.airmiles.core.models.QuoteCardModel"
+	 data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}"
+     class="cmp-quotecard">
+     <cite class="cmp-quotecard__title"> ${storyModel.headerText}
+     <span class="cmp-quotecard__body">${storyModel.midText @ context='html'}</span>
+     </cite>
+   <!--/*  <img class="cmp-quotecard__image"src="${storyModel.image}"></img> */-->
+    <p class="cmp-quotecard__collabName"> ${storyModel.collabName}</p>
+    <p class="cmp-quotecard__job"> ${storyModel.collabJob}  ${storyModel.collabSection}</p>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

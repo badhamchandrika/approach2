@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            jcr:mixinTypes="[mix:versionable]"
+            jcr:primaryType="cq:PageContent"
+            jcr:uuid="14c8f7a5-c757-4dd9-86e7-c6f76574895d"
+            autoBlockScript="dev|https://cdn.cookielaw.org/consent/{{TOKEN}}/OtAutoBlock.js,rde|https://cdn.cookielaw.org/consent/{{TOKEN}}/OtAutoBlock.js,stage|https://cdn.cookielaw.org/consent/{{TOKEN}}/OtAutoBlock.js,prod|https://cdn.cookielaw.org/consent/{{TOKEN}}/OtAutoBlock.js"
+            sdkStubScript="dev|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js,rde|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js,stage|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js,prod|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+            consentId="dev|53f6d7f0-e5aa-4b97-8154-d3be8ebc4175-test,rde|53f6d7f0-e5aa-4b97-8154-d3be8ebc4175-test,stage|53f6d7f0-e5aa-4b97-8154-d3be8ebc4175-test,prod|53f6d7f0-e5aa-4b97-8154-d3be8ebc4175"/>
+</jcr:root>

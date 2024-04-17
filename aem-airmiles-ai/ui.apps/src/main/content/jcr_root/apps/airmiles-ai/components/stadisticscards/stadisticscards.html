@@ -1,0 +1,19 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.stadModel="ai.aem.airmiles.core.models.StadisticsCardsModel"
+	 data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}">
+
+    <div data-sly-list.item="${stadModel.datacards}">          
+          <p><strong>headerText:</strong> ${item.headerText}</p>
+          <p><strong>midText:</strong> ${item.midText}</p>
+          <p><strong>icon:</strong> ${item.icon}</p>
+          <p><strong>image:</strong> ${item.image}</p>
+          <p><strong>imageAltText:</strong> ${item.imageAltText}</p>
+          <p><strong>ctaText:</strong> ${item.cta.ctaText}</p>
+          <p><strong>ctaUrl:</strong> ${item.cta.ctaUrl}</p>
+          <p><strong>ctaIcon:</strong> ${item.cta.ctaIcon}</p>
+          <p><strong>ctaTarget:</strong> ${item.cta.ctaTarget}</p>
+    </div>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

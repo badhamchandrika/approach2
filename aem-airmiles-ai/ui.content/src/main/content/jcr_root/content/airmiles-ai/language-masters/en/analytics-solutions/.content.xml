@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-10-17T14:04:26.218-05:00"
+        cq:lastModifiedBy="admin"
+        cq:robotsTags="[index,follow]"
+        cq:template="/conf/airmiles-ai/settings/wcm/templates/ai-page"
+        jcr:description="Improve your data-driven marketing with AIR MILES® Analytics automated dashboards and reports. "
+        jcr:language="en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Analytics Solutions | AIR MILES®"
+        sling:resourceType="airmiles-ai/components/page"
+        navTitle="Analytics Solutions | AIR MILES®"
+        pageTitle="Analytics Solutions | AIR MILES®">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="airmiles-ai/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="airmiles-ai/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:created="{Date}2022-10-03T10:14:58.255-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-17T14:02:27.197-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/hero"
+                    alignment="alignment-left"
+                    backgroundImage="/content/dam/airmiles-ai/Fondo_solution 1680.png"
+                    backgroundImageAltText="solution background"
+                    cssClass="solution"
+                    headerText="&lt;p>Reporting &amp;amp;&amp;nbsp;Analytics&lt;/p>&#xd;&#xa;"
+                    midText="&lt;p>Our marketing tools help businesses by providing automated access to rich customer information to understand business and marketing performance and make data-driven business decisions to increase customer engagement.&lt;/p>&#xd;&#xa;"
+                    productImage="/content/dam/airmiles-ai/Dashboard_solution 1000.png"
+                    productImageAltText="solutions dashboard"
+                    textIsRich="[true,true]">
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        ctaTarget="_self"/>
+                </hero>
+                <contentblock
+                    jcr:created="{Date}2022-10-03T10:32:44.420-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-17T14:02:46.389-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/contentblock"
+                    backgroundColor="blue"
+                    bodyText="&lt;p>AIR MILES’ Reporting &amp;amp; Analytics platform’s automated dashboards and marketing reports provide easy, simple access to key insights and useful metrics and marketing KPIs. These insights empower AIR MILES partners to make business decisions about who to target for future loyalty and marketing campaigns, and to understand customer response to previous campaigns.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    headerText="Develop the right customer segment for your offerings"
+                    image="/content/dam/airmiles-ai/Compu-1_v2.png"
+                    imageAltText="segments grow"
+                    invertPlacement="true"
+                    textIsRich="true"/>
+                <contentblock_7350690
+                    jcr:created="{Date}2022-10-03T10:41:36.465-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-17T14:02:58.755-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/contentblock"
+                    backgroundColor="white"
+                    bodyText="&lt;p>Our Data Sharing platform&amp;nbsp; provides partners access to aggregated and customer-level demographic, geographic, and predictive behavioral data powered by our machine learning capabilities. This platform allows access to rich consumer data, allowing for advanced analysis, customer segmentation, and deeper personalization. Partners can explore the data within our platform, export data into their own platform, or even combine data to help uncover key customer insights.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    headerText="Enhance your data and personalize your marketing offerings"
+                    image="/content/dam/airmiles-ai/Imagen2.png"
+                    imageAltText="loyalty program grow"
+                    textIsRich="true"/>
+                <contentblock_1816670
+                    jcr:created="{Date}2022-10-03T10:42:35.156-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-17T10:55:57.605-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/contentblock"
+                    backgroundColor="blue"
+                    bodyText="&lt;p>Our data solutions are available 24/7 and easily accessed via the airmiles.ai platform. Our solutions are also designed to update and refresh automatically, saving you time and effort so you can focus more on making data-driven analysis and decisions. Access to the data in near real-time analytics allows partners to dive deep into customer insights and business performance metrics. Partners can focus on taking advantage of opportunities, targeting customers with customized promotions, and optimizing marketing spend. &lt;/p>&#xd;&#xa;"
+                    headerText="Relevant, always on, accessible and scalable reporting"
+                    image="/content/dam/airmiles-ai/imagen3_v2.png"
+                    imageAltText="loyalty campaign"
+                    invertPlacement="true"
+                    textIsRich="true"/>
+                <contentblock_1087518
+                    jcr:created="{Date}2022-10-03T10:43:34.559-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-17T14:03:17.225-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/contentblock"
+                    backgroundColor="white"
+                    bodyText="&lt;p>Our Reporting &amp;amp; Analytics platform will give access to core business data &amp;amp; customer KPIs such as loyalty sales, category sales, RFV (recency, frequency, volume), customer lifestage, spend and lift, and customer migration metrics. We also provide access to campaign measurement and promotional effectiveness tools, allowing you to better understand the impact of product promotional offers on customer spend and loyalty.&lt;/p>&#xd;&#xa;"
+                    headerText="Robust and expansive measurement and insights"
+                    image="/content/dam/airmiles-ai/imagen4.png"
+                    imageAltText="customer basket penetration"
+                    textIsRich="true"/>
+                <separatorai
+                    jcr:created="{Date}2022-10-05T09:48:55.352-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-05T10:51:34.754-03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/separatorai"
+                    color="blue"
+                    icon="am-icon-dialog"
+                    text="Frequently Asked Questions"/>
+                <faqs
+                    jcr:created="{Date}2022-10-03T17:22:10.555-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-17T14:04:26.214-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/faqs"
+                    moreInfoText="&lt;p>If you any other question or request please reach us at: &lt;a href=&quot;mailto:info@airmiles.ai&quot; target=&quot;_blank&quot;>info@airmiles.ai&lt;/a>&lt;/p>&#xd;&#xa;"
+                    textIsRich="[true,true,true,true,true,true,true]">
+                    <questionsAnswers jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            answer="&lt;p>If you’re interested in learning more about any of our data solutions, please reach-out to us directly using the &lt;a href=&quot;/content/airmiles-ai/language-masters/en/airmilesaimailregistrationform.html&quot;>contact form&lt;/a>&lt;/p>&#xd;&#xa;"
+                            question="How can I learn more about AIR MILES’ data solutions? "/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            answer="&lt;p>We offer standard, loyalty program, and business measurement reports. We also have the ability to build customer dashboards for additional business needs. Please reach-out via the &lt;a href=&quot;/content/airmiles-ai/language-masters/en/airmilesaimailregistrationform.html&quot;>contact form&lt;/a>, or to your Client Services contact to evaluate your customization needs. &lt;/p>&#xd;&#xa;"
+                            question="How can I get access to standard and custom dashboards?"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            answer="&lt;p>The Data Sharing platform provides access to both aggregated and customer-level data using our 1st party data and analytics capabilities. With self-serve access, you can use the platform to generate your own insights or connect the data with your own environment. &lt;/p>&#xd;&#xa;"
+                            question="&lt;p>What type of information can I access through the Data Sharing platform?&lt;/p>&#xd;&#xa;"/>
+                    </questionsAnswers>
+                </faqs>
+                <experiencefragment
+                    jcr:created="{Date}2022-10-04T17:10:11.902-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-10-04T17:10:24.576-03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="airmiles-ai/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/airmiles-ai/us/en/site/mail-form/master"/>
+            </container>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2022-10-14T11:00:16.908-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>

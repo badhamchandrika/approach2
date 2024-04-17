@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <Dashboard_Hero_x0020__x0028_1_x0029_.png/>
+    <imagen4.png/>
+    <Imagen2.png/>
+    <success-mail-icon.png/>
+    <jcr:content
+        cq:conf="/conf/airmiles-ai"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Airmiles AI">
+        <folderThumbnail/>
+    </jcr:content>
+    <Logo.png/>
+    <metro_logo.png/>
+    <NSLC_logo.png/>
+    <Schell_logo.png/>
+    <solution-block.png/>
+    <tech-files/>
+    <Hero_solution.png/>
+    <Fondo_solution.png/>
+    <Fondo_solution_x0020_1680.png/>
+    <Dashboard_solution_x0020_1000.png/>
+    <error-mail-icon.svg/>
+    <video_airmiles_bn.gif/>
+    <Cielo_x0020_1680_1100_x0020__x0028_1_x0029_.png/>
+    <imagen3_v2.png/>
+    <Compu-1_v2.png/>
+</jcr:root>

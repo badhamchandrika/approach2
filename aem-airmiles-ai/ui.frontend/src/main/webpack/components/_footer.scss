@@ -1,0 +1,18 @@
+footer.experiencefragment{
+    background-color:color('brand-blue');
+    color:color('white')
+}
+
+.footerlinks {
+  /*   ul{
+        display:flex;
+    }
+ */
+    li{
+        list-style-type:none;
+        
+        a{
+            color:color('white')
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/airmiles-ai/clientlibs"/>
+    <filter root="/apps/airmiles-ai/components"/>
+    <filter root="/apps/airmiles-ai/i18n"/>
+</workspaceFilter>

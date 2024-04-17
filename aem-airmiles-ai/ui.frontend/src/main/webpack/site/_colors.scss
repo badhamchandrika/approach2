@@ -1,0 +1,102 @@
+$color-map: (
+  'brand-blue':                   #135582,
+  'brand-blue-tenpercent':        #1355821A,
+  'light-blue':	  	              #5ADCEA,
+  'link-blue':                    #135582,
+  'blue-hover':                   #00334D, 
+  'grey-blue':                    #F0F5F7,
+  'blue-background':              #F0F5F8,
+  'ice-blue':                     #DDF2FF,
+  'aliceblue':                    #f0f8ff,
+  'grey':                         #808080,
+  'medium-blue':                  #0a6fb3,
+  'white':                        #FFFFFF,
+  'onyx':                         #000000,
+  'gold':                         #8A6A0A,
+  'blue':                         #3A92E9,
+  'black':                        #000000,
+  'body-copy':                    #231F20,
+  'body-copy-grey':               #5E5E5E,
+  'grey-light':                   #BBBDBF,
+  'grey-dark':                    #7C7E80,
+  'brown':                        #a52a2a,
+  'disabled':                     #93A9Bf,
+  'orange':                       #fd7e14,
+  'functional-coral':             #F56762, 
+  'functional-red':               #DB141B,  
+  'cyan':                         #0dcaf0,
+  'teal':                         #0F5D58,
+  'dark-teal':                    #023438,
+  'focused-teal':                #169BA2,
+
+  'green':                        #3B8C32,
+  
+  'purple':                       #683E68,
+  'dark-purple':                  #51253F,
+  'light-purple':                 #B587A9,
+
+  'red':                          #CB3720,
+  'deep-red':                     #DB141B,
+
+  'coral':                        #FD807D,
+  'light-coral':                  #FEB3B1,
+  'dark-pink':                    #592340,
+
+  'yellow':                       #F0E400,
+
+  'alert-success':                #44A648,
+  'alert-success-icon':	          #3D9541,
+  'alert-success-background':     #F2F7D6,
+
+  'alert-warning':                #FCB813,
+  'alert-warning-icon':	          #C86822,
+  'alert-warning-background':     #FFF1D9,
+
+  'alert-neutral':                #169BA2,
+  'alert-neutral-icon':	          #1582B8,
+  'alert-neutral-background':     #DAEDF7,
+
+  'alert-failure':                #DB141B,
+  'alert-failure-icon':	          #E9161D,
+  'alert-failure-background':     #FDEBEB,
+
+  'search-text-placeholder':      #5E5E5E,
+  'search-icon':                  #231F20,
+
+  'magenta-pink':                 #51253D, 
+  'bahama-blue':                  #27537E,
+  'eden':                         #2A5C56,
+  'crayola-turquoise-blue':       #6cdae7,
+  'magenta-pink-light':           #bf85aa,
+  'red-medium-light':             #ff807d,
+  'red-hue-light':                #ffb3b0,
+  'yellow-light':                 #f0e300,
+  'cyan-dark':                    #003338,
+  'magenta-pink-dark':            #592140,
+  'cyan-blue-medium-dark':        #125482,
+  'cyan-dark-more-hue':           #0d5c57,
+  'magenta-medium-dark':          #693d69,
+  'cyan-medium-light':            #59dbeb,
+  'grey-section-separator':       #d7d6d6,
+);
+
+
+
+// ---------- Color Map Function ---------
+// Function that allows you to pull from the color map
+// Usage: border-color: color('purple-light');
+// Optional $variant parameter for the dark, darker, or light version of a color
+
+@function color($color, $variant: null) {
+  @if map-has-key($color-map, $color) {
+    $color: map-get($color-map, $color);
+    @return $color;
+  }
+
+  @else {
+    // Throw error if color string is not in the map
+    @error 'You have entered `#{$color}`, which is a color that doesn\'t exist. '
+      + 'Please make sure it is defined in `$color-map` map.';
+    @return '';
+  }
+}

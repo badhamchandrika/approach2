@@ -1,0 +1,204 @@
+.cmp{
+    &-experiencefragment--mail-form{
+        font-family: Open Sans;
+        text-align: center;
+        background-color: #eff6fd;
+        padding-top:56px;
+    & h2{
+        color: #135582;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-bottom: 16px; 
+    }
+    .text input, .text textarea{
+        height: 56px;
+        width: 452px;
+        left: 0px;
+        top: 0px;
+        border-radius: 8px;
+        border: 0px;
+        padding: 4px 16px 4px 16px;
+        box-sizing: border-box;
+    }  
+    button{
+        color: white;
+        cursor: pointer;
+        height: 56px;
+        width: 452px;
+        left: 0px;
+        top: 0px;
+        border-radius: 8px;
+        padding: 8px 32px 8px 32px;
+        border: 0px;
+        background-color: #147BB0;
+        margin-left: 7px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        margin: 32px auto 0px;
+        padding-bottom: 72px;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .text textarea{
+        resize: none;
+        height:auto;
+        padding-top: 16px;
+    }
+
+/*     form div.text.aem-GridColumn.aem-GridColumn--default--12{
+        text-align: end;
+        width: 384px;
+    }
+    form div.button.aem-GridColumn.aem-GridColumn--default--12{
+        text-align: start;
+        width: 143px;
+    } */
+   
+    form div.cmp-form-text{
+        text-align: center;
+        outline-color: #CE0007;
+    }
+        
+    .emailform-registration-error {
+        color: #CE0007;
+        width: 452px;
+        margin: 0px auto;
+        text-align: left;
+        padding-left: 16px;
+        font-weight: 100;
+    }
+
+    .error_title{
+        font-family: Open Sans;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -1px;
+        text-align: center;
+        /* width: 905px; */
+        margin-top: 36px;
+        margin-bottom: 26px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #135582;
+    }
+
+    .cmp-form-text__text.red {
+            border: 1px solid #CE0007;
+    }
+    .mail-registration-resultmessage{
+        padding-top: 50px;
+        padding-bottom: 40px;
+        & p{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+    }
+
+     .body_message{
+        margin-top: 26px;
+     }
+     .disabled-ai-button{
+        background-color: #bbb;
+        pointer-events: none;
+     }
+}
+
+ /*----------------------------------------------*/ 
+ /*-------------------Mobile Devices-------------*/ 
+ 
+ /* Custom, iPhone Retina */ 
+ @media screen and /* (min-width : 320px) and */ (max-width : 599px){   
+   &-experiencefragment--mail-form{
+        padding-top:24px;
+        .title, .text p{
+            width: calc(100vw - 32px);
+            margin: 0 auto;
+        }
+        form{
+            flex-direction: column;
+        }
+        .text input, .text textarea{
+            width: calc(100vw - 32px);
+        }
+        form div.cmp-form-text, form div.button{
+            text-align: center;
+        }
+        button{
+            text-align: center;
+            margin: 39px auto 64px auto;
+            width: calc(100vw - 32px);
+        }
+        div.text{
+            margin: 0px auto 39px;
+            width: auto;
+        }
+        form div.text.aem-GridColumn.aem-GridColumn--default--12{
+            width: auto;
+        }
+        form div.button.aem-GridColumn.aem-GridColumn--default--12{
+            width: calc(100vw - 32px);
+            margin: 0px auto;
+        }
+        .mail-registration-resultmessage{
+            width: calc(100vw - 60px);
+            margin: 0 auto;
+        }
+        .emailform-registration-error{
+            width: auto;
+        }
+
+    } 
+}
+  /* Small Devices, Phones */ 
+  @media screen and (min-width : 600px) /* and (max-width : 1199px) */{
+     &-experiencefragment--mail-form{
+        padding-top:24px;
+
+        .title, .text p{
+            width: 544px; 
+            margin: 0 auto;
+        }  
+        div.text{
+            margin: 0px auto 32px;
+            width: auto;
+        }   
+        .mail-registration-resultmessage{
+            width: calc(100vw - 102px);
+            margin: 0 auto;
+        }
+    }  
+ }
+/*-------------------------------------------------*/ 
+
+/*-------------------------------------------------*/ 
+/*-------------------Desktop Devices----------------*/ 
+
+/*   Large Devices   */ 
+   @media screen and (min-width : 1200px){
+     
+      &-experiencefragment--mail-form{
+        
+        padding-top:56px;
+        
+        & .title, .text p{
+            width: 544px; 
+            margin: 0 auto;
+        }  
+        .emailform-registration-resultmessage{
+            width: calc(100vw - 340px);
+            margin: 0 auto;
+        }
+        
+    }  
+  }
+} 

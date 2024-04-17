@@ -1,0 +1,12 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	data-sly-use.sepModel="ai.aem.airmiles.core.models.SeparatorModel"
+	data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component" id="${component.id}"
+	class="cmp-separatorai cmp-separatorai__${sepModel.color}">
+
+	<div class="cmp-separatorai__box">
+		<span class="cmp-separatorai__icon ${sepModel.icon} icon-separatorai"></span>
+		<p class="cmp-separatorai__text">${sepModel.text}</p>
+	</div>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

@@ -1,0 +1,12 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Extended from Page V2
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<link data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+	  data-sly-use.pageAnalytics="ai.aem.airmiles.core.models.PageUtilsModel"
+      data-sly-test="${page.canonicalLink}"
+      rel="canonical" href="${page.canonicalLink}">
+<link rel="alternate" href="${pageAnalytics.defaultHref}" hreflang="x-default" />      
+<link data-sly-test="${page.alternateLanguageLinks}"
+      data-sly-repeat="${page.alternateLanguageLinks.entrySet}"
+      rel="alternate" hreflang="${item.key.toLanguageTag}" href="${item.value}">
+<script src="${pageAnalytics.analyticsURL @ context='html'}" async></script>

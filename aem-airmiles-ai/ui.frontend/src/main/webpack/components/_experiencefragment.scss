@@ -1,0 +1,328 @@
+// .cmp-experiencefragment {}
+
+.cmp-experiencefragment--header {
+  .cmp-container[role='header'] {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding: 0px 103px;
+
+    // Left and right side of the header
+    div.aem-Grid {
+      display: flex;
+
+      // Left side container: logo + navsites
+      div:first-child {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0%;
+      }
+      // Right side container: langnav + sign in
+      div:last-child {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0%;
+      }
+    }
+
+    .cmp-container {
+      .logo {
+        a {
+          height: 28px;
+        }
+      }
+
+      .navsites {
+        .cmp-navsites__icon,
+        #hamburger {
+          display: none;
+        }
+        // Hidden menu in desktop mode (langnav + sign in)
+        .cmp-navsites__rightMenu {
+          display: none;
+          flex-direction: column;
+        }
+
+        .cmp-navsites__item-link {
+          color: #ffffff;
+        }
+      }
+
+      .langnav {
+		.am-icon-globe {
+            font-size: 20px;
+        }
+        button {
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          color: #ffffff;
+          line-height: 20px;
+
+          .cmp-button__text {
+            font-size: 12px;
+            margin: 0px 4px;
+          }
+        }
+      }
+      // Sign in button
+      .button {
+        height: 40px;
+
+        a {
+          background-color: transparent;
+          border: 1px solid #ffffff;
+          border-radius: 5px;
+          color: #ffffff;
+          height: 100%;
+          margin: 0px 0px 0px 22px;
+          width: 190px;
+          text-align: center;
+
+          span {
+            font-size: 14px;
+            padding: 0px 30px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//* SMALL DEVICES
+
+@media screen and (min-width : 360px) and (max-width : 599px){
+  .cmp-experiencefragment--header {
+    .cmp-container[role='header'] {
+      padding: 0 16px!important;
+      div.aem-Grid {
+        div:last-child {
+          .cmp-container {
+            display: none;
+          }
+        }
+      }
+      .cmp-container {
+        .cmp-navsites {
+          padding-left: 20px;
+          ul.cmp-navsites__group {
+            font-size: 14px;
+            width: 274px;
+          }
+        }
+      }
+    }
+    .cmp-navsites__icon {
+      right: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .cmp-experiencefragment--header {
+    // Hide right container (langnav + sign in)
+    .cmp-container[role='header'] {
+      padding: 0px 56px;
+      div.aem-Grid {
+        div:last-child {
+          .cmp-container {
+            display: none;
+          }
+        }
+      }
+      // Transform horizontal menu to hamburger menu
+      .cmp-container {
+        flex-direction: row-reverse;
+        align-items: stretch;
+        .navsites {
+          
+          input {
+            display: none;
+          }
+
+          // Hamburguer menu to X
+          .cmp-navsites__icon {
+            margin-right: 24px;
+            transform: translate(-50%, -50%);
+          }
+          .cmp-navsites__hamburgerIcon {
+            display: inline-block;
+            color: white;
+            font-style: normal;
+            font-size: 1.2em;
+            padding: 10px;
+            position: absolute;
+            right: 103px;
+            top: 10px;
+            z-index: 99;
+          }
+
+          .cmp-navsites__icon,
+          .cmp-navsites__icon::before,
+          .cmp-navsites__icon::after {
+            width: 16px;
+            height: 2px;
+            background-color: #ffffff;
+            display: inline-block;
+          }
+
+          .cmp-navsites__icon::before,
+          .cmp-navsites__icon::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+          }
+
+          .cmp-navsites__icon:before {
+            top: -0.4rem;
+          }
+          .cmp-navsites__icon::after {
+            top: 0.4rem;
+          }
+
+          .checkbox:checked + .cmp-navsites__icon {
+            background-color: transparent;
+          }
+
+          .checkbox:checked + .cmp-navsites__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+          }
+          .checkbox:checked + .cmp-navsites__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+          }
+
+          // Navsites in mobile mode
+          .cmp-navsites__item {
+            // border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            display: block;
+            padding: 12px;
+            margin: 14px 0 10px 20px;
+            width: 100%;
+            &::before {
+              content: "";
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              font-family: icomoon!important;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 400;
+              line-height: 1;
+              text-transform: none;
+              padding-right: 4px;
+              }
+            }
+          li.cmp-navsites__item:hover {
+            background-color: #3a92e9;
+            border-radius: 10px;
+            // margin-left: 16px;
+          }
+          .cmp-navsites__group {
+            .cmp-navsites__rightMenu {
+              display: block;
+              div {
+                // border-bottom: 1px solid #ccc;
+                justify-content: flex-start;
+                padding: 12px;
+                margin: 14px 0 10px 20px;
+                &::before {
+                  content: "";
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                  font-family: icomoon!important;
+                  font-style: normal;
+                  font-variant: normal;
+                  font-weight: 400;
+                  text-transform: none;
+                  padding-right: 7px;
+                }
+              }
+              div:hover {
+                background-color: #3a92e9;
+                border-radius: 10px;
+                margin: 14px 0 10px 20px;
+              }
+              .langnav {
+                .cmp-button {
+                  padding: 0%;
+                  &__text {
+                    margin: 0%;
+                    font-size: 14px;
+                  }
+                  &__icon {
+                    display: none;
+                  }
+                }
+              }
+            }
+            background-color: #135582;
+            box-shadow: 0px 10px 15px 0px rgb(31, 31, 31);
+            color: #ffff;
+            display: block;
+            height: 100%;
+            left: 0;
+            padding-left: 0;
+            position: absolute;
+            top: 0;
+            transform: translate(-150%);
+            transition: transform 0.5s ease-in-out;
+            width: 360px;
+            z-index: 99;
+            li {
+             position: relative;
+              width: 90%;
+              a, button {
+              color:#ffff;
+            }
+          }
+          &-logo {
+            height: 60px;
+            margin-bottom: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffff;
+            .cmp-navsites__icon {
+              position: static;
+              &::before, &::after {
+                background-color: #135582;
+              }
+            }
+            img {
+            padding-left: 32px;
+            filter: invert(80%) sepia(97%) saturate(1323%) hue-rotate(182deg) brightness(92%) contrast(85%);
+            }
+            label {
+              margin-right: 25px;
+            }
+          }
+        }
+        .cmp-navsites input:checked ~ .cmp-navsites__group {
+          transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+.cmp-experiencefragment--header {
+  .cmp-container[role=header] {
+    div.aem-Grid {
+      div:first-child {
+        div.cmp-navsites__group-logo {
+          display: none;
+        }
+      }
+    }
+  }
+}  
+}

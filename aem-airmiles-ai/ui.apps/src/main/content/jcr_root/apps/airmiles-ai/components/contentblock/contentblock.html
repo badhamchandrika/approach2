@@ -1,0 +1,21 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	data-sly-use.block="ai.aem.airmiles.core.models.ContentBlockModel"
+	data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component" id="${component.id}"
+	class="cmp-contentblock cmp-contentblock__${block.backgroundColor}">
+
+
+	<div class="cmp-contentblock__inverted-${block.invertPlacement}">
+
+		<div class="cmp-contentblock__textbox">
+			<h1 class="cmp-contentblock__header">${block.headerText @context='html'}</h1>
+			<p class="cmp-contentblock__body">${block.bodyText @context='html'}</p>
+		</div>
+
+		<div class="cmp-contentblock__imagebox">
+			<img src="${block.image}" alt="${block.imageAltText}">
+		</div>
+
+	</div>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

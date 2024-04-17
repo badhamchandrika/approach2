@@ -1,0 +1,31 @@
+<nav data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 	data-sly-use.navModel="ai.aem.airmiles.core.models.NavSitesModel"
+	 	data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+  	id="${component.id}"
+		class="cmp-navsites"> 
+
+		<!-- Hamburger -->
+		<input type="checkbox" id="hamburger" class="checkbox"/>
+		<label class="cmp-navsites__icon" for="hamburger" aria-label="hamburguer Menu"></label>
+
+		<!-- Menu -->
+			<ul class="cmp-navsites__group" data-sly-list.site="${navModel.sites}">
+				<div class="cmp-navsites__group-logo" data-sly-test=${siteList.first}>
+					<img src="/content/dam/airmiles-ai/Logo.png" alt="Airmiles Logo">
+					<input type="checkbox" checked id="hamburgercheck" class="checkbox" />
+					<label class="cmp-navsites__icon" for="hamburger" aria-label="hamburguer Menu"></label>
+				</div>
+
+				<li class="cmp-navsites__item">
+					<a id="${site.idElement}" class="cmp-navsites__item-link" href="${site.linkURL @ extension = 'html'}">${site.linkText}</a>
+				</li>
+				<li data-sly-test=${siteList.last} class="cmp-navsites__rightMenu">
+					<div class="langnav" data-sly-resource="${ 'langnav' @ resourceType='airmiles-ai/components/langnav'}"></div>
+					<div class="cmp-button">
+						<a class="cmp-navsites__item-link" href="${navModel.signInURL}">${navModel.signInLabel}</a>
+					</div>
+				</li>
+			</ul>
+
+	</nav>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

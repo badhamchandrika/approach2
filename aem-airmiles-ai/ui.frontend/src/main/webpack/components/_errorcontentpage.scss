@@ -1,0 +1,93 @@
+.errorcontentpage{
+    .cmp-hero {
+        &-bluefilter{
+            background-color: #135582;
+            height: 100%;
+            opacity: .75;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        &-maincontainer {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &-content__container {
+            margin: 130px auto;
+            max-width: 672px;
+            padding-top: 85px;
+        }
+
+        &__productImage {
+            bottom: -75px;
+            margin: 0 auto;
+            max-width: 100%;
+            position: relative;
+            display: block;
+        }
+
+        &__title {
+            margin: 0;
+            color: white;
+            text-align: center;
+            font-family: 'Open Sans';
+            font-weight: 100;
+            font-size: 56px;
+            line-height: 64px;
+        }
+
+        &__subtitle {
+            color: white;
+            text-align: center;
+            font-family: 'Open Sans';
+            font-weight: 100;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &__cta {
+            border: 1px solid #ffffff;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 0 auto;
+            padding: 10px 50px;
+            text-decoration: none;
+            width: fit-content;
+            a {
+                color: #FFF;
+            }
+        }
+    }
+}
+/*----------------------------------------------*/
+/*-------------------Mobile Devices-------------*/
+
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width: 599px) {
+    .errorcontentpage{
+        .cmp-hero {
+            &-content__container {
+              margin: 40px 16px 32px 16px;
+            }
+        }
+    }    
+}
+/* Small Devices, Phones */
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .errorcontentpage{
+        .cmp-hero {
+            &-content__container {
+            max-width: 625px;
+            }
+        }
+    }
+}

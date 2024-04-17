@@ -1,0 +1,13 @@
+<a href="#main_title" class="skip-to-main-content-link">Skip to main content</a>
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	data-sly-use.logoModel="ai.aem.airmiles.core.models.LogoModel"
+	data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}"
+     class="cmp-logo">
+        
+     <a href="${logoModel.logoURL}">
+          <img src="${logoModel.logoImage}" alt="Airmies Logo">
+     </a>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

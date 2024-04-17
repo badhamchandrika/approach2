@@ -1,0 +1,12 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+	 data-sly-use.brandsModel="ai.aem.airmiles.core.models.BrandsModel"
+	 data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     id="${component.id}"
+	 class="cmp-brands">
+
+	<h2 class="cmp-brands__title">${brandsModel.wayfinderText}</h2>
+	<div data-sly-list.item="${brandsModel.brandsImages}" class="cmp-brands__imgContainer">
+    	<img src="${item.brandImage}" alt="${item.brandAltText}">
+    </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
