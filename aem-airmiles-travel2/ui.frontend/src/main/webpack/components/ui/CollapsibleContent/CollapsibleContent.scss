@@ -1,0 +1,57 @@
+@import "../../../site/variables";
+@import "../../../site/mixins";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+.collapsible {
+  @include media-breakpoint-up("lg") {
+    margin-top: amSizeUnit(2);
+  }
+
+  &__item {
+    border-top: amSizeMicro(1) solid amGrey(5);
+    margin-bottom: amSizeMicro(2); // margin added to display properly the focus-outline state.
+
+    &:last-child {
+      border-bottom: amSizeMicro(1) solid amGrey(5);
+    }
+    &:focus-within {
+      @include focus-outline();
+    }
+  }
+  &__button {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: amSteel(9);
+    display: flex;
+    justify-content: space-between;
+    padding: amSizeUnit(2);
+    width: 100%;
+
+    &:hover {
+      background-color: amSapphire(2);
+    }
+    &-text {
+      font-family: amFontFamily(2);
+      font-size: amFontSize(4);
+
+      .collapsible__button[aria-expanded="true"] & {
+        font-family: amFontFamily(9);
+      }
+    }
+    &-icon {
+      color: amTierBlue(3);
+      font-size: amFontSize(3);
+    }
+  }
+
+  &__collapse {
+    transition: height 0.3s;
+
+    &-content {
+      color: amSteel(9);
+      padding: 0 amSizeUnit(2) amSizeUnit(2);
+    }
+  }
+}

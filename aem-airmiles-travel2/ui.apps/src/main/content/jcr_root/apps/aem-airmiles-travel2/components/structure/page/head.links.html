@@ -1,0 +1,13 @@
+<sly data-sly-test.domain="${[request.scheme, '://',  request.serverName ] @ join = ''}"/>
+<sly data-sly-use.custom="${'ca.airmiles.travel.core.models.CustomResource' @ resourcePath=request.pathInfo}"
+     data-sly-test.autoCanonical="${[domain  , custom.breadcrumb] @ join ='', context='html'}"/>
+
+<link data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+      data-sly-test="${page.canonicalLink}"
+      rel="canonical" href="${properties.cq:canonicalUrl || autoCanonical || page.canonicalLink}">
+<link data-sly-test="${page.alternateLanguageLinks}"
+      data-sly-repeat="${page.alternateLanguageLinks.entrySet}"
+      rel="alternate" hreflang="${item.key.toLanguageTag}" href="${item.value}">
+<link rel="shortcut icon" href="/etc.clientlibs/airmiles/clientlibs/site/resources/favicon-rebrand.png" type="image/x-icon"/>
+
+<meta property="og:image" content="${domain}${ properties['cq:featuredimage/fileReference'] || properties.cardImagePath || '/content/dam/aem-airmiles-web/assets/a/air-miles-travel/images/site-pages/travel2_default.jpg' }" />

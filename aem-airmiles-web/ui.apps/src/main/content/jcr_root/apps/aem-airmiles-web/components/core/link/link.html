@@ -1,0 +1,8 @@
+<sly data-sly-use.model="${'com.aem.airmiles.web.core.models.LinkModel'}"  />
+<sly data-sly-test="${!model.authenticated}">
+  <div class="linkcontainer">
+    <a href="${model.url}" target="${model.target}">
+      <p class="linktext">${model.text}</p>
+    </a>
+  </div>
+</sly>

@@ -1,0 +1,47 @@
+<div class="cmp-hero-section" data-cmp-is="hero-section" data-sly-use.model="com.aem.airmiles.web.core.models.HeroSectionModel" data-track-section="${model.dataTrackSection}">
+  <section class="cmp-hero-section__container${model.fullBleed ? ' bsp-container-fluid' : ' bsp-container'} px-0">
+    <div class="cmp-hero-section__innerContainer">
+      <div class="cmp-hero-section__imageContainer">
+        <div class="cmp-hero-section__imageContainer__wrapper">
+          <sly data-sly-set.backgroundStyle="url(${model.imgCardBgSource}) ${model.imgCardBgColour ? model.imgCardBgColour : '' }" />
+          <div class="cmp-hero-section__imageContainer__card" style="background:${backgroundStyle @ context='unsafe'}">
+            <img alt="hero image" src="${model.imgPath}"/>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-hero-section__header" style="background-color:${model.headingBgColour @ context='styleToken'}">
+        <div class="cmp-hero-section__wrapper">
+          <div class="cmp-hero-section__header--text">
+            <h1 class="h1-headline" style="color:${model.headingTextColour @ context='styleToken'};">
+              ${model.heading}
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-hero-section__body" style="background-color:${model.bodyBgColour @ context='styleToken'}">
+        <div class="cmp-hero-section__wrapper">
+          <div class="cmp-hero-section__body--text">
+            <div class="body-text" style="color:${model.bodyTextColour @ context='styleToken'};">
+              ${model.description @ context='html'}
+            </div>
+            <div class="cmp-hero-section__body--cta d-flex" data-sly-list.ctaDetails="${model.ctaDetails}">
+              <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                  type=ctaDetails.linkType,
+                  href=ctaDetails.linkUrl,
+                  target=ctaDetails.linkTarget,
+                  text=ctaDetails.linkText,
+                  hexText=ctaDetails.hexTextColor,
+                  hexBtn=ctaDetails.hexBtnColor,
+                  dataTrackID=ctaDetails.dataTrackID,
+                  dataClickID=ctaDetails.dataClickID,
+                  dataTrackType=ctaDetails.dataTrackType,
+                  classes=ctaDetails.linkColor}">
+                </sly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

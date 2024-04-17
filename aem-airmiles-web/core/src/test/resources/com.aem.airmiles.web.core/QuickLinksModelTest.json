@@ -1,0 +1,12 @@
+{
+  "quicklinks": {
+    "jcr:primaryType": "nt:unstructured",
+    "paragraphScope": "all",
+    "active": "true",
+    "text": "QuickLinks Quick Links Description ,,, Title Help Title Help",
+    "sling:resourceType": "aem-airmiles-web/components/quicklinks",
+    "displayMode": "multi",
+    "fragmentPath": "/content/dam/aem-airmiles-web/cfs/quick-links"
+  }
+}
+

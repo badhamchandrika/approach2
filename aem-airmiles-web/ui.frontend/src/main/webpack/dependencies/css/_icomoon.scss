@@ -1,0 +1,687 @@
+// AM-icon
+// FIX ME: Revert to online font when deployed new one
+@font-face {
+  font-family: "AM-icon";
+  font-style: normal;
+  font-weight: normal;
+  src: url(https://airmiles-fonts.s3.amazonaws.com/AM-icon.ttf)format("truetype"),
+  url(https://airmiles-fonts.s3.amazonaws.com/AM-icon.woff) format("woff"),
+  url(https://airmiles-fonts.s3.amazonaws.com/AM-icon.svg#AM-icon)format("svg");
+}
+
+.am-icon {
+  font-family: 'AM-icon' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// ---------- Icon Set **** MAKE CHANGES TO ICONS HERE ---------
+.am-icon-print-secondary:before {
+  content: '\e920';
+}
+
+.am-icon-orders:before {
+  content: '\e940';
+}
+
+.am-icon-alert:before {
+  content: '\63';
+}
+
+.am-icon-checkmark:before {
+  content: '\e901';
+}
+
+.am-icon-functional-arrow-down:before {
+  content: '\e900';
+}
+
+.am-icon-functional-arrow-left:before {
+  content: '\e902';
+}
+
+.am-icon-functional-arrow-right:before {
+  content: '\e903';
+}
+
+.am-icon-functional-arrow-up:before {
+  content: '\e904';
+}
+
+.am-icon-functional-minus:before {
+  content: '\e905';
+}
+
+.am-icon-functional-plus:before {
+  content: '\e906';
+}
+
+.am-icon-functional-secondary-arrow-down:before {
+  content: '\e907';
+}
+
+.am-icon-functional-secondary-arrow-left:before {
+  content: '\e908';
+}
+
+.am-icon-functional-secondary-arrow-right:before {
+  content: '\e909';
+}
+
+.am-icon-functional-secondary-arrow-up:before {
+  content: '\e90a';
+}
+
+.am-icon-functional-secondary-close:before {
+  content: '\e90b';
+}
+
+.am-icon-functional-secondary-minus:before {
+  content: '\e90c';
+}
+
+.am-icon-functional-secondary-plus:before {
+  content: '\e90d';
+}
+
+.am-icon-functional-toggle-arrow-left:before {
+  content: '\e90e';
+}
+
+.am-icon-functional-toggle-arrow-right:before {
+  content: '\e91d';
+}
+
+.am-icon-delete:before {
+  content: '\e91e';
+}
+
+.am-icon-store-directory:before {
+  content: '\69';
+}
+
+.am-icon-popular-stores:before {
+  content: '\71';
+}
+
+.am-icon-deals-offers:before {
+  content: '\36';
+}
+
+.am-icon-how-it-works:before {
+  content: '\44';
+}
+
+.am-icon-check-in-challenge:before {
+  content: '\25';
+}
+
+.am-icon-partners:before {
+  content: '\6b';
+}
+
+.am-icon-shopping-list:before {
+  content: '\e90f';
+}
+
+.am-icon-dream-rewards:before {
+  content: '\34';
+}
+
+.am-icon-in-store-cash-rewards:before {
+  content: '\43';
+}
+
+.am-icon-search:before {
+  content: '\2d';
+}
+
+.am-icon-sign-out:before {
+  content: '\e910';
+}
+
+.am-icon-inbox:before {
+  content: '\e911';
+}
+
+.am-icon-transactions:before {
+  content: '\e912';
+}
+
+.am-icon-about:before {
+  content: '\e913';
+}
+
+.am-icon-account-lock:before {
+  content: '\e914';
+}
+
+.am-icon-set-balance:before {
+  content: '\e915';
+}
+
+.am-icon-inbox-unopened:before {
+  content: '\e916';
+}
+
+.am-icon-inbox-opened:before {
+  content: '\e917';
+}
+
+.am-icon-turn-device-to-zoom:before {
+  content: '\e918';
+}
+
+.am-icon-shop-in-store:before {
+  content: '\e919';
+}
+
+.am-icon-scan-for-mobile:before {
+  content: '\e91a';
+}
+
+.am-icon-print:before {
+  content: '\e91b';
+}
+
+.am-icon-desktop:before {
+  content: '\e91c';
+}
+
+.am-icon-tip:before {
+  content: '\67';
+}
+
+.am-icon-calculator:before {
+  content: '\3b';
+}
+
+.am-icon-sweep-stakes:before {
+  content: '\68';
+}
+
+.am-icon-events-attractions:before {
+  content: '\32';
+}
+
+.am-icon-merchandise:before {
+  content: '\78';
+}
+
+.am-icon-travel:before {
+  content: '\65';
+}
+
+.am-icon-in-store-cash-rewards2:before {
+  content: '\45';
+}
+
+.am-icon-online-cash-rewards:before {
+  content: '\77';
+}
+
+.am-icon-charity-platform:before {
+  content: '\5e';
+}
+
+.am-icon-photography:before {
+  content: '\79';
+}
+
+.am-icon-entertainment:before {
+  content: '\33';
+}
+
+.am-icon-computer-tablets:before {
+  content: '\21';
+}
+
+.am-icon-communications:before {
+  content: '\40';
+}
+
+.am-icon-accessories:before {
+  content: '\2f';
+}
+
+.am-icon-stage-pass:before {
+  content: '\6a';
+}
+
+.am-icon-exclusive-events:before {
+  content: '\22';
+}
+
+.am-icon-canada-fun-attractions:before {
+  content: '\28';
+}
+
+.am-icon-usa-fun-attractions:before {
+  content: '\62';
+}
+
+.am-icon-spas:before {
+  content: '\6c';
+}
+
+.am-icon-skis:before {
+  content: '\6d';
+}
+
+.am-icon-golf:before {
+  content: '\4b';
+}
+
+.am-icon-cooking:before {
+  content: '\39';
+}
+
+.am-icon-dining:before {
+  content: '\24';
+}
+
+.am-icon-beverages:before {
+  content: '\23';
+}
+.am-icon-appliances:before {
+  content: '\2b';
+}
+
+.am-icon-travel-insurance:before {
+  content: '\64';
+}
+
+.am-icon-package-vacation:before {
+  content: '\75';
+}
+
+.am-icon-hotel:before {
+  content: '\46';
+}
+
+.am-icon-cruises:before {
+  content: '\37';
+}
+
+.am-icon-car-rental:before {
+  content: '\2a';
+}
+
+.am-icon-home-care:before {
+  content: '\49';
+}
+
+.am-icon-home-decor:before {
+  content: '\47';
+}
+
+.am-icon-outdoor:before {
+  content: '\76';
+}
+
+.am-icon-tools-automotive:before {
+  content: '\66';
+}
+
+.am-icon-pets:before {
+  content: '\73';
+}
+
+.am-icon-countertop-appliances:before {
+  content: '\38';
+}
+
+.am-icon-chefs-tools-table-setting:before {
+  content: '\35';
+}
+
+.am-icon-pots-pans:before {
+  content: '\3a';
+}
+
+.am-icon-coffee-beverages:before {
+  content: '\26';
+}
+
+.am-icon-gift-card-zone:before {
+  content: '\4c';
+}
+
+.am-icon-active-lifestyle:before {
+  content: '\3d';
+}
+
+.am-icon-personal-care:before {
+  content: '\27';
+}
+
+.am-icon-fashion-accessories:before {
+  content: '\52';
+}
+
+.am-icon-luggage-bags:before {
+  content: '\7a';
+}
+
+.am-icon-kids-baby:before {
+  content: '\42';
+}
+
+.am-icon-hobbies-collectable:before {
+  content: '\4a';
+}
+
+.am-icon-fb-logo:before {
+  content: '\e921';
+}
+
+.am-icon-twitter-logo:before {
+  content: '\e922';
+}
+
+.am-icon-theatre-icon:before {
+  content: '\e923';
+}
+.am-icon-shape:before {
+  content: '\e925';
+}
+.am-icon-perks-key:before {
+  content: '\e926';
+}
+.am-icon-in-store-icon:before {
+  content: '\e927';
+}
+.am-icon-mangemyaccount-icon:before {
+  content: '\e928';
+}
+.am-icon-home-improvement-icon:before {
+  content: '\e929';
+}
+.am-icon-help-centre-where-can-i-fly:before {
+  content: '\e92a';
+}
+.am-icon-help-centre-update-profile:before {
+  content: '\e92b';
+}
+.am-icon-help-centre-reset-create-pin:before {
+  content: '\e92c';
+}
+.am-icon-help-centre-recent-transactns:before {
+  content: '\e92d';
+}
+.am-icon-help-centre-my-travel:before {
+  content: '\e92e';
+}
+.am-icon-headphones-icon:before {
+  content: '\e92f';
+}
+.am-icon-grocery-icon:before {
+  content: '\e930';
+}
+.am-icon-gold-program-icon:before {
+  content: '\e931';
+}
+.am-icon-get-rewarded-icon:before {
+  content: '\e932';
+}
+.am-icon-cc-icon:before {
+  content: '\e924';
+}
+.am-icon-transfer-icon {
+  // Special case since this icon is really wide.
+  font-size: 26px;
+  margin-right: 70px;
+  &:before {
+    content: '\e933';
+  }
+}
+.am-icon-online-icon:before {
+  content: '\e934';
+}
+
+.am-icon-home:before {
+  content: '\e935';
+}
+
+.am-icon-offers-add:before {
+  content: '\e936';
+}
+
+.am-icon-offers-barcode:before {
+  content: '\e937';
+}
+
+.am-icon-offers-checkmark:before {
+  content: '\e938';
+}
+
+.am-icon-offers-gtg:before {
+  content: '\e939';
+}
+
+.am-icon-upload:before {
+  content: '\e94d';
+}
+
+.am-icon-offers-tag:before {
+  content: '\e93a';
+}
+
+.am-icon-edit:before {
+  content: '\e93b';
+}
+
+.am-icon-help-circle:before {
+  content: '\e942';
+}
+
+.am-icon-check-selected:before {
+  content: '\e91f';
+  width: auto;
+}
+
+.am-icon-address:before {
+  content: '\e941';
+}
+
+.am-icon-phone:before {
+  content: '\e947';
+}
+
+.am-icon-profile:before {
+  content: '\e948';
+}
+
+.am-icon-back-to-top:before {
+  content: '\e943';
+}
+
+.am-icon-transfer-miles:before {
+  content: '\e93c';
+}
+
+.am-icon-missing-miles:before {
+  content: '\e953';
+}
+
+.am-icon-buy-miles:before {
+  content: '\e954';
+}
+
+.am-icon-replace-card:before {
+  content: '\e955';
+}
+
+.am-icon-cash-rewards:before {
+  content: '\e944';
+}
+
+.am-icon-shipping_icon:before {
+  content: "\e94a";
+}
+
+.am-icon-airmiles-explained:before {
+  content: "\e946";
+}
+
+.am-icon-business:before {
+  content: "\e94b";
+}
+
+.am-icon-onyx:before {
+  content: "\e94c";
+}
+
+.am-icon-security:before {
+  content: "\e94e";
+}
+
+.am-icon-shipping-and-delivery:before {
+  content: "\e94f";
+}
+
+.am-icon-social-media:before {
+  content: "\e950";
+}
+
+.am-icon-travel-insurance-2:before {
+  content: "\e951";
+}
+
+.am-icon-warning-icon:before {
+  content: "\e952";
+}
+
+.am-icon-info_icon:before {
+  content: "\e956";
+}
+
+.am-icon-info:before {
+  content: "\e957";
+}
+
+.am-icon-download:before {
+  content: "\e958";
+}
+
+.am-icon-external-link:before {
+  content: "\e959";
+}
+
+.am-icon-external-link-alt:before {
+  content: "\e95a";
+}
+
+.am-icon-unlocked-icon:before {
+  content: "\e95b";
+}
+
+.am-icon-locked-icon:before {
+  content: "\e95c";
+}
+
+.am-icon-ticket:before {
+  content: "\e95d";
+}
+
+.am-icon-arrow-down-alt:before {
+  content: "\e95e";
+}
+
+.am-icon-cash-miles:before {
+  content: "\e960";
+}
+
+.am-icon-personal-shopper:before {
+  content: "\e961";
+}
+
+.am-icon-collect-together:before {
+  content: "\e95f";
+}
+
+.am-icon-gift-miles:before {
+  content: "\e966";
+}
+
+.am-icon-merge-profiles:before {
+  content: "\e967";
+}
+
+.am-icon-shield-checkmark:before {
+  content: "\e968";
+}
+
+.am-icon-tag-percentage:before {
+  content: "\e969";
+}
+
+.am-icon-shopping-bag:before {
+  content: "\e962";
+}
+
+.am-icon-offers-save-icon:before {
+  content: "\e96a";
+}
+
+.am-icon-save-to-opt-in:before {
+  content: "\e963";
+}
+
+.am-icon-get-miles-twice:before {
+  content: "\e971";
+}
+
+.am-icon-get-miles-on-daily:before {
+  content: "\e970";
+}
+
+.am-icon-extra-benefits:before {
+  content: "\e96f";
+}
+
+.am-icon-icons-primary-bonus:before {
+  content: "\e96e";
+}
+
+.am-icon-cash-miles-icon:before {
+  content: "\e96d";
+}
+
+.am-icon-partners-logo:before {
+  content: "\e96c";
+}
+
+.am-icon-multiplier-logo:before {
+  content: "\e96b";
+}
+
+.am-icon-dream-rewards-icon:before {
+  content: "\e965";
+}
+
+.am-icon-credit-card-logo:before {
+  content: "\e964";
+}
+
+.am-icon-tier-oynx:before {
+  content: "\e975";
+}
+
+.am-icon-tier-gold:before {
+  content: "\e974";
+}
+
+.am-icon-tier-blue:before {
+  content: "\e973";
+}
+
+.am-icon-am-logo:before {
+  content: "\e972";
+}
+
+.am-icon-travel-seat-plum:before {
+  content: "\e976";
+}
+.am-icon-reward:before {
+  content: "\e977";
+}

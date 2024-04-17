@@ -1,0 +1,44 @@
+@for $i from 1 to 22 {
+  $step: 125;
+  $start: 375;
+  .--am-base-font-size-#{$i} {
+    $num: $step*$i+$start;
+    font-size: #{divide($num, 1000)}rem;
+  }
+}
+@for $i from 1 to 10 {
+  $step: 100;
+  .--am-base-font-weight-#{$i*100} {
+    font-weight: $step*$i;
+  }
+}
+.--am-base-font-weight-bold {
+  font-weight: bold;
+}
+
+$fonttypes: 'ArchivoRegular','Montserrat','Cailbri','Arial','Helvetica','Helvetica Neue','san-serif';
+@each $type in $fonttypes {
+  $i: index($fonttypes, $type);
+  .--am-base-font-san-serif-#{$i} {
+    font-family: $type, sans-serif;
+  }
+}
+
+$fontcolors: ("black": "#000", "dark": "#555", "grey": "#888", "lite-grey": "#BBB", "brand-blue": "#135582", "white": "#FFF");
+@each $name, $hexcode in $fontcolors {
+  .--am-base-font-color-#{$name} {
+    color: #{$hexcode};
+  }
+}
+@for $i from 1 to 11 {
+  $percent: $i*10+'%';
+  .--am-base-gray-scale-#{$i*10} {
+    filter: #{"grayscale(#{$percent})"};
+  }
+}
+@for $i from 1 to 61 {
+  $height: $i*0.5;
+  .--am-base-height-#{$i} {
+    height: #{$height}rem!important;
+  }
+}

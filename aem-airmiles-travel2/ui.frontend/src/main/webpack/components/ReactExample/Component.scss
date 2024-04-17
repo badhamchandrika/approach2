@@ -1,0 +1,26 @@
+.ReactTest {
+    padding: 0 5rem;
+    color: #131582;
+    
+    &__title{
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    &__count{
+        font-size: 3rem;
+        font-weight: bold;
+        color: #404040;
+    }
+
+    &__btn {
+        border: none;
+        padding: 0.4rem 2rem;
+        color: #fff;
+        background-color: #131582;
+        font-weight: bold;
+        border-radius: 8px;
+        margin: 8px;
+        cursor: pointer;
+    }
+}

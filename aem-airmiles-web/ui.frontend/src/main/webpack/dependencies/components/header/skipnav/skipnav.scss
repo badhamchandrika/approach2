@@ -1,0 +1,20 @@
+$abs-height: 4rem;
+.skipnav{
+  position: absolute;
+  top: -$abs-height;
+  left: 0;
+  width: 100%;
+  background-color: color('blue-background');
+  z-index: 1;
+  font-size: 1.25rem;
+  &-anchor{
+    height: $abs-height;
+    margin-top: 0;
+    transition:margin-top .3s, transform .3s;
+    padding: 1rem 0;
+    color: color('brand-blue');
+    &:focus{
+      margin-top: $abs-height;
+    }
+  }
+}

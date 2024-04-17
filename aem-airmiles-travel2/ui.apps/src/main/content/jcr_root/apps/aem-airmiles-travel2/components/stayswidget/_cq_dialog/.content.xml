@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Stays Widget"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <roomsType
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Rooms Type"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="DropDown Heading"
+                                                name="./roomsTypeHeading"/>
+                                            <details
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Rooms Type List">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./roomsTypeList">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <target
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            emptyText="Dropdown Values"
+                                                            fieldLabel="DropDown Values"
+                                                            name="./typeList"/>
+                                                    </items>
+                                                </field>
+                                            </details>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </roomsType>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CTA"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <widgetTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Widget title (for small/vertical widget only)"
+                                                name="./widgetTitle" />
+                                            <buttontext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="ButtonText"
+                                                name="./buttonText"/>
+                                            <advsearchtext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Advanced Search Text"
+                                                name="./advSearchText"/>
+                                            <tolocation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Going To (Placeholder Text)"
+                                                name="./toLocationText"/>
+                                            <checkinLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Check-in Label"
+                                                name="./checkinLabel"/>
+                                            <checkinText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Check-in (Placeholder Text)"
+                                                name="./checkinText"/>
+                                            <checkoutLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Check-out Label"
+                                                name="./checkoutLabel"/>
+                                            <checkoutText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Check-out (Placeholder Text)"
+                                                name="./checkoutText"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </cta>
+                    <superUser
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Special Configs"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <granite:rendercondition
+                            jcr:primaryType="nt:unstructured"
+                            groups="[travel-superuser]"
+                            sling:resourceType="/apps/aem-airmiles-travel2/components/includes/renderconditions/groups"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <featureFlags
+                                                        jcr:title="Feature flags"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <parentConfig jcr:primaryType="nt:unstructured" active="{Boolean}true" />
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <hasProgressive
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./hasProgressive"
+                                                                text="Activate Progressive Disclosure"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true" />
+                                                            <hasWidgetUpdates
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./hasWidgetUpdates"
+                                                                text="Show widget updates"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"
+                                                                disabled="{Boolean}true" />
+                                                        </items>
+                                                    </featureFlags>
+                                                    <section
+                                                        jcr:title="Advanced search"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <advancedsearchtextinit
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Advanced search text init"
+                                                                name="./advSearchTextInit"/>
+                                                        </items>
+                                                    </section>
+                                                    <section1
+                                                        jcr:title="Headers"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <headermissinginfo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Header missing info"
+                                                                name="./headerMissingInfo"/>
+                                                            <headerseefields
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Header see fields"
+                                                                name="./headerSeeFields"/>
+                                                        </items>
+                                                    </section1>
+                                                    <section2
+                                                            jcr:title="Payment"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <creditCardDescription
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Credit Card Description"
+                                                                    name="./creditCardDescription">
+                                                            </creditCardDescription>
+                                                            <dreamMilesDescription
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Dream Miles Description"
+                                                                    useFixedInlineToolbar="{Boolean}true"
+                                                                    name="./dreamMilesDescription">
+                                                            </dreamMilesDescription>
+                                                        </items>
+                                                    </section2>
+                                                    <section3
+                                                            jcr:title="Validations"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <emptyfield
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Empty field"
+                                                                    name="./emptyField">
+                                                            </emptyfield>
+                                                            <msgemptyfield
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Empty field message"
+                                                                    name="./msgEmptyField">
+                                                            </msgemptyfield>
+                                                        </items>
+                                                    </section3>
+                                                    <notification
+                                                        jcr:title="Notification"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <noticeMessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Notification Message"
+                                                                name="./noticeMessage" />
+                                                            <showmultiheadermessage
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                cq:showOnCreate="{Boolean}true"
+                                                                name="./showMultiHeaderMessage"
+                                                                text="Show Multi Header Message"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                        </items>
+                                                    </notification>
+                                                </items>
+                                            </field>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </superUser>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

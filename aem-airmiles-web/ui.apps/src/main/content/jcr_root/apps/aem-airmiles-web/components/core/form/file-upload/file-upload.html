@@ -1,0 +1,39 @@
+<div data-sly-use.tmp="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.model="com.aem.airmiles.web.core.models.FileUploadModel"
+     data-sly-test.hasContent="${model.dndTxt}"
+     class="cmp-form-archive-upload"
+     id="${model.id}">
+    <div class="cmp-form-archive-upload__drop-area d-sm-block d-md-flex"
+         data-max-files="${model.maxAttachments}"
+         data-min-files="${model.minAttachments}"
+         data-allowed-extensions="${model.allowedFormats}"
+         data-allowed-size="${model.maxFile}"
+         data-upload-error="${model.uploadError}"
+         data-upload-done="${model.uploadDone}"
+         data-upload-wip="${model.uploadWip}"
+         data-dnd-txt="${model.dndTxt}">
+        <div class="am-icon2 am-icon2-icon-file-upload"></div>
+        <div class="ps-4">
+            <p class="cmp-form-archive-upload__drop--text pb-2"
+               data-sly-set.fu="${model.fileUploadTxt}">
+                ${model.dndTxt} ${fu ? ' or ' : '' @i18n}
+                <span class="d-block d-md-inline text-center">
+                    <span data-sly-test="${fu}" class="cmp-form-archive-upload__choose--file" >${fu}</span>
+                    <span data-sly-test="${properties.required}" class="file-required">*</span>
+                </span>
+            </p>
+            <p class="cmp-form-archive-upload__short-desc">${model.shortDescription}</p>
+            <input type="file" class="file-input" multiple required="${properties.required}">
+        </div>
+    </div>
+    <span data-sly-test="${properties.requiredMessage}" class="cmp-form-text__error am-icon2 am-icon2-critical-empty hide-element pt-2">
+              ${properties.requiredMessage}
+    </span>
+    <div class="cmp-form-archive-upload__uploaded--files d-none">
+        <span class="cmp-form-archive-upload__uploaded--files--text">${model.uploadedSectionTitle}</span>
+        <span class="cmp-form-archive-upload__uploaded--files--number"></span>
+    </div>
+    <ul class="cmp-form-archive-upload__uploaded--list d-none">
+    </ul>
+</div>
+<sly data-sly-call="${tmp.placeholder @ isEmpty=!hasContent, classAppend='cmp-form-archive-upload__placehlder'}"></sly>

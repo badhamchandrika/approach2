@@ -1,0 +1,29 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Mon Jan 02 2023 18:30:09 GMT+0000",
+  "jcr:content": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "icons-list",
+    "cq:lastModified": "Mon Jan 02 2023 18:30:32 GMT+0000",
+    "sling:resourceType": "acs-commons/components/utilities/genericlist",
+    "cq:lastModifiedBy": "admin",
+    "image": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/apps/acs-commons/components/utilities/genericlist/generic-list.png"
+    },
+    "list": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:title": "about",
+        "value": "about"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:title": "account-lock",
+        "value": "account-lock"
+      }
+    }
+  }
+}

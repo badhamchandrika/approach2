@@ -1,0 +1,13 @@
+.breadcrumb {
+    .cmp-breadcrumb {
+        width: 100%;
+
+        &__item {
+            color: amBlue(2);
+
+            &-link {
+                color: amBlue(2);
+            }
+        }
+    }
+}

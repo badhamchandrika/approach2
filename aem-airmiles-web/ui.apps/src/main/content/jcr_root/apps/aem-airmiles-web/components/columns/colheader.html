@@ -1,0 +1,33 @@
+<div class="row no-gutters" role="region" aria-label="header">
+    <div class="columns-header__sky col-12 order-1 order-md-0">
+        <div class="bsp-container-fluid g-0">
+            <div class="section-wrapper">
+                <sly data-sly-resource="${@path='topsky', resourceType='foundation/components/parsys'}"></sly>
+            </div>
+        </div>
+    </div>
+    <div class="columns-header__top col-12 d-none d-md-block">
+        <div class="bsp-container-fluid bsp-container-lg columns-header__px">
+            <div class="row section-wrapper">
+                <div class="col-12">
+                    <sly data-sly-resource="${@path='topcol', resourceType='foundation/components/parsys'}"></sly>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns-header__bottom col-12">
+        <div class="bsp-container-fluid bsp-container-lg columns-header__px">
+            <div class="row section-wrapper">
+                <div class="col-5 col-md-2 ms-auto my-auto order-md-3">
+                    <sly data-sly-resource="${@path='bottomsearchcol', resourceType='foundation/components/parsys'}"></sly>
+                </div>
+                <div class="col-3 col-md-1 d-flex my-auto order-md-1 logo-fix">
+                    <sly data-sly-resource="${@path='bottomlogocol', resourceType='foundation/components/parsys'}"></sly>
+                </div>
+                <div class="col-4 col-md-9 d-flex order-md-2 justify-content-end justify-content-md-start p-0">
+                    <sly data-sly-resource="${@path='bottomnavcol', resourceType='foundation/components/parsys'}"></sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

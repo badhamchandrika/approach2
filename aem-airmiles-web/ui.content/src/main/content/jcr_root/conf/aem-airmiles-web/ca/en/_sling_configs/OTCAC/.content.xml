@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            jcr:mixinTypes="[mix:versionable]"
+            jcr:primaryType="cq:PageContent"
+            jcr:uuid="6dd8a80c-e07f-4090-8e6d-3e06efdb5b6f"
+            sdkStubScript="dev|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js,rde|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js,stage|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js,prod|https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+            consentId="dev|5d79e4c6-e23a-4ffb-8072-55c589a87708-test,rde|5d79e4c6-e23a-4ffb-8072-55c589a87708-test,stage|5d79e4c6-e23a-4ffb-8072-55c589a87708-test,prod|5d79e4c6-e23a-4ffb-8072-55c589a87708"/>
+</jcr:root>

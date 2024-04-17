@@ -1,0 +1,128 @@
+html {
+  scroll-padding-top: $sticky_notibar_height_md_down;
+  @include media-breakpoint-up("md") {
+    scroll-padding-top: $sticky_notibar_height_md_up;
+  }
+}
+
+// using alert-message class to avoid collision with bootstrap classes
+.alert-message {
+  $container: &;
+  $radius: amSizeMicro(4);
+
+  border-radius: $radius;
+  border: 1px solid amGrey(5);
+  display: flex;
+  margin-bottom: amSizeUnit(3);
+  position: relative;
+
+  &__edge {
+    @include alert-edge($radius);
+
+    &--info {
+      background-color: amTierBlue(3);
+    }
+    &--error {
+      background-color: amRuby(9);
+    }
+    &--warning {
+      background-color: amCitrine(8);
+    }
+  }
+
+  &__icon {
+    @include alert-icon();
+    margin: amSizeUnit(1);
+    
+    @include media-breakpoint-up("md") {
+      margin: amSizeUnit(2);
+      margin-right: calc(amSizeUnit(1) * 1.5);
+    }
+
+    #{$container}--single & {
+      display: flex;
+      margin-top: amSizeUnit(1);
+      margin-bottom: amSizeUnit(1);
+    }
+
+    #{$container}--dropdown & {
+      font-size: amFontSize(12);
+      margin: amSizeUnit(1);
+
+      @include media-breakpoint-up("md") {
+        margin-left: calc(amSizeUnit(1) * 1.5);
+      }
+    }
+
+    &--error {
+      color: amRuby(9);
+    }
+    &--info {
+      color: amTierBlue(3);
+    }
+    &--warning {
+      color: amCitrine(8);
+    }
+  }
+
+  &__body {
+    font-family: amFontFamily(2);
+    font-size: amFontSize(4);
+    padding: amSizeUnit(1) amSizeUnit(1) amSizeUnit(1) 0;
+
+    @include media-breakpoint-up("xl") {
+      font-size: amFontSize(5);
+    }
+
+    @include media-breakpoint-up("md") {
+      padding: amSizeUnit(2) amSizeUnit(2) amSizeUnit(1) 0;
+    }
+
+    #{$container}--dropdown & {
+      font-size: amFontSize(4);
+      line-height: 1;
+      padding: amSizeUnit(1) amSizeUnit(1) amSizeUnit(1) 0;
+    }
+
+    &-type {
+      color: amSteel(9);
+      font-family: amFontFamily(9);
+      font-weight: 700;
+    }
+
+    &-message {
+      color: amSteel(7);
+      font-family: amFontFamily(2);
+      font-weight: 400;
+
+      a {
+        font-family: amFontFamily(2);
+        color: amTierBlue(3);
+
+        &:hover {
+          color: amStarySky(9);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  ul,
+  ol {
+    list-style-position: inside;
+    list-style-type: none;
+    margin-left: amSizeUnit(2);
+    margin-top: amSizeUnit(1);
+
+    li {
+      &::before {
+        content: "\2022";
+        display: inline-block;
+        width: 1em;
+      }
+      a {
+        color: amTierBlue(3);
+      }
+    }
+  }
+}

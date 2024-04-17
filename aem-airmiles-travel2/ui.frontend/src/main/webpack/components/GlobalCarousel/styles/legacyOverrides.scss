@@ -1,0 +1,51 @@
+@import './typographyV3.scss';
+@import './typographyV3Rebrand.scss';
+
+html {
+  body {
+    h1,
+    .h1 {
+      font-size: $am-font-size-2;
+      @include font-weight-light();
+      color: $am-font-blue;
+    };s
+
+    h2,
+    .h2 {
+      font-size: $am-line-height-4;
+      @include font-weight-light();
+      color: $am-font-blue;
+    }
+
+    h3,
+    .h3 {
+      font-size: $am-line-height-7;
+      @include font-weight-regular();
+      color: $am-font-grey;
+    }
+
+    h4,
+    .h4 {
+      font-size: $am-line-height-8;
+      @include font-weight-regular();
+      color: $am-font-grey;
+    }
+
+    h5,
+    .h5 {
+      font-size: $am-line-height-8;
+      @include font-weight-light();
+      color: $am-font-grey;
+    }
+
+    strong {
+      @include font-weight-medium();
+    }
+
+    sup {
+      vertical-align: super;
+      font-size: $am-font-size-10;
+      @include font-weight-light();
+    }
+  }
+}

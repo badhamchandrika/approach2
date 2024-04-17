@@ -1,0 +1,10 @@
+{
+  "jcr:primaryType": "sling:Folder",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Nov 03 2022 10:31:51 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Flights",
+    "sourcing": "false"
+  }
+}

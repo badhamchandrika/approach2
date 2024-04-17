@@ -1,0 +1,80 @@
+<template data-sly-template.modalParameters="${@ backToOfferText, backToOffersDataTrackID, backToOffersDataClickID,
+    backToOffersDataTrackType, fullDetailText, offerStartText, offerEndsText, seeAllPartnersTitle, miniFeedTitle, termsTitle}">
+    <div class="alloffers-detail">
+        <div class="alloffers-detail__container float-lg-end" role="region" aria-label="offer detail container">
+            <a href="javascript:void(0);" aria-label="${backToOfferText}" class="alloffers-detail__backbutton"
+                data-track-id="${backToOffersDataTrackID}"
+                data-track-click="${backToOffersDataClickID}"
+                data-track-type="${backToOffersDataTrackType}">
+                <span class="am-icon2 am-icon2-arrow-left" aria-hidden="true"></span>
+                ${backToOfferText}
+            </a>
+            <div class="alloffers-detail__content row">
+                <div class="col-12 col-md-5 alloffers-detail__left position-relative ps-md-0">
+                    <div class="position-absolute loader-shin w-100 h-100 bg-white pe-3">
+                        <img class="alloffers-offers__loader__image" src="/etc.clientlibs/aem-airmiles-web/clientlibs/clientlib-offers-site/resources/images/detail_offer_picture.svg" alt="preload background" />
+                    </div>
+                    <div class="alloffers-detail__partner__logo d-md-none"><img src="" alt="" /></div>
+                    <div class="alloffers-detail__image"><img src="" alt="" /></div>
+                </div>
+                <div class="col-12 col-md-7 alloffers-detail__right position-relative pt-3 pt-md-0 py-0 pe-md-0">
+                    <div class="position-absolute loader-shin w-100 h-100 bg-white pe-md-2 pe-3">
+                        <img class="alloffers-offers__loader__image" src="/etc.clientlibs/aem-airmiles-web/clientlibs/clientlib-offers-site/resources/images/detail_offer_content.svg" alt="preload background" />
+                    </div>
+                    <div class="alloffers-detail__promotion"></div>
+
+                    <a href="javascript:void(0);" aria-label="save" class="alloffers-detail__saved" data-saved-id="">
+                        <div class="icon saved">
+                            <svg class="saved-heart am-icon2 am-icon2-heart-empty">
+                                <path d="M11.91,20.571s9.5-6.3,11.706-12.2h0c.83-7.182-6.31-9.013-9.835-6.694L11.91,3.084,9.93,1.673c-5.7-3.184-10.3,2.618-9.5,6.694h0C2.588,14.173,11.91,20.571,11.91,20.571Z"
+                                    transform="translate(0.45 0.136)" />
+                                <path class="heart-full"
+                                    d="M11.91,20.571s9.5-6.3,11.706-12.2h0c.83-7.182-6.31-9.013-9.835-6.694L11.91,3.084,9.93,1.673c-5.7-3.184-10.3,2.618-9.5,6.694h0C2.588,14.173,11.91,20.571,11.91,20.571Z"
+                                    transform="translate(0.45 0.136)" />
+                            </svg>
+                            <svg class="transition">
+                                <path class="heart-transition"
+                                    d="M11.91,20.571s9.5-6.3,11.706-12.2h0c.83-7.182-6.31-9.013-9.835-6.694L11.91,3.084,9.93,1.673c-5.7-3.184-10.3,2.618-9.5,6.694h0C2.588,14.173,11.91,20.571,11.91,20.571Z" />
+                            </svg>
+                        </div>
+                    </a>
+
+                    <div class="alloffers-detail__tiers"></div>
+                    <div class="alloffers-detail__full pb-3 d-none">
+                        <a href="javascript:void(0);" aria-label="${fullDetailText}">${fullDetailText}</a>
+                        <div class="alloffers-detail__full__content d-none pb-3"></div>
+                    </div>
+
+                    <div class="alloffers-detail__offer-end">
+                        <strong class="alloffers-detail__start-text d-none">${offerStartText}</strong>
+                        <strong class="alloffers-detail__end-text d-none">${offerEndsText}</strong>
+                        <span class="alloffers-detail__date"></span>
+                    </div>
+                    <div class="alloffers-detail__tag text-center">
+                        <!--/* JS feed */-->
+                    </div>
+                    <div class="alloffers-detail__partner d-flex justify-content-start">
+                        <div class="alloffers-detail__partner__slogo my-auto">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="alloffers-detail__partner__ribbon">
+                            <div class="alloffers-detail__partner__name"></div>
+                            <div class="alloffers-detail__partner__offers"><a href="#" target="_self" class="alloffers-detail__partner__link">${seeAllPartnersTitle}</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 pt-5 alloffers-detail__minicards">
+                <h2 class="py-3">${miniFeedTitle}</h2>
+                <div class="alloffers-detail__slides"></div>
+            </div>
+            <div class="alloffers-detail__content row">
+                <div class="alloffers-detail__terms_cond col-12">
+                    <hr />
+                    <h4 class="alloffers-detail__termsTitle py-3" aria-hidden="true"><span class='am-icon am-icon-functional-arrow-up' aria-hidden="true"></span> ${termsTitle}</h4>
+                    <div class="alloffers-detail__terms"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,70 @@
+<sly data-sly-use.adCountModel="ca.airmiles.travel.core.models.AdBannersModel" />
+<sly data-sly-test="${adCountModel.enableGoogleAdSense}">
+    <script class="optanon-category-C0004 " type="${inheritedPageProperties.enableOneTrustAutoblock == 'false' ? 'text/plain' : 'text/javascript'  @ context='attribute'}" async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script class="optanon-category-C0004 " type="${inheritedPageProperties.enableOneTrustAutoblock == 'false' ? 'text/plain' : 'text/javascript'  @ context='attribute'}">
+        let adArray = [];
+        let _obj;
+    </script>
+    <sly data-sly-list.adCount="${adCountModel.adDetails}">
+        <script class="optanon-category-C0004 " type="${inheritedPageProperties.enableOneTrustAutoblock == 'false' ? 'text/plain' : 'text/javascript'  @ context='attribute'}">
+            _obj = {
+                "id":"${adCount.adSlotAdID @ context='attribute'}",
+                "size":"${adCount.adSlotAdSize @ context='attribute'}",
+                "path":"${adCount.adSlotAdPath @ context='attribute'}"
+            }
+            adArray.push( _obj );
+        </script>
+    </sly>
+    <script class="optanon-category-C0004 " type="${inheritedPageProperties.enableOneTrustAutoblock == 'false' ? 'text/plain' : 'text/javascript'  @ context='attribute'}">
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+            let leaderboardMapping =
+                googletag.sizeMapping()
+                    .addSize([985, 0], [970, 90])
+                    .addSize([768, 0], [728, 90])
+                    .addSize([0,0], [320, 50])
+                    .build();
+            let billboardMapping =
+                googletag.sizeMapping()
+                    .addSize([985, 0], [970, 250])
+                    .addSize([768, 0], [728, 90])
+                    .addSize([0,0], [300, 250])
+                    .build();
+            let medRectMapping =
+                googletag.sizeMapping()
+                    .addSize([1224, 0], [300, 250])
+                    .addSize([985, 0], [])
+                    .addSize([768, 0], [728, 90])
+                    .addSize([0, 0], [300,250])
+                    .build();
+            function getBoardSize(adUnitSize){
+                let boards;
+                switch (adUnitSize){
+                    case 'leaderboard':
+                        boards = leaderboardMapping;
+                        break;
+                    case 'billboard':
+                        boards = billboardMapping;
+                        break;
+                    case 'mediumRectangle':
+                        boards = medRectMapping;
+                        break;
+                }
+                return boards;
+            }
+            for(let adData of adArray){
+                let adUnitSize = adData['size'];
+                let adSlot =
+                    googletag.defineSlot(
+                        adData['path'],
+                        [[300, 250], [320, 50], [728, 90], [970, 90], [970, 250]],
+                        adData['id']
+                    ).addService(googletag.pubads());
+                adSlot.defineSizeMapping( getBoardSize(adUnitSize) );
+            }
+            window.googletag.pubads().disableInitialLoad();
+            window.googletag.pubads().enableSingleRequest();
+            window.googletag.enableServices();
+        });
+    </script>
+</sly>

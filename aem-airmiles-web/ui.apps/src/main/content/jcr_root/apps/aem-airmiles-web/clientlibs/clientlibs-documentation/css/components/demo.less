@@ -1,0 +1,121 @@
+.cmp-examples-demo {
+    position: relative;
+    margin: 1.5rem 0 5rem;
+    border: 0.0625rem solid #d3d3d3;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+}
+
+.cmp-examples-demo__top {
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 11.25rem;
+    border-radius: 0.25rem;
+    padding: 1rem;
+
+    @media only screen and (min-width: 768px) {
+        padding: 1.5rem;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        padding: 2.5rem;
+    }
+}
+
+.cmp-examples-demo__component--widthFull {
+    width: 100%;
+}
+
+.cmp-examples-demo__info {
+    position: relative;
+    display: none;
+
+    .cmp-tabs__tablist {
+        margin: 0;
+        padding-left: 0.5rem;
+        border: 0.0625rem solid #d3d3d3;
+        border-width: 0.0625rem 0 0 0;
+    }
+
+    .cmp-tabs__tab {
+        margin-bottom: -0.0625rem;
+        border-bottom: 0.125rem solid transparent;
+        padding: 0.75rem 1rem 0.625rem 1rem;
+        font-size: 0.875rem;
+        line-height: 1.2;
+        visibility: hidden;
+        color: #505050;
+
+        &:hover,
+        &--active {
+            color: #323232;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    @media only screen and (min-width: 480px) {
+        display: block;
+    }
+}
+
+.cmp-examples-demo__info-actions {
+    position: absolute;
+    top: 0;
+    right: 0.25rem;
+}
+
+.cmp-examples-demo__info-content {
+    width: auto;
+    height: 0;
+    margin: 0;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    overflow: auto;
+    transition: height 120ms ease-in-out;
+}
+
+.cmp-examples-demo__properties {
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+    color: #bcbcbc;
+    overflow: auto;
+    white-space: nowrap;
+    list-style-type: decimal;
+
+    .cmp-examples-demo__property-title {
+        padding-left: 1rem;
+        color: rgb(20, 115, 230);
+    }
+
+    .cmp-examples-demo__property-value {
+        color: rgb(18, 128, 92);
+    }
+
+    .cmp-examples-demo__property-separator {
+        color: rgb(50, 50, 50);
+    }
+}
+
+.cmp-examples-demo__info--open {
+    .cmp-examples-demo__info-content {
+        height: 13.5rem;
+    }
+
+    .cmp-tabs__tablist {
+        border-bottom-width: 0.0625rem;
+    }
+
+    .cmp-tabs__tab {
+        visibility: visible;
+
+        &--active {
+            border-color: #323232;
+        }
+    }
+}

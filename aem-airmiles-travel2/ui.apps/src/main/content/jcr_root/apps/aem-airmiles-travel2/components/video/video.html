@@ -1,0 +1,13 @@
+<div class="p-1 h-25 w-100 text-bg-secondary" data-sly-test="${wcmmode.edit}">
+    <span class="am-icon am-icon-info p-1"></span>${component.title}
+</div>
+<sly data-sly-use.model="ca.airmiles.travel.core.models.VideoModel">
+    <sly data-sly-use.youtube="youtube.html"/>
+    <sly data-sly-use.local="local.html"/>
+    <sly data-sly-test="${model.source == 'youtube'}">
+        <sly data-sly-call="${youtube.template @ model=model}"></sly>
+    </sly>
+    <sly data-sly-test="${model.source == 'local'}">
+        <sly data-sly-call="${local.template @ model=model}"></sly>
+    </sly>
+</sly>

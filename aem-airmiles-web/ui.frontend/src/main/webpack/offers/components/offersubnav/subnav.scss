@@ -1,0 +1,141 @@
+$brand-blue: #1F68DA;
+$dark-blue: #1C2D3F;
+@mixin divider{
+  content: "";
+  position: relative;
+  border-left: 1px solid $brand-blue;
+  top: 0;
+  font-size: 1rem;
+  height: 1.125rem;
+}
+.offers-subnav{
+  font-family: Montserrat, sans-serif;
+  float: none !important;
+  clear: both !important;
+  &:after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #FFF;
+    border-bottom: 2px solid #C7D2DC;
+  }
+  .cmp-container{
+    display: flex;
+    > div:first-child{
+      flex:1;
+    }
+    .cmp-breadcrumb__list{
+      display: flex;
+      padding: 0;
+      margin: auto 0 !important;
+    }
+  }
+  .cta-button{
+    display: none;
+    .cmp-button.ctabuttonroundhalo {
+      padding: .25rem;
+      margin-left: 1.5rem;
+      margin-right: 0;
+      font-size: .625rem;
+      letter-spacing: 2px;
+      &.disabled{
+        pointer-events: none;
+        color: $dark-blue!important;
+      }
+      &:hover{
+        background-color: transparent!important;
+        text-decoration: underline;
+        border-color: transparent!important;
+        color: $brand-blue!important;
+      }
+      &:before{
+        @include divider;
+        right: 1rem;
+      }
+      em.am-icon2{
+        font-size: 1rem;
+        padding-right: .25rem;
+      }
+    }
+  }
+  &__divider{
+    padding: 0 .5rem;
+    &:before{
+      @include divider;
+      right: 0;
+    }
+  }
+  .offersregion{
+    margin: auto 0;
+    .offers-region__regionlist{
+      top: 1.25rem;
+    }
+    .offers-region__location__region{
+      .am-icon.am-icon-functional-arrow-down{
+        font-size: .625rem;
+      }
+    }
+    .offers-region__location .am-icon2-location-1{
+      color: $dark-blue;
+      font-size: 1rem;
+    }
+    .region-name{
+      letter-spacing: 2px;
+      font-size: .625rem;
+      max-width: 8rem;
+    }
+  }
+  .breadcrumb{
+    margin-bottom: 0;
+    .cmp-breadcrumb__item{
+      font-family: "OpenSans", sans-serif!important;
+      font-size: .75rem;
+      color: $brand-blue;
+      display: none!important;
+      &--active{
+        display: inline!important;
+      }
+      &-link{
+        color: $brand-blue;
+        font-weight: normal;
+        font-family: "OpenSans", sans-serif!important;
+        bottom: .125rem;
+        position: relative;
+      }
+    }
+    .cmp-breadcrumb__item.body-text{
+      font-family: "OpenSans", sans-serif!important;
+      font-weight: 700;
+      margin: auto 0 !important;
+    }
+  }
+  .cta-button{
+    margin: auto 0;
+  }
+}
+
+@media (min-width: breakpoint('md')) {
+  .offers-subnav {
+    .cta-button {
+      display: block;
+    }
+    .offersregion {
+      .region-name {
+        max-width:none;
+      }
+    }
+    .breadcrumb {
+      .cmp-breadcrumb__item {
+        display: inline!important;
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('lg')) {
+
+}

@@ -1,0 +1,6 @@
+<ol class="cmp-examples-demo__properties">
+    <li class="cmp-examples-demo__property" data-sly-set.referenced="${resource.children[0]}" data-sly-repeat.prop="${referenced.valueMap}">
+        <span class="cmp-examples-demo__property-title">${prop}<span class="cmp-examples-demo__property-separator">:</span></span>
+        <span class="cmp-examples-demo__property-value">${referenced.valueMap[prop]}</span>
+    </li>
+</ol>

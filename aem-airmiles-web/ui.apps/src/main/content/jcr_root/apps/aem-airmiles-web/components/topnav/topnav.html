@@ -1,0 +1,22 @@
+<div data-sly-use.navbar="com.aem.airmiles.web.core.models.TopNav">
+  <div class="row topnav__height">
+    <div data-sly-list.item="${navbar.siteDetails}" class="col-12 col-lg-4 g-0 d-flex d-none d-lg-flex">
+      <div class="topnav__site ${itemList.index==0 ? 'active':'' }">
+        <a href="${item.webUrl}" id="${item.uid}" target="${item.clickAction}" class="topnav__links topnav__branding" data-track-id="${item.dataTrackID}"
+           data-track-click="${item.dataClickID}" data-track-type="${item.dataTrackType}">${item.siteName @ context = 'html'}</a>
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 my-auto d-flex justify-content-end px-0">
+      <div id="member-profile" class="py-4 py-md-0${!wcmmode.edit ? ' d-none':''}" data-editMode="${wcmmode.edit}">
+        <sly data-sly-resource="${@path='memberbanner/container', resourceType='aem-airmiles-web/components/memberbanner'}"></sly>
+      </div>
+      <sly data-sly-list.item="${navbar.profileToolsDetails}">
+        <!--/* Class 'topnav__rightnav' only applied to the link without unique ID which won't be processed in JS for mobile view. */-->
+        <a data-sly-test="${item.uid!='language_toggle'}" href="${item.webUrl}" target="${item.clickAction}" class="topnav__links${item.uid ? '' : ' topnav__rightnav'}${item.uid=='sign_out' ? ' topnav__rightnav' : ''} text-nowrap" data-track-id="${item.dataTrackID}"
+           data-track-click="${item.dataClickID}" data-track-type="${item.dataTrackType}" id="${item.uid}">${item.siteName @ context = 'html'}</a>
+        <a data-sly-test="${item.uid=='language_toggle'}" href="${pageProperties.correspondLangPath @ extension='html'}" target="${item.clickAction}" class="topnav__links topnav__rightnav text-nowrap" data-track-id="${item.dataTrackID}"
+           data-track-click="${item.dataClickID}" data-track-type="${item.dataTrackType}" id="${item.uid}">${item.siteName @ context = 'html'}</a>
+      </sly>
+    </div>
+  </div>
+</div>

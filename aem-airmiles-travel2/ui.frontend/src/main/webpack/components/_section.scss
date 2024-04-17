@@ -1,0 +1,55 @@
+// this file intends unified common section styles
+// as there is no section component for this purpose
+
+.section-header {
+  align-items: flex-end;
+
+  @include media-breakpoint-down("md") {
+    > * {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+
+  @include media-breakpoint-down("xl") {
+    gap: amSizeUnit(2);
+  }
+
+  &__title {
+    @include cmp-title();
+
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up("md") {
+      align-items: center;
+    }
+
+    @include media-breakpoint-up("xl") {
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .cta-button {
+      width: 100%;
+    }
+  }
+}
+
+// Style system clases for <section> tag
+.back-color-blue {
+  section {
+    background-color: amGrey(7);
+  }
+}
+.back-color-white {
+  section {
+    background-color: $--am-base-colour-white-100;
+  }
+}

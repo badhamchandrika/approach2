@@ -1,0 +1,13 @@
+{
+  "heroSectionValid": {
+    "description": "<p><b>When</b> you’re a <i>collector</i>, <u>rewarding</u> yourself is as easy as one, two, FREE. Every 95 Cash Miles gets you $10 towards groceries, gas, beauty essentials and more at participating partners. Usage limits and terms apply.</p>\r\n",
+    "contentFragmentPath": "/content/dam/aem-airmiles-web/cfs/cf-hero-section",
+    "imageUrl": "/content/dam/aem-airmiles-web/homepage_image.jpeg",
+    "buttonUrl": "/content/aem-airmiles-web/language-masters/en",
+    "title": "One. Two. Free.",
+    "linkUrl": "/content/aem-airmiles-web/language-masters/fr",
+    "buttonText": "Join now",
+    "linkText": "Sing in",
+    "textIsRich": "true"
+  }
+}

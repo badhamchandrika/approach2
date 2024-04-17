@@ -1,0 +1,31 @@
+div.root.shell {
+  div.title {
+    h1 {
+      @include centered;
+      color: $shell-gray;
+      height: 137px;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 41px;
+      margin: 8px 0px;
+    }
+    h2 {
+      @include yellow-border-bottom;
+      color: $shell-primary-blue;
+      font-family: futura-pt-400;
+      font-size: 42px;
+      line-height: 56px;
+      margin: 20px 16px 20px 16px;
+      text-align: center;
+    }
+    // tablet & desktop resolutions
+    @media screen and (min-width: 768px) {
+      @include centered;
+
+      h2 {
+        padding: 0px 20px;
+        min-width: 230px;
+      }
+    }
+  }
+}

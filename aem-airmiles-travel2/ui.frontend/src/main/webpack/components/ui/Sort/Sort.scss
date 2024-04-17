@@ -1,0 +1,62 @@
+@import '../../../site/variables';
+@import '../../../site/mixins';
+
+.sort .sort-list {
+  width: fit-content;
+  font-family: amFontFamily(10);
+  font-size: amFontSize(5);
+  color: amTierBlue(3);
+  border: none;
+  appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  gap: amSizeUnit(1);
+
+  cursor: pointer;
+  &__mobile{
+    background: none;
+    font-size: 1rem;
+    width: auto;
+    text-align: end;
+  }
+}
+
+.sort-modal {
+
+  &__title {
+    text-align: center; 
+    font-family: MontserratSemiBold;
+    font-size: 16px;
+    color: amGrey(1)
+  }
+
+  .payment__radiogroup {
+    height: 100%
+  }
+
+  .payment__radioItem {
+    align-items: center;
+    margin: 12px 0;
+  }
+
+  .payment__radioBtn {
+    margin-bottom: 0 !important;
+  }
+
+  &__show-results-wrapper {
+    padding: amSizeUnit(2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.19)
+  }
+
+  &__submit-btn {
+    @include cta-button;
+
+    @include media-breakpoint-down('xl') {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Template"
+    allowedPaths="[/content/entities(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:lastModified="{Date}2024-01-26T09:44:45.295-05:00"
+        cq:lastModifiedBy="admin"
+        cq:scaffolding="/conf/aem-airmiles-web/offers/settings/dam/cfm/models/offers-carousel/jcr:content/model"
+        cq:templateType="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Offers Carousel"
+        sling:resourceSuperType="dam/cfm/models/console/components/data/entity"
+        sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+        status="enabled">
+        <metadata jcr:primaryType="nt:unstructured"/>
+        <model
+            cq:targetPath="/content/entities"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="wcm/scaffolding/components/scaffolding"
+            dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
+            maxGeneratedOrder="20">
+            <cq:dialog
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog">
+                <content
+                    jcr:lastModified="{Date}2024-01-26T09:44:45.295-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        maxGeneratedOrder="21">
+                        <_x0031_706045372385
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldDescription="Number of Offers to be dispalyed in Carousel"
+                            fieldLabel="Number of Offers in Carousel"
+                            listOrder="3"
+                            metaType="number"
+                            name="numberOfOffersInCarousel"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            step="any"
+                            valueType="double">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045372385>
+                        <_x0031_708372948209
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldDescription="Scrolling through number of offers."
+                            fieldLabel="Scrolling # of offers"
+                            listOrder="2"
+                            metaType="number"
+                            name="scrollNumberOfOffers"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            step="any"
+                            valueType="double">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_708372948209>
+                        <_x0031_704835383823
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Carousel Title"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="carouselTitle"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            unique="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_704835383823>
+                        <_x0031_704835423830
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Carousel Description"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="carouselDescription"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_704835423830>
+                        <_x0031_704835478941
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Carousel CTA"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="carouselCta"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_704835478941>
+                        <_x0031_704836220632
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Carousel CTA URL"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="carouselCtaUrl"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_704836220632>
+                        <_x0031_704836267623
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="CLO CTA Data Click ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="cloCtaDataClickId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_704836267623>
+                        <_x0031_704836323113
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="CLO CTA Data Track ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="cloCtaDataTrackId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_704836323113>
+                        <_x0031_704836344841
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="CLO CTA Data Track Type"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="cloCtaDataTrackType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_704836344841>
+                        <_x0031_706280250220
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}true"
+                            fieldLabel="CLO Query Param CF Path"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/aem-airmiles-web/offers/settings/dam/cfm/models/clo-query-param"
+                            listOrder="21"
+                            metaType="fragment-reference"
+                            name="cloQueryParamDetails"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <field jcr:primaryType="nt:unstructured"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706280250220>
+                        <_x0031_706049838146
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/fragmentreference"
+                            allowNew="{Boolean}true"
+                            fieldLabel="Offers Custom Card Details"
+                            filter="hierarchy"
+                            fragmentmodelreference="/conf/aem-airmiles-web/offers/settings/dam/cfm/models/offers-custom-card"
+                            listOrder="9"
+                            metaType="fragment-reference"
+                            name="offersCustomCardDetails"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string/content-fragment">
+                            <field jcr:primaryType="nt:unstructured"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706049838146>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+    </jcr:content>
+</jcr:root>

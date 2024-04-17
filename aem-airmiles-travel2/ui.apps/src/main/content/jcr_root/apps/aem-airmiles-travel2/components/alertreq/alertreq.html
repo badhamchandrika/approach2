@@ -1,0 +1,26 @@
+<div class="cmp-optin"
+      data-cmp-is="optin"
+      data-sly-use.model="ca.airmiles.travel.core.models.AlertReqModel"
+      data-track-section="${model.dataTrackSection}">
+
+    <div class="p-1 h-25 w-100 text-bg-secondary" data-sly-test="${wcmmode.edit}">
+        <span class="am-icon am-icon-info p-1"></span>
+        ${component.title}
+    </div>
+
+    <div class="bsp-travel-container">
+        <div class="alertreq__content row">
+            <div class="col-2 col-md-auto">
+                <div class="alertreq__icon"><em class="am-icon am-icon-info-small"></em></div>
+            </div>
+            <div class="alertreq__text col-10 col-md-7 g-md-0">
+                <h4 class="alertreq__title" data-sly-test="${model.title}">${model.title}</h4>
+                <p class="alertreq__description" data-sly-test="${model.description}">${model.description}</p>
+            </div>
+            <div class="alertreq__cta col-auto offset-2 offset-md-0 ms-md-auto">
+                <sly data-sly-include="/apps/aem-airmiles-travel2/components/cta-button/cta-button.html"></sly>
+            </div>
+        </div>
+    </div>
+
+</div>

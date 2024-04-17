@@ -1,0 +1,13 @@
+<div data-sly-use.tmp="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.model="com.aem.airmiles.web.core.models.DataListModel"
+     class="cmp-data-list"
+     id="${model.id}">
+    <h3 data-sly-test="${model.dataListTitle}" class="cmp-title__text h2-small">${model.dataListTitle}</h3>
+    <ul class="cmp-data-list__container" data-sly-list="${model.dataList}">
+        <li class="cmp-data-list__item">
+            ${item.dataListItem}:
+            <span id="${item.itemID}"></span>
+        </li>
+    </ul>
+</div>
+<sly data-sly-call="${tmp.placeholder @ isEmpty=!hasContent, classAppend='cmp-data-list__placehlder'}"></sly>

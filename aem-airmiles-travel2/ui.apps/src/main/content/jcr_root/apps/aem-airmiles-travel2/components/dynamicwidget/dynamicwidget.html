@@ -1,0 +1,11 @@
+<sly data-sly-use.model="ca.airmiles.travel.core.models.DynamicWidgetModel">
+    <ul>
+        <sly data-sly-list.item="${model.dynamicWidgets}">
+            <!--/* renders destinations experience fragment on destinations page */-->
+            <sly data-sly-test="${item.experienceType == 'destinations' && model.isTravelDetailsPageTemplate && model.isDestinationsPage}">
+                <sly data-sly-resource="${@path=item.experienceFragment, selectors='content', wcmmode='disabled'}"></sly>
+            </sly>
+        </sly>
+    </ul>
+</sly>
+

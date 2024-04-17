@@ -1,0 +1,81 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Tue Sep 12 2023 13:52:15 GMT-0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [
+      "mix:versionable"
+    ],
+    "startDate": "Mon Sep 11 2023 09:31:00 GMT-0600",
+    "jcr:createdBy": "admin",
+    "jcr:title": "TEST Cruise Deal",
+    "cardDescription": "This is an amazing Cruise deal. Sail today!",
+    "enableOneTrust": "false",
+    "cq:lastReplicationAction": "Activate",
+    "jcr:versionHistory": "7c445572-b027-411b-94c0-aa9cec9d411f",
+    "cq:template": "/conf/aem-airmiles-travel2/settings/wcm/templates/travel-detail-page",
+    "cq:lastReplicatedBy": "rdelacruz@loyalty.com",
+    "dataTrackType": "internal",
+    "cardTagIcon": "SAIL TODAY!",
+    "enableGTM": "false",
+    "jcr:predecessors": [
+      "94643eeb-a5f9-4e90-afa5-000fdca94ae3"
+    ],
+    "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+    "jcr:created": "Tue Sep 12 2023 13:52:15 GMT-0600",
+    "cq:lastReplicated": "Sun Apr 16 2023 13:13:52 GMT+0000",
+    "cardTitle": "7-night Caribbean cruise with Norwegian Cruise Lines",
+    "cq:lastModified": "Thu Sep 14 2023 09:32:02 GMT-0600",
+    "url": "https://www.ncl.com/ca/en/",
+    "date": "Sat Sep 30 2023 09:31:00 GMT-0600",
+    "jcr:baseVersion": "94643eeb-a5f9-4e90-afa5-000fdca94ae3",
+    "cardImagePath": "/content/dam/aem-airmiles-travel2/images/deals/Screen Shot 2022-11-14 at 08.53.47.png",
+    "jcr:isCheckedOut": true,
+    "linkTarget": "_blank",
+    "pageTitle": "dfgdfg",
+    "cq:tags": [
+      "travel2:products/flight"
+    ],
+    "jcr:uuid": "a1d46ace-7922-4dac-a69f-48670c5830ad",
+    "sling:resourceType": "aem-airmiles-travel2/components/structure/dealsdetailpage",
+    "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+    "enableOneTrustAutoblock": "false",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "aem-airmiles-travel2/components/container",
+          "hero": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "displayBreadcrumb": "true",
+            "jcr:created": "Fri Nov 04 2022 10:53:01 GMT-0400",
+            "jcr:lastModified": "Fri Nov 04 2022 15:10:55 GMT-0400",
+            "sling:resourceType": "aem-airmiles-travel2/components/hero",
+            "breadcrumb": {
+              "jcr:primaryType": "nt:unstructured",
+              "startLevel": "4",
+              "disableShadowing": "false",
+              "showHidden": "false",
+              "hideCurrent": "false",
+              "sling:resourceType": "aem-airmiles-travel2/components/breadcrumb"
+            }
+          }
+        }
+      }
+    },
+    "cq:featuredimage": {
+      "jcr:primaryType": "nt:unstructured",
+      "fileReference": "/content/dam/aem-airmiles-travel2/images/deals/Screen Shot 2022-11-14 at 08.54.16.png",
+      "jcr:lastModifiedBy": "admin",
+      "jcr:lastModified": "Thu Sep 14 2023 09:32:02 GMT-0600",
+      "sling:resourceType": "core/wcm/components/image/v3/image",
+      "altValueFromDAM": "true"
+    }
+  }
+}

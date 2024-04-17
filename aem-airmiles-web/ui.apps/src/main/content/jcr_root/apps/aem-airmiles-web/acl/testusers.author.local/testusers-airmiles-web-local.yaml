@@ -1,0 +1,27 @@
+# These are test users to login on local/stage and validate the access
+
+- user_config:
+
+  - airmiles-web-test-author:
+
+      - name: Airmiles Web Test Author
+        path: airmiles-web
+        password: sc1f@Pro#cli0
+        email: airmiles-web-test-author@test.com
+        isMemberOf: airmiles-web-content-authors
+
+  - airmiles-web-test-publisher:
+
+      - name: Airmiles Web Test Publisher
+        path: airmiles-web
+        password: sc1f@Pro#cli0
+        email: airmiles-web-test-publisher@test.com
+        isMemberOf: airmiles-web-content-publishers
+
+  - airmiles-web-test-content-admin:
+
+      - name: Airmiles Web Test Content Admin
+        path: airmiles-web
+        password: sc1f@Pro#cli0
+        email: airmiles-web-test-content-admin@test.com
+        isMemberOf: airmiles-web-content-admins

@@ -1,0 +1,11 @@
+<sly data-sly-template.action="${@ action, dataTrackID, dataClickID, dataTrackType}">
+    <a class="cmp-teaser__action-link"
+       data-sly-attribute="${action.link.htmlAttributes}"
+       data-sly-unwrap="${!action.link.valid}"
+       id="${action.id}"
+       data-cmp-data-layer="${action.data.json}"
+       data-track-id="${dataTrackID}"
+       data-track-click="${dataClickID}"
+       data-track-type="${dataTrackType}"
+       data-cmp-clickable="${action.data ? true : false}">${action.title}</a>
+</sly>

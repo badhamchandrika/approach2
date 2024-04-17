@@ -1,0 +1,14 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "FCervantes@loyalty.com",
+  "linkMobileType": "link",
+  "jcr:lastModifiedBy": "lbonta@loyalty.com",
+  "dataTrackType": "internal",
+  "jcr:created": "Mon Jan 30 2023 19:44:26 GMT+0000",
+  "title": "Canada",
+  "variant": "destination-variant",
+  "linkTarget": "_blank",
+  "jcr:lastModified": "Tue Apr 04 2023 17:55:22 GMT+0000",
+  "linkType": "link",
+  "sling:resourceType": "aem-airmiles-travel2/components/card"
+}

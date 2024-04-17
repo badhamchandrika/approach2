@@ -1,0 +1,76 @@
+.deals-list {
+  &--with-title {
+    padding-top: amSizeUnit(4);
+  }
+
+  .sort-wrapper .InLineDropdown {
+    flex-direction: row;
+    align-self: flex-end;
+    border-bottom: none;
+    align-items: flex-end;
+
+    &__label {
+      padding: 0;
+      font-family: ArchivoRegular;
+      font-size: 16px;
+      color: amGrey(1);
+    }
+
+    button {
+      align-items: center;
+      padding: 0 0 0 amSizeUnit(2);
+
+      .btn-text {
+        font-family: ArchivoSemiBold;
+      }
+
+      .am-icon,
+      span {
+        margin-left: amSizeUnit(1);
+      }
+    }
+
+    & .active .menu {
+      white-space: nowrap;
+    }
+  }
+
+  &__results-count {
+    @include bodyText;
+
+    color: amGrey(3);
+    margin: 0 auto;
+    text-align: center;
+
+    @include media-breakpoint-up("xl") {
+      text-align: left;
+    }
+  }
+
+  &__heading {
+    color: amSteel(9);
+    font-family: amFontFamily(9);
+    font-size: amFontSize(8);
+    padding-bottom: amSizeUnit(1);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up("md") {
+      font-size: amFontSize(10);
+    }
+
+    @include media-breakpoint-up("xl") {
+      font-size: amFontSize(12);
+      padding-bottom: amSizeUnit(2);
+      text-align: left;
+    }
+  }
+
+  .AMPagination__rebrand {
+    margin-bottom: amSizeUnit(5) ;
+  }
+}
+
+.dealslist:has(+ .tabs) .AMPagination__rebrand {
+  margin-bottom: amSizeUnit(3) ;
+}

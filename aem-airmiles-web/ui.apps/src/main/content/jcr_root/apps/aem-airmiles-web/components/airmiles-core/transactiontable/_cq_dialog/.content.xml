@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Transaction Table - Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <button
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Transaction Table"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <tableTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        name="./tableTitle"
+                                        required="{Boolean}true"/>
+                                    <noTransText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="No Transaction Text"
+                                        name="./noTransText"
+                                        required="{Boolean}true"/>
+                                    <apiErrorMessage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="API Error Message"
+                                        name="./apiErrorMessage"
+                                        required="{Boolean}true"/>
+                                    <tableCTAText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Table CTA Text"
+                                        name="./tableCTAText"
+                                        required="{Boolean}true"/>
+                                    <tableCTALink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                        fieldLabel="Table CTA Link"
+                                        name="./tableCTALink"
+                                        required="{Boolean}true"/>
+                                    <tableCTATrackType
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Track Type"
+                                        fieldLabel="Analytics TrackType"
+                                        name="./tableCTATrackType">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <internal
+                                                jcr:primaryType="nt:unstructured"
+                                                selected="{Boolean}true"
+                                                text="Internal"
+                                                value="internal"/>
+                                            <button
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Button"
+                                                value="button"/>
+                                            <exit
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Exit"
+                                                value="exit"/>
+                                            <social
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Social"
+                                                value="social"/>
+                                        </items>
+                                    </tableCTATrackType>
+                                    <tableCTATrackID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Table CTA Track ID"
+                                        name="./tableCTATrackID"
+                                        required="{Boolean}true"/>
+                                    <tableCTAClickID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Table CTA Click ID"
+                                        name="./tableCTAClickID"
+                                        required="{Boolean}true"/>
+                                    <buttonDetail
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/include"
+                                        path="aem-airmiles-web/components/cta-button/cq:dialog/content/items/linkdetails"/>
+                                    <columnHead1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Column Head 1 (Date)"
+                                        name="./columnHead1"/>
+                                    <columnHead2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Column Head 2 (Partner)"
+                                        name="./columnHead2"/>
+                                    <columnHead3
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Column Head 3 (Description)"
+                                        name="./columnHead3"/>
+                                    <columnHead4
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Column Head 4 (Miles)"
+                                        name="./columnHead4"/>
+                                    <uniqueId
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Unique ID"
+                                        name="./uniqueId"/>
+                                </items>
+                            </column>
+                        </items>
+                    </button>
+                    <extra
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Extra Setting"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <noLogoPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                        fieldDescription="Path to the default logo when logo path is blank in fetched data."
+                                        fieldLabel="Default Logo Path"
+                                        name="./noLogoPath"/>
+                                    <mockJson
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Use mocked data for QA testing only."
+                                        name="./mockJson"
+                                        text="Using mockup json data"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </extra>
+                    <transaction_x0020_values
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Transaction Values"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <transactiondetails
+                                        granite:class="link-detail"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        required="{Boolean}false">
+                                        <field
+                                            granite:class="cq-multi-field"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Transaction Details"
+                                            name="./transactionValues">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <accordion
+                                                    granite:class="link-accordion"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Link Tab"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                    margin="{Boolean}false"
+                                                    maximized="{Boolean}true"
+                                                    multiple="{Boolean}true"
+                                                    variant="quiet">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <content
+                                                            jcr:primaryType="nt:unstructured"
+                                                            jcr:title="Transaction Detail"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <activityType
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    emptyText="Select Activity Type"
+                                                                    fieldLabel="Activity Type"
+                                                                    name="./activityType">
+                                                                    <datasource
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType=" acs-commons/components/utilities/genericlist/datasource"
+                                                                        path="/etc/acs-commons/lists/airmiles/common-configurations/transaction-table-activitytype-list"/>
+                                                                </activityType>
+                                                                <channelType
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    emptyText="Select Channel Type"
+                                                                    fieldLabel="Channel Type"
+                                                                    name="./channelType">
+                                                                    <datasource
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType=" acs-commons/components/utilities/genericlist/datasource"
+                                                                        path="/etc/acs-commons/lists/airmiles/common-configurations/transaction-table-channeltype-list"/>
+                                                                </channelType>
+                                                                <redemptionStatus
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    emptyText="Select Redemption Status"
+                                                                    fieldLabel="Redemption Status"
+                                                                    name="./redemptionStatus">
+                                                                    <datasource
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType=" acs-commons/components/utilities/genericlist/datasource"
+                                                                        path="/etc/acs-commons/lists/airmiles/common-configurations/transaction-table-redemptionstatus-list"/>
+                                                                </redemptionStatus>
+                                                                <channelLabel
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Configure channel label"
+                                                                    name="./channelLabel"
+                                                                    required="{Boolean}true"/>
+                                                                <accordion
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                                    margin="{Boolean}false"
+                                                                    maximized="{Boolean}true"
+                                                                    multiple="{Boolean}true"
+                                                                    variant="quiet">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <charity
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            jcr:title="Charity Section"
+                                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <charitySection
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                                    composite="{Boolean}true"
+                                                                                    fieldLabel="Charity Field">
+                                                                                    <field
+                                                                                        granite:class="cq-multi-field"
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                        emptyText="Charity Details"
+                                                                                        name="./charitySection">
+                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                            <charityDescription
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Configure Charity Description"
+                                                                                                fieldLabel="Charity Description"
+                                                                                                name="./charityDescription"/>
+                                                                                            <charityName
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Configure Charity Name"
+                                                                                                fieldLabel="Charity Name"
+                                                                                                name="./charityName"/>
+                                                                                        </items>
+                                                                                    </field>
+                                                                                </charitySection>
+                                                                            </items>
+                                                                        </charity>
+                                                                        <logo
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            jcr:title="Logo Section"
+                                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <logoSrc
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldDescription="Configure Logo path"
+                                                                                    fieldLabel="Logo source"
+                                                                                    name="./logoSrc"/>
+                                                                                <altText
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldDescription="Alt text"
+                                                                                    fieldLabel="Logo Alt text"
+                                                                                    name="./logoAltText"/>
+                                                                            </items>
+                                                                        </logo>
+                                                                    </items>
+                                                                </accordion>
+                                                            </items>
+                                                        </content>
+                                                    </items>
+                                                </accordion>
+                                            </items>
+                                        </field>
+                                    </transactiondetails>
+                                </items>
+                            </column>
+                        </items>
+                    </transaction_x0020_values>
+                    <personalization
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Personalization"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <personalizationId
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="id"
+                                    name="./id"/>
+                        </items>
+                    </personalization>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

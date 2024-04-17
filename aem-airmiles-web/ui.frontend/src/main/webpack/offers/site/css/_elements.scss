@@ -1,0 +1,20 @@
+.basic__button{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding: 1rem 2.5rem;
+  white-space: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  min-width: 7rem;
+  margin: 1rem 0;
+  color: color('blue-background')!important;
+  border: 0;
+  background-color: color('brand-blue');
+  &:hover{
+    background-color: color('blue-hover');
+  }
+}

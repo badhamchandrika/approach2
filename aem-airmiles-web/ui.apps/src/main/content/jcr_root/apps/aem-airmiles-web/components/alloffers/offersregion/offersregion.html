@@ -1,0 +1,15 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Offers - Region" class="cq-placeholder"></div>
+<sly data-sly-use.regionModel="com.aem.airmiles.web.core.models.OffersRegionModel" />
+<div id="float-region-wrapper" class="offers-region">
+    <div class="offers-region__mask"></div>
+    <div class="offers-region__location d-flex justify-content-end">
+        <div class="offers-region__location__region d-flex justify-content-lg-end my-auto" data-code="region" role="region" aria-label="current region">
+            <div class='am-icon2 am-icon2-location-1 my-auto pe-1' aria-hidden="true"></div>
+            <div class="region-name my-auto text-start" aria-live="polite"></div>
+            <div class='am-icon am-icon-functional-arrow-down my-auto px-2' aria-hidden="true"></div>
+        </div>
+        <ul class="offers-region__regionlist" role="list" data-sly-list.region="${regionModel.regionList}">
+            <li class="offers-region__regionlist__item" role="listitem" data-code="${region.value}">${region.title}</li>
+        </ul>
+    </div>
+</div>

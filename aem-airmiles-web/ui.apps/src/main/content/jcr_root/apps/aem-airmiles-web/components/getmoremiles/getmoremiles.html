@@ -1,0 +1,120 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.GetMoreMilesModel" />
+<div
+  class="cmp-getmoremiles bsp-container"
+  data-cmp-is="getmoremiles"
+  data-track-section="${model.dataTrackSection}"
+>
+  <div class="no-show" id="getMoreMilesBgPath">
+    ${model.backgroundImagePath}
+  </div>
+  <h2 data-sly-test="${model.wayFinderText}" class="cmp-getmoremiles_wayfinder h2-wayfinding text-center">
+    ${model.wayFinderText}
+  </h2>
+  <h3 data-sly-test="${model.mainTitleText}" class="cmp-getmoremiles_title h3-subsection text-center">
+    ${model.mainTitleText}
+  </h3>
+  <div data-sly-test="${model.mainBodyText}" class="cmp-getmoremiles_body body-text text-center">
+    ${model.mainBodyText @context='html'}
+  </div>
+  <div
+    class="cmp-getmoremiles__subcategories"
+    data-sly-list="${model.subCategories}"
+  >
+    <div class="cmp-getmoremiles__panel d-none d-tab-block px-4">
+      <h4 class="h4-sub-subsection cmp-getmoremiles__card-title">
+        ${item.title}
+      </h4>
+      <p class="cmp-getmoremiles__card-text">${item.body @context='html'}</p>
+
+      <div class="d-flex justify-content-center">
+        <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"></sly>
+        <sly data-sly-call="${ctatemplate.ctalink @ type='link', href=item.linkUrl, text=item.linkText, target=item.linkTarget, dataTrackID=item.dataTrackID, dataClickID=item.dataClickID, dataTrackType=item.dataTrackType,
+        classes='cmp-getmoremiles__cta-wrapper', hexBtn=item.hexBtnColor, classes=item.linkColor}"></sly>
+      </div>
+      <img
+        class="cmp-getmoremiles__card-img"
+        src="${item.imagePath}"
+        src2="${item.imagePath2}"
+        alt="Card image ${itemList.count}"
+      />
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div
+    id="getMoreMilesCarousel"
+    class="carousel slide cmp-getmoremiles__carousel d-block d-tab-none"
+    data-bs-interval="false"
+    data-bs-wrap="false"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#getMoreMilesCarousel"
+        data-bs-slide-to="0"
+        class="active cmp-getmoremiles__carousel-indicator"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        class="cmp-getmoremiles__carousel-indicator"
+        type="button"
+        data-bs-target="#getMoreMilesCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        class="cmp-getmoremiles__carousel-indicator"
+        type="button"
+        data-bs-target="#getMoreMilesCarousel"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div
+      class="cmp-getmoremiles__carousel carousel-inner"
+      id="getmoremiles-carousel"
+      data-sly-list="${model.subCategories}"
+    >
+      <div class="cmp-getmoremiles__slide carousel-item">
+        <h4 class="h4-sub-subsection cmp-getmoremiles__card-title">
+          ${item.title}
+        </h4>
+        <p class="body-text cmp-getmoremiles__card-text">${item.body @context='html'}</p>
+        <sly
+          data-sly-call="${ctatemplate.ctalink @ type=item.linkType, href=item.linkUrl, text=item.linkText, target=item.linkTarget, dataTrackID=item.dataTrackID, dataClickID=item.dataClickID, dataTrackType=item.dataTrackType, classes='cmp-getmoremiles__cta-wrapper'}"
+        ></sly>
+        <img
+          class="cmp-getmoremiles__card-img--mobile"
+          src="${item.imagePath}"
+          alt="Card image ${itemList.count}"
+          src2="${item.imagePath2}"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev cmp-getmoremiles__carousel-btn"
+      type="button"
+      data-bs-target="#getMoreMilesCarousel"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon am-icon am-icon-functional-arrow-left cmp-getmoremiles__carousel-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next cmp-getmoremiles__carousel-btn"
+      type="button"
+      data-bs-target="#getMoreMilesCarousel"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon am-icon am-icon-functional-arrow-right cmp-getmoremiles__carousel-icon"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

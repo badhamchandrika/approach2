@@ -1,0 +1,15 @@
+{
+  "empty_linkmodel": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/linkmodel"
+  },
+  "one_linkmodel": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/linkmodel",
+    "text": "new text for test",
+    "url": "https://www.github.com",
+    "target": "new test target",
+    "authenticated":true
+  }
+}
+

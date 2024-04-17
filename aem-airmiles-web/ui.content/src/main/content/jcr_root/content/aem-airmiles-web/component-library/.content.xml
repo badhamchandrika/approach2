@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-13T11:56:19.038-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/component-library-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Component Library"
+        sling:resourceType="aem-airmiles-web/components/structure/component-library-page">
+        <root jcr:primaryType="nt:unstructured">
+            <responsivegrid jcr:primaryType="nt:unstructured">
+                <responsivegrid
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <text
+                        jcr:created="{Date}2023-03-29T08:34:21.419-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-03-29T08:34:36.200-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                        text="&lt;h1>Component Library&lt;/h1>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <text_655501681
+                        jcr:created="{Date}2023-03-29T08:35:00.266-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-03-29T08:36:53.071-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                        text="&lt;p>Get to know the Air Miles- web AEM Components with this collection of component examples - currently featuring a selection of the available components. For all components, visit our&amp;nbsp;&lt;a href=&quot;https://github.com/LoyaltyOne/aem-airmiles-web&quot;>GitHub Project&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <text_295982095
+                        cq:styleIds="[1680123585936]"
+                        jcr:created="{Date}2023-03-29T17:00:38.332-04:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2023-03-29T17:01:41.264-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search Components"
+                        sling:resourceType="aem-airmiles-web/components/core/form/text"
+                        helpMessage="Search Components"
+                        hideTitle="true"
+                        name="cmp-examples-component-search"
+                        rows="2"
+                        type="text"
+                        usePlaceholder="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="8"/>
+                        </cq:responsive>
+                    </text_295982095>
+                    <teaser_copy
+                        cq:styleIds="[1680121465968]"
+                        jcr:created="{Date}2023-03-29T08:37:17.299-04:00"
+                        jcr:createdBy="admin"
+                        jcr:description="&lt;p>Displays transaction values&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2023-03-29T16:29:22.434-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/core/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/core-components-examples/library/components/component.svg"
+                        linkURL="/content/aem-airmiles-web/component-library/transaction-table"
+                        textIsRich="true"
+                        titleFromPage="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="3"/>
+                        </cq:responsive>
+                    </teaser_copy>
+                    <teaser_126646246_cop
+                        cq:styleIds="[1680121465968]"
+                        jcr:created="{Date}2023-03-29T16:26:49.723-04:00"
+                        jcr:createdBy="admin"
+                        jcr:description="&lt;p>Display the quick links&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2023-03-29T16:28:53.656-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/core/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/core-components-examples/library/components/list.svg"
+                        linkURL="/content/aem-airmiles-web/component-library/quick-links"
+                        textIsRich="true"
+                        titleFromPage="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="1"
+                                width="3"/>
+                        </cq:responsive>
+                    </teaser_126646246_cop>
+                    <teaser_1517060966_co
+                        cq:styleIds="[1680121465968]"
+                        jcr:created="{Date}2023-03-29T16:35:54.169-04:00"
+                        jcr:createdBy="admin"
+                        jcr:description="&lt;p>Dashboard hero section&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2023-03-29T17:12:37.648-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/core/teaser"
+                        actionsEnabled="false"
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/core-components-examples/library/components/carousel.svg"
+                        linkURL="/content/aem-airmiles-web/component-library/welcome-banner"
+                        textIsRich="true"
+                        titleFromPage="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="3"/>
+                        </cq:responsive>
+                    </teaser_1517060966_co>
+                </responsivegrid>
+            </responsivegrid>
+            <responsivegrid_756979268
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <text
+                    jcr:created="{Date}2023-03-31T00:40:28.810-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-03-31T00:40:36.785-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h1>Component Library&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_492903114
+                    jcr:created="{Date}2023-03-31T00:40:41.565-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-03-31T00:40:54.517-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>Get to know the Air Miles- web AEM Components with this collection of component examples - currently featuring a selection of the available components. For all components, visit our&amp;nbsp;&lt;a href=&quot;https://github.com/LoyaltyOne/aem-airmiles-web&quot;>GitHub Project&lt;/a>.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_1949208931
+                    cq:styleIds="[1680194912193]"
+                    jcr:created="{Date}2023-03-31T00:42:35.059-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-03-31T00:44:09.548-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Search Components"
+                    sling:resourceType="aem-airmiles-web/components/core/form/text"
+                    helpMessage="Search Components"
+                    hideTitle="true"
+                    name="cmp-examples-component-search"
+                    rows="2"
+                    type="text"
+                    usePlaceholder="true"/>
+                <teaser
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-03-31T00:44:15.687-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Displays transaction data&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-03-31T00:46:02.303-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/content-fragment.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/transaction-table"
+                    textIsRich="true"
+                    titleFromPage="true">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser>
+                <teaser_2090529384
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-03-31T00:46:50.309-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Displays&amp;nbsp; quick links&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-03-31T00:47:40.895-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/list.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/quick-links"
+                    textIsRich="true"
+                    titleFromPage="true">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="1"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser_2090529384>
+                <teaser_355559069
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-03-31T00:48:37.279-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Dashboard hero section&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-03-31T00:49:24.253-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/carousel.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/welcome-banner"
+                    textIsRich="true"
+                    titleFromPage="true">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="1"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser_355559069>
+                <teaser_355559069_cop
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-03-31T00:48:37.279-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Display carousel&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-03-31T00:49:24.253-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/carousel.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/carousel"
+                    textIsRich="true"
+                    titleFromPage="true">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser_355559069_cop>
+                <teaser_298102936
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-04-19T15:44:06.810-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Display Global Alert&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-04-19T15:54:31.371-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Global Alert"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/text.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/global-alert"
+                    textIsRich="true"
+                    titleFromPage="false">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="1"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser_298102936>
+                <teaser_2041771493
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-06-12T11:59:43.826-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Homepage Hero Banner component&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-06-13T11:56:03.814-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Home Hero"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/carousel.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/home-hero"
+                    textIsRich="true"
+                    titleFromPage="false">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="1"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser_2041771493>
+                <teaser_874900411
+                    cq:styleIds="[1680194948002]"
+                    jcr:created="{Date}2023-06-12T12:07:28.990-04:00"
+                    jcr:createdBy="admin"
+                    jcr:description="&lt;p>Displays cards&lt;/p>&#xd;&#xa;"
+                    jcr:lastModified="{Date}2023-06-13T11:56:19.033-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Highlight Cards"
+                    sling:resourceType="aem-airmiles-web/components/core/teaser"
+                    actionsEnabled="false"
+                    descriptionFromPage="false"
+                    fileReference="/content/dam/core-components-examples/library/components/separator.svg"
+                    linkURL="/content/aem-airmiles-web/component-library/highlightcards"
+                    textIsRich="true"
+                    titleFromPage="false">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="2"/>
+                    </cq:responsive>
+                </teaser_874900411>
+            </responsivegrid_756979268>
+        </root>
+    </jcr:content>
+    <transaction-table/>
+    <quick-links/>
+    <welcome-banner/>
+    <carousel/>
+    <global-alert/>
+    <home-hero/>
+    <highlightcards/>
+</jcr:root>

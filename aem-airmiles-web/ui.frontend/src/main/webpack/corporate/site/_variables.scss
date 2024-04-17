@@ -1,0 +1,28 @@
+$font-regular:          'ArchivoRegular', Calibri, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size:             1rem;
+$base-font-size:        16px;
+$font-height:           1.5;
+
+// Colors
+$brand-blue: #1f68da;
+$brand-light-blue: #DAEAFF;
+$dark-blue: #1c2d3f;
+$grey-light: #C7D2DC;
+$outer-border-colour: #16A78A;
+
+// Normal mode
+$color-foreground:      #202020;
+$color-background:      #ECECEC;
+$color-link:            #2020E0;
+
+// Dark mode
+$color-foreground-dark: invert($color-foreground);
+$color-background-dark: invert($color-background);
+$color-link-dark:       invert($color-link);
+
+$nav-box-shadow: 0 4px 2px 0 rgb(0 0 0 / 25%);
+$tile-box-shadow: 0px 2px 2px 0px rgba(40, 47, 64, 0.1);
+
+// Break points
+$s-screen: breakpoint('md');
+$l-screen: 1440px;

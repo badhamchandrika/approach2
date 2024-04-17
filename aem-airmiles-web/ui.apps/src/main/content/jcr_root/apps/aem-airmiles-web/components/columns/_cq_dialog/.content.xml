@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Columns Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Main"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/text"
+                                        class="coral-Form-fieldlabel"
+                                        text="The Columns component is suitable as a container for most components. It has fixed width depends on breakpoints so it won't sticks out viewable area. As for background spread out from edge to edge, check option of Full Width to expand width."/>
+                                    <columnnumber
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Column Type"
+                                        name="./columnnumber"
+                                        required="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <one
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Single"
+                                                value="1"/>
+                                            <two-e
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two equal on all devices"
+                                                value="2e"/>
+                                            <two-m
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two equal on medium devices"
+                                                value="2"/>
+                                            <two-l
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two equal on large devices"
+                                                value="2l"/>
+                                            <three
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Three equal"
+                                                value="3"/>
+                                            <four
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Four equal"
+                                                value="4"/>
+                                            <onenarrow
+                                                jcr:primaryType="nt:unstructured"
+                                                text="One Narrow Column - 10/12"
+                                                value="onenarrow"/>
+                                            <onetiny
+                                                jcr:primaryType="nt:unstructured"
+                                                text="One Narrow Column - 8/12"
+                                                value="onetiny"/>
+                                            <onehalf
+                                                jcr:primaryType="nt:unstructured"
+                                                text="One Narrow Column - 6/12"
+                                                value="onehalf"/>
+                                            <sevenfive
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two Columns - 7/12, 5/12"
+                                                value="7/5"/>
+                                            <eightfour
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two Columns - 8/12, 4/12"
+                                                value="8/4"/>
+                                            <ninethree
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two Columns - 9/12, 3/12"
+                                                value="9/3"/>
+                                            <dashboard
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two Columns - Dashboard"
+                                                value="dashboard"/>
+                                            <tentwo
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two Columns - 10/12, 2/12"
+                                                value="10/2"/>
+                                            <rowtworowone
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Two Columns - 2 rows, 1 row"
+                                                value="r2r1"/>
+                                            <header
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Header"
+                                                value="header"/>
+                                            <footer
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Footer"
+                                                value="footer"/>
+                                        </items>
+                                    </columnnumber>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <fullWidth
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./fullwidth"
+                                        text="Full Width"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <verticalCenter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./verticalCenter"
+                                        text="Content vertical center in all cells"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <horizontalCenter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./horizontalCenter"
+                                        text="Content horizontal center in all cells"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </style>
+                    <background
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Background"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <backgroundcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Background color"
+                                        name="./backgroundcolor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <transparent
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Transparent"
+                                                value="bg-transparent"/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="bg-white"/>
+                                            <blue
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Blue"
+                                                value="bg-primary text-white"/>
+                                            <lightblue
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light Blue"
+                                                value="bg-secondary"/>
+                                            <dark
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dark"
+                                                value="bg-dark text-white"/>
+                                            <grey
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light Grey"
+                                                value="bg-light text-white"/>
+                                        </items>
+                                    </backgroundcolor>
+                                </items>
+                            </column>
+                        </items>
+                    </background>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

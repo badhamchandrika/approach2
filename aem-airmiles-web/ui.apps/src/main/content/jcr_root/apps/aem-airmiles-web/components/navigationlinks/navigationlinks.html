@@ -1,0 +1,108 @@
+<sly data-sly-test="${wcmmode.edit}" data-emptytext="Navigation Links component" class="cq-placeholder"/>
+<sly data-sly-use.navigationModel="com.aem.airmiles.web.core.models.TopNavigationModel"/>
+
+<section class="headnav" data-cmp-is="navitem">
+	<!--/* Mobile Menu */-->
+	<div class="d-none headnav__mobile-menu">
+		<div class="headnav__mobile-container">
+			<sly data-sly-include="mobiletopnav.html"></sly>
+			<div class="headnav__mobile-mbSpacing"></div>
+			<ul class="headnav__mobile-items d-block" data-sly-list.navModelMobileList="${navigationModel.navItem}">
+				<li class="headnav__item-mobile" link="${navModelMobileList.navSectionList.size > 0 ? 'haslink' : ''}">
+					<!--/* Sections */-->
+					<div class="headnav__item-title d-flex justify-content-between">
+						<div class="headnav__item-title-text --am-base-font-size-6">
+							<!--/* Section has no children */-->
+							<sly data-sly-test="${navModelMobileList.navSectionList.size <= 0}">
+								<a class="p-0 headnav__mobile-menu-link" href="${navModelMobileList.navLink @ context = 'uri'}" data-track-id="${navModelMobileList.dataTrackId}"
+								   data-track-click="${navModelMobileList.dataTrackClick}" data-track-type="${navModelMobileList.dataTrackType}">${navModelMobileList.navTitle}</a>
+							</sly>
+							<!--/* Section has children */-->
+							<sly data-sly-test="${navModelMobileList.navSectionList.size > 0}">
+								${navModelMobileList.navTitle}
+							</sly>
+						</div>
+						<span class="am-icon am-icon-functional-arrow-down bottom my-auto" data-sly-test="${navModelMobileList.navSectionList.size > 0}" ></span>
+					</div>
+
+					<!--/* Submenus */-->
+					<div data-sly-test="${navModelMobileList.navSectionList.size > 0}" class="headnav__subitem-mobile">
+						<div data-sly-list.subNavList = "${navModelMobileList.navSectionList}">
+							<!--/* Uncomment following element for new T2 nav */-->
+							<h3 data-sly-test="${!subNavList.hideNavInMob}" class="h2-wayfinding text-nowrap">${subNavList.sectionTitle}</h3>
+						   <ul data-sly-test="${!subNavList.hideNavInMob}" data-sly-list.subMenuList = "${subNavList.submenu}">
+							   <li>
+								   <a href="${subMenuList.link @ context = 'uri'}" data-track-id="${subMenuList.dataTrackId}" data-track-click="${subMenuList.dataTrackClick}" data-track-type="${subMenuList.dataTrackType}">
+									   ${subMenuList.title @ context='html'}
+									   <!--/* Uncomment following element for new T2 nav */-->
+									   <span data-sly-test="${subMenuList.dataTrackType == 'exit'}" class="am-icon am-icon-external-link bottom my-auto" aria-label='external link icon'></span>
+								   </a>
+							   </li>
+						   </ul>
+           				</div>
+					   <div data-sly-test="${navModelMobileList.ctaText && !navModelMobileList.hideCtaInMob}" class="headnav__subitem-mobile-button" aria-label="${navModelMobileList.ctaText}">
+						   <a href="${navModelMobileList.ctaUrl @ context = 'uri'}" target="${navModelMobileList.targetCtaUrl}"
+							  data-track-id="${navModelMobileList.ctaDataTrackId}" data-track-click="${navModelMobileList.ctaDataTrackClick}" data-track-type="${navModelMobileList.ctaDataTrackType}">
+							   ${navModelMobileList.ctaText}
+						   </a>
+					   </div>
+				   </div>
+			   </li>
+			</ul>
+			<sly data-sly-include="mobilebottomnav.html"></sly>
+		</div>
+	</div>
+	<div class="d-md-none headnav__icon-menu d-flex align-content-center flex-wrap px-3">
+		<span class="hamburger">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17">
+			   <g fill="none" fill-rule="evenodd" stroke="#FFFFFF" stroke-linecap="square" stroke-width="2">
+				   <path d="M1 1.375h21.238M1 8.25h21.238M1 15.125h21.238"/>
+			   </g>
+			</svg>
+		</span>
+		<span class="close-modal d-none">
+			<span class='am-icon am-icon-functional-secondary-close' aria-label='icon' role='img'></span>
+		</span>
+	</div>
+
+<!--/* Desktop Menu */-->
+	<div class="d-none d-md-block">
+		<ul class="headnav__items" data-sly-list.navModelList = "${navigationModel.navItem}">
+			<li class="headnav__item">
+				<a href="${navModelList.navLink @ context = 'uri'}" target = "${navModelList.linkTarget}" class="--am-base-font-size-8 headnav__item-href"
+				   data-track-id="${navModelList.dataTrackId}" data-track-click="${navModelList.dataTrackClick}" data-track-type="${navModelList.dataTrackType}">
+					${navModelList.navTitle}
+				</a>
+				<span class="am-icon am-icon-functional-arrow-down bottom my-auto headnav__item-arrow" data-sly-test="${navModelList.navSectionList.size > 0}"></span>
+				<div data-sly-test="${navModelList.navSectionList.size > 0}" class="headnav__subitem bsp-container">
+					<div data-sly-list.subNavList = "${navModelList.navSectionList}" class="d-flex flex-row pb-4">
+						<div class="headnav__subitem-block${subNavList.leftSeparator ? ' headnav__subitem-border':''}">
+							<h3 class="h2-wayfinding text-nowrap">${subNavList.sectionTitle ? subNavList.sectionTitle : '&nbsp;' @ context='html'}</h3>
+							<div class="d-flex flex-row">
+								<!--/* - (${subNavListList.count} - ${subNavListList.last}) */-->
+								<!--/* <div class="headnav__subitem-link${subNavList.submenu.size > navColBreak && !subNavListList.last ? ' column-break':''}${subNavListList.last && subNavList.submenu.size > navColBreak ? ' last-column-break':''}" data-sly-list.subMenuList = "${subNavList.submenu}">*/-->
+								<sly data-sly-set.navColBreak="${subNavList.navColumnBreak ? subNavList.navColumnBreak :'1'}"/>
+								<div class="headnav__subitem-link" data-sly-list.subMenuList = "${subNavList.submenu}" style="column-count:${navColBreak @ context='number'};">
+									<div class="headnav__subitem-link-wrapper">
+										<a href="${subMenuList.link @ context = 'uri'}" class="body-text-inline-link" data-track-type="${subMenuList.dataTrackType}"
+										   data-track-id="${subMenuList.dataTrackId}" data-track-click="${subMenuList.dataTrackClick}" target="${subMenuList.linkTarget}">
+											${subMenuList.title @ context='html'}
+											<span data-sly-test="${subMenuList.dataTrackType == 'exit'}" class="am-icon am-icon-external-link bottom my-auto" aria-label='external link icon'></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-sly-test="${navModelList.ctaText}" aria-label="${navModelList.ctaText}">
+						<sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html" />
+						<sly data-sly-call="${ctatemplate.ctalink @ type='framebutton', href=navModelList.ctaUrl,
+							text=navModelList.ctaText, target=navModelList.targetCtaUrl, dataTrackID=navModelList.ctaDataTrackId,
+							dataClickID=navModelList.ctaDataTrackClick, dataTrackType=navModelList.ctaDataTrackType, classes='',hexText='', hexBtn=''}" />
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="headnav__underbar"></div>
+	</div>
+</section>

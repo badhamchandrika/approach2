@@ -1,0 +1,12 @@
+{
+  "offerscarousel": {
+    "jcr:primaryType": "nt:unstructured",
+    "paragraphScope": "all",
+    "active": "true",
+    "text": "OffersCarousel",
+    "sling:resourceType": "aem-airmiles-web/components/offerscarousel",
+    "displayMode": "multi",
+    "fragmentPath": "/content/dam/aem-airmiles-web/offers-clo/offers-carousel"
+  }
+}
+

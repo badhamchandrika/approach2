@@ -1,0 +1,14 @@
+<div class="cmp-getapps" data-cmp-is="getapps" data-sly-use.model="com.aem.airmiles.web.core.models.GetAppModel" role="region" aria-label="Footer - APPs">
+  <div class="cmp-getapps__heading">
+      <h3 class="h3-subsection d-flex justify-content-center justify-content-md-start text-center text-md-start">${'Get the App' @ i18n}</h3>
+  </div>
+  <div class="cmp-getapps__body">
+      <ul class="container" data-sly-list="${model.appsList}">
+        <li>
+          <a class="cmp-getapps__link" href="${item.link}" target="${item.linkTarget}" data-track-click="${item.dataClickID}" data-track-id="${item.dataTrackID}" data-track-type="${item.dataTrackType}">
+            <img src="${item.image}" alt="${item.alt}" class="cmp-getapps__image"/>
+          </a>
+        </li>
+      </ul>
+  </div>
+</div>

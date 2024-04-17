@@ -1,0 +1,226 @@
+{
+  "partner-1": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Nov 16 2022 12:59:35 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Partner-1",
+      "cq:template": "/conf/aem-airmiles-travel2/settings/wcm/templates/travel-detail-page",
+      "jcr:created": "Thu Nov 16 2022 12:59:35 GMT+0530",
+      "cq:lastModified": "Thu Nov 16 2022 15:46:53 GMT+0530",
+      "cq:tags": [
+        "travel:ca"
+      ],
+      "sling:resourceType": "aem-airmiles-travel2/components/structure/dealsdetailpage",
+      "cq:lastModifiedBy": "admin",
+      "cq:featuredimage": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:lastModified": "Thu Nov 16 2022 15:46:53 GMT+0530",
+        "sling:resourceType": "core/wcm/components/image/v3/image",
+        "altValueFromDAM": "true"
+      }
+    }
+  },
+  "cq:tags": {
+    "travel": {
+      "jcr:primaryType": "cq:Tag",
+      "jcr:mixinTypes": ["rep:AccessControllable"],
+      "jcr:createdBy": "admin",
+      "jcr:title": "Travel",
+      "jcr:created": "Thu Nov 16 2022 12:15:09 GMT+0530",
+      "jcr:description": "",
+      "sling:resourceType": "cq/tagging/components/tag",
+      "ca": {
+        "jcr:primaryType": "cq:Tag",
+        "jcr:createdBy": "admin",
+        "jcr:title": "CA",
+        "jcr:created": "Thu Nov 16 2022 12:15:52 GMT+0530",
+        "jcr:description": "",
+        "sling:resourceType": "cq/tagging/components/tag",
+        "en": {
+          "jcr:primaryType": "cq:Tag",
+          "jcr:createdBy": "travel-service-user",
+          "jcr:title": "en",
+          "jcr:created": "Thu Nov 16 2022 16:17:31 GMT+0530",
+          "sling:resourceType": "cq/tagging/components/tag",
+          "partners": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:createdBy": "travel-service-user",
+            "jcr:title": "partners",
+            "jcr:created": "Thu Nov 16 2022 16:17:31 GMT+0530",
+            "sling:resourceType": "cq/tagging/components/tag",
+            "partner-1": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "partner-1",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 16:17:31 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 16:17:31 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner-2": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "partner-2",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 16:17:31 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 16:17:31 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner-3": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "partner-3",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 16:29:36 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 16:29:36 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner-8": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "partner-8",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:00:36 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:00:36 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner-28": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "partner-28",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:27:21 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:27:21 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner-15": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "partner-15",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:30:58 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:30:58 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner3000": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "Partner3000",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:40:57 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:40:57 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            }
+          }
+        },
+        "fr": {
+          "jcr:primaryType": "cq:Tag",
+          "jcr:createdBy": "travel-service-user",
+          "jcr:title": "fr",
+          "jcr:created": "Thu Nov 16 2022 16:17:32 GMT+0530",
+          "sling:resourceType": "cq/tagging/components/tag",
+          "partners": {
+            "jcr:primaryType": "cq:Tag",
+            "jcr:createdBy": "travel-service-user",
+            "jcr:title": "partners",
+            "jcr:created": "Thu Nov 16 2022 16:17:32 GMT+0530",
+            "sling:resourceType": "cq/tagging/components/tag",
+            "fr-partner-1": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "fr-partner-1",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 16:17:32 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 16:17:32 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "fr-partner-2": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "fr-partner-2",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 16:17:32 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 16:17:32 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "fr-partner-9": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "fr-partner-9",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:27:46 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:27:46 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "fr-partner-10": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "fr-partner-10",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:30:29 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:30:29 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "fr-partner-12": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "fr-partner-12",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:31:13 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:31:13 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            },
+            "partner-150": {
+              "jcr:primaryType": "cq:Tag",
+              "jcr:mixinTypes": ["cq:ReplicationStatus"],
+              "jcr:createdBy": "travel-service-user",
+              "jcr:title": "Partner-150",
+              "cq:lastReplicationAction": "Activate",
+              "cq:lastReplicatedBy": "travel-service-user",
+              "jcr:created": "Thu Nov 16 2022 17:40:28 GMT+0530",
+              "cq:lastReplicated": "Thu Nov 16 2022 17:40:28 GMT+0530",
+              "sling:resourceType": "cq/tagging/components/tag"
+            }
+          }
+        }
+      },
+      "rep:policy": {
+        "jcr:primaryType": "rep:ACL",
+        "allow": {
+          "jcr:primaryType": "rep:GrantACE",
+          "rep:principalName": "travel-service-user",
+          "rep:privileges": ["jcr:all"]
+        }
+      }
+    }
+  }
+
+}

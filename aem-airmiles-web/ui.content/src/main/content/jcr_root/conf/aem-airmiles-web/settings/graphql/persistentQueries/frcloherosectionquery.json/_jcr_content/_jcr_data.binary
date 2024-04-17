@@ -1,0 +1,27 @@
+query getElements{
+  cloHeroSectionByPath(_path:"/content/dam/aem-airmiles-web/cfs/fr/offers/clo-hero-section") {
+    item {
+      step1Title
+      step2Title
+      step3Title
+      linkYourCardUrlToDisplay
+      linkYourCardInternalUrl {
+        ... on PageRef {
+          _path
+        }
+      }
+      linkYourCardExternalUrl
+      linkYourCardCtaText
+      learnMoreText
+      learnMoreUrlToDisplay
+      learnMoreExternalUrl
+      learnMoreInternalUrl {
+        ... on PageRef {
+          _path
+        }
+      }
+      faqText
+      informationText
+    }
+  }
+}

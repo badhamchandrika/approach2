@@ -1,0 +1,15 @@
+#container-heading-help-section {
+  position: relative;
+
+  .image {
+    position: absolute;
+    left: 5%;
+    top: 48px;
+  }
+
+  @media (max-width: 1023px) {
+    .image {
+      display: none;
+    }
+  }
+}

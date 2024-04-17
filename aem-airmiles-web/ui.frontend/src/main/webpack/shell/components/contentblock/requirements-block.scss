@@ -1,0 +1,140 @@
+div.root.shell {
+  /*-------------------Mobile First----------------*/
+  .contentblock {
+    max-width: none;
+    .contentBlock__requirements {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 30px;
+
+      .contentBlock__container {
+        width: 100%;
+      }
+
+      .shell-primary {
+        min-height: 270px;
+        padding: 0px 16px;
+
+        &.right {
+          .contentBlock__card {
+            flex-direction: row-reverse;
+            a {
+              margin-right: 25px;
+            }
+          }
+        }
+
+        .contentBlock__bgimage {
+          position: absolute;
+          z-index: -1;
+          height: inherit;
+          padding: 0px 16px;
+          img {
+            width: 100%;
+            max-height: 296px;
+          }
+        }
+
+        // Normal Card
+        .contentBlock__card {
+          display: flex;
+          align-items: center;
+          height: 100%;
+
+          a {
+            img.contentBlock__fgimage {
+              height: 240px;
+              margin-top: 22px;
+            }
+          }
+
+          .contentBlock__text {
+            font-family: 'futura-pt-400';
+            align-self: flex-start;
+            color: $shell-gray;
+            line-height: 22px;
+            margin-top: 40px;
+            margin-left: 10px;
+            padding: 0px 10px;
+            width: 100%;
+
+            h3 {
+              font-family: futura-pt-700;
+              font-size: 18px;
+              font-weight: 700;
+            }
+            p {
+              font-family: futura-pt-400;
+              font-size: 14px;
+              margin-bottom: 20px;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+
+        // QR Card
+        .contentBlock__QRcard {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+
+          .contentBlock__fgimages {
+            display: flex;
+            a {
+              img.contentBlock__fgimage {
+                width: 125px;
+              }
+            }
+          }
+
+          .contentBlock__text {
+            color: $shell-gray;
+            line-height: 22px;
+            padding: 0px 10px;
+            margin-top: 40px;
+
+            h3 {
+              font-family: futura-pt-700;
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #requirements {
+      #error {
+      @include error-message-red;
+      }
+    }
+
+  /*-------------------Tablet Devices----------------*/
+  @media screen and (min-width: 768px) {
+    #requirements {
+      #error {
+        margin: 0px auto 20px auto;
+        width: 457px;
+      }
+    }
+  }
+  /*-------------------Desktop Devices----------------*/
+  @media screen and (min-width: 1280px) {
+    .contentblock {
+      .contentBlock__requirements {
+        flex-direction: row;
+
+        .contentBlock__container {
+          width: 100%;
+          .shell-primary {
+            .contentBlock__bgimage {
+              width: 392px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

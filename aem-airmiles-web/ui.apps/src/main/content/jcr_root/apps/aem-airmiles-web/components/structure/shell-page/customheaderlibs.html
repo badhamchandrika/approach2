@@ -1,0 +1,96 @@
+<!--/*
+    Copyright 2017 Adobe Systems Incorporated
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<link rel="shortcut icon" href="/etc.clientlibs/airmiles/clientlibs/site/resources/favicon-rebrand.png" type="image/x-icon" />
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='aem-airmiles-web.base'}"/>
+    <sly data-sly-call="${clientlib.css @ categories='aem-airmiles-web-shell.site'}"/>
+</sly>
+
+<!-- AppsFlyer-->
+<sly data-sly-use.appsFlyer="${'com.aem.airmiles.web.core.models.AppsFlyerKeyModel'}">
+    <script class="optanon-category-C0003" type="text/plain">
+        !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){(t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=document.getElementById('one-trust__cookielaw__airmiles-ca'),o.async=1,o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),p.parentNode.insertBefore(o,p.nextSibling)}(window,document,"script",0,"AF","banners",{banners: {key: '${appsFlyer.appsFlyerKey @context="text"}'}});AF('banners', 'showBanner')
+    </script>
+</sly>
+
+<!--/* Adobe Analytics */-->
+<sly data-sly-test="${properties.enableAdobeAnalytics}" data-sly-include="head.aa.html"></sly>
+
+<!--/* Google Ad */-->
+<sly data-sly-include="head.ads.html"></sly>
+
+<!-- Google Tag Manager -->
+<sly data-sly-use.basePageModel="com.aem.airmiles.web.core.models.BasePageModel">
+    <sly data-sly-test.prod="${basePageModel.production}">
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5H24ZZR');
+        </script>
+  </sly>
+  <sly data-sly-test="${!prod}">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=5hhd3Uju8LrEVTCuVlJkxg&gtm_preview=env-612&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5H24ZZR');</script>
+  </sly>
+</sly>
+<!-- End Google Tag Manager -->
+
+
+<script>
+   //prehiding snippet for Adobe Target with asynchronous tags deployment
+   ;(function(win, doc, style, timeout) {
+   let STYLE_ID = 'at-body-style';
+   function getParent() {
+      return doc.getElementsByTagName('head')[0];
+   }
+   function addStyle(parent, id, def) {
+      if (!parent) {
+      return;
+      }
+      let style = doc.createElement('style');
+      style.id = id;
+      style.innerHTML = def;
+      parent.appendChild(style);
+   }
+   function removeStyle(parent, id) {
+      if (!parent) {
+      return;
+      }
+      let style = doc.getElementById(id);
+      if (!style) {
+      return;
+      }
+      parent.removeChild(style);
+   }
+   addStyle(getParent(), STYLE_ID, style);
+   setTimeout(function() {
+      removeStyle(getParent(), STYLE_ID);
+   }, timeout);
+   }(window, document, "body {opacity: 0 !important}", 3000));
+</script>
+<script src="${properties.targetId @ context='scriptComment'}" async></script>
+
+
+<sly data-sly-use.theme="${'com.aem.airmiles.web.core.models.ThemeNameModel' @themeName=inheritedPageProperties.themeName}"/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories=[theme.themeNameDependency, theme.themeNameSite] }"/>
+</sly>

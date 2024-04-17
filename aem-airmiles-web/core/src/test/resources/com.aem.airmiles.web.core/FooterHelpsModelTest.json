@@ -1,0 +1,11 @@
+{
+    "footerhelps": 
+    {
+        "jcr:primaryType": "nt:unstructured",
+        "paragraphScope": "all",
+        "text": "",
+        "sling:resourceType": "aem-airmiles-web/components/footer/footerhelps",
+        "displayMode": "multi",
+        "fragmentPath": "/content/dam/aem-airmiles-web/cfs/cf-footer-helps"
+    }
+}

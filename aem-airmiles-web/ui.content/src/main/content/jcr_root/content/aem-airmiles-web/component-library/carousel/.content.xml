@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-04-10T23:36:43.018-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/component-library-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Carousel"
+        sling:resourceType="aem-airmiles-web/components/structure/component-library-page"
+        themeName="corporate">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid_756979268
+                jcr:created="{Date}2023-03-31T00:09:24.956-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:11:11.936-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <text
+                    jcr:created="{Date}2023-04-10T20:57:24.032-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-04-10T20:57:40.802-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h1>Carousel&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_951288668
+                    jcr:created="{Date}2023-04-10T20:58:00.975-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-04-10T21:07:45.385-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>Carousel allows a user to cycle through content panels. Can included multiple components in it. Can be used for both anonymous and authenticated collectors.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Figma URL:&amp;nbsp;&lt;/b>&lt;a href=&quot;https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?node-id=180-4143&amp;amp;t=qpUfd2iCUPqgB9ei-0&quot;>https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?node-id=180-4143&amp;amp;t=qpUfd2iCUPqgB9ei-0&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Component path:&amp;nbsp;&amp;nbsp;&lt;/b>aem-airmiles-web/components/airmiles-core/carousel&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Dashboard page:&amp;nbsp;&lt;/b>&lt;a href=&quot;https://airmiles.ca/en/dashboard&quot;>https://airmiles.ca/en/dashboard&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Image Text component can be included in carousel component. Image Text component allows to add image, text and cta links in it.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_220162963
+                    jcr:created="{Date}2023-04-10T21:08:16.882-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-04-10T21:08:28.982-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h2>Examples&lt;/h2>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_477919089
+                    jcr:created="{Date}2023-04-10T21:08:39.075-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-04-10T23:36:21.032-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>1. Carousel component with image text components in it.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <demo
+                    jcr:created="{Date}2023-04-10T22:09:34.240-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-04-10T22:09:34.240-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/demo">
+                    <component
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/component">
+                        <carousel
+                            jcr:created="{Date}2023-04-10T22:10:48.606-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2023-04-10T22:14:04.621-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/carousel"
+                            accessibilityLabel="Latest Updates">
+                            <image_text
+                                cq:panelTitle="Image Text1"
+                                jcr:created="{Date}2023-04-10T22:12:40.969-04:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2023-04-10T22:13:36.111-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aem-airmiles-web/components/airmiles-core/image-text"
+                                dataTrackType="internal"
+                                description="&lt;p>Collectors can now get Miles with Onlia Insurance.&lt;/p>&#xd;&#xa;"
+                                fileReference="/content/dam/aem-airmiles-web/images/62525_ACQ_HPB_HeroImage_EN.jpg"
+                                isModalTrigger="false"
+                                linkTarget="_blank"
+                                linkText="LEARN MORE"
+                                linkType="link"
+                                linkUrl="/content/aem-airmiles-web/ca/en"
+                                textIsRich="true"
+                                title="Welcoming Onlia Insurance to the Program!"/>
+                            <item_1681179233633
+                                cq:panelTitle="Image Text2"
+                                jcr:lastModified="{Date}2023-04-10T22:15:49.136-04:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="aem-airmiles-web/components/airmiles-core/image-text"
+                                dataTrackType="internal"
+                                description="&lt;p>Earn extra miles with our BMO airmiles credit card&lt;/p>&#xd;&#xa;"
+                                fileReference="/content/dam/aem-airmiles-web/images/BMO_NFAM_Card_Dark_EN_RGB.png"
+                                isModalTrigger="false"
+                                linkTarget="_blank"
+                                linkText="LEARN MORE"
+                                linkType="link"
+                                linkUrl="/content/aem-airmiles-web/ca/en"
+                                textIsRich="true"
+                                title="Apply for BMO credit card to earn extra miles"/>
+                        </carousel>
+                    </component>
+                    <info
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/tabs/v1/tabs">
+                        <properties
+                            cq:panelTitle="Properties"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/properties"
+                            reference="../../component"/>
+                        <markup
+                            cq:panelTitle="Markup"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/markup"
+                            reference="../../component"/>
+                        <json
+                            cq:panelTitle="JSON"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/json"
+                            reference="../../component"/>
+                    </info>
+                </demo>
+            </responsivegrid_756979268>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2023-04-10T23:36:43.014-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>

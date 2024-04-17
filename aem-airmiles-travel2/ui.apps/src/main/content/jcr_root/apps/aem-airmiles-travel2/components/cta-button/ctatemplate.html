@@ -1,0 +1,53 @@
+<template data-sly-template.ctalink="${@ type, mobiletype, text, href, target, dataTrackID, dataClickID, classes, btnStyle, hexText, hexLinkBar, hexBtn, ctaBreakpoint}">
+  <div data-sly-test="${type=='link' || type=='extlink'}" class="d-none d-${!ctaBreakpoint ? 'md' : ctaBreakpoint}-block">
+    <sly data-sly-set.barStyle="${hexText ? hexText : '#135582' }" />
+    <a data-sly-test="${href}"
+      class="cta-link cta-link--tertiary cta-link--tertiary-${btnStyle}"
+      target="${target}"
+      href="${href @ context = 'uri'}"
+      data-track-id="${dataTrackID}"
+      data-track-click="${dataClickID}"
+      style="color:${hexText @ context='styleToken'};--bar-color: ${hexLinkBar @ context='styleToken'};">
+      <span>${text @ context='html'}</span>
+      <em class="am-icon ${type != 'extlink' ? 'am-icon2-arrow-right' : 'am-icon-external-link'}"></em>
+    </a>
+  </div>
+  <div data-sly-test="${type == 'button' || type == 'framebutton'}" class="d-none d-${!ctaBreakpoint ? 'md' : ctaBreakpoint}-block">
+    <a data-sly-test="${href}"
+      class="cta-button cta-button--${type == 'button' ? 'primary' : 'secondary'} cta-button--${type == 'button' ? 'primary' : 'secondary'}-${btnStyle}"
+      target="${target}"
+      href="${href @ context = 'uri'}"
+      data-track-id="${dataTrackID}"
+      data-track-click="${dataClickID}"
+      style="background-color: ${hexBtn @ context='styleToken'}; color:${hexText @ context='styleToken'}">
+        ${text @ context='html'}
+    </a>
+  </div>
+
+  <div data-sly-test="${mobiletype == 'link' || mobiletype == 'extlink' || mobiletype == 'tertiary' }" class="d-${!ctaBreakpoint ? 'md' : ctaBreakpoint}-none">
+    <sly data-sly-set.barStyle="${hexText ? hexText : '#135582' }" />
+    <a data-sly-test="${href}"
+      class="cta-link cta-link--tertiary cta-link--tertiary-${btnStyle}"
+      target="${target}"
+      href="${href @ context = 'uri'}"
+      data-track-id="${dataTrackID}"
+      data-track-click="${dataClickID}"
+      style="color:${hexText @ context='styleToken'};--bar-color: ${hexLinkBar @ context='styleToken'};">
+      <span>${text @ context='html'}</span>
+      <em class="am-icon ${mobiletype != 'extlink' ? 'am-icon2-arrow-right' : 'am-icon-external-link'}"></em>
+    </a>
+  </div>
+
+  <div data-sly-test="${mobiletype == 'button' || mobiletype == 'framebutton'}" class="d-${!ctaBreakpoint ? 'md' : ctaBreakpoint}-none">
+    <a data-sly-test="${href}"
+      class="cta-button cta-button--${mobiletype == 'button' ? 'primary' : 'secondary'} cta-button--${mobiletype == 'button' ? 'primary' : 'secondary'}-${btnStyle}"
+      target="${target}"
+      href="${href @ context = 'uri'}"
+      data-track-id="${dataTrackID}"
+      data-track-click="${dataClickID}"
+      style="background-color: ${hexBtn @ context='styleToken'}; color:${hexText @ context='styleToken'}">
+        ${text @ context='html'}
+    </a>
+  </div>
+
+</template>

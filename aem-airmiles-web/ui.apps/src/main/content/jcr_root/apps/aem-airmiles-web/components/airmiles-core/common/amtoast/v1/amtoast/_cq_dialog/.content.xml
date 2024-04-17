@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="AM Toast Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <main
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="main"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <toastDetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        required="{Boolean}false">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Toast Details"
+                                            name="./toastDetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <accordion
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                    jcr:title="Toast Detail List"
+                                                    margin="{Boolean}false"
+                                                    maximized="{Boolean}true"
+                                                    multiple="{Boolean}true"
+                                                    variant="quiet">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <content
+                                                            jcr:primaryType="nt:unstructured"
+                                                            jcr:title="Toast Detail"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <toastUID
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Icon Type"
+                                                                    name="./toastUID"
+                                                                    required="{Boolean}true">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <offerSaveMsg
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Offers Saving Message"
+                                                                            value="offerSaveMsg"/>
+                                                                        <offerUnSaveMsg
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Offers Un-saving Message"
+                                                                            value="offerUnSaveMsg"/>
+                                                                    </items>
+                                                                </toastUID>
+                                                                <toastTitle
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    emptyText="Title"
+                                                                    maxlength="30"
+                                                                    fieldDescription="Maximum 64 characters for title."
+                                                                    fieldLabel="Toast Title"
+                                                                    name="./toastTitle"/>
+                                                                <toastMessage
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    emptyText="Message"
+                                                                    maxlength="100"
+                                                                    fieldDescription="Maximum 64 characters for title. In any case longer title needed, add /br tag for line break."
+                                                                    fieldLabel="Toast Message"
+                                                                    name="./toastMessage"/>
+                                                                <icon
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Icon Type"
+                                                                    name="./icon"
+                                                                    required="{Boolean}true">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <none
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="---------"
+                                                                            value=""/>
+                                                                        <airmiles
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Airmiles Logo"
+                                                                            value="am-icon am-icon-am-logo"/>
+                                                                        <warning
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Warning Triangle"
+                                                                            value="am-icon2 am-icon2-warning"/>
+                                                                        <heart
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Heart"
+                                                                            value="am-icon2 am-icon2-heart-full"/>
+                                                                        <hearthalo
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Heart Outline"
+                                                                            value="am-icon2 am-icon2-heart-empty"/>
+                                                                        <info
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Information Circle"
+                                                                            value="am-icon2 am-icon2-information"/>
+                                                                        <checkmark
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Checkmark"
+                                                                            value="am-icon2 am-icon2-lock-cash-account"/>
+                                                                        <location
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Location"
+                                                                            value="am-icon2 am-icon2-location"/>
+                                                                        <question
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Question"
+                                                                            value="am-icon2 am-icon2-help"/>
+                                                                        <barcode
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Barcode"
+                                                                            value="am-icon2 am-icon2-barcode_scanner"/>
+                                                                        <home
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Home"
+                                                                            value="am-icon am-icon-home"/>
+                                                                        <profile
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="User/Profile"
+                                                                            value="am-icon am-icon-tier-oynx"/>
+                                                                        <airplane
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Airplane"
+                                                                            value="am-icon2 am-icon2-travel-bookings"/>
+                                                                        <bookmark
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Bookmark/Tag"
+                                                                            value="am-icon2 am-icon2-offers"/>
+                                                                    </items>
+                                                                </icon>
+                                                                <customIcon
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Custom Icon"
+                                                                    name="./customIcon"/>
+                                                                <style
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Base Style"
+                                                                    name="./style"
+                                                                    required="{Boolean}true">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <blue
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Informational/Blue"
+                                                                            value="toast-blue"/>
+                                                                        <yellow
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Warning/Yellow"
+                                                                            value="toast-yellow"/>
+                                                                        <red
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Critical/Red"
+                                                                            value="toast-red"/>
+                                                                        <green
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Success/Green"
+                                                                            value="toast-green"/>
+                                                                        <blueFrame
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Informational - Light"
+                                                                            value="toast-blue-frame"/>
+                                                                        <yellowFrame
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Warning - Light"
+                                                                            value="toast-yellow-frame"/>
+                                                                        <redFrame
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Critical - Light"
+                                                                            value="toast-red-frame"/>
+                                                                        <greenFrame
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Success - Light"
+                                                                            value="toast-green-frame"/>
+                                                                    </items>
+                                                                </style>
+                                                                <duration
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                    fieldLabel="Time of toast appearing in screen. Then it will disappear. Duration time by seconds"
+                                                                    name="./duration"/>
+                                                                <hasCloseButton
+                                                                    cq:showOnCreate="{Boolean}true"
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                    fieldDescription="Enable Close Button"
+                                                                    name="./hasCloseButton"
+                                                                    text="Close button"
+                                                                    value="{Boolean}true" />
+                                                            </items>
+                                                        </content>
+                                                    </items>
+                                                </accordion>
+                                            </items>
+                                        </field>
+                                    </toastDetails>
+                                </items>
+                            </column>
+                        </items>
+                    </main>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

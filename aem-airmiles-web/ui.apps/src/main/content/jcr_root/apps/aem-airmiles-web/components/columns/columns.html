@@ -1,0 +1,156 @@
+<sly data-sly-use.columnsModel="com.aem.airmiles.web.core.models.ColumnsModel" />
+<sly data-sly-test="${columnsModel.columnnumber != 'header' && columnsModel.columnnumber != 'footer'}">
+    <sly data-sly-set.commonClass="${columnsModel.verticalCenter ? ' my-auto':''}${columnsModel.horizontalCenter ? ' d-flex justify-content-center':''}" />
+    <div class="${columnsModel.fullwidth ? columnsModel.backgroundcolor : 'bsp-container'}" role="region" aria-label="section">
+        <div class="columns-inner ${columnsModel.fullwidth ? 'bsp-container' : columnsModel.backgroundcolor}">
+            <div class="${columnsModel.cardwrap ? 'columns__card' : 'columns__blank'}">
+                <div class="row section-wrapper">
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '1' || !columnsModel.columnnumber}">
+                        <div class="col-12${commonClass}">
+                            <sly data-sly-resource="${@path='centercol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '2e'}">
+                        <div class="col-6${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-6${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '2'}">
+                        <div class="col-12 col-md-6${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-6${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '2l'}">
+                        <div class="col-12 col-lg-6${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-lg-6${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '3'}">
+                        <div class="col-12 col-md-4${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-4${commonClass}">
+                            <sly data-sly-resource="${@path='centercol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-4${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '4'}">
+                        <div class="col-12 col-md-3${commonClass}">
+                            <sly data-sly-resource="${@path='col1', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-3${commonClass}">
+                            <sly data-sly-resource="${@path='col2', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-3${commonClass}">
+                            <sly data-sly-resource="${@path='col3', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-3${commonClass}">
+                            <sly data-sly-resource="${@path='col4', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == 'onenarrow'}">
+                        <div class="col-10 offset-1${commonClass}">
+                            <sly data-sly-resource="${@path='centercol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == 'onetiny'}">
+                        <div class="col-8 offset-2${commonClass}">
+                            <sly data-sly-resource="${@path='centercol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == 'onehalf'}">
+                        <div class="col-6 offset-3${commonClass}">
+                            <sly data-sly-resource="${@path='centercol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '7/5'}">
+                        <div class="col-12 col-md-7${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-5${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '8/4'}">
+                        <div class="col-12 col-md-8${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-4${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '9/3'}">
+                        <div class="col-12 col-md-9${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-3${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == 'dashboard'}">
+                        <div class="col-12 col-lg-8${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="d-none d-lg-flex col-lg-1"> </div>
+                        <div class="col-12 col-lg-3${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == '10/2'}">
+                        <div class="col-12 col-md-10${commonClass}">
+                            <sly data-sly-resource="${@path='leftcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                        <div class="col-12 col-md-2${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+
+                    <sly data-sly-test="${columnsModel.columnnumber == 'r2r1'}">
+                        <div class="col-12 col-md-6${commonClass}">
+                            <div class="row">
+                                <div class="col-12">
+                                    <sly data-sly-resource="${@path='leftrow1', resourceType='foundation/components/parsys'}"></sly>
+                                </div>
+                                <div class="col-12">
+                                    <sly data-sly-resource="${@path='leftrow2', resourceType='foundation/components/parsys'}"></sly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6${commonClass}">
+                            <sly data-sly-resource="${@path='rightcol', resourceType='foundation/components/parsys'}"></sly>
+                        </div>
+                    </sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
+
+<sly data-sly-test="${columnsModel.columnnumber == 'header'}" data-sly-include="colheader.html" />
+
+<sly data-sly-test="${columnsModel.columnnumber == 'footer'}" data-sly-include="colfooter.html" />

@@ -1,0 +1,55 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/alberta"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/britishcolumbia"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/quebec"
+    },
+    "item3": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/ontario"
+    },
+    "item4": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/saskatchewan"
+    },
+    "item5": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/manitoba"
+    },
+    "item6": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/newbrunswick"
+    },
+    "item7": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/newfoundlandlabrador"
+    },
+    "item8": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/novascotia"
+    },
+    "item9": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/princeedwardisland"
+    },
+    "item10": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/northwestterritories"
+    },
+    "item11": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/nunavut"
+    },
+    "item12": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/destinations/canada/yukon"
+    }
+  }

@@ -1,0 +1,21 @@
+<template data-sly-template.elements="${@ data, count}">
+    <div class="alertheader-border ${data.alertType}" role="${data.hasRoleAlert ? 'alert':''}" id="alert_${count}" data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=data.startTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=data.endTime}">
+        <div class="bsp-container d-flex justify-content-center" data-track-section="${data.dataTrackSection}">
+            <div data-sly-test="${data.alertType}" class="alertheader-icon ${data.alertType}">
+                <span data-sly-test="${data.alertType=='success'}" class='am-icon am-icon-checkmark' aria-hidden="true"></span>
+                <span data-sly-test="${data.alertType=='failure'}" class='am-icon am-icon-functional-secondary-close' aria-hidden="true"></span>
+                <span data-sly-test="${data.alertType=='warning'}" class='am-icon am-icon-alert' aria-hidden="true"></span>
+                <span data-sly-test="${data.alertType=='neutral'}" class='am-icon am-icon-info' aria-hidden="true"></span>
+                <span data-sly-test="${data.alertType=='optin'}" class='am-icon am-icon-inbox-unopened' aria-hidden="true"></span>
+            </div>
+            <div class="alertheader-text">
+                <p>${data.alertText @ context='html'}</p>
+            </div>
+            <div data-sly-test="${data.displayClose}" class="alertheader-close" aria-label='close' id="close_alert_${count}">
+                <button type="button" class="" data-track-click="${data.dataClickID}" data-track-id="${data.dataTrackID}" data-track-type="${data.dataTrackType}" data-testid="close-alert" aria-label="Close">
+                    <span class="am-icon am-icon-functional-secondary-close" data-testid="close-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</template>

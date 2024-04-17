@@ -1,0 +1,168 @@
+$card-shadow:0 3px 7px 0 rgb(0 0 0 / 25%);
+$brand-blue: #1F68DA;
+$dark-blue: #1C2D3F;
+$hover-border: #16A78A;
+$logo-circle: 3.5rem;
+$logo-md-circle: 6rem;
+$logo-size: $logo-circle - 1.5rem;
+$logo-md-size: $logo-md-circle - 2.75rem;
+$fade-sides: to left, transparent 0%, black 1%, black 99%, transparent 100%;
+.offerspartners{
+  display: flex;
+  .ctabutton{
+    .cmp-button.ctabuttonround{
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: .625rem;
+      .am-icon2.am-icon2-arrow-right{
+        font-size: .75rem;
+        &:before{
+          font-weight: 700;
+        }
+      }
+      &:hover, &:active{
+        background-color: transparent!important;
+        border-color: transparent!important;
+        color: $brand-blue!important;
+      }
+    }
+  }
+  .cmp-title{
+    padding: 0;
+    h2{
+      font-size: 1.125rem;
+      padding: 0!important;
+    }
+  }
+  .partner-logo-container{
+    margin: 0 -1rem;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient($fade-sides);
+    mask-image: linear-gradient($fade-sides);
+  }
+  &__box{
+    padding-right: .5rem;
+    &:first-child{
+      padding-left: 1rem;
+    }
+    &:last-child{
+      padding-right: 1rem;
+    }
+  }
+  &__logo{
+    display: flex;
+    background-color: #FFF;
+    border-radius: 5rem;
+    min-height: $logo-circle;
+    min-width: $logo-circle;
+    max-height: $logo-circle;
+    max-width: $logo-circle;
+    text-align: center;
+    margin-bottom: .5rem;
+    box-shadow: $card-shadow;
+    border: 2px solid transparent;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:focus{
+      border-color: $hover-border;
+    }
+    &:hover{
+      border-color: $brand-blue;
+      +.offerspartners__name{
+        color:rgba(31, 104, 218, 1);
+      }
+    }
+    img{
+      max-height: $logo-size;
+      max-width: $logo-size;
+      margin: auto;
+      mix-blend-mode: multiply; // Only works on white background to prevent bleeding corners.
+    }
+  }
+  &__name{
+    font-family: 'OpenSans', sans-serif;
+    font-size: .75rem;
+    color: $dark-blue;
+    max-width: 4.5rem;
+    min-width: 4.5rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-wrap:break-word;
+    overflow: hidden;
+  }
+  .partner-logo{
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      -webkit-box-shadow: none;
+    }
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+}
+
+@media (min-width: breakpoint('md')) {
+  .offerspartners {
+    .ctabutton{
+      .cmp-button.ctabuttonround{
+        font-size: .75rem;
+        padding-right: 1rem;
+        .am-icon2.am-icon2-arrow-right{
+          font-size: .875rem;
+        }
+      }
+    }
+    .cmp-title {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    &__box {
+      padding-right: 1.375rem;
+    }
+    &__logo {
+      min-height: $logo-md-circle;
+      min-width: $logo-md-circle;
+      max-height: $logo-md-circle;
+      max-width: $logo-md-circle;
+      margin-bottom: .75rem;
+      img {
+        max-height: $logo-md-size;
+        max-width: $logo-md-size;
+      }
+    }
+    &__name {
+      font-family: 'OpenSans', sans-serif;
+      max-width: 6rem;
+      min-width: 6rem;
+    }
+    .partner-logo{
+      &::-webkit-scrollbar {
+        height: 1rem;
+        width: auto;
+        background: unset;
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('lg')) {
+  .offerspartners {
+    //.partner-logo-container{
+    //  margin: 0 -2rem;
+    //}
+    &__logo {
+      //margin-right: 1.5rem;
+    }
+  }
+}

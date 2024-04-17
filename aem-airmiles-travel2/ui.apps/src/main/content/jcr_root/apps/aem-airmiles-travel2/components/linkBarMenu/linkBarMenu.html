@@ -1,0 +1,32 @@
+<sly data-sly-use.model="${'ca.airmiles.travel.core.models.LinksBarModel'}"/>
+<div class="pn-ProductNav">
+  <nav id="pnProductNav" class="pn-ProductNav__Nav">
+    <div id="pnProductNavContents" class="pn-ProductNav__Contents" data-sly-list.link="${model.links}">
+      <a href="${link.linkUrl}"
+         class="pn-ProductNav__Contents-Link  ${link.active ? 'pn-ProductNav__Contents-Link--active' : ''}"
+         data-sly-attribute.aria-current="${link.active ? 'true' : 'false'}"
+         data-track-id="${link.dataTrackID}"
+         data-track-click="${link.dataClickID}"
+         data-track-type="${link.dataTrackType}">
+        <img src="/content/dam/aem-airmiles-travel2/link-bar-icons/${link.icon}.svg" alt="">
+        ${link.linkText}</a>
+    </div>
+  </nav>
+  <button id="pnAdvancerLeft" class="pn-ProductNav__Advancer pn-ProductNav__Advancer--Left" type="button" tabindex="-1" aria-label="${'Previous' @ i18n}">
+    <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M8.40828 16.7073L0.71582 8.46688L8.412 0.289688C8.77553 -0.0965628 9.36363 -0.0965628 9.72716 0.289688C10.0907 0.67594 10.0907 1.30211 9.72716 1.68837L3.34242 8.47215L9.73088 15.3153C10.0919 15.7028 10.0895 16.329 9.72468 16.7126C9.54354 16.9051 9.30656 17 9.06958 17C8.83012 17 8.59066 16.9024 8.40828 16.7073Z"
+        fill="#1F68DA" />
+    </svg>
+  </button>
+  <button id="pnAdvancerRight" class="pn-ProductNav__Advancer pn-ProductNav__Advancer--Right" type="button" tabindex="-1" aria-label="${'Next' @ i18n}">
+    <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M1.59172 0.292657L9.28418 8.53312L1.588 16.7103C1.22447 17.0966 0.63637 17.0966 0.272839 16.7103C-0.0906916 16.3241 -0.0906917 15.6979 0.272838 15.3116L6.65758 8.52785L0.269115 1.68474C-0.0919336 1.29717 -0.0894532 0.670998 0.275319 0.287385C0.456463 0.0949181 0.693441 2.68184e-06 0.930418 2.66048e-06C1.16988 2.63889e-06 1.40934 0.097554 1.59172 0.292657Z"
+        fill="#1F68DA" />
+    </svg>
+  </button>
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.js @ categories='aem.travel2.custom.linkBarMenu'}" />

@@ -1,0 +1,40 @@
+<sly data-sly-use.model ="com.aem.airmiles.web.core.models.ImageTextModel">
+    <div class="${model.isCarouselItem ? 'custom-carousel__item': ''}">
+    <sly data-sly-set.cta = "${model.cta}"></sly>
+        <div class="cmp-text-image-wrapper" id="${model.imageTextId}">
+            <div class="row text-image-section">
+                <div class="col-lg-8 col-md-6 col-12 image-section ${properties.imageAlign}" data-authoredimage="${model.fileReference @context = 'uri'}" style="background-image: url(${model.fileReference @ context='uri'});">
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 text-section">
+                    <div class="logo-image" data-sly-test="${model.logoPath}">
+                        <img src="${model.logoPath}" alt="${model.imageAltText}"/>
+                    </div>
+                    <h3 class="text-image-title ${model.titleType}" data-sly-element="${model.titleHeading}">
+                        ${model.titleText @context='html'}
+                    </h3>
+                    <div class="text-image-description">
+                        ${model.descriptionText @ context='html'}
+                    </div>
+                    <div class="text-image-link">
+                        <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                        <sly data-sly-call="${ctatemplate.ctalink @
+                              type=cta.linkType,
+                              href=cta.linkUrl,
+                              text=cta.linkText,
+                              target=cta.linkTarget,
+                              hexText=cta.hexTextColor,
+                              hexBtn=cta.hexBtnColor,
+                              dataTrackID=cta.dataTrackID,
+                              dataClickID=cta.dataClickID,
+                              dataTrackType=cta.dataTrackType,
+                              dataBannerName=model.trackName,
+                              dataBannerCategory=model.trackCategory,
+                              classes=cta.linkColor}">
+                        </sly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>

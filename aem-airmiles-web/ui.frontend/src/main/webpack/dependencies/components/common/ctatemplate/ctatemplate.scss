@@ -1,0 +1,326 @@
+@mixin ctabuttonround-styles {
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  letter-spacing: 3px;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
+}
+@mixin cta-sizes {
+  $cta-sizes: (
+    sm: .625rem!important,
+    md: .75rem!important,
+    lg: .875rem!important,
+  );
+  @each $size, $font-size in $cta-sizes {
+    .cta-#{$size} {
+      font-size: $font-size;
+    }
+  }
+}
+
+.ctalink {
+  text-align: left;
+  max-width: min-content;
+  color: color("brand-blue");
+
+  &--arrowlink-new.ctalink {
+    margin: 0 auto;
+    font-weight: 700;
+
+    @media (min-width: 768px) {
+      padding-right: 0;
+    }
+    
+    .cmp-link {
+      font-size: .75rem!important;
+      font-family: Montserrat, sans-serif;
+      letter-spacing: 2px;
+      color: #1F68DA;
+
+      em:before {
+        font-size: 14px;
+        width: 11px;
+      }
+    }
+  }
+  
+  .cmp-link {
+    position: relative;
+    align-items: baseline;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    font-family: ArchivoRegular, sans-serif;
+    font-size: .875rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+    min-width: unset;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
+    color: color("brand-blue");
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    @media (min-width: breakpoint("md")) {
+      font-size: 1rem;
+      padding-right: 2rem;
+    }
+    @media (min-width: breakpoint("lg")) {
+      font-size: 1.125rem;
+    }
+    sup{
+      font-size: .75rem;
+    }
+    em {
+      &.am-icon {
+        width: 0;
+        pointer-events: none;
+      }
+      &:before {
+        font-size: 11px;
+        line-height: 26px;
+        font-weight: 600;
+        left: 8px;
+        position: relative;
+        transition: left 0.2s ease-out;
+      }
+    }
+    .am-icon2.am-icon2-arrow-right{
+       em:before {
+         font-size: 1rem;
+       }
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: .25rem;
+      left: 0;
+      pointer-events: none;
+      display: block;
+      width: 0;
+      height: 1px;
+      //background-color: color("brand-blue");
+      transition: all 0.3s;
+    }
+    &:hover {
+      color: color('blue-hover');
+      em {
+        &:before {
+          left: 12px;
+        }
+        &.am-icon-external-link{
+          &:before{
+            content: '\e95a';
+          }
+        }
+      }
+      &:after {
+        width: 100%;
+        background-color: var(--bar-color);
+        @media (min-width: breakpoint('md')) {
+          width: calc(100% - 2rem);
+        }
+      }
+    }
+  }
+  @include cta-sizes;
+
+  &.primary{
+    .cmp-link {color: color('brand-blue');&:after{background-color: color("brand-blue");}}
+  }
+  &.secondary{
+    .cmp-link {color: color('light-blue');&:after{background-color: color("light-blue");}}
+  }
+  &.info{
+    .cmp-link {color: color('blue');&:after{background-color: color("blue");}}
+  }
+  &.gold{
+    .cmp-link {color: color('gold');&:after{background-color: color("gold");}}
+  }
+  &.success{
+    .cmp-link {color: color('alert-success');&:after{background-color: color("alert-success");}}
+  }
+  &.warning{
+    .cmp-link {color: color('orange');&:after{background-color: color("orange");}}
+  }
+  &.danger{
+    .cmp-link {color: color('alert-failure');&:after{background-color: color("alert-failure");}}
+  }
+  &.dark{
+    .cmp-link {color: color('grey-dark');&:after{background-color: color("grey-dark");}}
+  }
+  &.light{
+    .cmp-link {color: color('grey-light');&:after{background-color: color("grey-light");}}
+  }
+  &.white{
+    .cmp-link {color: #fff;&:after{background-color: #fff;}}
+  }
+}
+
+.ctabutton{
+  .cmp-button{
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    margin-right: 0.625rem;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    font-family: ArchivoSemiBold, sans-serif;
+    font-size: .875rem;
+    color: color('white');
+    background-color: color('brand-blue');
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    cursor: pointer;
+    sup{
+      font-size: .75rem;
+    }
+    &:hover{
+      -webkit-box-shadow: inset 0 0 0 200px rgba(0,0,0,0.10);
+      box-shadow: inset 0 0 0 200px rgba(0,0,0,0.10);
+      color: color('white');
+    }
+    &.framebutton{
+      background-color: color('transparent')!important;
+      color: color('brand-blue');
+      border: solid 2px color('brand-blue');
+    }
+    &.ctabuttonround {
+      @include ctabuttonround-styles;
+      border: solid 2px transparent;
+    }
+
+    &.ctabuttonroundhalo {
+      @include ctabuttonround-styles;
+      background-color: transparent !important;
+      color: color('brand-blue');
+      border: solid 2px color('brand-blue');
+    }
+    &.ctabuttonround, &.ctabuttonroundhalo {
+      &:hover{
+        border: solid 2px #E9FC88 !important;
+        background: #E9FC88 !important;
+        color: #080E1A !important;
+        box-shadow: none;
+      }
+      &:active{
+        border: solid 2px #D7FA29 !important;;
+        background: #D7FA29 !important;
+        color: #080E1A !important;
+      }
+    }
+    @media (min-width: breakpoint('md')) {
+      font-size: 1rem;
+      &.ctabuttonround, &.ctabuttonroundhalo {
+        font-size: .625rem;
+      }
+    }
+    @media (min-width: breakpoint('lg')) {
+      font-size: 1.125rem;
+      &.ctabuttonround, &.ctabuttonroundhalo {
+        font-size: .75rem;
+      }
+    }
+  }
+  @include cta-sizes;
+  &.primary{
+    .cmp-button {
+      color: color('white');
+      background-color: color('brand-blue');
+      &.framebutton{
+        color: color('brand-blue');
+        border-color: color('brand-blue');
+      }
+    }
+  }
+  &.secondary{
+    .cmp-button {
+      color: color('white');
+      background-color: color('light-blue');
+      &.framebutton{
+        color: color('light-blue');
+        border-color: color('light-blue');
+      }
+    }
+  }
+  &.info{
+    .cmp-button {
+      color: color('white');
+      background-color: color('blue');
+      &.framebutton{
+        color: color('blue');
+        border-color: color('blue');
+      }
+    }
+  }
+  &.gold{
+    .cmp-button {
+      color: color('white');
+      background-color: color('gold');
+      &.framebutton{
+        color: color('gold');
+        border-color: color('gold');
+      }
+    }
+  }
+  &.success{
+    .cmp-button {
+      color: color('white');
+      background-color: color('alert-success');
+      &.framebutton{
+        color: color('alert-success');
+        border-color: color('alert-success');
+      }
+    }
+  }
+  &.warning{
+    .cmp-button {
+      color: color('white');
+      background-color: color('orange');
+      &.framebutton{
+        color: color('orange');
+        border-color: color('orange');
+      }
+    }
+  }
+  &.danger{
+    .cmp-button {
+      color: color('white');
+      background-color: color('alert-failure');
+      &.framebutton{
+        color: color('alert-failure');
+        border-color: color('alert-failure');
+      }
+    }
+  }
+  &.dark{
+    .cmp-button {
+      color: color('white');
+      background-color: color('grey-dark');
+      &.framebutton{
+        color: color('grey-dark');
+        border-color: color('grey-dark');
+      }
+    }
+  }
+  &.light{
+    .cmp-button {
+      color: color('body-copy');
+      background-color: color('grey-light');
+      &.framebutton{
+        color: color('grey-light');
+        border-color: color('grey-light');
+      }
+    }
+  }
+}

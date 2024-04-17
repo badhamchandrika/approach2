@@ -1,0 +1,139 @@
+div.root.shell {
+  /*-------------------Mobile First----------------*/
+  .prizes {
+    display: block;
+
+    .contentBlock__prizes {
+      display: grid;
+
+      .shell-primary {
+        padding: 0px 0px;
+        &.right {
+          .contentBlock__card__prizes {
+            background-color:#ffffff;
+            color: #000000;
+           /*  grid-template-columns: 1fr;
+            grid-template-rows: 1fr; */
+            
+          }
+        }
+        &.left {
+          .contentBlock__card__prizes {
+         /*    grid-template-columns: 1fr;
+            grid-template-rows: 1fr; */
+          
+          }
+        }
+        &.right-mobile {
+          .contentBlock__card__prizes {
+          /*   grid-template-columns: 1fr;
+            grid-template-rows: 1fr; */
+            
+          }
+        }
+
+        .contentBlock__card__prizes {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          vertical-align: unset;
+          .contentBlock__backgroundImage{
+            flex: 1;
+            img.contentBlock__fgimage {
+              width: 100%; 
+            }
+          }
+
+          .contentBlock__text_prizes {
+            color: #000000;
+            font-size: 22px;
+            line-height: 22px;
+            padding: 24px;
+            flex: 1;
+               h3 {
+                padding-bottom:16px;
+                /* the style with a weight of 450 cannot be used because 
+                    the client does not provide this font,
+                    it is replaced with a weight of 400. title-desktop-h4 */
+                &.large{
+                    @include title-desktop-h4;
+                    text-align: left;
+                  }
+                  &.medium{
+                    @include description-desktop-h5 ;
+                    text-align: left;
+                  }
+                  &.small{
+                    @include subtitle-desktop-h6;
+                    text-align: left;
+                  }
+              }
+              .contentBlock_subHeader{
+                 p {
+                    @include subHeader-desktop;
+                    padding-bottom:16px;
+                  }
+              }
+              .contentBlock_description{
+                 p{
+                   @include contentBlock-body-desktop;
+                 }
+                }
+              ul {
+                font-family: futura-pt-300;
+                padding-left: 16px;
+                li {
+                  @include contentBlock-body-desktop;
+                  list-style: disc;
+                }
+              }
+              ol {
+                font-family: futura-pt-300;
+                padding-left: 16px;
+                li {
+                  @include contentBlock-body-desktop;
+                  list-style: decimal;
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+
+  /*-------------------Tablet Devices----------------*/
+  @media screen and (min-width: 768px) {
+    .prizes {
+      .contentBlock__prizes {
+        .shell-primary {
+          .contentBlock__card__prizes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            justify-content: center;
+            height: 100%;
+            .contentBlock__text_prizes{
+              height: 500px;
+            }
+            .contentBlock__backgroundImage{
+              height: 500px;
+              width: 100%;
+              overflow: hidden;
+              .contentBlock__fgimage{
+                object-fit: cover;
+                height: 100%;
+              }
+             }
+            }
+          }
+        }
+      }
+    }
+  
+  /*-------------------Desktop Devices----------------*/
+  @media screen and (min-width: 1280px) {
+      }
+  }

@@ -1,0 +1,74 @@
+<!--/*
+    Copyright 2017 Adobe Systems Incorporated
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<!-- Google Tag Manager -->
+<sly data-sly-test.googleAuth="${inheritedPageProperties.gtmAuth ? ['&gtm_auth=',inheritedPageProperties.gtmAuth]  : '' @ join = ''}"></sly>
+<sly data-sly-test.gtmPreview="${inheritedPageProperties.gtmPreview ? ['&gtmPreview=',inheritedPageProperties.gtmPreview]  : '' @ join = ''}"></sly>
+<sly data-sly-test.gtmCookies="${inheritedPageProperties.gtmCookies ? ['&gtm_cookies_win=',inheritedPageProperties.gtmCookies]  : '' @ join = ''}"></sly>
+<script data-sly-test="${inheritedPageProperties.enableGTM}" type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl + '${googleAuth @context='uri'}${gtmPreview @ context='uri'}${gtmCookies @ context='uri'}';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','${inheritedPageProperties.analyticsId @ context='text'}');</script>
+<!-- End Google Tag Manager -->
+
+
+<sly data-sly-include="head.ads.html"></sly>
+
+
+<script  class="optanon-category-C0003" type="${inheritedPageProperties.enableOneTrust == 'true' ? 'text/plain' : 'text/javascript'  @ context='attribute'}">
+   //prehiding snippet for Adobe Target with asynchronous tags deployment
+   ;(function(win, doc, style, timeout) {
+   let STYLE_ID = 'at-body-style';
+   function getParent() {
+      return doc.getElementsByTagName('head')[0];
+   }
+   function addStyle(parent, id, def) {
+      if (!parent) {
+      return;
+      }
+      let style = doc.createElement('style');
+      style.id = id;
+      style.innerHTML = def;
+      parent.appendChild(style);
+   }
+   function removeStyle(parent, id) {
+      if (!parent) {
+      return;
+      }
+      let style = doc.getElementById(id);
+      if (!style) {
+      return;
+      }
+      parent.removeChild(style);
+   }
+   addStyle(getParent(), STYLE_ID, style);
+   setTimeout(function() {
+      removeStyle(getParent(), STYLE_ID);
+   }, timeout);
+   }(window, document, "body {opacity: 0 !important}", 3000));
+</script>
+
+<script  src="${inheritedPageProperties.targetUrl  @ context='uri'}" async></script>
+
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+   <sly data-sly-call="${clientlib.css @ categories='aem-airmiles-web.base'}"/>
+   <sly data-sly-call="${clientlib.css @ categories='aem-airmiles-travel2.base'}"/>
+</sly>
+<head>
+    <script src="https://sdk.joinsherpa.io/widget.js?appId=spc1ODgxMT"></script>
+</head>
+

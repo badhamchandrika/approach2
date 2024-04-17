@@ -1,0 +1,109 @@
+.cmp-text__container {
+    color: amSteel(7);
+    font-family: amFontFamily(2);
+    font-size: amFontSize(5);
+    font-weight: amFontWeight(4);
+
+    @include media-breakpoint-down('xl'){
+        font-size: amFontSize(4);
+    }
+
+    b {
+        font-weight: bold;
+    }
+    ul {
+        list-style: inside;
+        list-style-type: disc;
+    }
+    ol {
+        list-style: inside;
+        list-style-type: decimal;
+    }
+}
+// Style system classes
+.text-bsp-container {
+    .cmp-text__container {
+        @include make-container();
+
+        @include media-breakpoint-up('sm'){
+            max-width: get-max-breakpoints("sm");
+        }
+        @include media-breakpoint-up('md'){
+            max-width: get-max-breakpoints("md");
+        }
+        @include media-breakpoint-up('lg'){
+            max-width: get-max-breakpoints("lg");
+        }
+        @include media-breakpoint-up('xl'){
+            max-width: get-max-breakpoints("xl");
+        }
+        @include media-breakpoint-up('xxl'){
+            max-width: get-max-breakpoints("xxl");
+        }
+    }
+}
+.text-back-color-blue {
+    background-color: amGrey(7);
+}
+.text-back-color-white {
+    background-color: $--am-base-colour-white-100;
+}
+.text-typography-body-text {
+    .cmp-text__container {
+        font-family: amFontFamily(1);
+        font-weight: amFontWeight(4);
+        text-transform: amFontStyle(1);
+        color: amGrey(1);
+        font-size: amFontSize(6);
+
+        @include media-breakpoint-down('xl'){
+            font-size: amFontSize(5);
+        }
+        @include media-breakpoint-down('md'){
+            font-size: amFontSize(4);
+        }
+    }
+}
+.text-typography-wayfinding {
+    .cmp-text__container {
+        font-family: amFontFamily(9);
+        font-weight: amFontWeight(7);
+        text-transform: amFontStyle(5);
+        color: amGrey(1);
+        font-size: amFontSize(5);
+
+        @include media-breakpoint-down('xl'){
+            font-size: amFontSize(4);
+        }
+        @include media-breakpoint-down('md'){
+            font-size: amFontSize(3);
+        }
+    }
+}
+.text-optional-bottom-paddings {
+    .cmp-text__container {
+        padding-bottom: amSizeUnit(5);
+
+        @include media-breakpoint-down('xl'){
+            padding-bottom: amSizeUnit(4);
+        }
+        @include media-breakpoint-down('md'){
+            padding-bottom: amSizeUnit(3);
+        }
+    }
+}
+.text-alignment-left {
+    .cmp-text__container {
+        text-align: left;
+    }
+}
+.text-alignment-center {
+    .cmp-text__container {
+        text-align: center;
+    }
+}
+.text-alignment-right {
+    .cmp-text__container {
+        text-align: right;
+    }
+}

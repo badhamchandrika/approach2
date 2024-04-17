@@ -1,0 +1,38 @@
+<sly data-sly-use.model="ca.airmiles.travel.core.models.HeroModel" xmlns="http://www.w3.org/1999/html" />
+
+<style>
+
+    .hero__container {
+        background-image: linear-gradient(to right,#0000018c, #0000018c), url('${model.fileReference @ context="uri"}');
+    }
+
+@media only screen and (min-width: 764px) {
+    .hero__container {
+        background-image: linear-gradient(to right,#0000018c, #0000018c, #0000), url('${model.fileReference @ context="uri"}');
+    }
+}
+    
+</style>
+<div class="row-for-hero__container">
+    <div class="hero__container">
+        <div class="bsp-travel-container">
+            <div class="hero__breadcrumb" data-sly-test="${model.displayBreadcrumb == 'true'}">
+                <sly data-sly-resource="${'breadcrumb' @ resourceType='aem-airmiles-travel2/components/breadcrumb'}"/>
+            </div>
+            <div class="hero__content">
+                <h1 data-sly-test="${model.title}" class="hero__title">
+                    ${model.title @ context='html'}
+                </h1>
+                <div data-sly-test="${model.title}" class="hero__description">
+                    ${model.description @context='html'}
+                </div>
+            </div>
+            <div data-sly-test="${model.fileReference2}" class="hero__partner-logo">
+                <img src="${model.fileReference2 @ context='uri'}" alt="${model.imageAltText2}">
+            </div>
+            <div class="hero__cta">
+                <div data-sly-include="/apps/aem-airmiles-travel2/components/cta-button/cta-button.html"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+.contentbanner{
+    background-color: color('blue-background');
+    .cmp-content-banner {
+        display:flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        @media screen and (min-width: breakpoint('md')) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5rem 4.375rem;
+        }
+
+        &__left {
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            @media screen and (min-width: breakpoint('md')) {
+                justify-content: space-between;
+            }
+        }
+
+        &__heading {
+            font-size: .875rem;
+            margin-bottom: 0;
+            vertical-align: bottom;
+
+            @media screen and (min-width: breakpoint('md')) {
+                font-size: 1.25rem;
+            }
+
+            @media screen and (min-width: breakpoint('lg')) {
+                font-size: 1.375rem;
+                margin-bottom: .75rem;
+            }
+        }
+
+        &__body-text {
+            color: #213f20;
+            font-size: .75rem;
+            @media screen and (min-width: breakpoint('lg')) {
+                font-size: 1.125rem;
+                line-height: 1.33;
+            }
+        }
+
+        &__img {
+            width: 33px;
+            height: 33px;
+            margin-right:15px;
+
+            @media screen and (min-width: breakpoint('md')) {
+                width: 4.5rem;
+                height: 4.5rem;
+                margin-right: 30px;
+            }
+        }
+
+        &__btn {
+            border: 2px solid color('brand-blue');
+            color: color('brand-blue');
+            padding: 14px 24px;
+            justify-content: center;
+            display: inline-flex;
+            flex-direction: row;
+            align-items: baseline;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: left;
+            background-color: color('blue-background');
+            width: 100%;
+            font-size: .875rem;
+            margin-left: 0;
+
+            @media screen and (min-width: breakpoint('lg')) {
+                font-size: 1.125rem;
+                min-width: 168px;
+                margin-left: 30px;
+                margin-top: 12px;
+            }
+        }
+        sup{
+            font-size: smaller;
+        }
+    }
+}

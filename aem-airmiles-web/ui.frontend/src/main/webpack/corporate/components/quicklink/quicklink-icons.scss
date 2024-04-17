@@ -1,0 +1,33 @@
+.help-section--sst,
+.help-section--faq {
+  .quicklink-icon .am-icon2 {
+    position: relative;
+
+    &::before {
+      margin: 0;
+      position: absolute;
+    }
+  }
+}
+
+//Self-Serve Tools
+.help-section--sst {
+  .quicklink-icon .am-icon2 {
+    width: px2rem(24px);
+    height: px2rem(24px);
+    &::before{
+      font-size: px2rem(24px);
+    }
+  }
+}
+
+//FAQ section
+.help-section--faq {
+  .quicklink-icon .am-icon2 {
+    width: px2rem(32px);
+    height: px2rem(32px);
+    &::before{
+      font-size: px2rem(32px);
+    }
+  }
+}

@@ -1,0 +1,138 @@
+div {
+  &.MontserratBold {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-family: "MontserratBold";
+      }
+      font-family: "MontserratBold";
+    }
+  }
+
+  &.Archivo {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-family: "ArchivoRegular";
+      }
+      font-family: "ArchivoRegular";
+    }
+  }
+  &.brand-blue {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        color: color("brand-blue");
+      }
+      color: color("brand-blue");
+    }
+  }
+  &.light-blue {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        color: color("light-blue");
+      }
+      color: color("light-blue");
+    }
+  }
+  &.body-copy {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        color: color("body-copy");
+      }
+      color: color("body-copy");
+    }
+  }
+  &.medium-blue {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        color: color("medium-blue");
+      }
+      color: color("medium-blue");
+    }
+  }
+
+  &.font-xs {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-size: 8px;
+      }
+      font-size: 8px;
+    }
+  }
+
+  &.font-s {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-size: 12px;
+      }
+      font-size: 12px;
+    }
+  }
+  &.font-m {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-size: 16px;
+      }
+      font-size: 16px;
+    }
+  }
+  &.font-l {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-size: 32px;
+      }
+      font-size: 32px;
+    }
+  }
+
+  &.font-xl {
+    h1, h2, h3, h4, h5, h6 {
+      & a {
+        &:hover{
+         text-decoration: underline;   
+        }  
+        text-decoration: none;
+        font-size: 48px;
+      }
+      font-size: 48px;
+    }
+  }
+}

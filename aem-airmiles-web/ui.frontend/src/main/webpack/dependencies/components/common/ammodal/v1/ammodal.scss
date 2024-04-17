@@ -1,0 +1,30 @@
+.ammodal{
+  .modal{
+    &-header{
+      border-bottom: 0 solid #eee;
+    }
+    &-content{
+      border-radius: 1rem;
+    }
+    &-body {
+      padding: 0 1rem 3rem 1rem;
+    }
+    .cmp-title__text{
+      padding-bottom: 24px !important;
+    }
+    .text{
+      color: #384A5B;
+      padding-bottom: 24px;
+    }
+    .ctabutton{
+      padding-bottom: 16px;
+    }
+    .am-icon-functional-secondary-close{
+      padding-top: .25rem;
+      margin: -.25rem 0 -.5rem auto;
+      color: #1C2D3F;
+      font-size: .75rem;
+      align-self: start;
+    }
+  }
+}

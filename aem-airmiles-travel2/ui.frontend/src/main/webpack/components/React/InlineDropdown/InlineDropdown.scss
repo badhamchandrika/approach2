@@ -1,0 +1,120 @@
+// @import './InlineDropdownRebrand.scss';
+@import "../../../site/variables";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+.InLineDropdown {
+  border-bottom: none;
+  border-radius: amSizeMicro(4);
+  display: flex;
+  flex-direction: column;
+  font-family: amFontFamily(2);
+  font-size: amFontSize(4);
+  width: 100%;
+
+  @include media-breakpoint-up("md") {
+    font-size: amFontSize(5);
+  }
+
+  &:focus-within {
+    @include focus-outline();
+  }
+
+  &__label {
+    color: amSteel(9);
+    display: block;
+    font-family: amFontFamily(9);
+    font-size: amFontSize(3);
+    padding: 0 0 amSizeMicro(4) amSizeUnit(2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .item {
+    color: amSteel(9);
+    cursor: pointer;
+    display: flex;
+    line-height: normal;
+    padding: amSizeUnit(2);
+
+    &:focus {
+      @include focus-outline(inset);
+    }
+
+    &:hover,
+    &.hovered {
+      background: amGrey(7);
+    }
+
+    &.selected {
+      background: amTierBlue(3);
+      color: white;
+
+      &:hover,
+      &.hovered {
+        color: color("white");
+      }
+    }
+  }
+
+  .active {
+    .menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .menu {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 amSizeMicro(1) amSizeMicro(3) 0 rgba(0, 0, 0, 0.5);
+    left: 0;
+    max-height: 400px;
+    min-width: 100%;
+    opacity: 0;
+    overflow-y: auto;
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    font-size: amFontSize(4);
+    background: none;
+    padding: 0 0 amSizeMicro(4) 0;
+    font-weight: 400;
+    color: amSteel(7);
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+
+    @include media-breakpoint-up("md") {
+      font-size: amFontSize(5);
+    }
+
+    .btn-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .am-icon {
+    align-self: center;
+    color: amTierBlue(3);
+    display: flex;
+    font-size: amFontSize(3);
+    margin-left: amFontSize(3);
+  }
+}

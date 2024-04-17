@@ -1,0 +1,52 @@
+.amtable {
+    &-main {
+        font-size: .875rem;
+        display: block;
+        overflow: hidden;
+        padding: 0;
+        &__shadow{
+            box-shadow: $common-box-shadow;
+        }
+        &__full{
+            width: 100%;
+        }
+        &__rounded{
+            border-radius: .5rem;
+        }
+    }
+    &-cell {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        padding: .5rem 1rem;
+    }
+    &-header, &-footer{
+        text-align: center;
+        font-weight: bold;
+    }
+    &-header{
+        border-bottom: 1px solid rgba(42, 117, 219, 0.2);
+    }
+    &-footer{
+
+    }
+}
+@media (min-width: breakpoint('md')) {
+    .amtable {
+        &-main {
+            &__rounded{
+                border-radius: 1rem;
+            }
+        }
+        &-cell {
+            padding: .75rem 1rem;
+        }
+    }
+}
+@media (min-width: breakpoint('lg')) {
+    .amtable {
+        &-cell {
+            padding: 1rem 2rem;
+        }
+    }
+}

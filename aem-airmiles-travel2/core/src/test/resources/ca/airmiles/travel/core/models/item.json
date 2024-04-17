@@ -1,0 +1,17 @@
+
+{
+  "jcr:primaryType": "nt:unstructured",
+  "cq:panelTitle": "Tab 1",
+  "title": "Tab 1",
+  "jcr:title": "Tab 1",
+  "jcr:lastModifiedBy": "admin",
+  "tabImage": "about",
+  "abbreviation": "about",
+  "icon": "account-lock",
+  "dataClickID": "dataClickID",
+  "dataTrackID": "dataTrackID",
+  "dataTrackType": "dataTrackType",
+  "jcr:lastModified": "Fri Dec 30 2022 16:01:33 GMT+0000",
+  "singleExpansion": "false",
+  "sling:resourceType": "/aem-airmiles-travel2/components/accordion"
+}

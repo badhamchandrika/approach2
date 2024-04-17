@@ -1,0 +1,26 @@
+<sly data-sly-use.links="com.aem.airmiles.web.core.models.QuickLinksModel">
+    <div class="cf-wrapper quicklinks__container">
+        <div class="quicklinks__container__sub">
+
+            <h2 class="h3-subsection quicklinks__container__sub__title">${links.QuickLinksDetailsModel.title}</h2>
+
+            <p class="body-text quicklinks__container__sub__description">${links.QuickLinksDetailsModel.description}</p>
+
+            <div class="quicklinks__container__sub__links" data-track-section=${links.QuickLinksDetailsModel.dataTrackSection}>
+                <div class="quicklinks__container__sub__links__uls">
+                    <ul class="row px-md-4" data-sly-list.item="${links.QuickLinksDetailsModel.quicklinks}">
+                        <li class="col-6 col-md-4 col-xl-3">
+                            <div class="quicklinks__container__sub__links__uls__links">
+                                <a href="${item.link}" target="${item.linkTarget}" data-track-click="${item.dataTrackClick}" data-track-id="${item.dataTrackId}" data-track-type="${item.dataTrackType}">
+                                    <span class="quicklinks__container__sub__links__uls__links__icon am-icon am-icon-${item.icon}"></span>
+                                    <p class="quicklinks__container__sub__links__uls__links__text">${item.title}</p>
+                                    <span class="quicklinks__container__sub__links__uls__links__arrow am-icon am-icon-functional-arrow-right"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>

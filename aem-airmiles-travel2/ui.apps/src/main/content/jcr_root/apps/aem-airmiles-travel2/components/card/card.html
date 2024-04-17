@@ -1,0 +1,28 @@
+<div class="p-1 h-25 w-100 text-bg-secondary" data-sly-test="${wcmmode.edit}">
+  <span class="am-icon am-icon-info p-1"></span>${component.title}
+</div>
+<sly data-sly-use.model="ca.airmiles.travel.core.models.CardModel">
+  <sly data-sly-test.source="${properties.source || 'manual'}"></sly>
+  <div class="bsp-travel-container">
+    <div class="py-4 py-md-5 py-xl-6">
+      <div class="aemcard row section-header">
+        <div
+          class="section-header__title col-xl-6 offset-xl-3"
+          data-sly-test="${model.title}">
+          ${model.title}
+        </div>
+        <div
+          class="section-header__cta col-xl-3"
+          data-sly-include="/apps/aem-airmiles-travel2/components/cta-button/cta-button.html"
+        ></div>
+      </div>
+      <sly data-sly-test="${source == 'manual'}" data-sly-include="card-list.html"></sly>
+      <div data-sly-test="${source == 'auto'}"
+           data-component="dealslist"
+           data-prop-json_cards_url="${currentNode.path}.auto.model.json"
+           data-prop-is_author="${model.author}"
+           data-prop-product_page="true"
+      ></div>
+    </div>
+  </div>
+</sly>

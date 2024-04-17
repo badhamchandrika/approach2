@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Modal - Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <main
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Modal Type"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <uniqueID
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Unique ID (must have)"
+                                        required="{Boolean}true"
+                                        name="./uniqueID"/>
+                                    <modalTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Modal Title"
+                                        name="./modalTitle"/>
+                                    <typePicker
+                                        granite:class="cq-dialog-dropdown-showhide cq-divider"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select Type"
+                                        name="./typePicker">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <pageload
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Pageload"
+                                                value="pageload"/>
+                                            <buttonActive
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Active by single button"
+                                                value="button"/>
+                                            <idTrigger
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Triggered by particular ID"
+                                                value="id"/>
+                                        </items>
+                                    </typePicker>
+                                    <pageload
+                                        granite:class="showhidetargets cq-box-wrapper"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="pageload"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <once
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Show this modal only once. Data stored in cookie."
+                                                name="./once"
+                                                text="Show the modal only once"
+                                                value="{Boolean}true" />
+                                        </items>
+                                    </pageload>
+                                    <button
+                                        granite:class="showhidetargets cq-box-wrapper"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="button"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <buttonText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Button Text"
+                                                name="./buttonText"/>
+                                            <buttonDetail
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/include"
+                                                path="aem-airmiles-web/components/cta-button/cq:dialog/content/items/linkdetails/items/linkType"/>
+                                            <analytics
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options"/>
+                                        </items>
+                                    </button>
+                                    <id
+                                        granite:class="showhidetargets cq-box-wrapper"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="id"/>
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                        </items>
+                                    </id>
+                                </items>
+                            </column>
+                        </items>
+                    </main>
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Modal Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sizePicker
+                                        granite:class="cq-dialog-dropdown-showhide cq-divider"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select Size (width)"
+                                        name="./sizePicker">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <large
+                                                jcr:primaryType="nt:unstructured"
+                                                text="large"
+                                                value="modal-lg"/>
+                                            <medium
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Medium"
+                                                value="modal-md"/>
+                                            <small
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Small"
+                                                value="modal-sm"/>
+                                        </items>
+                                    </sizePicker>
+                                </items>
+                            </column>
+                        </items>
+                    </style>
+                    <analyticsCloseBtn
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Modal Analytics Close Button"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <analytics-options
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                                        margin="{Boolean}false">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <datatrackid
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Analytics Tracking ID"
+                                                name="./dataTrackIDCloseBtn"/>
+                                            <dataclickid
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Analytics Click ID"
+                                                name="./dataClickIDCloseBtn"/>
+                                            <dataTrackType
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="Track Type"
+                                                fieldLabel="Analytics TrackType"
+                                                name="./dataTrackTypeCloseBtn">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <internal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="Internal"
+                                                        value="internal"/>
+                                                    <button
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Button"
+                                                        value="button"/>
+                                                    <exit
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Exit"
+                                                        value="exit"/>
+                                                    <social
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Social"
+                                                        value="social"/>
+                                                    <banner
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Banner"
+                                                        value="banner"/>
+                                                </items>
+                                            </dataTrackType>
+                                        </items>
+                                    </analytics-options>
+                                </items>
+                            </column>
+                        </items>   
+                    </analyticsCloseBtn>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

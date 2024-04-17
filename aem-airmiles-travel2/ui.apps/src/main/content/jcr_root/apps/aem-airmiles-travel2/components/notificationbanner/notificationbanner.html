@@ -1,0 +1,25 @@
+<div  class="cmp-notification__wrapper">
+  <sly data-sly-test="${properties.notificationBannerType == 'sign-in'}">
+    <div class="cmp-notificationbanner ${properties.notificationBannerType} bsp-travel-container-fluid bsp-travel-container" id="sign-in-prompt">
+      <div class="cmp-notificationbanner__container">
+        <div class="cmp-notificationbanner__logo-title">
+          <img src="${properties.fileReference @context = 'uri'}" alt="${properties.imageAltText}"
+               class="cmp-notificationbanner__logo ${properties.notificationBannerType}">
+          <p class="cmp-notificationbanner__title ${properties.notificationBannerType}">${'Sign in to get the best prices and deals.' @ i18n}</p>
+        </div>
+        <a class="cta-button cta-button--primary cta-button--primary-white" x-cq-linkchecker="valid" href="${properties.signInButtonLink ? properties.signInButtonLink : '/en/login.html'}">${'Sign in' @ i18n}</a>
+      </div>
+    </div>
+  </sly>
+  <sly data-sly-test="${properties.notificationBannerType == 'campaigns'}">
+    <div class="cmp-notificationbanner ${properties.campaignsType} bsp-travel-container-fluid bsp-travel-container" id="campaigns-banner">
+      <div class="cmp-notificationbanner__container">
+        <div class="cmp-notificationbanner__logo-title">
+          <img src="${properties.fileReference @context = 'uri'}" alt="${properties.imageAltText}"
+               class="cmp-notificationbanner__logo ${properties.campaignsType}">
+          <p class="cmp-notificationbanner__title ${properties.campaignsType}">${properties.campaignDescription @context='html'}</p>
+        </div>
+      </div>
+    </div>
+  </sly>
+</div>

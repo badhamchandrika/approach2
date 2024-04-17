@@ -1,0 +1,202 @@
+.memberbanner{
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  &-item{
+    display: flex;
+    padding-right: 1.5rem;
+    align-items: center;
+    position: static;
+    img{
+      width: 2rem;
+      height: 2rem;
+      margin: 0 .5rem;
+    }
+    .am-icon{
+      font-size: .75rem;
+      padding: .25rem .75rem .25rem .5rem!important;
+      color: color('body-copy')!important;
+    }
+    &__wrapper{
+      cursor: pointer;
+    }
+    &__modal{
+      display: none;
+      position: absolute;
+      background-color: color('white');
+      padding: 1rem;
+      width: 100%;
+      min-width: 20rem;
+      top: 5.5rem;
+      left: 0;
+      text-align: start;
+      box-shadow: 0 4px 2px 0 rgb(0 0 0 / 25%);
+      border-top: 1px solid rgba(0,0,0,.5);
+      .js-close{
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        cursor: pointer;
+      }
+
+      &.cash{
+        background-color: color('dark-teal');
+        color: color('white');
+        &:after {
+          border-bottom-color: color('dark-teal');
+          left: 10%;
+        }
+        .am-icon{
+          color: color('white')!important;
+        }
+      }
+      &.dream{
+        background-color: color('dark-purple');
+        color: color('white');
+        &:after {
+          border-bottom-color: color('dark-purple');
+          left: 45%;
+        }
+        .am-icon{
+          color: color('white')!important;
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1rem;
+        height: 1rem;
+        width: 100%;
+        background-color: color('transparent');
+      }
+      &:after {
+        bottom: calc(100% - 1px);
+        left: 80%;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border: 18px solid transparent;
+        border-bottom-color: #fff;
+        margin-left: -18px;
+        filter: drop-shadow(0 -1px 0.5px rgba(0,0,0,.5));
+      }
+    }
+    &.mb-active{
+      .memberbanner-item__modal {
+        display: block;
+      }
+    }
+    &__icon{
+      .am-icon{
+        font-size: 1.875rem;
+      }
+      .am-icon-cash-miles-icon{
+        color: color('dark-teal')!important;
+      }
+      .am-icon-dream-rewards-icon{
+        color: color('dark-purple')!important;
+      }
+      .blue, .bleu{
+        color: color('blue')!important;
+      }
+      .gold, .or{
+        color: color('gold')!important;
+      }
+      .onyx{
+        color: color('onyx')!important;
+      }
+    }
+    &__title{
+      font-family: MontserratBold, sans-serif;
+      font-size: 1.5rem;
+    }
+    &__body{
+      font-size: .875rem;
+      line-height: 1.5;
+    }
+    &__link{
+      strong{
+        font-weight: bold;
+      }
+      a{
+        text-decoration: none;
+        color: color('brand-blue')!important;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    &__tag{
+      padding: 0 .25rem;
+      border-radius: .25rem;
+      font-size: .75rem;
+      margin-left: .25rem;
+      color: #fff;
+      font-family: 'ArchivoRegular', sans-serif;
+      &.blue, &.bleu{
+        background-color: color('blue');
+      }
+      &.gold, &.or{
+        background-color: color('gold');
+      }
+      &.onyx{
+        background-color: color('onyx');
+      }
+    }
+    &__name{
+      padding-bottom: 1px;
+    }
+  }
+}
+
+@media (min-width: breakpoint('md')) {
+  .memberbanner{
+    &-item{
+      position: relative;
+      &__modal {
+        top: 3.65rem;
+        left: -5.5rem;
+        width: 22rem;
+        padding: 1.25rem;
+        &:after {
+          left: 35%;
+        }
+        &.cash, &.dream{
+          &:after {
+            left: 35%;
+          }
+        }
+      }
+      &__body{
+        font-size: 1.125rem;
+      }
+      &__tag {
+        padding: .25rem .5rem;
+        border-radius: .5rem;
+        font-size: 1rem;
+      }
+      &__name{
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('lg')) {
+  .memberbanner{
+    &-item{
+      &__modal {
+        top: 3.65rem;
+        left: -7rem;
+        width: 24rem;
+        padding: 1.25rem;
+      }
+      &__name{
+        padding-bottom: 1px;
+      }
+    }
+  }
+}

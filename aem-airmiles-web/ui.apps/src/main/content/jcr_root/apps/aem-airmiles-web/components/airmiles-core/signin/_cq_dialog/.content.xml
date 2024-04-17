@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Sign-in"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Logo"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <filereference
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Logo Source"
+                                                name="./logoReference"
+                                                rootPath="/content/dam"/>
+                                            <imagealttext
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Image alt"
+                                                name="./imageAltText"
+                                                required="{Boolean}false"/>
+                                            <message
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Login Message"
+                                                name="./loginMessage"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </image>
+                    <ctadetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CTA"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <loginbuttons
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Details"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Details">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./loginButtons">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <ctas
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/include"
+                                            path="aem-airmiles-web/components/cta-button/cq:dialog/content/items/linkdetails"/>
+                                    </items>
+                                </field>
+                            </loginbuttons>
+                        </items>
+                    </ctadetails>
+                    <appLinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="App links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <androidURL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Android download URL:"
+                                name="./androidURL"
+                                required="{Boolean}false"/>
+                            <androidDeeplink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Android APP deeplink:"
+                                name="./androidDeeplink"
+                                required="{Boolean}false"/>
+                            <iosURL
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="iOS download URL:"
+                                name="./iosURL"
+                                required="{Boolean}false"/>
+                            <iosDeeplink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="iOS APP deeplink:"
+                                name="./iosDeeplink"
+                                required="{Boolean}false"/>
+                        </items>
+                    </appLinks>
+                    <associatedComponent
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Replacement"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <replaceCompClass
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="The unique class for replacement component"
+                                fieldLabel="Class Name"
+                                name="./replaceCompClass"
+                                required="{Boolean}false"/>
+                        </items>
+                    </associatedComponent>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

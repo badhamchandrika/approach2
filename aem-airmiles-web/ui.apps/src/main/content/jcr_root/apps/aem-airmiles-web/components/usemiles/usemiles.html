@@ -1,0 +1,42 @@
+<div class="usemiles bsp-container" data-sly-use.model="${'com.aem.airmiles.web.core.models.UseMilesSection'}">
+    <div>
+        <h2 class="usemiles__wayfinding h2-wayfinding">${model.wayfinderText}</h2>
+        <h3 class="usemiles__title pb-4 h3-subsection">${model.headerText}</h3>
+    </div>
+    <div data-track-section="${model.dataTrackSection}">
+        <div class="usemiles__tabs-container">
+            <ul data-sly-list.item="${model.tabsList}" class="usemiles__tabs-list">
+                <li class="usemiles__tab-item fromLeft"
+                    id="tab_${item.tabId}"
+                    data-track-id="${item.dataTrackID}"
+                    data-track-click="${item.dataClickID}"
+                    data-track-type="${item.dataTrackType}">
+                    <button class="usemiles__tabs-button">
+                        <img src="${item.svgIcon}" alt="Icon - ${item.tabTitle}">
+                        <div class="usemiles__tab-iconTab-text">
+                            <h2 class="h2-wayfinding">
+                                ${item.tabTitle}
+                            </h2>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+            <div class="usemiles__underline"></div>
+        </div>
+        <div data-sly-test="${model.active}" class="usemiles__container" data-sly-list.item="${model.tabsList}">
+            <div class="row usemiles__tab-content-innercontainer show-container "
+                 data-sly-test="${itemList.index == 0}" id="tabcontent_${item.tabId}">
+                <div class="col-12 my-auto order-1">
+                    <sly data-sly-resource="${@path='tabs/tab0/offersleft', resourceType='aem-airmiles-web/components/text-image'}"></sly>
+                </div>
+            </div>
+            <div class="row usemiles__tab-content-innercontainer ${wcmmode.edit || wcmmode.design ? 'show-container' : '' }"
+                 data-sly-test="${itemList.index == 1}" id="tabcontent_${item.tabId}">
+                <div class="col-12 my-auto order-1">
+                    <sly data-sly-resource="${@path='tabs/tab1/offersleft', resourceType='aem-airmiles-web/components/text-image'}"></sly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

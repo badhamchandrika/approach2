@@ -1,0 +1,44 @@
+<template data-sly-template.carouselDetails="${@ offersCarouselModel,cloQueryParamModel,customCardDetailsModel}">
+    <div class="bsp-container offerscarousel${wcmmode.edit?'':' d-none'}" role="region" aria-label="Carousel" data-carousel-id="${offersCarouselModel.carouselTitle}">
+        <div class="row">
+            <div class="col-7 d-flex justify-content-start align-items-center">
+                <h2>${offersCarouselModel.carouselTitle}</h2>
+            </div>
+            <div class="col-5 pe-0 d-flex justify-content-end align-items-center">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                    type='arrowlink',
+                    href=offersCarouselModel.carouselCtaUrl,
+                    text=offersCarouselModel.carouselCta,
+                    hexText='#1F68DA',
+                    hexBtn='#00000000',
+                    dataTrackID=offersCarouselModel.cloCtaDataTrackId,
+                    dataClickID=offersCarouselModel.cloCtaDataClickId,
+                    dataTrackType=offersCarouselModel.cloCtaDataTrackType,
+                    classes='special'}">
+                </sly>
+            </div>
+            <div class="col-12 pt-2">
+                <p>${offersCarouselModel.carouselDescription}</p>
+            </div>
+            <div class="col-12 p-0 p-md-3">
+                <div class="offerscarousel__container"
+                     data-carousel-mass-offer="${cloQueryParamModel.massOffer}"
+                     data-carousel-program-type="${cloQueryParamModel.programType}"
+                     data-carousel-partner-id="${cloQueryParamModel.partnerId}"
+                     data-carousel-subcategory-id="${cloQueryParamModel.subcategoryId}"
+                     data-carousel-category-id="${cloQueryParamModel.categoryId}"
+                     data-carousel-promotion-id="${cloQueryParamModel.promotionId}"
+                     data-carousel-sort-options="${cloQueryParamModel.sortOptions}"
+                     data-carousel-limit="${offersCarouselModel.numberOfOffersInCarousel}"
+                     data-carousel-scroll-number="${offersCarouselModel.scrollNumberOfOffers}">
+                    <button class="offerscarousel__arrow left justify-content-start align-items-center d-none" aria-label='left arrow'><span class='am-icon am-icon-functional-arrow-left'></span></button>
+                    <button class="offerscarousel__arrow right justify-content-start align-items-center d-none" aria-label='right arrow'><span class='am-icon am-icon-functional-arrow-right'></span></button>
+                    <div class="offerscarousel__showcase ${wcmmode.edit ? 'd-none' : ''}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <sly data-sly-test="${customCardDetailsModel}" data-sly-use.lastcardtemplate="/apps/aem-airmiles-web/components/alloffers/offerstemplates/offercardblank.html"/>
+    <sly data-sly-call="${lastcardtemplate.lastCardAttributes @ lastCardModel = customCardDetailsModel, lastCardId = offersCarouselModel.carouselTitle}"></sly>
+</template>

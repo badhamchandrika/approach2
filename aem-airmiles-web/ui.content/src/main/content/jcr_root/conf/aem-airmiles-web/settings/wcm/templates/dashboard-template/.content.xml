@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2023-11-03T11:24:48.632Z"
+        cq:lastModifiedBy="ACalia@loyalty.com"
+        cq:lastReplicated="{Date}2023-11-03T11:25:22.491Z"
+        cq:lastReplicatedBy="ACalia@loyalty.com"
+        cq:lastReplicationAction="Activate"
+        cq:templateType="/conf/aem-airmiles-web/settings/wcm/template-types/empty-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="dashboard template"
+        status="enabled"/>
+</jcr:root>

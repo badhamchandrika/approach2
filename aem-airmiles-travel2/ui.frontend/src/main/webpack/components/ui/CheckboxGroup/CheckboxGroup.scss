@@ -1,0 +1,35 @@
+@import '../../../site/variables';
+@import '../../../site/bootstrap/bootstrap-utilities.scss';
+
+.checkbox-group {
+  border: 0;
+  margin: 0 0 amSizeUnit(1);
+  padding: 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--vertical {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__label {
+    color: amGrey(1);
+    font-size: amFontSize(4);
+    font-weight: amFontWeight(6);
+    line-height: 1.5;
+    margin-bottom: amSizeMicro(3);
+    padding: 0;
+
+    @include media-breakpoint-up('md') {
+      font-size: amFontSize(5);
+    }
+    @include media-breakpoint-up('lg') {
+      font-size: amFontSize(6);
+      margin-bottom: amSizeUnit(1);
+    }
+  }
+}

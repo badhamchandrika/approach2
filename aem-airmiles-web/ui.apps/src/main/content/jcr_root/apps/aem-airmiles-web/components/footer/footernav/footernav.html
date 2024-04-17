@@ -1,0 +1,12 @@
+<div data-sly-use.navbar="com.aem.airmiles.web.core.models.FooterNav" class="footernav" role="region" aria-label="Footer - nav">
+  <ul data-sly-list.item="${navbar.siteDetails}">
+    <li>
+      <a href="${item.siteName == 'English' || item.siteName == 'Français' ? pageProperties.correspondLangPath : item.webUrl}" target="${item.urlTarget}" class="${item.siteName}"
+        data-track-id="${item.dataTrackID}"
+        data-track-click="${item.dataClickID}"
+        data-track-type="${item.dataTrackType}">
+        ${item.siteName}
+      </a>
+    </li>
+  </ul>
+</div>

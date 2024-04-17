@@ -1,0 +1,36 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "description": "description",
+  "imageLink": "https://google.com",
+  "bgColor": "#61C1EE",
+  "dataTrackAdCard": "track",
+  "headerColor": "#0000",
+  "dataTrackId": "datatrack",
+  "headerText": "Header",
+  "startDate": "Mon Sep 11 2023 09:31:00 GMT-0600",
+  "endDate": "Mon Sep 11 2023 23:31:00 GMT-0600",
+  "slideImage": {
+    "jcr:primaryType": "nt:unstructured",
+    "altSrc": "/content/dam/aem-airmiles-travel2/dummy.png",
+    "imageAlt": "alttext",
+    "webpSrc": "/content/dam/aem-airmiles-web/asset.jpg"
+  },
+  "png": {
+    "jcr:primaryType": "nt:unstructured",
+    "altSrc": "/content/dam/airmiles-ai/success-mail-icon.png",
+    "alt": "pngalt",
+    "webpSrc": "/content/dam/airmiles-ai/Logo.png"
+  },
+  "actions": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "dataClickID": "asdf",
+      "linkUrl": "/content/aem-airmiles-travel2/ca/en",
+      "linkTarget": "_blank",
+      "linkText": "xsdsdfsdf",
+      "linkType": "extlink",
+      "dataTrackID": "sdafas"
+    }
+  }
+}

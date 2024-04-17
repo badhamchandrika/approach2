@@ -1,0 +1,7 @@
+#base=scripts
+
+vendor/beautify.js
+vendor/prettify.js
+
+demo.js
+search.js

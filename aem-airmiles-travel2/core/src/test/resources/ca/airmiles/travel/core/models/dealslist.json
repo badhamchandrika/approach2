@@ -1,0 +1,21 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "tagField": "properties:style",
+  "jcr:created": "Mon Dec 12 2022 17:27:23 GMT+0530",
+  "variant": "deal",
+  "rootPages": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "pagePath": "/content/aem-airmiles-travel2/ca/en/traveldeals"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "pagePath": "/content/aem-airmiles-travel2/ca/en/moredeals"
+    }
+  },
+  "jcr:lastModified": "Wed Dec 14 2022 12:02:09 GMT+0530",
+  "sling:resourceType": "aem-airmiles-travel2/components/dealslist"
+}

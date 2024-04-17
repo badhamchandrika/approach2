@@ -1,0 +1,32 @@
+<div data-sly-test="${wcmmode.edit}" class="d-flex justify-content-center">
+    <p class="p-1 mb-2 w-50 bg-secondary text-white d-flex justify-content-center">Alert Component</p>
+</div>
+<div data-sly-use.alertModel="com.aem.airmiles.web.core.models.AlertHeaderModel"
+     class="alertheader-container" data-sly-list.details="${alertModel.alertDetails}"
+     data-sly-use.template="alertTemplate.html">
+    <!--/* For authoring only. */-->
+    <div data-sly-test="${wcmmode.edit}" class="text-danger px-3 mx-2">
+        <span data-sly-test="${details.isGlobalAlert}" class='am-icon am-icon-help-centre-where-can-i-fly' aria-label='icon'> | </span>
+<!--        <span>Date: ${details.showAlert ? 'active':'inactive'} | </span>-->
+        <span>${ 'YYYY-MM-dd HH:mm:ss' @ format=details.startTime} - ${ 'YYYY-MM-dd HH:mm:ss' @ format=details.endTime}</span>
+        <span>${details.alertText @ context='html'}</span>
+        <span data-sly-test="${details.alertPages}"><strong>Shown Page(s):</strong></span>
+        <ol data-sly-list.localPage="${details.alertPages}"><li>${localPage.alertPage}</li></ol>
+        <hr />
+    </div>
+    <!--/* For publish view only. */-->
+    <sly data-sly-test="${!wcmmode.edit}">
+        <!--/* Global alert info. */-->
+        <sly data-sly-test="${details.isGlobalAlert && details.displayAlert}">
+            <sly data-sly-call="${template.elements @ data=details, count=detailsList.count}"></sly>
+        </sly>
+        <!--/* Non-global but specific page alert info. */-->
+        <sly data-sly-test="${!details.isGlobalAlert && details.displayAlert}">
+            <sly data-sly-list.localPage="${details.alertPages}">
+                <sly data-sly-test="${localPage.alertPage == currentPage.path}">
+                    <sly data-sly-call="${template.elements @ data=details, count=detailsList.count}"></sly>
+                </sly>
+            </sly>
+        </sly>
+    </sly>
+</div>

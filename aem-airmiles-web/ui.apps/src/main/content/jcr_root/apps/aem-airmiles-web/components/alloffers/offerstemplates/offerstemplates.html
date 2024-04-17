@@ -1,0 +1,82 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Offers Templates" class="cq-placeholder"></div>
+<template id="filter-tab">
+    <button class="alloffers-tag tag" data-code=""><span class="am-icon am-icon-functional-secondary-close"></span><span class="alloffers-tag__text"></span></button>
+</template>
+<template id="all-offers-template">
+    <button class="alloffers-offers__card">
+        <div class="alloffers-offers__card__wrapper" role="region" aria-label="offer content">
+            <div class="alloffers-offers__card__box row">
+                <div class="col-4 col-md-12 order-2 order-md-1 alloffers-offers__card__imagebox">
+                    <img class="alloffers-offers__card__image" src="" alt="image" loading="lazy" />
+                </div>
+                <div class="col-8 col-md-12 order-1 order-md-2">
+                    <div class="alloffers-offers__card__partner d-flex">
+                        <div class="alloffers-offers__card__partner__logo">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="alloffers-offers__card__partner__name text-start"> </div>
+                    </div>
+                    <div class="alloffers-offers__card__content text-start">
+                        <h4 class="alloffers-offers__card__title" aria-hidden="true"></h4>
+                        <p class="alloffers-offers__card__description"></p>
+                        <!--/* Remove this if date no need */-->
+                        <div class="alloffers-offers__card__date d-none">
+                            ${'Ends' @ i18n}: <span class="alloffers-offers__card__date-text"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alloffers-offers__card__mechanisms">
+                <div class="d-flex justify-content-between py-3">
+                    <a class="alloffers-offers__card__mechanisms__label my-auto">
+                        <span class='alloffers-offers__card__mechanisms__icon am-icon2 pe-2' aria-hidden="true"></span>
+                        <span class="alloffers-offers__card__mechanisms__label__text"></span>
+                    </a>
+                    <a href="javascript:void(0);" aria-hidden="true" tabindex="-1" class="alloffers-offers__card__mechanisms__saved">
+                        <div class="icon saved">
+                            <svg class="saved-heart am-icon2 am-icon2-heart-empty">
+                                <path d="M11.91,20.571s9.5-6.3,11.706-12.2h0c.83-7.182-6.31-9.013-9.835-6.694L11.91,3.084,9.93,1.673c-5.7-3.184-10.3,2.618-9.5,6.694h0C2.588,14.173,11.91,20.571,11.91,20.571Z"
+                                    transform="translate(0.45 0.136)"/>
+                                <path class="heart-full"
+                                    d="M11.91,20.571s9.5-6.3,11.706-12.2h0c.83-7.182-6.31-9.013-9.835-6.694L11.91,3.084,9.93,1.673c-5.7-3.184-10.3,2.618-9.5,6.694h0C2.588,14.173,11.91,20.571,11.91,20.571Z"
+                                    transform="translate(0.45 0.136)"/>
+                            </svg>
+                            <svg class="transition">
+                                <path class="heart-transition"
+                                    d="M11.91,20.571s9.5-6.3,11.706-12.2h0c.83-7.182-6.31-9.013-9.835-6.694L11.91,3.084,9.93,1.673c-5.7-3.184-10.3,2.618-9.5,6.694h0C2.588,14.173,11.91,20.571,11.91,20.571Z"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="alloffers-offers__card__alert d-none"></div>
+            </div>
+        </div>
+    </button>
+</template>
+<template id="all-offers-loader-template">
+    <button class="alloffers-offers__card">
+        <div class="alloffers-offers__card__wrapper loader-shin">
+            <div class="alloffers-offers__card__box row">
+                <div class="col-4 col-md-12 order-2 order-md-1 mt-auto">
+                    <img class="alloffers-offers__card__image" src="/etc.clientlibs/aem-airmiles-web/clientlibs/clientlib-offers-site/resources/images/card_picture.svg" alt="preload background" />
+                </div>
+                <div class="col-8 col-md-12 order-1 order-md-2">
+                    <img class="alloffers-offers__card__image" src="/etc.clientlibs/aem-airmiles-web/clientlibs/clientlib-offers-site/resources/images/card_content.svg" alt="preload background" />
+                </div>
+            </div>
+            <div class="alloffers-offers__card__mechanisms">
+                <div class="d-flex justify-content-between">
+                    <img class="alloffers-offers__card__image loader-shin__footer" src="/etc.clientlibs/aem-airmiles-web/clientlibs/clientlib-offers-site/resources/images/card_footer.svg" alt="preload background" />
+                </div>
+            </div>
+        </div>
+    </button>
+</template>
+<template id="alloffers-barcode">
+    <svg class="alloffers-barcode"
+         data-format=""
+         data-value=""
+         data-textmargin="0"
+         data-fontoptions="bold">
+    </svg>
+</template>

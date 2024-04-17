@@ -1,0 +1,74 @@
+<sly data-sly-use.model="ca.airmiles.travel.core.models.CardModel">
+  <ul
+    data-sly-list.item="${model.cardDetailList}"
+    class="row card-list mt-4 mt-xl-5 ${
+      (model.variant == 'deal' && model.cardDetailList.size > 3) || 
+      (model.variant != 'deal' && model.cardDetailList.size > 1) 
+      ? 'justify-content-left'
+      : 'justify-content-center'
+    }"
+  >
+    <li class="col-md-6 col-xl-3">
+      <div class="card-container card-container--${model.variant}">
+        <div class="card-container__tags">
+          <div
+            data-sly-test="${item.cardTagIcon}"
+            class="card-container__tags-category"
+          >
+            ${item.cardTagIcon}
+          </div>
+        </div>
+
+        <div class="card-container__img-container">
+            <img
+              class="img-container__img"
+              src="${item.cardImagePath}"
+              alt="${item.cardImageAlt ? item.cardImageAlt : item.cardTitle}"
+            />
+        </div>
+
+        <div class="card-container__body">
+          <p class="card-container__body-title">
+            <a
+              aria-label="${item.cardTagIcon ? '${item.cardTagIcon}. ' : ''}${item.cardTitle}. ${item.cardDescription ? '${item.cardDescription}. ' : ''}${item.cardDestinationCountry ? '${item.cardDestinationCountry}. ' : ''}${item.dealType}"
+              class="card-container__body-link deals__link nostyle"
+              href="${item.url}"
+              data-track-id="${item.dataTrackID}"
+              data-track-click="${item.dataClickID}"
+              data-track-type="${item.dataTrackType}"
+            >
+              ${item.cardTitle}
+            </a>
+          </p>
+          <p
+            data-sly-test="${model.variant == 'deal'}"
+            class="card-container__body-desc"
+          >
+            <span data-sly-test="${item.cardDescription}">
+              ${item.cardDescription}
+            </span>
+          </p>
+          <p
+            data-sly-test="${model.variant == 'deal' && item.dateText}"
+            class="card-container__body-date"
+          >
+            ${item.dateText}
+          </p>
+          <p
+            data-sly-test="${model.variant == 'destination' && item.cardDestinationCountry}"
+            class="card-container__body-destination"
+          >
+            ${item.cardDestinationCountry}
+          </p>
+        </div>
+        <div
+          data-sly-test="${item.icon && item.icon != 'no-icon'}"
+          aria-label="${item.dealType}"
+          class="card-container__tags-icon"
+        >
+          <span class="am-icon am-icon-${item.icon}"></span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</sly>

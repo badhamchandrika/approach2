@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2023-12-06T16:23:26.280-05:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2023-10-05T18:09:51.762Z"
+        cq:lastReplicatedBy="sandhyakumari@loyalty.com"
+        cq:lastReplicationAction="Activate"
+        cq:templateType="/conf/aem-airmiles-web/settings/wcm/template-types/page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Offers Page Template"
+        status="enabled"/>
+</jcr:root>

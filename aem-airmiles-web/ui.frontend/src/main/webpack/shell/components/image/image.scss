@@ -1,0 +1,26 @@
+div.root.shell {
+  //== Hero Image
+  div.image {
+    // Mobile
+    #hero-image-mobile > img {
+      object-fit: cover;
+      width: 100%;
+    } 
+
+    #hero-image-desktop > img  {
+      display: none;
+    }
+
+    // Tablet & Desktop
+    @media screen and (min-width: 1279px) {
+      #hero-image-mobile > img {
+        display: none;
+      }
+
+      #hero-image-desktop > img {
+        display: block;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

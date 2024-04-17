@@ -1,0 +1,3 @@
+<sly data-sly-use.model="${'ca.airmiles.travel.core.models.CTALink'}"
+     data-sly-use.ctatemplate="/apps/aem-airmiles-travel2/components/cta-button/ctatemplate.html"/>
+<sly data-sly-call="${ctatemplate.ctalink @ type=model.linkType, mobiletype=model.linkMobileType, href=model.linkUrl, text=model.linkText, target=model.linkTarget, dataTrackID=model.dataTrackID, dataClickID=model.dataClickID, classes='', btnStyle=model.btnStyle, hexText=model.hexTextColor, hexLinkBar=model.hexLinkBarColor, hexBtn=model.hexBtnColor, ctaBreakpoint=model.ctaBreakpoint}"/>

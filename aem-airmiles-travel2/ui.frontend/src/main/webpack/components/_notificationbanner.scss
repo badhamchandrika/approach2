@@ -1,0 +1,120 @@
+.cmp-notificationbanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: amSizeUnit(2);
+  border-radius: amSizeUnit(1);
+
+  &.sign-in {
+    background: amTierBlue(2);
+  }
+
+  &.blue {
+    background: #ffffff;
+    border: 2px solid amTierBlue(2);
+  }
+
+  &.gold {
+    background: #ffffff;
+    border: 2px solid #785c09;
+  }
+
+  &.onyx {
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    flex: none;
+    justify-content: space-between;
+    padding: amSizeUnit(1) amSizeUnit(2);
+    gap: amSizeUnit(2);
+
+    @include media-breakpoint-up("sm") {
+      padding: 0;
+      flex-direction: row;
+    }
+
+    .cmp-notificationbanner__logo-title {
+      display: flex;
+      gap: 23px;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    max-width: 50px;
+    width: auto;
+
+/* Using filter to change in the logo color for different campaigns  */
+    &.sign-in {
+      background: amTierBlue(2);
+    }
+
+    &.blue {
+      filter: brightness(0) saturate(100%) invert(68%) sepia(93%) saturate(5421%) hue-rotate(198deg) brightness(88%) contrast(94%);
+    }
+
+    &.gold {
+      filter: brightness(0) saturate(100%) invert(32%) sepia(88%) saturate(437%) hue-rotate(7deg) brightness(94%) contrast(97%);
+    }
+
+    &.onyx {
+      filter: brightness(0) saturate(100%) invert(0%) sepia(4%) saturate(19%) hue-rotate(82deg) brightness(92%) contrast(100%);
+    }
+  }
+
+  &__title {
+    font-family: amFontFamily(9);
+    font-style: normal;
+    font-weight: 600;
+    font-size: amFontSize(5);
+    line-height: amSizeUnit(3);
+    display: flex;
+    align-items: center;
+
+    &.sign-in {
+      color: #ffffff;
+    }
+
+    &.blue {
+      color: #000000;
+    }
+
+    &.gold {
+      color: #000000;
+    }
+
+    &.onyx {
+      color: #000000;
+    }
+
+    @include media-breakpoint-up("md") {
+      font-size: amFontSize(5);
+    }
+    @include media-breakpoint-up("xl") {
+      font-size: amFontSize(6);
+    }
+  }
+}
+
+.cmp-bg-white .cmp-notification__wrapper {
+  background-color: rgb(255, 255, 255);
+}
+
+.cmp-bg-grey .cmp-notification__wrapper {
+  background-color: rgb(240, 245, 248);
+}
+
+.cmp-notification__wrapper {
+  padding-top: 3pc;
+  @include media-breakpoint-down("md") {
+    padding-left: calc(amSizeUnit(2) * 1.25);
+    padding-right: calc(amSizeUnit(2) * 1.25);
+  }
+}

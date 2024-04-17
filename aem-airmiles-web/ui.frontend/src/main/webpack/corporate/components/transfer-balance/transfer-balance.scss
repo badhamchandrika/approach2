@@ -1,0 +1,290 @@
+.cq-Editable-dom.hide-element {
+  display: block !important;
+}
+.cq-Editable-dom.cq-Editable-dom--container {
+  .hide-element {
+    display: block !important;
+  }
+}
+.hide-element {
+  display: none;
+}
+#genericError, #insufficientBalanceError, #timeOutError, #eligibilityError{
+  &.hide-element{
+    display: none;
+  }
+}
+
+//Transfer Balance Container css
+.transfer-balance-detail,.transfer-balance-confirmation, .form-error-container{
+  &.hide-element{
+    display: none;
+  }
+  .cmp-title__text.wayfinder{
+    letter-spacing: 6px;
+    color: #1F68DA;
+    padding-left: 0 !important;
+    padding-bottom: 8px !important;
+    font-size: 12px;
+    text-align: left;
+  }
+  .cmp-title__text{
+    color: #1C2D3F;
+    padding-left: 0 !important;
+    padding-bottom: 16px !important;
+  }
+  .cmp-text{
+    color: #384A5B;
+    padding-bottom: 32px;
+    b{
+      color: #1c2d3f;
+    }
+  }
+  .ctabutton{
+    padding-top: 32px;
+    .cmp-button{
+      font-size: 12px;
+      &.disabled{
+        opacity: 0.4;
+        pointer-events: none;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    background: white;
+    .ctabutton .cmp-button{
+      width: 100%;
+    }
+  }
+}
+
+//Transfer Details css
+.transfer-balance-detail{
+  .image{
+    height: auto;
+    img{
+      border-radius: 6px 6px 0 0;
+    }
+  }
+  .transfer-miles {
+    padding-bottom: 32px;
+    .bsp-container{
+      padding: 0 12px !important;
+    }
+    &__type__error{
+      font-size: 12px;
+      color: #E71823;
+      padding-top: 12px;
+    }
+    .section-wrapper{
+      gap: 11px;
+      flex-wrap: nowrap;
+      .col-6{
+        border-radius: 8px;
+        border: 1px solid #5A6B7B;
+        cursor: pointer;
+        width: 48%;
+        padding: 0;
+        &__cash_img, &__dream_img{
+          border-radius: 6px 6px 0 0;
+        }
+        .text{
+          padding: 8px 12px 16px 12px;
+          .cmp-text{
+            padding-bottom: 0;
+            .cash-dream-icons{
+              display: flex;
+              align-items: center;
+              font-size: 18px;
+              b{
+                color: #1c2d3f;
+              }
+            }
+            .cash-miles, .dream-miles{
+              font-size: 14px;
+            }
+            .cash-miles b{
+              color: #023438;
+            }
+            .dream-miles b{
+              color: #592340;
+            }
+          }
+        }
+        &:hover, &.selected{
+          outline: 5px solid #e9fc88;
+          border: 1px solid transparent;
+          box-shadow: 0px 2px 10px 0px rgba(40, 47, 64, 0.15);
+        }
+        &.disabled{
+          opacity: 0.4;
+        }
+        .am-icon2:before{
+          font-size: 24px;
+        }
+        .am-icon2-arrow-right:before {
+          font-size: 26px;
+          padding-top: 2px;
+          margin-right: 6px;
+          margin-left: 0;
+        }
+        .cash-icon-img{
+          margin: 0 -7px;
+        }
+        .dream-icon-img{
+          padding-top: 1px;
+          margin-left: -7px;
+        }
+      }
+    }
+    @media (min-width: breakpoint('md')) {
+      .section-wrapper {
+        gap: 24px;
+        .col-6 {
+          .text {
+            padding: 8px 24px 24px 24px;
+          }
+          .cash-icon-img{
+            margin: 0 0 0 -7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Transfer Confirmation css
+.transfer-balance-confirmation{
+  .cmp-text{
+    text-align: center;
+    position: relative;
+  }
+  .latest-cash-miles{
+    color: color('dark-teal');
+  }
+  .latest-dream-miles{
+    color: color('dark-pink');
+  }
+  .am-icon2-check-small{
+    padding-bottom: 16px;
+    &:before {
+      border-radius: 75pt;
+      color: #fff;
+      background: #16a78a;
+      border: 1px solid #16a78a;
+      font-size: 50px;
+    }
+  }
+  .cta-button{
+    position: relative;
+    .cmp-button{
+      min-width: 240px;
+    }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+  .confetti {
+    display: none;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+  }
+  .confetti.show {
+    display: block;
+    animation: fadeIn 4s;
+  }
+  .am-icon2-check-small:before {
+    border-radius: 100px;
+    color: white;
+    background: #16A78A;
+    border: 1px solid #16A78A;
+    font-size: 50px;
+  }
+  .transfer-miles-updated{
+    .col-12{
+      padding: 0;
+      .cmp-text{
+        padding-bottom: 0;
+      }
+    }
+  }
+  .updated-cash-miles{
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #a6b1bb;
+    border-bottom: 0;
+  }
+  .updated-dream-miles{
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #a6b1bb;
+  }
+  .updated-cash-miles, .updated-dream-miles{
+    .cmp-text{
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      padding: 24px;
+      .am-icon2{
+        font-size: 24px;
+        margin-left: -5px;
+      }
+      p{
+        font-size: 18px;
+        align-items: center;
+        display: flex;
+      }
+      h2{
+        font-size: 24px;
+        font-weight: 700;
+      }
+      b{
+        color: #1c2d3f;
+      }
+    }
+  }
+}
+@media (min-width: breakpoint('md')) {
+  .updated-cash-miles, .updated-dream-miles{
+    .cmp-text{
+      p{
+        font-size: 20px !important;
+      }
+      h2{
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+.form-error-container{
+  .am-icon2-error{
+    color: #e71823;
+    font-size: 3pc!important;
+  }
+  .cmp-title__text, .cmp-text{
+    padding-top: 16px;
+    padding-bottom: 0 !important;
+  }
+  .ctalink {
+    max-width: inherit;
+    text-align: center;
+    padding-top: 24px;
+  }
+  .ctalink .cmp-link {
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 9pt;
+    align-items: center;
+    padding-right: 0;
+  }
+  .ctalink .cmp-link .am-icon2-arrow-right:before {
+    font-size: 19px;
+  }
+}

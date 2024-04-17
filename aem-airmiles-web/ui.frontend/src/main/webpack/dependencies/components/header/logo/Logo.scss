@@ -1,0 +1,19 @@
+.logo{
+  margin-top: auto;
+  margin-bottom: auto;
+  a{
+    display: block;
+    font-size: 1.125rem;
+    color: #0a6fb3;
+  }
+  .airmiles-web-logo {
+    height: 44px;
+    width: 45px;
+    object-fit: fill;
+    margin-top: .25rem;
+    @media (min-width: breakpoint('md')) {
+      height: 46px;
+      width: 53px;
+    }
+  }
+}

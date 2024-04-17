@@ -1,0 +1,25 @@
+site_name: 'aem-airmiles-web'
+
+docs_dir: "."
+
+nav: 
+  - Home: ./README.md
+  - UiTests:
+    - Home: ./ui.tests/README.md
+    - Test Module:
+      - Home: ./ui.tests/test-module/README.md
+      - Lib:
+        - Wdio Pixelmatch Service:
+          - Home: ./ui.tests/test-module/lib/wdio-pixelmatch-service/Readme.md
+  - UiFrontend:
+    - Home: ./ui.frontend/README.md
+    - Webpack:
+      - Dependencies:
+        - Components:
+          - Core:
+            - Home: ./ui.frontend/src/main/webpack/dependencies/components/core/README.md
+
+
+plugins:
+  - techdocs-core
+  - same-dir

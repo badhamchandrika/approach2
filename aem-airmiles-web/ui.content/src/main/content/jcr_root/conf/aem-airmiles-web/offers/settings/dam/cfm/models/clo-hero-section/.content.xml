@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Template"
+    allowedPaths="[/content/entities(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:lastModified="{Date}2024-03-11T15:18:31.784-04:00"
+        cq:lastModifiedBy="admin"
+        cq:scaffolding="/conf/aem-airmiles-web/offers/settings/dam/cfm/models/clo-hero-section/jcr:content/model"
+        cq:templateType="/libs/settings/dam/cfm/model-types/fragment"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="CLO Hero Section"
+        sling:resourceSuperType="dam/cfm/models/console/components/data/entity"
+        sling:resourceType="dam/cfm/models/console/components/data/entity/default"
+        status="enabled">
+        <metadata jcr:primaryType="nt:unstructured"/>
+        <model
+            cq:targetPath="/content/entities"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="wcm/scaffolding/components/scaffolding"
+            dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
+            maxGeneratedOrder="20">
+            <cq:dialog
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog">
+                <content
+                    jcr:lastModified="{Date}2024-03-11T15:18:31.784-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                    <items
+                        jcr:primaryType="nt:unstructured"
+                        maxGeneratedOrder="20">
+                        <_x0031_705685132654
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Process 1 Image Path"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="process1ImagePath"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/aem-airmiles-web"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_705685132654>
+                        <_x0031_705959431969
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Step 1 Title"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="step1Title"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_705959431969>
+                        <_x0031_705685213848
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Process 2 Image Path"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="process2ImagePath"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/aem-airmiles-web"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_705685213848>
+                        <_x0031_705959503401
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Step 2 Title"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="step2Title"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_705959503401>
+                        <_x0031_705685234318
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Process 3 Image Path"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="process3ImagePath"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            rootPath="/content/dam/aem-airmiles-web"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_705685234318>
+                        <_x0031_705959559365
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Step 3 Title"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="step3Title"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_705959559365>
+                        <_x0031_707345536561
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Information Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="informationText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_707345536561>
+                        <_x0031_705685326258
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Link your Card CTA Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="linkYourCardCtaText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_705685326258>
+                        <_x0031_710182723040
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Link your Card URL to Display"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="linkYourCardUrlToDisplay"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Link your Card External URL"
+                                    fieldValue="linkYourCardExternalUrl"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Link your Card Internal URL"
+                                    fieldValue="linkYourCardInternalUrl"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_710182723040>
+                        <_x0031_705685352511
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Link your Card Internal URL"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="linkYourCardInternalUrl"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_705685352511>
+                        <_x0031_710182599296
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Link your Card External URL"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="linkYourCardExternalUrl"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_710182599296>
+                        <_x0031_706729301718
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Link Your Card Target"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="linkYourCardTarget"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="New Tab"
+                                    fieldValue="_blank"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Same Tab"
+                                    fieldValue="_self"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706729301718>
+                        <_x0031_706045512504
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Link your Card Data Click ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="linkYourCardDataClickId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045512504>
+                        <_x0031_706045566098
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Link your Card Data Track ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="linkYourCardDataTrackId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045566098>
+                        <_x0031_706045669149
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Link your Card Data Track Type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="linkYourCardDataTrackType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Internal"
+                                    fieldValue="internal"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Button"
+                                    fieldValue="button"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Exit"
+                                    fieldValue="exit"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045669149>
+                        <_x0031_705685383816
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="FAQ Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="faqText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_705685383816>
+                        <_x0031_705685445568
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="FAQ URL"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="faqUrl"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_705685445568>
+                        <_x0031_706733158464
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="FAQ Target"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="faqTarget"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="New Tab"
+                                    fieldValue="_blank"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Same Tab"
+                                    fieldValue="_self"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706733158464>
+                        <_x0031_706733286680
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="FAQ Data Click ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="faqDataClickId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706733286680>
+                        <_x0031_706733327348
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="FAQ Data Track ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="faqDataTrackId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706733327348>
+                        <_x0031_706733367171
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="FAQ Data Track Type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="faqDataTrackType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Internal"
+                                    fieldValue="internal"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Exit"
+                                    fieldValue="exit"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Button"
+                                    fieldValue="button"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706733367171>
+                        <_x0031_705685464496
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Learn More Text"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="learnMoreText"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_705685464496>
+                        <_x0031_710184590831
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Learn More URL to Display"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="learnMoreUrlToDisplay"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Learn More External URL"
+                                    fieldValue="learnMoreExternalUrl"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Learn More Internal URL"
+                                    fieldValue="learnMoreInternalUrl"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_710184590831>
+                        <_x0031_705685497526
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="dam/cfm/models/editor/components/contentreference"
+                            fieldLabel="Learn More Internal URL"
+                            filter="hierarchy"
+                            listOrder="8"
+                            metaType="reference"
+                            name="learnMoreInternalUrl"
+                            nameSuffix="contentReference"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            showThumbnail="false"
+                            valueType="string/reference">
+                            <granite:data
+                                jcr:primaryType="nt:unstructured"
+                                thumbnail-validation="cfm.validation.thumbnail.show"/>
+                        </_x0031_705685497526>
+                        <_x0031_710184564786
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Learn More External URL"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="learnMoreExternalUrl"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_710184564786>
+                        <_x0031_706733426093
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Learn More Target"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="learnMoreTarget"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="New Tab"
+                                    fieldValue="_blank"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Same Tab"
+                                    fieldValue="_self"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706733426093>
+                        <_x0031_706045855304
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Learn More Data Click ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="learnMoreClickId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045855304>
+                        <_x0031_706045925555
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Learn More Data Track ID"
+                            listOrder="1"
+                            maxlength="255"
+                            metaType="text-single"
+                            name="learnMoreDataTrackId"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045925555>
+                        <_x0031_706045965052
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            emptyOption="{Boolean}true"
+                            fieldLabel="Learn More Data Track Type"
+                            listOrder="6"
+                            metaType="enumeration"
+                            name="learnMoreDataTrackType"
+                            renderReadOnly="false"
+                            showEmptyInReadOnly="true"
+                            valueType="string">
+                            <optionsmultifield jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Internal"
+                                    fieldValue="internal"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Exit"
+                                    fieldValue="exit"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    fieldLabel="Button"
+                                    fieldValue="button"/>
+                            </optionsmultifield>
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="dam/cfm/admin/components/datasources/optionrendererenumeration"
+                                variant="default"/>
+                            <granite:data jcr:primaryType="nt:unstructured"/>
+                        </_x0031_706045965052>
+                    </items>
+                </content>
+            </cq:dialog>
+        </model>
+    </jcr:content>
+</jcr:root>

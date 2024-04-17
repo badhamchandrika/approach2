@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:title": "Origin",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Tue Nov 07 2022 16:33:03 GMT+0530",
+  "id": "test",
+  "name": "origin",
+  "rows": "2",
+  "type": "text",
+  "hideTitle": "true",
+  "icon": "location-icon",
+  "jcr:lastModified": "Tue Nov 08 2022 10:34:05 GMT+0530",
+  "sling:resourceType": "aem-airmiles-travel2/components/form/text",
+  "cq:responsive": {
+    "jcr:primaryType": "nt:unstructured",
+    "default": {
+      "jcr:primaryType": "nt:unstructured",
+      "offset": "0",
+      "width": "3"
+    }
+  }
+}

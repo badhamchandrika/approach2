@@ -1,0 +1,14 @@
+<div class="p-1 h-25 w-100 text-bg-secondary" data-sly-test="${wcmmode.edit}">
+    <span class="am-icon am-icon-info p-1"></span>${component.title}
+</div>
+<sly data-sly-use.model="ca.airmiles.travel.core.models.FeaturedPartners">
+    <!-- TODO: check if partner.html is needed since the category-funnel.html fits for partners and deals variation -->
+    <div data-sly-test="${model.displayType == 'partners'}" class="featured-partners-deals__container">
+        <div class="bsp-travel-container">
+            <sly data-sly-include="partners.html"></sly>
+        </div>
+    </div>
+    <sly data-sly-test="${model.displayType == 'deals'}">
+        <sly data-sly-include="category-funnel.html"></sly>
+    </sly>
+</sly>

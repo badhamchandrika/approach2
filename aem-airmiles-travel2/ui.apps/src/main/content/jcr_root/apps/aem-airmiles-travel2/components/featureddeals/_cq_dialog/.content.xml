@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Links"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <displaytype
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="Choose Display type"
+                                                fieldLabel="Display Type"
+                                                name="./displayType">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <featuredpartners
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Partner block"
+                                                        selected="{Boolean}true"
+                                                        value="partners"/>
+                                                    <deals
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Category funnel"
+                                                        value="deals"/>
+                                                </items>
+                                            </displaytype>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./title"/>
+                                            <ctabutton
+                                                 jcr:primaryType="nt:unstructured"
+                                                 sling:resourceType="granite/ui/components/foundation/include"
+                                                 path="aem-airmiles-travel2/components/includes/cta-button/cq:dialog/content/items/ctadetails"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <details
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Details"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <accordion
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Details">
+                                                <granite:data jcr:primaryType="nt:unstructured"/>
+                                                <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                        name="./details">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <section jcr:title="Detail Item"
+                                                                 jcr:primaryType="nt:unstructured"
+                                                                 sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <imagepath
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                        fieldLabel="Image Path"
+                                                                        name="./imagePath"
+                                                                        rootPath="/content/dam"/>
+                                                                <alttext
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Alternate Text"
+                                                                        name="./altText"/>
+                                                                <linktext
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                        fieldLabel="Link Text (deals)"
+                                                                        name="./linkText"/>
+                                                                <link
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                        fieldLabel="Link URL"
+                                                                        name="./linkUrl"/>
+                                                                <target
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                        emptyText="Choose Target for Link"
+                                                                        fieldLabel="Link Target"
+                                                                        name="./linkTarget">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <sametab
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Same Tab"
+                                                                                selected="{Boolean}true"
+                                                                                value="_self"/>
+                                                                        <newtab
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="New Tab"
+                                                                                value="_blank"/>
+                                                                    </items>
+                                                                </target>
+                                                                <analytics
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                                        path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options"/>
+                                                            </items>
+                                                        </section>
+                                                    </items>
+                                                </field>
+                                            </accordion>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </details>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

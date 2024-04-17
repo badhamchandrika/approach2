@@ -1,0 +1,121 @@
+.globalalert{
+  background-color: color('white');
+  &-container{
+    &.bsp-container{
+      padding: 1.5rem 1rem!important;
+    }
+  }
+  &-display{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    &__slide{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      &.active{
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+  }
+  &-text{
+    &__title{
+      white-space: nowrap;
+      min-width: auto;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      padding-right: 24px;
+    }
+    &__body{
+      font-family: Montserrat, sans-serif;
+      font-size: .875rem;
+      padding: 1px 0 0 0;
+      strong{
+        font-weight: 700;
+      }
+      em{
+        font-style: italic;
+      }
+      u{
+        text-decoration: underline;
+      }
+      a{
+        color: #1F68DA;
+      }
+    }
+  }
+  &-pagination, &-player{
+    padding: 0 .5rem;
+    height: 1.5rem;
+  }
+  &-pagination{
+    &__prev, &__next{
+      cursor: pointer;
+      &:hover{
+        color: #1C2D3F;
+      }
+    }
+    &__numbers{
+      font-family: Montserrat, sans-serif;
+      color: #1C2D3F;
+      position: relative;
+      top: -.125rem;
+    }
+    .am-icon{
+      font-size: 1.25rem;
+    }
+  }
+  &-player{
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    top: -4px;
+    &__play, &__pause{
+      cursor: pointer;
+      .am-icon2{
+        font-size: 1.5rem;
+      }
+      &:hover{
+        color: #1F68DA;
+      }
+    }
+    &__text{
+      position: relative;
+      top: -.125rem;
+    }
+  }
+  &-icon{
+    position: relative;
+    padding-right: .5rem;
+    top: -5px;
+    .am-icon2{
+      font-size: 1.5rem;
+    }
+  }
+  .int-view{
+    &.deactivate{
+      filter: brightness(80%);
+      background-color: #AEAEAE;
+    }
+  }
+}
+@media (min-width: breakpoint('md')) {
+  .globalalert{
+    &-text {
+      &__title {
+        //white-space: normal;
+        //min-width: 10rem;
+      }
+    }
+  }
+}
+@media (min-width: breakpoint('lg')) {
+  .globalalert{
+    &-text {
+      &__title {
+        //white-space: nowrap;
+        //min-width: auto;
+      }
+    }
+  }
+}

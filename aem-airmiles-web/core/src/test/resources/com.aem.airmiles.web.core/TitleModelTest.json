@@ -1,0 +1,104 @@
+{
+	"jcr:primaryType": "cq:Page",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:title": "Offers",
+		"cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-template",
+		"cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+		"themeName": "corporate",
+		"sling:resourceType": "aem-airmiles-web/components/structure/page",
+		"cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+		"root": {
+			"jcr:primaryType": "nt:unstructured",
+			"layout": "responsiveGrid",
+			"sling:resourceType": "aem-airmiles-web/components/container",
+			"titleValid": {
+				"jcr:primaryType": "nt:unstructured",
+				"jcr:title": "Test Title Valid",
+				"linkTitleAttribute": "bold",
+				"active": "true",
+				"id": "testId",
+				"type": "h2",
+				"titleType": "wayfinder",
+				"linkURL": "/content/aem-airmiles-web/language-masters/en/search",
+				"linkAccessibilityLabel": "testLabelId",
+				"sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title",
+				"analyticsOptions": {
+					"jcr:primaryType": "nt:unstructured",
+					"item0": {
+						"jcr:primaryType": "nt:unstructured",
+						"option": "data-track-section",
+						"trackingId": "test-section"
+					}
+				}
+			},
+			"titleNull": {},
+			"titleNoLink": {
+				"jcr:primaryType": "nt:unstructured",
+				"jcr:title": "Test Title No Link",
+				"active": "true",
+				"id": "testId",
+				"type": "h2",
+				"titleType": "wayfinder",
+				"sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title",
+				"analyticsOptions": {
+					"jcr:primaryType": "nt:unstructured",
+					"item0": {
+						"jcr:primaryType": "nt:unstructured",
+						"option": "data-track-section",
+						"trackingId": "test-section"
+					}
+				}
+			},
+			"titleNoMasterFields": {
+				"jcr:primaryType": "nt:unstructured",
+				"jcr:title": "Test Title 2",
+				"linkTitleAttribute": "bold",
+				"id": "testId",
+				"type": "h2",
+				"titleType": "wayfinder",
+				"linkURL": "/content/aem-airmiles-web/language-masters/en/search",
+				"linkAccessibilityLabel": "testLabelId",
+				"sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title"
+			},
+			"titleNoActive": {
+				"jcr:primaryType": "nt:unstructured",
+				"jcr:title": "Test Title 2",
+				"linkTitleAttribute": "bold",
+				"id": "testId",
+				"type": "h2",
+				"linkURL": "/content/aem-airmiles-web/language-masters/en/search",
+				"linkAccessibilityLabel": "testLabelId",
+				"titleType": "wayfinder",
+				"sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title",
+				"analyticsOptions": {
+					"jcr:primaryType": "nt:unstructured",
+					"item0": {
+						"jcr:primaryType": "nt:unstructured",
+						"option": "data-track-section",
+						"trackingId": "test-section"
+					}
+				}
+			},
+			"titleAnalyticsNoValid": {
+				"jcr:primaryType": "nt:unstructured",
+				"jcr:title": "Test Title 2",
+				"linkTitleAttribute": "bold",
+				"active": "true",
+				"id": "testId",
+				"type": "h2",
+				"linkURL": "/content/aem-airmiles-web/language-masters/en/search",
+				"linkAccessibilityLabel": "testLabelId",
+				"sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title",
+				"titleType": "wayfinder",
+				"analyticsOptions": {
+					"jcr:primaryType": "nt:unstructured",
+					"item0": {
+						"jcr:primaryType": "nt:unstructured",
+						"option": "data-track-section"
+					}
+				}
+			}
+		}
+	}
+}

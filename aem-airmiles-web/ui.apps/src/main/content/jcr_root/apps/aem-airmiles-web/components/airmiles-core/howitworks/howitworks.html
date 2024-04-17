@@ -1,0 +1,53 @@
+<div data-sly-use.tmp="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.model="com.aem.airmiles.web.core.models.HowItWorksModel"
+     data-sly-test.hasContent="${model.title}" class="bsp-container narrow" id="${model.uniqueID}">
+
+    <div class="how_it_works">
+        <span class="how_it_works_subtitle text-center">${model.title}</span>
+        <h2 class="text-center h2-large">${model.subtitle}</h2>
+        <div class="how_it_works_content">
+            <div class="how_it_works_left">
+                <div class="how_it_works_top">
+                    <div class="how_it_works_card">
+                        <span class="how_it_works_number" data-index="1"></span>
+                        <div>
+                            <h3>${model.step1text}</h3>
+                            <p>${model.step1subtext @ context='html'}</p>
+                        </div>
+                    </div>
+                    <div class="how_it_works_card">
+                        <span class="how_it_works_number" data-index="2"></span>
+                        <div>
+                            <h3>${model.step2text}</h3>
+                            <p>${model.step2subtext @ context='html'}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="imageContainer">
+                    <div class="image" style="background-image: url(${model.step2image @ context='uri'});"></div>
+                    <div class="background"></div>
+                    <p class="how_it_works_image_description">${model.step2imageAltText || 'support image'}</p>
+                </div>
+            </div>
+            <div class="how_it_works_right">
+                <div class="imageContainer d-none d-md-block">
+                    <div class="image" style="background-image: url(${model.step3image @ context='uri'});"></div>
+                    <p class="how_it_works_image_description">${model.step3imageAltText || 'support image'}</p>
+                </div>
+                <div class="imageContainer d-block d-md-none">
+                    <div class="image" style="background-image: url(${model.step2image @ context='uri'});"></div>
+                    <div class="background"></div>
+                    <p class="how_it_works_image_description">${model.step2imageAltText || 'support image'}</p>
+                </div>
+                <div class="how_it_works_card">
+                    <span class="how_it_works_number" data-index="3"></span>
+                    <div>
+                        <h3>${model.step3text}</h3>
+                        <p>${model.step3subtext @ context='html'}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${tmp.placeholder @ isEmpty=!hasContent, classAppend='cmp-howitworks__placeholder'}"></sly>

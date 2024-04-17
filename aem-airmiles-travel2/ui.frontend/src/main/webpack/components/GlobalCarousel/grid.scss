@@ -1,0 +1,63 @@
+@import './mediaqueries.scss';
+
+$columnSize: (
+  'md': 44px,
+  'lg': 80px,
+);
+
+$gutter: (
+  'md': 16px,
+  'lg': 24px,
+);
+
+.am-grid {
+  &--column {
+    @include mobile {
+      @for $i from 1 through 12 {
+        &_sm-#{$i}-of-12 {
+          width: calc(8.33% * #{$i});
+        }
+      }
+    }
+    @include tablet {
+      &_md-1-of-12 {
+        width: map-get($columnSize, 'md');
+      }
+      @for $i from 2 through 12 {
+        &_md-#{$i}-of-12 {
+          width: map-get($columnSize, 'md') *
+            $i +
+            map-get($gutter, 'md') *
+            ($i - 1);
+        }
+      }
+    }
+    @include desktop {
+      &_lg-1-of-12 {
+        width: map-get($columnSize, 'lg');
+      }
+      @for $i from 2 through 12 {
+        &_lg-#{$i}-of-12 {
+          width: map-get($columnSize, 'lg') *
+            $i +
+            map-get($gutter, 'lg') *
+            ($i - 1);
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  html {
+    body {
+      .am-grid--container,
+      .am-grid--column_sm-12-of-12,
+      .am-grid--column_md-12-of-12,
+      .am-grid--column_lg-12-of-12 {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

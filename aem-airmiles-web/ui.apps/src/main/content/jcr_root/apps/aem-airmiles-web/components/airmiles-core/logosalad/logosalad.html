@@ -1,0 +1,29 @@
+<sly data-sly-use.model ="${'com.aem.airmiles.web.core.models.LogoSaladModel'}">
+    <div class="bsp-container-sm logo_salad" id="${model.uniqueID}">
+        <h2 class="logo_salad__title h2-large">${model.logoSaladTitle}</h2>
+        <div class="logo_salad__container">
+            <sly class="logo_salad__details" data-sly-list.logo="${model.logos}">
+                <div class="${logo.hideInTablet && logo.hideInMobile? 'd-lg-block visible-lg-logo d-sm-none d-md-none d-none': (logo.hideInTablet ? 'd-lg-block visible-lg-logo visible-sm-logo d-sm-block d-md-none':(logo.hideInMobile?'d-lg-block visible-lg-logo visible-md-logo d-sm-none d-none d-md-block':'d-block visible-lg-logo visible-md-logo visible-sm-logo'))}">
+                    <div class="logo_salad__logo">
+                        <img src="${logo.logoUrl}" alt="${logo.logoAltText}"/>
+                    </div>
+                </div>
+            </sly>
+        </div>
+        <div class="logo_salad__button text-center">
+            <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+            <sly data-sly-call="${ctatemplate.ctalink @
+                      type=properties.linkType,
+                      href=properties.linkUrl,
+                      text=properties.linkText,
+                      target=properties.linkTarget,
+                      hexText=properties.hexTextColor,
+                      hexBtn=properties.hexBtnColor,
+                      dataTrackID=properties.dataTrackID,
+                      dataClickID=properties.dataClickID,
+                      dataTrackType=properties.dataTrackType,
+                      classes=properties.linkColor}">
+            </sly>
+        </div>
+    </div>
+</sly>

@@ -1,0 +1,14 @@
+<div class="cmp-footerhelps" data-cmp-is="footerhelps" data-sly-use.model="com.aem.airmiles.web.core.models.FooterHelpsModel">
+    <div class="cmp-footerhelps__heading">
+        <h3 class="h3-subsection d-flex justify-content-center justify-content-md-start text-center text-md-start" aria-hidden="true">${model.footerHelpsDetailsModel.heading}</h3>
+    </div>
+    <div class="cmp-footerhelps__body" role="region" aria-label="Footer - help">
+        <div class="row" data-sly-list="${model.footerHelpsDetailsModel.footerHelps}">
+            <div class="col-12 col-lg-4 d-flex flex-lg-column justify-content-center justify-content-lg-start py-2 py-md-0 px-0 pe-md-2">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @ type='link', href=item.link, text=item.title, target=item.linkTarget, dataTrackID=item.dataTrackId, dataClickID=item.dataTrackClick, dataTrackType=item.dataTrackType}"/>
+                <p class="body-text d-none d-lg-block pt-2">${item.description}</p>
+            </div>
+        </div>
+    </div>
+</div>

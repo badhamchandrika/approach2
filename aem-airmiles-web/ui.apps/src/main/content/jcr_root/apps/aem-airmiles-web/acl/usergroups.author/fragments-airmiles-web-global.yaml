@@ -1,0 +1,86 @@
+- group_config:
+
+    - airmiles_web_fragment_everyone:
+
+        - name: Airmiles Web Fragment Everyone
+          path: airmiles-web
+
+- ace_config:
+
+    - airmiles_web_fragment_everyone:
+    
+        - path: /
+          permission: allow
+          actions: read
+
+        - path: /etc
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ""
+
+        - path: /etc
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: /jcr:*
+          
+        - path: /content
+          permission: deny
+          actions: read
+
+        - path: /content
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ""
+
+        - path: /content
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: /jcr:*
+          
+        - path: /content/dam
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ""
+
+        - path: /content/dam
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: /jcr:*
+
+        - path: /content
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ""
+
+        - path: /content
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: /jcr:*
+
+        - path: /content/aem-airmiles-web
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ""
+
+        - path: /content/aem-airmiles-web
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: /jcr:*
+
+        - path: /content/aem-airmiles-web/ca
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: ""
+
+        - path: /content/aem-airmiles-web/ca
+          permission: allow
+          privileges: jcr:read,jcr:readAccessControl
+          repGlob: /jcr:*
+          
+        - path: /content/cq:tags
+          permission: allow
+          actions: read
+
+        - path: /conf
+          permission: allow
+          actions: read          

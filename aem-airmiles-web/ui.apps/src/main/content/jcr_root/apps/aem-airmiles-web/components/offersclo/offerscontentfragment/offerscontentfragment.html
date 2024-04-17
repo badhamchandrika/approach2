@@ -1,0 +1,27 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Offers - Content Fragment" class="cq-placeholder"></div>
+
+<sly data-sly-use.clo="com.aem.airmiles.web.core.models.OffersContentFragmentModel"/>
+
+<sly data-sly-test="${clo.offersCarouselDetailsModel}">
+    <sly data-sly-use.carouseltemplate="/apps/aem-airmiles-web/components/offersclo/offerscontentfragment/offerscarousel.html"/>
+    <sly data-sly-call="${carouseltemplate.carouselDetails @ offersCarouselModel = clo.offersCarouselDetailsModel,cloQueryParamModel=clo.offersQueryParamModel,
+        customCardDetailsModel = clo.offersCustomCardDetailsModel}"></sly>
+</sly>
+
+<sly data-sly-test="${clo.cloHeroDetailsModel}">
+    <sly data-sly-use.herodetailstemplate="/apps/aem-airmiles-web/components/offersclo/offerscontentfragment/cloherosection.html"/>
+    <sly data-sly-call="${herodetailstemplate.heroDetails @ heroDetailsModel = clo.cloHeroDetailsModel}"></sly>
+</sly>
+<sly data-sly-test="${clo.offersQueryParamModel}">
+    <div id="offers-query-parameter"
+         data-page-name="clo-page"
+         data-limit="20"
+         data-sort-options="${clo.offersQueryParamModel.sortOptions}"
+         data-mass-offer="${clo.offersQueryParamModel.massOffer}"
+         data-program-type="${clo.offersQueryParamModel.programType}"
+         data-partner-id="${clo.offersQueryParamModel.partnerId}"
+         data-promotion-id="${clo.offersQueryParamModel.promotionId}"
+         data-category-id="${clo.offersQueryParamModel.categoryId}"
+         data-subcategory-id="${clo.offersQueryParamModel.subcategoryId}">
+    </div>
+</sly>

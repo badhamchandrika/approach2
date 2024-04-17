@@ -1,0 +1,666 @@
+@import '~@loyaltyone-am/fonts/fonts.scss';
+@import '~@loyaltyone-am/am-mediaqueries/mediaqueries.scss';
+@import '../../../site/variables';
+@import "../../../site/mixins";
+// @import '~@loyaltyone-am/colors/colors.scss';
+
+@mixin focus-state($inset: null) {
+    outline: none !important;
+    @if $inset {
+      box-shadow: 0 0 0 2px amEmerald(9) inset,
+        0 0 0 4px #fff inset;
+    } @else {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px amEmerald(9);
+  }
+}
+
+// @import './reset.scss';
+// font sizes
+$am-font-size-1: 60px;
+$am-font-size-2: 44px;
+$am-font-size-3: 36px;
+$am-font-size-4: 26px;
+$am-font-size-5: 22px;
+$am-font-size-6: 20px;
+$am-font-size-7: 18px;
+$am-font-size-8: 16px;
+$am-font-size-9: 14px;
+$am-font-size-10: 12px;
+$am-font-size-11: 10px;
+
+// New font size variables for Monserrat
+// This is temporary and the above font-sizes may be replaced once Omnes is no longer needed
+$am-font-size-1-new: 42px;
+$am-font-size-2-new: 34px;
+$am-font-size-3-new: 30px;
+
+// line-height variables
+$am-line-height-1: 68px;
+$am-line-height-2: 52px;
+$am-line-height-3: 44px;
+$am-line-height-4: 36px;
+$am-line-height-5: 32px;
+$am-line-height-6: 28px;
+$am-line-height-7: 26px;
+$am-line-height-8: 24px;
+$am-line-height-9: 20px;
+$am-line-height-10: 16px;
+
+//font-color variables
+$am-font-grey: #5e5e5e;
+$am-font-blue: #1790cc;
+$am-font-blue-higher-contrast: #0773be;
+$am-font-functional: #0a6fb3;
+$am-font-black: #000000;
+$am-font-white: #ffffff;
+$am-font-onyx: color('onyx');
+
+//letter spacing variables
+$am-letter-spacing-normal: normal;
+$am-letter-spacing-small: 0.3px;
+$am-letter-spacing-medium: 0.4px;
+$am-letter-spacing-large: 1.4px;
+
+//font weight mixins
+@mixin font-weight-light() {
+  font-family: 'ArchivoRegular';
+  font-weight: 300;
+}
+@mixin font-weight-regular() {
+  font-family: 'ArchivoRegular';
+  font-weight: 400;
+}
+@mixin font-weight-medium() {
+  font-family: 'ArchivoSemiBold';
+  font-weight: 500;
+}
+@mixin font-weight-bold-montserrat() {
+  font-family: 'MontserratBold';
+  font-weight: 700;
+}
+@mixin mobileTabletDesktop {
+  @include mobile {
+    @content;
+  }
+
+  @include tablet {
+    @content;
+  }
+
+  @include desktop {
+    @content;
+  }
+}
+@mixin sizedVariants {
+  @content;
+  &-sm {
+    @include mobile {
+      @content;
+    }
+  }
+  &-md {
+    @include tablet {
+      @content;
+    }
+  }
+  &-lg {
+    @include desktop {
+      @content;
+    }
+  }
+}
+@mixin allVariants {
+  @include mobileTabletDesktop {
+    @content;
+  }
+  @include sizedVariants {
+    @content;
+  }
+}
+
+@mixin font-blue {
+  color: $am-font-blue;
+
+  // Blue superscripts are a special case, to meet contrast requirements for accessibility
+  sup {
+    color: $am-font-blue-higher-contrast;
+    font-size: 80%;
+
+    @include tabletAndUp {
+      font-size: 70%;
+    }
+
+    @include desktop {
+      font-size: 60%;
+    }
+  }
+}
+
+
+
+// Rebrand Theme CSS
+@import './typographyV3Rebrand.scss';
+
+.am {
+  // am-typographyV3 is appended to the class of all Typog3 elements
+  // anything within the block below will only apply to TypogV3 everything
+  // else will apply generaly
+  &-typographyV3 {
+    a {
+      text-decoration: underline;
+      color: #0a6fb3;
+      font-weight: 500;
+      font-family: ArchivoSemiBold;
+    }
+
+    a:hover {
+      color: #0e4d7b;
+      text-decoration: underline;
+    }
+
+    a:focus {
+      @include focus-state();
+    }
+  }
+  // Quick style types
+  &-headline {
+    font-size: $am-font-size-4;
+    line-height: $am-line-height-4;
+    letter-spacing: $am-letter-spacing-large;
+    @include font-blue();
+    @include font-weight-light();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-3;
+      line-height: $am-line-height-2;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-2;
+      line-height: $am-line-height-2;
+    }
+
+    &--large {
+      font-size: $am-font-size-4;
+      line-height: $am-line-height-4;
+      letter-spacing: $am-letter-spacing-large;
+      @include font-blue();
+      @include font-weight-light();
+
+      @include tabletAndUp {
+        font-size: $am-font-size-2;
+        line-height: $am-line-height-2;
+      }
+
+      @include desktop {
+        font-size: $am-font-size-1;
+        line-height: $am-line-height-1;
+      }
+    }
+  }
+  &-page-title {
+    font-size: $am-font-size-8;
+    line-height: $am-line-height-8;
+    color: $am-font-grey;
+    @include font-weight-light();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-6;
+      line-height: $am-line-height-6;
+    }
+    @include desktop {
+      font-size: $am-font-size-5;
+      line-height: $am-line-height-5;
+    }
+  }
+  &-wayfinding {
+    font-size: $am-font-size-10;
+    line-height: $am-line-height-10;
+    color: $am-font-grey;
+    text-transform: uppercase;
+    @include font-weight-medium();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-9;
+      line-height: $am-line-height-9;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-8;
+      line-height: $am-line-height-8;
+    }
+  }
+  &-subsection {
+    font-size: $am-font-size-5;
+    line-height: $am-line-height-5;
+    letter-spacing: $am-letter-spacing-large;
+    @include font-blue();
+    @include font-weight-light();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-4;
+      line-height: $am-line-height-4;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-3;
+      line-height: $am-line-height-3;
+    }
+  }
+  &-sub-subsection {
+    font-size: $am-font-size-8;
+    line-height: $am-line-height-8;
+    color: $am-font-grey;
+    @include font-weight-medium();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-6;
+      line-height: $am-line-height-6;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-5;
+      line-height: $am-line-height-5;
+    }
+  }
+  &-intro-text {
+    font-size: $am-font-size-8;
+    line-height: $am-line-height-8;
+    color: $am-font-grey;
+    letter-spacing: $am-letter-spacing-large;
+    @include font-weight-light();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-7;
+      line-height: $am-line-height-7;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-6;
+      line-height: $am-line-height-6;
+    }
+  }
+  &-body {
+    font-size: $am-font-size-9;
+    line-height: $am-line-height-9;
+    color: $am-font-grey;
+    @include font-weight-regular();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-8;
+      line-height: $am-line-height-8;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-7;
+      line-height: $am-line-height-7;
+    }
+  }
+  &-legal {
+    font-size: $am-font-size-11;
+    line-height: $am-line-height-10;
+    color: $am-font-grey;
+    @include font-weight-regular();
+
+    @include tabletAndUp {
+      font-size: $am-font-size-10;
+      line-height: $am-line-height-10;
+    }
+
+    @include desktop {
+      font-size: $am-font-size-9;
+      line-height: $am-line-height-9;
+    }
+  }
+  &-screen-reader-only {
+    @include mobileTabletDesktop {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
+  // Specific classes for setting individual properties
+  &-font {
+    &-color {
+      @include allVariants {
+        &--grey {
+          color: #5e5e5e;
+        }
+        &--blue {
+          @include font-blue();
+        }
+        &--functional {
+          color: #0a6fb3;
+        }
+        &--black {
+          color: #000;
+          // to override subsection sup color
+          sup {
+            color: inherit;
+          }
+        }
+        &--white {
+          color: #fff;
+        }
+      }
+    }
+    &-size {
+      @include allVariants {
+        &--60 {
+          font-size: $am-font-size-1;
+        }
+        &--48 {
+          font-size: $am-font-size-1-new;
+        }
+        &--44 {
+          font-size: $am-font-size-2;
+        }
+        &--36 {
+          font-size: $am-font-size-3;
+        }
+        &--32 {
+          font-size: $am-font-size-3-new;
+        }
+        &--28 {
+          font-size: $am-font-size-4;
+        }
+        &--24 {
+          font-size: $am-font-size-5;
+        }
+        &--20 {
+          font-size: $am-font-size-6;
+        }
+        &--18 {
+          font-size: $am-font-size-7;
+        }
+        &--16 {
+          font-size: $am-font-size-8;
+        }
+        &--14 {
+          font-size: $am-font-size-9;
+        }
+        &--12 {
+          font-size: $am-font-size-10;
+        }
+        &--10 {
+          font-size: $am-font-size-11;
+        }
+      }
+    }
+    &-style {
+      @include allVariants {
+        &--normal {
+          font-style: normal;
+        }
+        &--italic {
+          font-style: italic;
+        }
+      }
+    }
+    &-weight {
+      @include allVariants {
+        &--light {
+          @include font-weight-light();
+        }
+        &--regular {
+          @include font-weight-regular();
+        }
+        &--medium {
+          @include font-weight-medium();
+        }
+        &--bold-montserrat {
+          @include font-weight-bold-montserrat();
+        }
+      }
+    }
+  }
+  &-letter-spacing {
+    @include allVariants {
+      &--normal {
+        letter-spacing: $am-letter-spacing-normal;
+      }
+      &--small {
+        letter-spacing: $am-letter-spacing-small;
+      }
+      &--medium {
+        letter-spacing: $am-letter-spacing-medium;
+      }
+      &--large {
+        letter-spacing: $am-letter-spacing-large;
+      }
+    }
+  }
+  &-line-height {
+    @include allVariants {
+      &--68 {
+        line-height: $am-line-height-1;
+      }
+      &--52 {
+        line-height: $am-line-height-2;
+      }
+      &--44 {
+        line-height: $am-line-height-3;
+      }
+      &--36 {
+        line-height: $am-line-height-4;
+      }
+      &--32 {
+        line-height: $am-line-height-5;
+      }
+      &--28 {
+        line-height: $am-line-height-6;
+      }
+      &--26 {
+        line-height: $am-line-height-7;
+      }
+      &--24 {
+        line-height: $am-line-height-8;
+      }
+      &--20 {
+        line-height: $am-line-height-9;
+      }
+      &--16 {
+        line-height: $am-line-height-10;
+      }
+    }
+  }
+  &-text {
+    &-decoration {
+      @include allVariants {
+        &--none {
+          text-decoration: none;
+        }
+        &--underline {
+          text-decoration: underline;
+        }
+        &--uppercase {
+          text-transform: uppercase;
+        }
+        &--lowercase {
+          text-transform: lowercase;
+        }
+        &--italic {
+          font-style: italic;
+        }
+      }
+    }
+    &-size {
+      &--1 {
+        font-size: $am-font-size-1;
+        line-height: $am-line-height-1;
+      }
+      &--1-no-height {
+        font-size: $am-font-size-1-new;
+        line-height: normal;
+      }
+      &--2 {
+        font-size: $am-font-size-2;
+        line-height: $am-line-height-2;
+      }
+      &--2-no-height {
+        font-size: $am-font-size-2-new;
+        line-height: normal;
+      }
+      &--3 {
+        font-size: $am-font-size-3;
+        line-height: $am-line-height-3;
+      }
+      &--3-no-height {
+        font-size: $am-font-size-3-new;
+        line-height: normal;
+      }
+      &--4 {
+        font-size: $am-font-size-4;
+        line-height: $am-line-height-4;
+      }
+      &--4-no-height {
+        font-size: $am-font-size-4;
+        line-height: normal;
+      }
+      &--5 {
+        font-size: $am-font-size-5;
+        line-height: $am-line-height-5;
+      }
+      &--5-no-height {
+        font-size: $am-font-size-5;
+        line-height: normal;
+      }
+      &--6 {
+        font-size: $am-font-size-6;
+        line-height: $am-line-height-6;
+      }
+      &--6-no-height {
+        font-size: $am-font-size-6;
+        line-height: normal;
+      }
+      &--7 {
+        font-size: $am-font-size-7;
+        line-height: $am-line-height-7;
+      }
+      &--7-no-height {
+        font-size: $am-font-size-7;
+        line-height: normal;
+      }
+      &--8 {
+        font-size: $am-font-size-8;
+        line-height: $am-line-height-8;
+      }
+      &--8-no-height {
+        font-size: $am-font-size-8;
+        line-height: normal;
+      }
+      &--9 {
+        font-size: $am-font-size-9;
+        line-height: $am-line-height-9;
+
+        sup {
+          font-size: 90%;
+
+          @include desktop {
+            font-size: 70%;
+          }
+
+          @include tabletAndUp {
+            font-size: 80%;
+          }
+        }
+      }
+      &--9-no-height {
+        font-size: $am-font-size-9;
+        line-height: normal;
+
+        sup {
+          font-size: 90%;
+
+          @include desktop {
+            font-size: 70%;
+          }
+
+          @include tabletAndUp {
+            font-size: 80%;
+          }
+        }
+      }
+      &--10 {
+        font-size: $am-font-size-10;
+        line-height: $am-line-height-10;
+
+        sup {
+          font-size: 90%;
+
+          @include desktop {
+            font-size: 70%;
+          }
+
+          @include tabletAndUp {
+            font-size: 80%;
+          }
+        }
+      }
+      &--10-no-height {
+        font-size: $am-font-size-10;
+        line-height: normal;
+
+        sup {
+          font-size: 90%;
+
+          @include desktop {
+            font-size: 70%;
+          }
+
+          @include tabletAndUp {
+            font-size: 80%;
+          }
+        }
+      }
+      &--11 {
+        font-size: $am-font-size-11;
+        line-height: $am-line-height-10;
+
+        sup {
+          font-size: 90%;
+
+          @include desktop {
+            font-size: 70%;
+          }
+
+          @include tabletAndUp {
+            font-size: 80%;
+          }
+        }
+      }
+      &--11-no-height {
+        font-size: $am-font-size-11;
+        line-height: normal;
+
+        sup {
+          font-size: 90%;
+
+          @include desktop {
+            font-size: 70%;
+          }
+
+          @include tabletAndUp {
+            font-size: 80%;
+          }
+        }
+      }
+    }
+    &-transform {
+      &--none {
+        text-transform: none;
+      }
+      &--uppercase {
+        text-transform: uppercase;
+      }
+      &--lowercase {
+        text-transform: lowercase;
+      }
+    }
+  }
+}

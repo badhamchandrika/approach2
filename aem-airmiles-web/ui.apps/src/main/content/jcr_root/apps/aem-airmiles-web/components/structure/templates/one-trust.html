@@ -1,0 +1,16 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright © 2023 AIR MILES Loyalty Inc.
+  ~
+  ~ HTL file used to include OneTrust Scripts by using OneTrustModel to
+  ~ follow business logic.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<sly data-sly-use.oneTrust="com.aem.airmiles.web.core.models.onetrust.OneTrustModel"
+     data-sly-test="${wcmmode.disabled && oneTrust.enabled}">
+    <!--/* OneTrust Cookies Consent Notice start for airmiles.ca */-->
+    <script charset="UTF-8" type="text/javascript" id="one-trust__cookielaw__airmiles-ca"
+            src="${oneTrust.sdkStub @ context='scriptComment'}"
+            data-domain-script="${oneTrust.consentId @ context='scriptComment'}"
+            data-document-language="true"></script>
+    <script type="text/javascript">function OptanonWrapper(){}</script>
+    <!--/* OneTrust Cookies Consent Notice end for airmiles.ca */-->
+</sly>

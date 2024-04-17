@@ -1,0 +1,1210 @@
+$card-shadow:0 3px 7px 0 rgb(0 0 0 / 25%);
+$brand-blue: #1F68DA;
+$dark-blue: #1C2D3F;
+$void-bg: rgba(8, 14, 26, 0.7);
+$hover-border: #16A78A;
+$hover-bg: #E9FC88;
+$hover-blk-txt: #080E1A;
+$saved-red: #e71823;
+$promo-pink: #FDECFF;
+$promo-text: #323F4B;
+$text-color: #384A5B;
+$light-border: #C7D2DC;
+@mixin commonHeartStyle{
+  position: absolute;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  stroke: $saved-red;
+  stroke-width: 1.5px;
+  stroke-dasharray: 75;
+  stroke-dashoffset: 0;
+  stroke-linejoin: round;
+}
+@mixin commonHeartAnimation{
+  // General icon setup
+  .icon svg {
+    width: 25px;
+    height: 25px;
+    margin-top: 3px;
+  }
+
+  // Initial setup empty heart
+  .icon.saved > .am-icon2-heart-empty{
+    fill: transparent;
+    @include commonHeartStyle;
+  }
+
+  // Initial setup full heart
+  .icon.saved > .am-icon2-heart-full {
+    fill: $saved-red;
+    @include commonHeartStyle;
+  }
+
+  // Initial setup saved full heart path for animation
+  .icon.saved > .am-icon2-heart-full.full path{
+    fill: $saved-red;
+  }
+
+  // General icon setup path for transition between save-unsave
+  .icon.saved > svg.transition path{
+    fill: transparent;
+    width: 25px;
+    height: 25px;
+  }
+
+  // Animation for heart empty shape transition
+  .icon.saved > .am-icon2-heart-full.transition {
+    animation: animated-heartSaved 700ms linear 0s 2 forwards;
+  }
+
+  // Animation for heart full shape transition
+  .icon.saved > .am-icon2-heart-empty.full{
+    animation: animated-heartSaved 700ms linear 0s 2 forwards;
+  }
+
+  // Animation for scale fill heart transition
+  .icon.saved > .am-icon2-heart-full.transition + svg.transition path{
+    transform-origin: center;
+    animation: fillIn 200ms linear 1500ms forwards;
+  }
+
+  // Animation for scale fill heart transition on hover
+  .icon.saved > .am-icon2-heart-empty:hover + svg.transition path{
+    transform-origin: center;
+    animation: fillIn 700ms linear forwards;
+  }
+
+  // Animation for unscale fill heart transition
+  .icon.saved > .am-icon2-heart-empty.full + svg.transition path{
+    transform-origin: center;
+    animation: fillOut 700ms linear 1400ms forwards;
+  }
+}
+.alloffers{
+  padding: 1.5rem 0;
+  display: block;
+  margin: 0 auto;
+  font-family: Montserrat, sans-serif;
+  h2 {
+    font-size: 1.875rem;
+    line-height: 125%;
+    font-weight: bold;
+    display: block;
+    color: $dark-blue;
+  }
+  h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: block;
+    color: $dark-blue;
+  }
+  h4{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &-filters{
+    &__slides{
+      &__filter{
+        display: flex;
+        font-size: .875rem;
+        color: $dark-blue;
+        &:last-child{
+          padding-bottom: 1rem!important;
+        }
+        .form-check-label{
+          font-size: .875rem;
+          color: $dark-blue;
+          padding: unset!important;
+          background-color: transparent;
+        }
+        .form-check-input{
+          width: 1.5rem;
+          min-width: 1.5rem;
+          height: 1.5rem;
+          margin: 0 .5rem 0 0;
+          &:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            outline: 2px solid $hover-border!important;
+            outline-offset: 3px!important;
+          }
+        }
+        .form-check-input:checked + .form-check-label {
+          font-weight: bold!important;
+        }
+        .form-check-input:checked{
+          &:checked[type=radio] {
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'%3E%3Ccircle r='2' fill='%230d6efd'/%3E%3C/svg%3E");
+          }
+        }
+      }
+      &__title{
+        padding: 0 0 1rem 0;
+      }
+      &__backbutton{
+        display: flex;
+        text-decoration: none;
+        font-size: .75rem;
+        cursor: pointer;
+        padding: 1rem 0;
+        color: $brand-blue;
+        text-transform: uppercase;
+        font-weight: 700;
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+    &__sub-panel{
+      height: 0;
+      overflow-y: auto;
+      position: absolute;
+      top: 0;
+      background-color: #FFF;
+      width: 100%;
+      z-index: 1;
+      .am-icon2-arrow-left{
+        font-size: 1.25rem;
+      }
+    }
+    &__container{
+      position: relative;
+      top: -5rem;
+      opacity: 0;
+      transition: top 0.3s ease, opacity .3s ease;
+    }
+    &__accordion-btn{
+      color: $dark-blue;
+      padding: .75rem 0;
+      border: solid 1px transparent;
+      border-top: solid 1px $light-border;
+      cursor: pointer;
+      background-color: transparent;
+      width: 100%;
+      font-size: .875rem;
+      &.active{
+        .am-icon.am-icon-functional-arrow-down{
+          transform: rotate(180deg);
+        }
+      }
+      &.active+.alloffers-filters__sub-panel{
+        height: 100%;
+        .alloffers-filters__container{
+          top: 0;
+          opacity: 1;
+          padding-bottom: 7rem;
+        }
+      }
+      &:hover{
+        border: solid 1px #0dcaf0;
+      }
+    }
+    &__buttons{
+      position: fixed;
+      background-color: #EEEEFF;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+      z-index: 1;
+      cursor: pointer;
+      .cmp-button.ctabuttonround{
+        padding: .625rem 2rem;
+      }
+    }
+    &__partners__total,&__categories__total,&__types__total,&__total{
+      display: flex;
+      width: 2rem;
+      height: 2rem;
+      padding: .5rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4.688px;
+      border-radius: 117.188px;
+      border: 1.172px solid var(--solids-sapphire-sapphire-900, $brand-blue);
+    }
+    &__filter-by{
+      border-bottom: solid 1px $light-border;
+    }
+  }
+  &-login{
+    display: flex;
+    &-logo{
+      img{
+        vertical-align: super;
+      }
+    }
+    &__container{
+      background-color: $brand-blue;
+      color: #FFF;
+      border-radius: .5rem;
+      margin: 1rem 0;
+      padding: 1rem 0;
+    }
+    &__message{
+      padding-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    &__buttons{
+      .special{
+        .cmp-button, .cmp-link{
+          font-size: .625rem;
+          width: 7rem;
+          padding: .625rem .5rem;
+          text-wrap: initial;
+          font-family: 'Montserrat', sans-serif;
+          margin: 0;
+          .am-icon2.am-icon2-arrow-right{
+            position: relative;
+            margin-top: auto;
+            margin-bottom: auto;
+            right: 1rem;
+            &:before{
+              font-size: .875rem;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-tag{
+    margin: .25rem .5rem .25rem 0;
+    font-size: .75rem;
+    height: 1.7rem;
+    color: $dark-blue;
+    padding: .25rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &__container{
+      display: flex;
+    }
+    .am-icon{
+      font-size: .5rem;
+      padding: 0 .25rem;
+    }
+    &:hover{
+      border: solid 1px $hover-border;
+    }
+    &.tag{
+      background-color: #FFF;
+      box-shadow: $card-shadow;
+    }
+    &.clear{
+      background-color: transparent;
+    }
+  }
+  &-tabs{
+    &__container{
+      overflow-x: auto;
+      padding-bottom: 1.25rem;
+    }
+    &__slides{
+      padding: .25rem;
+      margin: .125rem 0;
+      border-radius: 3rem;
+      color: $brand-blue;
+      background-color: white;
+      line-height: 1rem;
+      font-size: .75rem;
+      &__tab{
+        cursor: pointer;
+        display: flex;
+        border-radius: 3rem;
+        padding: .25rem 1rem;
+        width: 6.375rem;
+        margin-right: .875rem;
+        align-items: center;
+        justify-content: center;
+        border-color: transparent;
+        background-color: transparent;
+        color: $brand-blue;
+        &:hover{
+          color: $hover-blk-txt;
+          background-color: $hover-bg;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        &.active{
+          color: white;
+          background-color: $brand-blue;
+        }
+      }
+    }
+    &__apart {
+      font-size: .875rem;
+      font-weight: 700;
+      color: $brand-blue;
+      &__sort {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &-offers{
+    &__showcase {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 3rem;
+    }
+    &__card {
+      flex-basis: 100%;
+      box-sizing: border-box;
+      padding: 0;
+      margin-bottom: 1rem;
+      border: 0;
+      background-color: transparent;
+      min-width: 88%;
+      min-height: 12.625rem;
+      max-height: 26rem;
+      &:focus {
+        outline: none;
+      }
+      &__mechanisms__icon{
+        color: color('focused-teal');
+      }
+      &__wrapper, &__carousel__last{
+        position: relative;
+        background-color: #FFF;
+        border-radius: .5rem;
+        height: 100%;
+        box-shadow: $card-shadow;
+        text-align: left;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &__wrapper{
+        padding: 1rem 1rem 0 1rem
+      }
+      &__carousel__last{
+        padding: 1rem;
+      }
+      &__box{
+        text-align: center;
+      }
+      &__imagebox{
+        padding-top: 2.5rem;
+      }
+      &__image{
+        width: 5rem;
+        height: 5rem;
+        max-height: 5rem;
+        &.full {
+          width: 100%;
+          object-fit: cover;
+          border-radius: .5rem;
+        }
+      }
+      &__title{
+        color: $dark-blue;
+        margin-bottom: .5rem;
+        font-size: 1.125rem;
+        font-weight: bold;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      &__description{
+        color: $text-color;
+        font-size: .875rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__mechanisms{
+        width: 100%;
+        &__label{
+          border-radius: 2rem;
+          border: 1px solid $light-border;
+          padding: 0 .5rem 0 0;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+          background-color: transparent;
+          .am-icon{
+            padding-left: .5rem;
+          }
+          &__text{
+            font-size: .75rem;
+            color: $dark-blue;
+          }
+        }
+        &__saved{
+          display: flex;
+          width: 24px;
+          height: 21px;
+          @include commonHeartAnimation;
+        }
+      }
+      &__partner{
+        padding: .5rem 0;
+        &__logo{
+          display: flex;
+          align-items: center;
+          img{
+            max-height: 1.5rem;
+            max-width: 2.75rem;
+          }
+        }
+        &__name{
+          color: $text-color;
+          padding-left: .5rem;
+          font-size: .75rem;
+          font-weight: 700;
+          margin-top: auto;
+          margin-bottom: auto;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      &__date{
+        font-size: .875rem;
+        padding: 0.5rem 0;
+      }
+      &__alert{
+        position: relative;
+        margin: 0 -1rem;
+        padding: .25rem 1rem;
+        font-weight: 700;
+        font-size: .75rem;
+        background-color: $promo-pink;
+      }
+      .alloffers-offers__card__carousel__last{
+        img{
+          display: none;
+          width: 7.5rem;
+        }
+        p{
+          padding: 1.5rem 0 2rem 0;
+          color: $brand-blue;
+          text-align: center;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 24px */
+        }
+      }
+    }
+    &__loader__image{
+      width: 100%;
+    }
+    &__result-container{
+      margin-left: 25%;
+      margin-bottom: -2%;
+    }
+    &__filter{
+      &-panel{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        &.active{
+          height: 100%;
+        }
+      }
+      &-bg{
+        background-color: $void-bg;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+      &-box{
+        background-color: #FFF;
+        width: 100%;
+        height: 100%;
+        right: -10rem;
+        padding: 1rem;
+        overflow-y: auto;
+        opacity: 0;
+        transition: left 0.3s ease, opacity .3s ease;
+        h3{
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+        h4{
+          color: $dark-blue;
+          font-size: 1.125rem;
+          font-weight: 700;
+        }
+        &.active{
+          right: 0;
+          opacity: 1;
+          margin-top:-3%;
+        }
+      }
+      &-item{
+        padding: .5rem;
+      }
+    }
+    &__close-btn{
+      display: block;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      color: $brand-blue;
+      z-index: 2;
+    }
+  }
+  &-showing{
+    color: $dark-blue;
+    font-size: .875rem;
+    &__title{
+      font-weight: bold;
+    }
+  }
+  &-panel{
+    &__toggle{
+      font-size: .75rem;
+      cursor: pointer;
+      color: $brand-blue;
+      font-weight: 700;
+      letter-spacing: 2px;
+      &__collapse{
+        display: none;
+      }
+      &__collapse, &__expand{
+        text-decoration: none;
+        color: $brand-blue;
+        &:hover{
+          color: $hover-blk-txt;
+        }
+      }
+      &.active{
+        .alloffers-panel__toggle__collapse{
+          display: block;
+        }
+        .alloffers-panel__toggle__expand{
+          display: none;
+        }
+      }
+      .am-icon2, .am-icon{
+        font-size: 1.25rem;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+  &-pagenation{
+    &__number{
+      cursor: pointer;
+      padding: 0 .25rem;
+      &.active{
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-detail{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    height: 100%;
+    width: 0;
+    z-index: 100;
+    background-color: white;
+    overflow-y: auto;
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+    transition: all .2s ease;
+    &.active{
+      opacity: 1;
+      width: 100%;
+      left: 0;
+    }
+    h2{
+      font-size: 1.5rem!important;
+      font-weight: 700;
+      padding-right: 1.5rem
+    }
+    h3{
+      font-size: 1.125rem!important;
+      font-weight: 700;
+    }
+    &__container{
+      width: 100%;
+      height: auto;
+      background-color: #FFF;
+      padding: 0 .5rem!important;
+    }
+    &__minicards{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 -1.5rem;
+      overflow: hidden;
+      .alloffers-detail__slides{
+        button:first-child{
+          padding-left: 1rem;
+        }
+        button:last-child{
+          padding-right: 1rem;
+        }
+      }
+    }
+    &__content{
+      padding: 0 1rem;
+    }
+    &__backbutton{
+      display: block;
+      cursor: pointer;
+      color: $brand-blue;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      font-size: .75rem;
+      font-weight: 700;
+      width: calc(100% + 2rem);
+      margin-left: -1rem;
+      border-bottom: 1px solid $light-border;
+      text-decoration: none;
+      position: sticky;
+      top: 0;
+      background-color: #FFF;
+      z-index: 1;
+      &:hover{
+        color: $hover-blk-txt;
+      }
+      .am-icon2-arrow-left{
+        position: relative;
+        padding-left: 1.5rem;
+        font-size: 1.5rem;
+        top: 3px;
+      }
+    }
+    &__saved{
+      color: $saved-red;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      right: .5rem;
+      width: 24px;
+      height: 21px;
+      @include commonHeartAnimation;
+    }
+    &__tag{
+      width: 100%;
+      font-size: .75rem;
+      border: 1px solid $light-border;
+      padding: 1rem 1.5rem;
+      border-radius: .5rem;
+      margin: 1.5rem 0;
+      &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .am-icon2 {
+          font-size: 1.25rem;
+          color: color('focused-teal');
+        }
+      }
+      .cmp-button{
+        font-size: .625rem!important;
+      }
+      .ctalink--arrowlink-new.ctalink{
+        .cmp-link{
+          font-size: .625rem!important;
+          padding-right: 0;
+        }
+      }
+    }
+    &__tab__text{
+      color: $dark-blue;
+      font-size: .75rem;
+      font-weight: 700;
+      &.detail-coupon{
+        display: block;
+        color: $dark-blue;
+        font-size: 2.375rem;
+        font-weight: 700;
+        padding-top: 1rem;
+      }
+      &.detail-barcode{
+        display: block;
+        color: $dark-blue;
+        font-size: 1.5rem;
+      }
+    }
+    &__label{
+      border-radius: 2rem;
+      border: 1px solid $light-border;
+      padding: 0 .5rem 0 0;
+      display: flex;
+      align-items: center;
+      height: 1.625rem;
+      width: max-content;
+      background-color: transparent;
+      .am-icon2{
+        color: color('focused-teal');
+      }
+      .am-icon{
+        padding-left: .5rem;
+      }
+      &__text{
+        font-size: .75rem;
+      }
+    }
+    &__full{
+      a{
+        display: block;
+        text-align: left;
+      }
+    }
+    &__partner{
+      font-size: .875rem;
+      background-color: #F0F5F8;
+      padding: .5rem 1rem;
+      border-radius: .5rem;
+      margin: 1.25rem 0;
+      &__logo, &__slogo{
+        margin-right: 1rem;
+        max-width: 4rem;
+        min-width: 4rem;
+        max-height: 3rem;
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__name{
+        color: $dark-blue;
+        font-weight: 700;
+      }
+      &__link{
+        color: $brand-blue;
+      }
+    }
+    &__image{
+      width: 100%;
+      height: 12rem;
+      display: flex;
+      justify-content: center;
+      img{
+        width: 12rem;
+        height: 12rem;
+      }
+    }
+    &__body{
+      margin: .5rem 0 1rem 0;
+      color: $text-color;
+    }
+    &__offer-end{
+      strong{
+        font-weight: 700;
+      }
+    }
+    &__slides{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: .125rem .125rem .75rem;
+    }
+    &__terms{
+      font-size: .75rem;
+      color: $text-color;
+    }
+    &__termsTitle{
+      color: $text-color;
+      cursor: pointer;
+    }
+    &__promotion{
+      display: none;
+      font-size: .75rem;
+      position: relative;
+      left: -1.5rem;
+      margin-bottom: 1rem;
+      padding: .25rem 1.5rem;
+      font-weight: 700;
+      color: $dark-blue;
+      background-color: $promo-pink;
+      clip-path: polygon(0% 0%, 100% 0%, calc(100% - 10px) 50%, 100% 100%, 0% 100%);
+      &.active{
+        display: inline-block;
+      }
+    }
+    &__date{
+      font-size: .875rem;
+      color: $dark-blue;
+    }
+  }
+  .contentfragment{
+    h3{
+      font-size: .625rem;
+    }
+    dl{
+      display: flex;
+      font-size: .75rem;
+      .cmp-contentfragment__element{
+        padding: 0 .5rem;
+        border-left: 1px solid #aaa;
+      }
+      dt{
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// Heart Shape Animation
+@keyframes animated-heartSaved {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 150;
+  }
+}
+
+// Fill In Animation
+@keyframes fillIn {
+ from {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E%3C/svg%3E");
+  transform: scale(0);
+  fill: $saved-red;
+ }
+ to {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E%3C/svg%3E");
+  transform: scale(1);
+  fill: $saved-red;
+ }
+}
+
+// Fill Out Animation
+@keyframes fillOut {
+  from {
+   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E%3C/svg%3E");
+   transform: scale(1);
+   fill: $saved-red;
+  }
+  to {
+   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E%3C/svg%3E");
+   transform: scale(0);
+   fill: $saved-red;
+  }
+ }
+
+@media (min-width: breakpoint('md')) {
+  .alloffers{
+    h2 {
+      font-size: 2.375rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    .subtitle-text{
+      padding-top: 0;
+      padding-bottom: 16px;
+    }
+    &-login{
+      display: flex;
+      &-logo{
+        img{
+          vertical-align: unset;
+        }
+      }
+      &__container{
+        padding: 0;
+        margin-top: 1.5rem;
+      }
+      &__message{
+        padding-bottom: 0;
+      }
+    }
+    &-tabs{
+      &__slides{
+        font-size: .875rem;
+        &__tab{
+          width: auto;
+          padding: .5rem 1rem;
+        }
+      }
+      &__apart{
+        font-size: .875rem;
+        .am-icon2{
+          font-size: 1.25rem;
+        }
+        &__sort{
+          cursor: pointer;
+          color: $brand-blue;
+          font-weight: 700;
+          background-color: transparent;
+          border-color: transparent;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &-offers{
+      &__showcase{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      &__card {
+        margin-bottom: 0;
+        max-height: 27rem;
+        &__imagebox{
+          padding-top: 0;
+        }
+        &__image{
+          width: 10rem;
+          height: 10rem;
+          max-height: 10rem;
+        }
+        &__partner{
+          &__logo{
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+        .alloffers-offers__card__carousel__last{
+          img{
+            display: block;
+          }
+        }
+        &__alert{
+          padding: .5rem 1rem;
+          font-size: .875rem;
+        }
+      }
+      &__filter {
+        &-box {
+          width: 50%;
+        }
+      }
+    }
+    &-detail {
+      transition: all .5s ease, opacity .5s ease;
+      h2, h3{
+        font-size: 1.5rem!important;
+      }
+      &__content {
+        padding: 3rem 1rem 0 .5rem;
+      }
+      &__container {
+        min-height: 100%;
+        height: auto;
+        padding: 0 1.5rem 1rem!important;
+      }
+      &__slides{
+        gap: 1.5rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding: 1rem 2rem;
+        .alloffers-offers__card{
+          min-width: 16rem;
+        }
+      }
+      &__promotion {
+        left: 0;
+      }
+      &__backbutton{
+        padding-top: 1.5rem;
+        .am-icon2-arrow-left{
+          padding-left: .5rem;
+        }
+      }
+      &__saved {
+        right: -.25rem;
+      }
+      &__minicards {
+        margin: 0 -1.5rem;
+      }
+    }
+    &-filters {
+      &__buttons {
+        width: 50%;
+        &__reset {
+          .ctabuttonroundhalo{
+            width: 150px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+        &__viewresult {
+          .ctabuttonround{
+            width: 150px;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('lg')) {
+  .alloffers{
+    h2 {
+      font-size: 2.375rem;
+    }
+    .alloffers-offers__filter-box h3 {
+      font-size: 1.25rem;
+    }
+    &-login{
+      &__container{
+        margin-top: 3rem;
+      }
+      &__buttons{
+        .special{
+          .cmp-button, .cmp-link{
+            font-size: .75rem;
+          }
+        }
+      }
+    }
+    &-filters{
+      &__sub-panel{
+        position: relative;
+        top: 0;
+        background-color: transparent;
+        width: auto;
+      }
+      &__accordion-btn {
+        font-size: 1rem;
+        &.active + .alloffers-filters__sub-panel {
+          height: auto;
+          .alloffers-filters__container{
+            padding-bottom: 0;
+          }
+        }
+      }
+      &__buttons{
+        position: relative;
+        background-color: transparent;
+        bottom: unset;
+        left: 0;
+        width: unset;
+        &__reset{
+          .ctabuttonroundhalo{
+            border-color: transparent;
+            &:before{
+              content: '\e90b';
+              position: relative;
+              top: 0;
+              font-family: AM-icon!important;
+              left: 0;
+              font-size: .75rem;
+              padding-right: 0.5rem;
+            }
+          }
+        }
+        .ctabutton{
+          text-align: center;
+          .cmp-button{
+            width: 100%;
+            border-color: transparent!important;
+          }
+        }
+        .special{
+          .cmp-buttons{
+            padding: .625rem 2rem;
+          }
+        }
+      }
+    }
+    &-offers{
+      &__filter {
+        &-panel {
+          position: relative;
+          z-index: 0;
+          height: 0;
+          overflow: hidden;
+          background-color: transparent;
+          &.active{
+            height: auto;
+          }
+        }
+        &-bg{
+          background-color: transparent;
+          min-height: 40rem;
+        }
+        &-box{
+          width: 100%;
+          background-color: transparent;
+          padding: 0 2.5rem 0 1rem;
+        }
+      }
+      &__card {
+        max-height: 26rem;
+        &__image{
+          height: 9.0625rem;
+          width: 9.0625rem;
+          max-height: 9.0625rem;
+        }
+      }
+      &__showcase {
+        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        padding-bottom: 6rem;
+        height: fit-content;
+        &.panel-collapse{
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      &__close-btn{
+        display: none;
+      }
+    }
+    &-detail{
+      background-color: $void-bg;
+      &__content {
+        padding: 3rem 6rem 0;
+      }
+      &__container{
+        max-width: 60rem;
+        padding: 0 1rem 1rem!important;
+      }
+      &__minicards {
+        margin: 0 -1rem;
+      }
+      &__slides{
+        padding: 1rem 7rem;
+        .alloffers-offers__card{
+          min-width: 17.25rem;
+        }
+      }
+    }
+    &-filters {
+      &__slides {
+        &__filter {
+          .form-check-label {
+            font-size: 1rem!important;
+          }
+        }
+      }
+    }
+  }
+}

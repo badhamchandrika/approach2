@@ -1,0 +1,22 @@
+<template data-sly-template.lastCardAttributes="${@ lastCardModel, lastCardId}">
+  <div class="alloffers-offers__card carousel-last-card d-none" data-logo-path="${lastCardModel.logoPath}" data-cta-text="${lastCardModel.logoPath}" data-carousel-lastcard-id="${lastCardId}">
+    <div class="alloffers-offers__card__carousel__last d-flex flex-column align-items-center justify-content-center" role="region" aria-label="offer card">
+      <img src="${lastCardModel.logoPath}" alt="${lastCardModel.ctaText}" />
+      <p class="carousel-last__card__text">${lastCardModel.description}</p>
+      <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+      <sly data-sly-call="${ctatemplate.ctalink @
+        type='pill',
+        href=lastCardModel.ctaUrl,
+        text=lastCardModel.ctaText,
+        target='_self',
+        hexText='#FFF',
+        hexBtn='#1F68DA',
+        dataTrackID=lastCardModel.ctaDataTrackId,
+        dataClickID=lastCardModel.ctaDataClickId,
+        dataTrackType=lastCardModel.ctaDataTrackType,
+        classes='text-center'
+        }">
+      </sly>
+    </div>
+  </div>
+</template>

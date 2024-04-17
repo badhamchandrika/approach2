@@ -1,0 +1,13 @@
+<sly data-sly-use.logoModel="${'com.aem.airmiles.web.core.models.LogoModel'}"
+     data-sly-use.analyticsModel="com.aem.airmiles.web.core.models.ComponentModel"/>
+<span data-cmp-is="logo">
+  <a href="${logoModel.logoUrl}" alt="Airmiles"
+     data-track-id="${analyticsModel.dataTrackID}"
+     data-track-click="${analyticsModel.dataClickID}"
+     data-track-type="${analyticsModel.dataTrackType}"
+     data-cmp-data-layer="${logoModel.data.json}"
+     data-cmp-clickable="true"
+     data-cmp-data-layer-enabled="true">
+    <img src="${logoModel.logo}" class="airmiles-web-logo" alt="Airmiles Logo" />
+  </a>
+</span>

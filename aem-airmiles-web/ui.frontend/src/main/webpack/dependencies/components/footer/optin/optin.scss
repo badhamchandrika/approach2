@@ -1,0 +1,23 @@
+.cmp-optin {
+  &__icon {
+    color: color('white');
+    border-radius: 50%;
+    background-color: color('focused-teal');
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0 0 auto;
+    em {
+      position: absolute;
+      font-size: 1.5rem;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__title {
+    font-family: ArchivoSemibold;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="p-1 h-25 w-100 bg-light text-white" data-sly-test="${wcmmode.edit}">
+    <span class="am-icon am-icon-info p-1"></span>${component.title}
+</div>
+<sly data-sly-use.model="ca.airmiles.travel.core.models.HereToHelp"/>
+<div class="heretohelp-container">
+    <div class="bsp-travel-container">
+        <div class="row heretohelp-container__rowcont" data-sly-test="${model.displayType == 'block'}">
+            <sly data-sly-include="blockheretohelp.html"></sly>
+        </div>
+
+        <div class="row heretohelp-container__simplesection" data-sly-test="${model.displayType == 'simple'}">
+            <sly data-sly-include="simpleheretohelp.html"></sly>
+        </div>
+    </div>
+ </div>

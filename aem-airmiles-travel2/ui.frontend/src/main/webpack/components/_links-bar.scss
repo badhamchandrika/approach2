@@ -1,0 +1,222 @@
+$--am-component-link-pill-text-style: "normal";
+
+$--am-component-link-pill-text-color-default: $--am-base-colour-blue-100;
+$--am-component-link-pill-text-color-hover: $--am-base-colour-blue-100;
+$--am-component-link-pill-text-color-active: $--am-base-colour-white-100;
+
+$--am-component-link-bar-pill-background-color-default: $--am-base-colour-white-100;
+$--am-component-link-bar-pill-background-color-hover: $--am-base-colour-grey-700;
+$--am-component-link-bar-pill-background-color-active: $--am-base-colour-blue-100;
+
+$--am-component-link-bar-pill-icon-color-default: $--am-base-colour-blue-100;
+$--am-component-link-bar-pill-icon-color-hover: $--am-base-colour-blue-100;
+$--am-component-link-bar-pill-icon-color-active: $--am-base-colour-white-100;
+
+$--am-component-link-pill-icon-size: $--am-base-sizing-unit-3x;
+
+$--am-component-link-bar-nav-icon-color: $--am-base-colour-blue-100;
+$--am-component-link-bar-nav-icon-size: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-nav-background-color-default: $--am-base-colour-white-100;
+$--am-component-link-bar-nav-background-color-hover: $--am-base-colour-grey-700;
+
+$--am-component-link-bar-pill-icon-border-radius: $--am-base-sizing-unit-4x;
+
+$--am-component-link-bar-pill-padding-right-desktop: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-pill-padding-right-tablet: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-pill-padding-right-mobile: $--am-base-sizing-unit-2x;
+
+$--am-component-link-bar-pill-padding-left-desktop: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-pill-padding-left-tablet: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-pill-padding-left-mobile: $--am-base-sizing-unit-2x;
+
+$--am-component-link-bar-pill-padding-top-desktop: $--am-base-sizing-unit-1x;
+$--am-component-link-bar-pill-padding-top-tablet: $--am-base-sizing-unit-1x;
+$--am-component-link-bar-pill-padding-top-mobile: $--am-base-sizing-unit-1x;
+
+$--am-component-link-bar-pill-padding-bottom-desktop: $--am-base-sizing-unit-1x;
+$--am-component-link-bar-pill-padding-bottom-tablet: $--am-base-sizing-unit-1x;
+$--am-component-link-bar-pill-padding-bottom-mobile: $--am-base-sizing-unit-1x;
+
+$--am-component-link-bar-pill-padding-internal-desktop: $--am-base-sizing-unit-1x;
+$--am-component-link-bar-pill-padding-internal-tablet: $--am-base-sizing-unit-1x;
+$--am-component-link-bar-pill-padding-internal-mobile: $--am-base-sizing-unit-1x;
+
+$--am-component-link-bar-drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+$--am-component-link-bar-background-colour: --am-base-colour-white-100;
+
+$--am-component-link-bar-horizontal-alignment-desktop: $--am-base-alignment-center;
+$--am-component-link-bar-horizontal-alignment-tablet: $--am-base-alignment-center;
+$--am-component-link-bar-horizontal-alignment-mobile: $--am-base-alignment-left;
+
+$--am-component-link-bar-horizontal-padding-desktop: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-horizontal-padding-tablet: $--am-base-sizing-unit-2x;
+$--am-component-link-bar-horizontal-padding-mobile: $--am-base-sizing-micro-1;
+
+$--am-component-link-bar-internal-horizontal-padding: "8px";
+
+$--am-typography-body-text-family: $--am-base-font-san-serif-1;
+$--am-typography-body-text-weight: $--am-base-font-weight-400;
+$--am-typography-body-text-style: $--am-base-font-style-1;
+$--am-typography-body-text-colour: $--am-base-colour-grey-100;
+
+$--am-typography-body-text-size-desktop: $--am-base-font-size-6;
+$--am-typography-body-text-size-tablet: $--am-base-font-size-5;
+$--am-typography-body-text-size-mobile: $--am-base-font-size-4;
+
+@mixin bodyText {
+  font-family: $--am-typography-body-text-family;
+  font-weight: $--am-typography-body-text-weight;
+  font-style: $--am-typography-body-text-style;
+  color: $--am-typography-body-text-colour;
+}
+
+.links-container {
+  box-shadow: $--am-component-link-bar-drop-shadow;
+  background-color: $--am-component-link-bar-background-colour;
+  display: flex;
+
+  justify-content: $--am-component-link-bar-horizontal-alignment-tablet;
+
+  &__next-button,
+  &__prev-button {
+    display: flex;
+    align-items: center;
+    color: $--am-component-link-bar-pill-icon-color-default;
+    size: $--am-component-link-bar-nav-icon-size;
+    background-color: $--am-component-link-bar-nav-background-color-default;
+    opacity: 0.8;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .pills-container {
+    width: 100%;
+    margin: $--am-component-link-bar-horizontal-padding-desktop 0;
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+  }
+
+  .pill-container {
+    position: relative;
+    text-align: center;
+    background-color: $--am-component-link-bar-pill-background-color-default;
+    border-radius: $--am-component-link-bar-pill-icon-border-radius;
+    padding: $--am-component-link-bar-pill-padding-top-mobile
+      $--am-component-link-bar-pill-padding-right-mobile
+      $--am-component-link-bar-pill-padding-bottom-mobile
+      $--am-component-link-bar-pill-padding-left-mobile;
+    white-space: nowrap;
+
+    a {
+      @include bodyText;
+      color: $--am-component-link-pill-text-color-default;
+      font-size: $--am-typography-body-text-size-desktop;
+      cursor: default;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .link-pill::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+    }
+
+    &:focus-within {
+      background-color: $--am-component-link-bar-pill-background-color-hover;
+      @include focus-outline();
+    }
+    &.active {
+      background-color: $--am-component-link-bar-pill-background-color-active;
+      a {
+        color: $--am-component-link-pill-text-color-active;
+      }
+    }
+  }
+
+  .link-pill__icon {
+    color: $--am-component-link-bar-pill-icon-color-default;
+    margin-right: $--am-component-link-bar-pill-padding-internal-mobile;
+  }
+
+  .active .link-pill__icon {
+    color: $--am-component-link-bar-pill-icon-color-active;
+  }
+}
+
+@media only screen and (min-width: 764px) {
+  .links-container {
+    justify-content: $--am-component-link-bar-horizontal-alignment-tablet;
+
+    .pill-container {
+      padding: $--am-component-link-bar-pill-padding-top-tablet
+        $--am-component-link-bar-pill-padding-right-tablet
+        $--am-component-link-bar-pill-padding-bottom-tablet
+        $--am-component-link-bar-pill-padding-left-tablet;
+    }
+
+    .link-pill__icon {
+      margin-right: $--am-component-link-bar-pill-padding-internal-tablet;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .links-container {
+    justify-content: $--am-component-link-bar-horizontal-alignment-desktop;
+
+    &__next-button,
+    &__prev-button {
+      &:hover {
+        background-color: $--am-component-link-bar-nav-background-color-hover;
+        opacity: 0.8;
+      }
+    }
+
+    .pill-container {
+      padding: $--am-component-link-bar-pill-padding-top-desktop
+        $--am-component-link-bar-pill-padding-right-desktop
+        $--am-component-link-bar-pill-padding-bottom-desktop
+        $--am-component-link-bar-pill-padding-left-desktop;
+      &.active {
+        background-color: $--am-component-link-bar-pill-background-color-active;
+        color: $--am-component-link-pill-text-color-active;
+      }
+      &:hover {
+        background-color: $--am-component-link-bar-pill-background-color-hover;
+        a {
+          color: $--am-component-link-pill-text-color-hover;
+        }
+
+        .link-pill__icon {
+          color: $--am-component-link-bar-pill-icon-color-hover;
+        }
+      }
+    }
+
+    .link-pill__icon {
+      margin-right: $--am-component-link-bar-pill-padding-internal-desktop;
+    }
+
+    .active .link-pill__icon {
+      color: $--am-component-link-bar-pill-icon-color-active;
+    }
+  }
+}

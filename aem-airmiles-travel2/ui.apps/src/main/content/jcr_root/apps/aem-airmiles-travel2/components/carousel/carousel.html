@@ -1,0 +1,8 @@
+<div data-sly-test="${wcmmode.edit}">Global Carousel</div>
+<div 
+    data-sly-use.model="ca.airmiles.travel.core.models.CarouselModel"
+    data-sly-use.environment="/apps/aem-airmiles-travel2/components/core/runmode.js"
+></div>
+<div class="bsp-travel-container">
+    <div data-component="globalcarousel" data-prop-json_url="${currentNode.path @ context='uri'}.model.json"  data-prop-is_author="${wcmmode.edit}" data-prop-runmodes="${environment.runmodes}"></div>
+</div>

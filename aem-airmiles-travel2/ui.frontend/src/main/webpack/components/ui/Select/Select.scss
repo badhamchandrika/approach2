@@ -1,0 +1,57 @@
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__label {
+    display: none;
+    padding-left: amSizeUnit(2);
+    position: absolute;
+
+    &--selected {
+      display: block;
+      inset-block-start: 6px;
+      font-size: amFontSize(2);
+      line-height: 0.6875rem;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231f68da' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-position-x: 90%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    border-radius: amSizeMicro(4);
+    border: amSizeMicro(1) solid amSteel(3);
+    color: amSteel(9);
+    font-family: amFontFamily(2);
+    height: amFontSize(18);
+    line-height: amFontSize(9);
+    padding: amSizeUnit(1) amSizeUnit(2);
+    width: 100%;
+
+    // NOTE: re-applying focus style to
+    // override styles from airmiles-web
+    &:focus {
+      @include focus-outline();
+      border: amSizeMicro(1) solid amSteel(3);
+      padding: amSizeUnit(1) amSizeUnit(2);
+    }
+
+    &--selected {
+      font-size: amFontSize(4);
+      line-height: 1;
+      padding-block-start: amSizeUnit(2);
+      padding-bottom: amSizeMicro(5);
+
+      // NOTE: re-applying focus style to
+      // override styles from airmiles-web
+      &:focus {
+        @include focus-outline();
+        padding-block-start: amSizeUnit(2);
+        padding-bottom: amSizeMicro(5);
+      }
+    }
+  }
+}

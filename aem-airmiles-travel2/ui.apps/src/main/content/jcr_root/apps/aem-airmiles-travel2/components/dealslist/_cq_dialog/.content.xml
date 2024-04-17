@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <dealListConfig
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Deal List config"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">    
+                            <title 
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title"
+                                name="./title"
+                                required="{Boolean}false"/>
+                            <variant
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Variant card"
+                                    name="./variant">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <deal
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Deal"
+                                            selected="{Boolean}true"
+                                            value="deal"/>
+                                    <partner
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Partner"
+                                            value="partner"/>
+                                    <destination
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Destination"
+                                            value="destination"/>
+                                </items>
+                            </variant>
+                            <rootpages
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                    composite="{Boolean}true"
+                                    fieldLabel="Root Pages">
+                                <field
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./rootPages"
+                                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <section
+                                                jcr:title="RootPages"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <pagepath
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldLabel="Page Path"
+                                                        name="./pagePath"/>
+                                            </items>
+                                        </section>
+                                    </items>
+                                </field>
+                            </rootpages>
+                            <tagfield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                allowbulkedit="{Boolean}true"
+                                autocreatetag="{Boolean}true"
+                                fieldDescription="Pick 1st level filters."
+                                fieldLabel="Filters"
+                                multiple="{Boolean}true"
+                                name="./tagField"/>
+                            <paginationBackgroundColor
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    emptyText="Choose Colour"
+                                    fieldDescription="Select the background color for pagination"
+                                    fieldLabel="Pagination Background Colour style"
+                                    name="./paginationBackgroundColor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <blue
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Blue"
+                                        value="blue"/>
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="white"/>
+                                </items>
+                            </paginationBackgroundColor>
+                        </items>
+                    </dealListConfig>
+                    <superUser
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Special Configs"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <granite:rendercondition
+                            jcr:primaryType="nt:unstructured"
+                            groups="[travel-superuser]"
+                            sling:resourceType="/apps/aem-airmiles-travel2/components/includes/renderconditions/groups"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">  
+                                            <showPackagesWidget
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./showPackagesWidget"
+                                                text="Show Packages widget"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>   
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </superUser>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

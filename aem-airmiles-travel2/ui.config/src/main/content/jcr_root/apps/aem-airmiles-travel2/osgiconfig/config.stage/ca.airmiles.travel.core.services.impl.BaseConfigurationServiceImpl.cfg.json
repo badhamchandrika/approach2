@@ -1,0 +1,4 @@
+{
+  "apiUrl": "https://uat-services.api.airmiles.ca",
+  "domBFFUrl": "https://uat-bff.api.airmiles.ca/dombff-contents"
+}

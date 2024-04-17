@@ -1,0 +1,43 @@
+<div  data-sly-use.model="${'com.aem.airmiles.web.core.models.PrizesShellModel'}">
+
+  <div class="contentBlock__prizes" data-sly-list.item="${model.cardsList}">
+    <div class="shell-primary ${item.swapPlacement}">
+      <div class="contentBlock__card__prizes" data-color="${item.backgroundColor}" data-textsize="${item.textSize}" data-textcolor="${item.textColor}">
+        <div class="contentBlock__backgroundImage">
+            <img class="contentBlock__fgimage" src="${item.backgroundImage}" alt="${item.backgroundImageAltText}">
+        </div>
+        <div class="contentBlock__text_prizes">
+            <div class="contentBlock_title">
+              <h3>${item.title}</h3>
+            </div>
+            <div class="contentBlock_subHeader">
+              <p>${item.subheader}</p>
+            </div>
+            <div class="contentBlock_description">
+             ${item.description @ context = 'html'}
+            </div>            
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("readystatechange", function () {
+     
+      let card = document.querySelectorAll(".contentBlock__card__prizes");
+
+      for (var i = 0; i < card.length; i++){
+        card[i].style.backgroundColor = card[i].dataset.color;
+        let container = card[i].querySelector(".contentBlock__text_prizes")
+        
+        let elements = container.querySelectorAll("*, p, a");
+        for (var j = 0; j < elements.length; j++){
+            elements[j].style.color = card[i].dataset.textcolor;
+        }
+        let heading = container.querySelectorAll("h3");
+        let size = card[i].dataset.textsize;
+        heading[0].classList.add(size);
+      }
+    });
+  </script>

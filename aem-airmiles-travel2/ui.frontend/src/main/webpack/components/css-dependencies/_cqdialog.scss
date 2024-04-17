@@ -1,0 +1,25 @@
+.wcmmode-edit{
+  color: color('grey') !important;
+  font-weight: bold!important;
+}
+
+coral-dialog{
+  .multi-field{
+    border-bottom: 3px dashed #231F20 !important;
+    padding: 1rem 0;
+    .coral3-Multifield-item{
+      padding-right: 0;
+    }
+    &--inner{
+      //border: 1px solid color('body-copy')!important;
+      &__text{
+        //border-bottom: 1px solid color('body-copy')!important;
+      }
+    }
+  }
+  .rte-ui.is-desktop{
+    .coral3-ButtonGroup.rte-toolbar.is-sticky.is-active{
+      visibility: visible!important;
+    }
+  }
+}

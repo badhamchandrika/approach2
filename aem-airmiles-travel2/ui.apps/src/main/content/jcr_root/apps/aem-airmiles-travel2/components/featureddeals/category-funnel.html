@@ -1,0 +1,41 @@
+<sly data-sly-use.model="ca.airmiles.travel.core.models.FeaturedPartners">
+  <section class="category-funnel">
+    <div class="bsp-travel-container">
+      <div class="category-funnel__container">
+        <div class="row section-header">
+          <div class="col-xl-6 offset-xl-3">
+            <h2 class="section-header__title">${model.title}</h2>
+          </div>
+          <div
+            class="col-xl-3"
+          >
+            <div class="section-header__cta" data-sly-include="/apps/aem-airmiles-travel2/components/cta-button/cta-button.html"></div>
+          </div>
+        </div>
+        <div class="category-funnel__content">
+          <ul
+            class="row category-funnel__list category-funnel__list--${model.displayType}"
+            data-sly-list.detailList="${model.details}"
+          >
+            <li class="${model.displayType == 'deals' ? 'col-md-4 col-xl-2' : 'col-6 col-md-2 mb-md-0'}">
+              <a
+                href="${detailList.linkUrl}"
+                target="${detailList.linkTarget}"
+                data-track-id="${detailList.dataTrackID}"
+                data-track-click="${detailList.dataClickID}"
+                data-track-type="${detailList.dataTrackType}"
+              >
+                <img
+                  data-sly-test="${detailList.imagePath}"
+                  alt="${detailList.altText}"
+                  src="${detailList.imagePath @context = 'uri'}"
+                />
+                <p data-sly-test="${model.displayType == 'deals'}">${detailList.linkText}</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</sly>

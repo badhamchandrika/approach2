@@ -1,0 +1,12 @@
+{
+  "testActiveTrue": {
+    "active": "true"
+  },
+  "testNullComponent":  {
+
+  },
+  "testAnalyticsValid": {
+    "dataTrackID": "test-ID",
+    "dataClickID": "test-clickID"
+  }  
+}

@@ -1,0 +1,67 @@
+{
+  "search": {
+    "jcr:primaryType":"nt:unstructured",
+    "searchPlaceholderText":"Search airmiles.ca",
+    "cancelLabel":["cancel"],
+    "jcr:lastModifiedBy":"admin",
+    "searchIcon":"/content/dam/aem-airmiles-web/icons/search-icon.PNG",
+    "searchRoot":"/content/aem-airmiles-web",
+    "searchLabel":"search",
+    "id":"search",
+    "jcr:lastModified":"Tue May 31 2022 11:43:44 GMT+0530",
+    "sling:resourceType":"aem-airmiles-web/components/search",
+    "pagination":"20",
+    "searchResultPage":"/content/aem-airmiles-web/ca/en",
+    "excludeSearchPath":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "searchPathExclude":"/content/aem-airmiles-web-ex/us"
+      }
+    }
+  },
+  "searchwithoutexclude": {
+    "jcr:primaryType":"nt:unstructured",
+    "searchPlaceholderText":"Search airmiles.ca",
+    "cancelLabel":["cancel"],
+    "jcr:lastModifiedBy":"admin",
+    "searchIcon":"/content/dam/aem-airmiles-web/icons/search-icon.PNG",
+    "searchRoot":"/content/we-retail",
+    "searchLabel":"search",
+    "id":"search",
+    "jcr:lastModified":"Tue May 31 2022 11:43:44 GMT+0530",
+    "sling:resourceType":"aem-airmiles-web/components/search",
+    "pagination":"20",
+    "searchResultPage":"/content/aem-airmiles-web/ca/en"
+  },
+  "initialTest": {
+    "jcr:primaryType": "nt:unstructured",
+    "cancelLabel": "Cancel",
+    "searchRoot": "/searchmodelcontent/language-masters",
+    "searchLabel": "Search",
+    "id": "1",
+    "sling:resourceType": "aem-airmiles-web/components/search",
+    "pagination": "5",
+    "searchIcon": "/content/dam/aem-airmiles-web/asset.jpg",
+    "searchPlaceholderText": "Search Here",
+    "searchResultPage": "/searchmodelcontent/language-masters/en/search",
+    "excludeSearchPath": "/searchmodelcontent/List"
+  },
+  "searchAnalyticsTest": {
+    "jcr:primaryType": "nt:unstructured",
+    "cancelLabel": "Cancel",
+    "submitLabel": "Submit",
+    "searchLabel": "Search",
+    "sling:resourceType": "aem-airmiles-web/components/search",
+    "pagination": "5",
+    "searchIcon": "/content/dam/aem-airmiles-web/asset.jpg",
+    "searchPlaceholderText": "Search Here",
+    "searchResultPage": "/searchmodelcontent/language-masters/en/search.html",
+    "searchButtonTrackID": "button-trackID",
+    "searchButtonClickID": "button-clickID",
+    "searchInputTrackID": "input-trackID",
+    "searchInputClickID": "input-clickID"
+
+  }
+
+}

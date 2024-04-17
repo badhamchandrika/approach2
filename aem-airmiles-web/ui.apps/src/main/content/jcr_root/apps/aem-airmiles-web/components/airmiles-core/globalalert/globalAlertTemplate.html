@@ -1,0 +1,18 @@
+<template data-sly-template.elements="${@ data, count, uid}">
+    <div class="globalalert-border ${data.globalAlertType}" role="${data.globalAlertHasRole ? 'alert':''}">
+        <div class="bsp-container d-flex justify-content-center" data-track-section="${data.globalAlertDataTrackSection}">
+            <div class="globalalert-text d-block d-md-flex">
+                <div class="d-flex">
+                    <div data-sly-test="${data.globalAlertType}" class="globalalert-icon ${data.globalAlertType}">
+                        <span data-sly-test="${data.globalAlertType=='check'}" class='am-icon2 am-icon2-success --am-base-color-emerald-900' aria-hidden="true"></span>
+                        <span data-sly-test="${data.globalAlertType=='warning'}" class='am-icon2 am-icon2-warning --am-base-color-citrine-800' aria-hidden="true"></span>
+                        <span data-sly-test="${data.globalAlertType=='stop'}" class='am-icon2 am-icon2-error --am-base-color-ruby-900' aria-hidden="true"></span>
+                        <span data-sly-test="${data.globalAlertType=='info'}" class='am-icon2 am-icon2-information --am-base-color-saphire-900' aria-hidden="true"></span>
+                    </div>
+                    <div class="globalalert-text__title --am-base-color-steel-900"><h2 data-sly-test="${data.globalAlertTitle}">${data.globalAlertTitle @ context='html'}</h2></div>
+                </div>
+                <div class="globalalert-text__body --am-base-color-steel-700"><p>${data.globalAlertText @ context='html'}</p></div>
+            </div>
+        </div>
+    </div>
+</template>

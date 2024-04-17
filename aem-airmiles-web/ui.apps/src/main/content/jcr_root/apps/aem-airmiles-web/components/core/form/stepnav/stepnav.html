@@ -1,0 +1,15 @@
+<div data-sly-use.tmp="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${resource.hasChildren}"
+     data-sly-use.steps="${resource.path}/stepList"
+     class="cmp-step-navigation">
+    <ul class="cmp-step-navigation__container step-1" data-sly-list="${steps.listChildren}">
+        <li class="cmp-step-navigation__step ${itemList.count == 1 ? 'active':''} ${item.stepClass}" data-step-number="${itemList.count}">
+            <div class="cmp-step-navigation__item">
+                <i class="am-icon2-success"></i>
+                <span>${itemList.count}</span>
+            </div>
+            <div class="cmp-step-navigation__label">${item.stepName}</div>
+        </li>
+    </ul>
+</div>
+<sly data-sly-call="${tmp.placeholder @ isEmpty=!hasContent, classAppend='formcmp-stepnav'}"></sly>

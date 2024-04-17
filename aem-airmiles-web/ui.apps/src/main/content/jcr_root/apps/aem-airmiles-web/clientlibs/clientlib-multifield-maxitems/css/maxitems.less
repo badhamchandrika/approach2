@@ -1,0 +1,20 @@
+coral-multifield {
+    &[data-foundation-validation][aria-invalid=true] {
+        border: solid 1px #c9252d;
+        & + coral-icon[icon][role] {
+            color: #c9252d;
+            height:18px;
+            width:18px;
+        }
+    }
+    
+    //in case of missing fieldLabel
+    &:first-child[data-foundation-validation^=multifield-min-max] {
+        & + coral-icon[icon][role] {
+            top: -16px;
+        }
+        &[aria-invalid=true] + coral-icon[icon][role] {
+            top: -20px;
+        }
+    }
+}

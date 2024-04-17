@@ -1,0 +1,57 @@
+{
+	"jcr:primaryType": "cq:Component",	
+	"sling:resourceSuperType": "core/wcm/components/title/v2/title",
+	"cq:dialog": {
+		"jcr:primaryType": "nt:unstructured",
+		"sling:resourceType": "cq/gui/components/authoring/dialog",
+		"content": {
+			"jcr:primaryType": "nt:unstructured",
+			"granite:class": "cmp-title__editor",
+			"sling:resourceType": "granite/ui/components/coral/foundation/container",
+			"items": {
+				"jcr:primaryType": "nt:unstructured",
+				"tabs": {
+					"jcr:primaryType": "nt:unstructured",
+					"maximized": true,
+					"sling:resourceType": "granite/ui/components/coral/foundation/tabs",
+					"items": {
+						"jcr:primaryType": "nt:unstructured",
+						"properties": {
+							"jcr:primaryType": "nt:unstructured",
+							"margin": true,
+							"sling:resourceType": "granite/ui/components/coral/foundation/container",
+							"items": {
+								"jcr:primaryType": "nt:unstructured",
+								"columns": {
+									"jcr:primaryType": "nt:unstructured",
+									"margin": true,
+									"sling:resourceType": "granite/ui/components/coral/foundation/fixedcolumns",
+									"items": {
+										"jcr:primaryType": "nt:unstructured",
+										"column": {
+											"jcr:primaryType": "nt:unstructured",
+											"sling:resourceType": "granite/ui/components/coral/foundation/container",
+											"items": {
+												"jcr:primaryType": "nt:unstructured",
+												"active": {
+													"jcr:primaryType": "nt:unstructured",
+													"path": "aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/active",
+													"sling:resourceType": "granite/ui/components/coral/foundation/include"
+												},
+												"analyticsOptions": {
+													"jcr:primaryType": "nt:unstructured",
+													"path": "aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options",
+													"sling:resourceType": "granite/ui/components/coral/foundation/include"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

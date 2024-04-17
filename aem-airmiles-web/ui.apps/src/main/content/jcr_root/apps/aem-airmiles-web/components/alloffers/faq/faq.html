@@ -1,0 +1,28 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Offers - FAQ" class="cq-placeholder"></div>
+
+<sly data-sly-use.list="com.adobe.cq.wcm.core.components.models.contentfragment.ContentFragmentList"
+     data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+     data-sly-test="${list.listItems.size>0}">
+    <section class="faq cmp-contentfragmentlist" data-is-multiple>
+        <sly data-sly-list.fragment="${list.listItems}" id="${component.id}" class="cmp-contentfragmentlist">
+            <article class="faq-box d-flex flex-column">
+                <sly data-sly-list.element="${fragment.elements}" data-sly-test="${element.title != 'FAQ Category'}">
+                    <sly data-sly-test="${element.title == 'FAQ Question'}">
+                        <div class="faq-box__question d-flex justify-content-between">
+                            <p class="pe-0 pe-md-3">
+                                ${element.value @ context = 'html'}
+                            </p>
+                            <span class="am-icon am-icon-functional-arrow-down my-auto" aria-hidden="true"></span>
+                        </div>
+                    </sly>
+                    <sly data-sly-test="${element.title == 'FAQ Answer'}">
+                        <div class="faq-box__answer pe-0 pe-md-4">
+                            ${element.value @ context = 'html'}
+                        </div>
+                        <div class="faq-box__category d-none"></div>
+                    </sly>
+                </sly>
+        </article>
+        </sly>
+    </section>
+</sly>

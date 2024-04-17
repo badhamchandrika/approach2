@@ -1,0 +1,5 @@
+{
+  "user.mapping": [
+    "aem-airmiles-travel2.core:travel-service-user=[travel-service-user]"
+  ]
+}

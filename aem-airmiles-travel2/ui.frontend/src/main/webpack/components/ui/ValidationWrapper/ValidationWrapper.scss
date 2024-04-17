@@ -1,0 +1,54 @@
+.validation-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  > :first-child {
+    height: 100%;
+    display: flex;
+  }
+
+  &.error {
+    ::-webkit-input-placeholder {
+      color: amRuby(9);
+    }
+    .datepicker__inputLabel,
+    .moving-label,
+    select {
+      color: amRuby(9);
+    }
+    .datepicker__input,
+    .location-input__container,
+    .promo-code-input-wrapper input,
+    select {
+      border-color: amRuby(9);
+    }
+
+    select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23E71823' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    }
+  }
+
+  &__message {
+    align-items: self-start;
+    color: amRuby(9);
+    display: flex;
+    font-family: amFontFamily(2);
+    font-size: amFontSize(4);
+    line-height: 1.125;
+    min-height: amSizeUnit(3);
+    padding-top: amSizeUnit(1);
+
+    &--bottom {
+      &--md,
+      &--xl {
+        bottom: calc(amSizeUnit(2) * -1.0625);
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}

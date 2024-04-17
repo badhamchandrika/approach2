@@ -1,0 +1,52 @@
+{
+  "empty_subcategories":
+  {
+    "jcr:primaryType": "nt:unstructured",
+    "mainBodyText": "body",
+    "backgroundImagePath": "/content/dam/wknd-events/wknd-events.jpg",
+    "sling:resourceType": "aem-airmiles-web/components/getmoremiles",
+    "wayFinderText": "WayFinder",
+    "mainTitleText": "title",
+    "subCategories": {}
+  },
+  "three_categories":
+  {
+    "jcr:primaryType": "nt:unstructured",
+    "mainBodyText": "body",
+    "backgroundImagePath": "/content/dam/wknd-events/wknd-events.jpg",
+    "sling:resourceType": "aem-airmiles-web/components/getmoremiles",
+    "wayFinderText": "WayFinder",
+    "mainTitleText": "title",
+    "dataTrackSection": "get-more-miles",
+    "subCategories": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "imagePath": "/content/dam/we-retail-screens/usa.png",
+        "body": "body1",
+        "title": "Title1",
+        "linkUrl": "https://www.google.cl",
+        "linkTarget": "_blank",
+        "linkText": "GoogleCL"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "imagePath": "/content/dam/we-retail-screens/italy.png",
+        "body": "body2",
+        "title": "title2",
+        "linkUrl": "https://www.google.com.co",
+        "linkTarget": "_blank",
+        "linkText": "GoogleCo"
+      },
+      "item2": {
+        "jcr:primaryType": "nt:unstructured",
+        "imagePath": "/content/dam/we-retail-screens/we-retail-instore-logo.png",
+        "body": "body3",
+        "title": "title3",
+        "linkUrl": "https://www.google.com.ar",
+        "linkTarget": "_blank",
+        "linkText": "GoogleAr"
+      }
+    }
+  }
+}

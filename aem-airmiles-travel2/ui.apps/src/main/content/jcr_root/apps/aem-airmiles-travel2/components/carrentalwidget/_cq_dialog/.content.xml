@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Car Rental Widget"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <carrentalprops
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Car rental properties"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <renteragetitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Renter's age text"
+                                                    name="./renterAgeTitle"/>
+                                            <fromlocation
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="From Location (Placeholder Text)"
+                                                    name="./fromLocationText"/>
+                                            <tolocation
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="To Location (Placeholder Text)"
+                                                    name="./toLocationText"/>
+                                            <buttontext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button Text"
+                                                    name="./buttonText"/>
+                                            <advsearchtext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Advance Search Text"
+                                                    name="./advSearchText"/>
+                                            <urladvsearch
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    emptyText="Url advance search"
+                                                    fieldLabel="Url advance search"
+                                                    name="./urlAdvSearch"
+                                                    required="{Boolean}true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </carrentalprops>
+                    <pickupdatetime
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Pick Up date and time"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <pickupdatetext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Pick up Date text (Placeholder Text)"
+                                                    name="./pickUpDateText"/>
+                                            <dropoffdatetext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Drop off Date text (Placeholder Text)"
+                                                    name="./dropOffDateText"/>
+                                            <pickuptimetext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Pick up Time text (Placeholder Text)"
+                                                    name="./pickUpTimeText"/>
+                                            <dropofftimetext
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Drop off Time text (Placeholder Text)"
+                                                    name="./dropOffTimeText"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </pickupdatetime>
+                    <superUser
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Special Configs"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <granite:rendercondition
+                                jcr:primaryType="nt:unstructured"
+                                groups="[travel-superuser]"
+                                sling:resourceType="/apps/aem-airmiles-travel2/components/includes/renderconditions/groups"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <featureFlags
+                                                        jcr:title="Feature flags"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <parentConfig jcr:primaryType="nt:unstructured" active="{Boolean}true" />
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <hasPaymentOption
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./hasPaymentOption"
+                                                                text="Show Payment Options"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true" />
+                                                            <hasProgressive
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./hasProgressive"
+                                                                text="Activate Progressive Disclosure"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true" />
+                                                            <hasWidgetUpdates
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./hasWidgetUpdates"
+                                                                text="Show widget updates"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"
+                                                                disabled="{Boolean}true" />
+                                                        </items>
+                                                    </featureFlags>
+                                                    <notification
+                                                            jcr:title="Notification"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <alertMsgStart
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Alert 1st message start"
+                                                                    name="./alertMsgStart"/>
+                                                            <alertMsgEnd
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Alert 1st message end"
+                                                                    name="./alertMsgEnd"/>
+                                                            <alertMsgReturn
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                                    fieldLabel="Alert 2nd message"
+                                                                    name="./alertMsgReturn"/>
+                                                            <showmultiheadermessage
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                    cq:showOnCreate="{Boolean}true"
+                                                                    name="./showMultiHeaderMessage"
+                                                                    text="Show Multi Header Message"
+                                                                    uncheckedValue="{Boolean}false"
+                                                                    value="{Boolean}true"/>
+                                                            <showdefaultheadermessage
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                    cq:showOnCreate="{Boolean}true"
+                                                                    name="./showDefaultHeaderMessage"
+                                                                    text="Show Default Header Message"
+                                                                    fieldDescription="Enable this to show default multi line notice message, disabling this will render single line notice"
+                                                                    uncheckedValue="{Boolean}false"
+                                                                    value="{Boolean}true"/>
+                                                        </items>
+                                                    </notification>
+                                                    <validations
+                                                            jcr:title="Validations"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <validationRequired
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Field required"
+                                                                    fieldDescription="eg. This field is required."
+                                                                    name="./validationRequired"/>
+                                                            <widgetValidationMissing
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Validation missing info"
+                                                                    fieldDescription="eg. You are missing information."
+                                                                    name="./widgetValidationMissing"/>
+                                                            <widgetValidationFields
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Validation fields"
+                                                                    fieldDescription="eg. See the following fields to correct them:"
+                                                                    name="./widgetValidationFields"/>
+                                                        </items>
+                                                    </validations>
+                                                </items>
+                                            </field>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </superUser>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

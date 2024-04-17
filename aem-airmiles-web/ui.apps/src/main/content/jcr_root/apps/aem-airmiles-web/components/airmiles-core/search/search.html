@@ -1,0 +1,12 @@
+<form data-sly-use.model="com.aem.airmiles.web.core.models.QuicksearchModel"
+      data-suggestive-texts="${model.suggestiveTexts ? properties.suggestiveTexts : '0'}"
+      id="${model.id}"
+      class="quicksearch">
+    <label>
+        <input type="search" name="query" data-sly-set.defaultPlaceholder="${'Search' @ i18n}"
+               placeholder="${model.placeholder ? properties.placeholder : defaultPlaceholder}">
+    </label>
+    <button name="submit" type="submit">
+        <span class="am-icon am-icon-search --am-base-font-size-10 _search"></span>
+    </button>
+</form>

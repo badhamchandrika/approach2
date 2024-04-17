@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2023-03-31T09:03:26.881-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/component-library-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="aem-airmiles-web/components/structure/component-library-page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <experiencefragment
+                jcr:created="{Date}2023-03-31T00:05:40.462-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:06:01.782-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/experiencefragment"
+                dataTrackType="internal"
+                fragmentVariationPath="/content/experience-fragments/aem-airmiles-web/ca/en/site/header/corporate"/>
+            <show_menu
+                jcr:created="{Date}2023-03-31T00:08:57.069-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:08:57.069-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/airmiles-core/show-menu"/>
+            <responsivegrid
+                cq:styleIds="[1680267685493]"
+                jcr:created="{Date}2023-03-31T00:09:08.661-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:09:08.661-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="1"
+                        width="2"/>
+                </cq:responsive>
+                <navigation
+                    jcr:created="{Date}2023-03-31T00:10:25.764-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-03-31T00:10:36.626-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/core/navigation"
+                    collectAllPages="true"
+                    disableShadowing="false"
+                    navigationRoot="/content/aem-airmiles-web/component-library"
+                    structureStart="1"/>
+            </responsivegrid>
+            <responsivegrid_756979268
+                jcr:created="{Date}2023-03-31T00:09:24.956-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:09:24.956-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="9"/>
+                </cq:responsive>
+            </responsivegrid_756979268>
+            <responsivegrid_1422613350
+                jcr:created="{Date}2023-03-31T00:09:42.189-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:09:42.189-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid_1422613350>
+            <experiencefragment_2123817474
+                jcr:created="{Date}2023-03-31T00:09:48.952-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:09:59.648-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/experiencefragment"
+                dataTrackType="internal"
+                fragmentVariationPath="/content/experience-fragments/aem-airmiles-web/ca/en/site/footer/corporate"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}650"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

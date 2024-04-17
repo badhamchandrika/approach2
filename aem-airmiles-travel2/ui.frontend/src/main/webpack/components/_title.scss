@@ -1,0 +1,114 @@
+.cmp-title__text {
+  @include cmp-title();
+}
+
+h1.cmp-title__text{
+  font-size: amFontSize(18);
+  margin-bottom: $--am-base-sizing-unit-3x;
+
+  @include media-breakpoint-down('md') {
+    font-size: amFontSize(15);
+    margin-bottom: 16px;
+  }
+
+  &.sz-small {
+    font-size: amFontSize(16);
+  }
+
+  &.sz-large {
+    font-size: amFontSize(23);
+    @include media-breakpoint-down('xl') {
+      font-size: amFontSize(21);
+    }
+    @include media-breakpoint-down('md') {
+      font-size: amFontSize(17);
+    }
+  }
+}
+
+h2.cmp-title__text{
+  font-size: amFontSize(12);
+  margin-bottom: $--am-base-sizing-unit-3x;
+
+  @include media-breakpoint-down('md') {
+    font-size: amFontSize(9);
+    margin-bottom: $--am-base-sizing-unit-2x;
+  }
+
+  &.sz-small {
+    font-size: amFontSize(9);
+  }
+
+  &.sz-large {
+    font-size: amFontSize(16);
+    @include media-breakpoint-down('xl') {
+      font-size: amFontSize(15);
+    }
+    @include media-breakpoint-down('md') {
+      font-size: amFontSize(12);
+    }
+  }
+
+  &.sz-xlarge {
+    font-size: amFontSize(23);
+    margin-bottom: $--am-base-sizing-unit-3x;
+    @include media-breakpoint-down('xl') {
+      font-size: amFontSize(18);
+    }
+    @include media-breakpoint-down('md') {
+      font-size: amFontSize(15);
+    }
+  }
+
+  &.vp-small {
+    margin-bottom: $--am-base-sizing-unit-2x;
+  }
+
+  &.vp-large {
+    margin-bottom: $--am-base-sizing-unit-4x;
+  }
+}
+
+h3.cmp-title__text{
+  font-size: amFontSize(6);
+  margin-bottom: $--am-base-sizing-unit-1x;
+
+  &.sz-small {
+   font-size: amFontSize(5);
+  }
+
+  &.sz-large {
+    font-size: amFontSize(7);
+  }
+}
+
+h5.cmp-title__text{
+  font-size: amFontSize(3);
+
+  @include media-breakpoint-up('md') {
+    font-size: amFontSize(5);
+  }    
+}
+
+//Style system classes
+.title-optional-top-padding {
+  .cmp-title {
+      padding-top: amSizeUnit(3);
+
+      @include media-breakpoint-down('xl'){
+        padding-top: amSizeUnit(4);
+      }
+      @include media-breakpoint-down('md'){
+        padding-top: amSizeUnit(3);
+      }
+  }
+}
+.title-optional-bottom-padding {
+  .cmp-title {
+    padding-bottom: amSizeUnit(3);
+
+    @include media-breakpoint-down('md'){
+      padding-bottom: amSizeUnit(2);
+    }
+  }
+}

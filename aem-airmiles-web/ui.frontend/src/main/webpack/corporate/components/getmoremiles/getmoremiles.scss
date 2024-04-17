@@ -1,0 +1,100 @@
+.cmp-getmoremiles {
+  margin-top: 25px;
+
+  b, strong {
+    font-family: ArchivoSemiBold, serif;
+  }
+  &__subcategories {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+    background-size: 94%;
+  }
+
+  &__cta-wrapper {
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  &__carousel-btn {
+    height: fit-content;
+    top: 50%;
+    opacity: 1;
+  }
+
+  &__carousel-indicator[data-bs-target] {
+    width: 8px;
+    height: 8px;
+    background-color: color("brand-blue");
+    border-radius: 100%;
+    margin: 0 5px;
+
+    @media screen and (min-width: 545px) {
+      margin: 0 10px;
+    }
+
+    &.active{
+      transform: scale(1.3);
+    }
+  }
+
+
+  &__carousel-icon {
+    background-image: none;
+    color: color("brand-blue");
+  }
+
+  &__panel {
+    width: 30rem;
+    margin: 4px 4px 0 4px;
+    text-align: center;
+  }
+
+  &__slide {
+    text-align: center;
+    height: 33rem;
+  }
+
+  &__card-img {
+    width: 15rem;
+    display: block;
+    margin: 3rem auto 0;
+
+    &--mobile {
+      max-width: 15rem;
+      max-height: 43%;
+      display: block;
+      margin: 40px auto 0;
+    }
+  }
+
+  &__card-text {
+    margin: 2rem 0;
+    font-family: ArchivoRegular;
+    color: color('body-copy');
+    font-size: 1rem;
+    @media screen and (max-width: breakpoint("xl")) {
+      font-size: .875rem;
+    }
+  }
+  &__card-title {
+    font-size: 1.375rem;
+    margin: 2rem 0;
+    font-family: MontserratBold;
+    color: color('body-copy');
+    @media screen and (max-width: breakpoint("xl")) {
+      font-size: 1.25rem;
+    }
+  }
+  .cmp-getmoremiles__carousel{
+    .carousel-control-next,.carousel-control-prev{
+      width: 2rem;
+    }
+    @media (min-width: breakpoint("md")) {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<sly data-sly-use.model="ca.airmiles.travel.core.models.HereToHelp"/>
+<div class="col-12 col-md-12 heretohelp-container__simplesection-titlediv">
+    <h2 class="heretohelp-container__simplesection-titlediv-title">${model.title}</h2>
+</div>
+<ul class="row" data-sly-list.detailList="${model.details}">
+    <li class="col-12 col-md-4">
+        <div class="heretohelp-container__rightsection-li">
+            <a href="${detailList.linkUrl}" data-track-click="${detailList.dataClickID}" data-track-type="${detailList.dataTrackType}" data-track-id="${detailList.dataTrackID}"
+               target="${detailList.linkTarget}">
+                <div class="row heretohelp-container__rightsection-li-iconrow">
+                    <div class="col-10 col-md-9 col-lg-10 heretohelp-container__rightsection-li-textdiv">
+                        <p>${detailList.text}</p>
+                    </div>
+                    <div class="col-2 col-md-3 col-lg-2 heretohelp-container__rightsection-li-icondiv">
+                        <span class="am-icon am-icon-${detailList.icon}"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/component-library-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Block 50-50"
+        jcr:uuid="b262cf85-8856-44ac-b83c-751529bb5599"
+        sling:resourceType="aem-airmiles-web/components/structure/component-library-page"
+        themeName="corporate">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid_756979268
+                jcr:createdBy="admin"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <tex
+                    jcr:createdBy="admin"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h1>Block 50-50 Component&lt;/h1>&#xa;"
+                    textIsRich="true"/>
+                <text_528799759_copy
+                    jcr:createdBy="admin"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>This is the 50-50 component which allow the publishing team to author content to add text, optional CTAs, and images, contains text on the left side and the image on the right side. This component is used on the New Home Page.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Figma URL: &lt;/b>&lt;a href=&quot;https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?type=design&amp;amp;node-id=956-14078&amp;amp;mode=design&amp;amp;t=rIfTj0CBioqmI43h-0&quot;>Block-50-50-component&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Jira ticket: &lt;/b>&lt;a href=&quot;https://amrp.atlassian.net/browse/DEP-12157&quot;>DEP-12157&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Component path:&amp;nbsp;&amp;nbsp;&lt;/b>aem-airmiles-web/components/airmiles-core/block-50-50&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Dashboard page:&amp;nbsp;&lt;/b>&lt;a href=&quot;https://www.airmiles.ca/en.html&quot;>https://www.airmiles.ca/en.html&lt;/a>&lt;a href=&quot;https://airmiles.ca/en.html&quot;>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_897733156_copy_
+                    jcr:createdBy="admin"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h2>&lt;b>Examples&lt;/b>&lt;/h2>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <separator_copy_copy
+                    jcr:createdBy="admin"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/separator/v1/separator">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="8"/>
+                    </cq:responsive>
+                </separator_copy_copy>
+                <text_1753619954_copy
+                    jcr:createdBy="admin"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>&lt;b>1. Block 50-50 component displaying text and image&lt;/b>&lt;/p>&#xa;"
+                    textIsRich="true"/>
+                <demo
+                    jcr:createdBy="admin"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/demo">
+                    <component
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/component">
+                        <block_50_50
+                            jcr:createdBy="admin"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/block-50-50"
+                            descriptionText="&lt;p>So may rewards, even more ways to get them. Set out on your own unique rewarding journey today –&amp;nbsp;just take note of these basics and you won’t be steered wrong&lt;/p>&#xd;&#xa;"
+                            fileReference="/content/dam/aem-airmiles-web/block.jpg"
+                            imageAlign="top"
+                            imageAltText="image demo"
+                            preTitle="Become a collector"
+                            textIsRich="true"
+                            titleText="Don’t miss out on rewards">
+                            <ctas jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    dataClickID="demo click"
+                                    dataTrackID="demo tracking"
+                                    dataTrackType="button"
+                                    hexBtnColor="#1F68DA"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="join air miles now"
+                                    linkType="pill"
+                                    linkUrl="/content/aem-airmiles-web/ca"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    dataClickID="demo click sign in"
+                                    dataTrackID="demo traking sig in"
+                                    dataTrackType="button"
+                                    hexBtnColor="#1F68DA"
+                                    hexTextColor="#1F68DA"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Sign In"
+                                    linkType="framedpill"
+                                    linkUrl="/content/aem-airmiles-web/ca"/>
+                            </ctas>
+                        </block_50_50>
+                    </component>
+                    <info
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/tabs/v1/tabs">
+                        <properties
+                            cq:panelTitle="Properties"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/properties"
+                            reference="../../component"/>
+                        <markup
+                            cq:panelTitle="Markup"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/markup"
+                            reference="../../component"/>
+                        <json
+                            cq:panelTitle="JSON"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/json"
+                            reference="../../component"/>
+                    </info>
+                </demo>
+            </responsivegrid_756979268>
+            <responsivegrid_1422613350
+                jcr:createdBy="admin"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+        <cq:featuredimage
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>

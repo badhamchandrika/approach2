@@ -1,0 +1,100 @@
+// this file intends unified common widget styles
+// as there is no widget component for this purpose
+
+$min-width-col-field: 250px;
+
+.widget {
+  background-color: amGrey(7);
+  padding: amSizeUnit(3) 0;
+
+  @include media-breakpoint-up("md") {
+    padding: amSizeUnit(4) 0;
+  }
+
+  .bsp-travel-container {
+    padding: 0;
+
+    // NOTE: this media query is needed only for
+    // small screens but not for small container query,
+    // then isn't neccessary change it to container query.
+    @include media-breakpoint-down("md") {
+      padding-left: $bsp-travel-container-side-margin;
+      padding-right: $bsp-travel-container-side-margin;
+    }
+  }
+
+  &--small {
+    background-color: transparent;
+  }
+
+  .col-field {
+    flex: 1 0 0;
+    min-width: $min-width-col-field;
+  }
+
+  .col-selector {
+    flex: 0 0 auto;
+    width: auto;
+
+    &--md {
+      flex-shrink: 1;
+    }
+  }
+
+  .col-datepicker {
+    &--xl {
+      flex: 2 0 0;
+    }
+  }
+
+  .cmp-tabsai--widgets & {
+    background-color: transparent;
+    padding-bottom: 0;
+
+    .bsp-travel-container {
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+  &__inner {
+    background-color: white;
+    border-radius: amSizeUnit(2);
+    border: none;
+    box-shadow: $box-shadow-2;
+    padding: amSizeUnit(2) amSizeUnit(3);
+    width: 100%;
+
+    .widget--small & {
+      border: none;
+      box-shadow: $box-shadow-2;
+      padding: amSizeUnit(2);
+
+      @include media-breakpoint-up("md") {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      @include media-breakpoint-up("xl") {
+        box-shadow: $box-shadow-2;
+        padding: amSizeUnit(2);
+      }
+    }
+
+    .cmp-tabsai--widgets & {
+      border: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+
+  &__title {
+    @include cmp-title(none);
+    margin-bottom: $--am-base-sizing-unit-3x;
+
+    @include media-breakpoint-up("md") {
+      font-size: amFontSize(9);
+      margin-bottom: $--am-base-sizing-unit-2x;
+    }
+  }
+}

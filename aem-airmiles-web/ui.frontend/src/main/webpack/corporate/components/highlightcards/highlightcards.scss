@@ -1,0 +1,185 @@
+.highlightcards {
+    &__wrapper {
+        padding: 48px 16px;
+        display: flex;
+    }
+    &__container{
+        padding: 0;
+        align-items: stretch;
+        display: flex;
+    }
+}
+
+.card_container_title{
+    text-align: center;
+    padding-top: 64px;
+    color: #1C2D3F;
+}
+
+.highlightcard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(40, 47, 64, 0.15);
+    display: flex;
+    box-sizing: content-box;
+    &__title{
+        font-size: 18px;
+        font-weight: 700;
+        color: #1C2D3F;
+        font-family: 'Montserrat';
+        padding-bottom: 8px;
+    }
+    &__description p{
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'Montserrat';
+        padding-bottom: 16px;
+        color: #384A5B;
+    }
+    .card-image{
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        border-radius: 16px;
+    }
+    .card-icon{
+        height: 54px;
+        width: 54px;
+        background-repeat: no-repeat;
+    }
+    &__cta .cmp-button{
+        border-color: #1F68DA !important;
+        text-transform: uppercase;
+        padding: 10px 24px;
+        &.ctabuttonroundhalo{
+            color: #1F68DA;
+        }
+        &.ctabuttonround{
+            background-color: #1F68DA;
+        }
+        &:hover{
+            border: 2px;
+            background: #E9FC88 !important;
+            color: #080E1A !important;
+        }
+        &:active{
+            border: 2px;
+            background: #D7FA29 !important;
+            color: #080E1A !important;
+        }
+    }
+    &__cta .cmp-link{
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #1F68DA;
+    }
+    &__content__image{
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 308px);
+    }
+    &__content__icon {
+        padding-left: 16px;
+    }
+}
+
+@media (min-width: breakpoint('md')) and (max-width: 1023px) {
+    .highlightcards {
+        &__wrapper {
+            padding: 64px 16px;
+            gap: 24px;
+        }
+        &__container {
+            width: 352px;
+        }
+    }
+    .highlightcard {
+        .w-100 {
+            width: 122px !important;
+        }
+        &__content__image{
+            height: auto;
+            width: calc(100% - 122px);
+        }
+    }
+}
+
+@media (min-width: breakpoint('lg')) {
+    .highlightcard {
+        display: block;
+        padding: 24px;
+        .card-image {
+            height: 300px;
+        }
+        &__title{
+            padding-top: 24px;
+        }
+        &__description p {
+            font-size: 16px;
+        }
+        &__content__icon, &__content__image{
+            padding-left: 0;
+            height: calc(100% - 308px);
+        }
+    }
+
+    .highlightcards {
+        &__wrapper{
+            padding: 80px 12px 96px;
+            gap: 40px;
+        }
+        &__container {
+            width: calc(25% - 30px);
+        }
+    }
+    .card_container_title{
+        padding-top: 96px;
+    }
+}
+
+@media (max-width: 767px) {
+    .card_container_title{
+        padding-top: 48px;
+    }
+    .highlightcard {
+        display: block;
+        padding: 24px;
+        .card-image {
+            height: 300px;
+        }
+        &__title{
+            padding-top: 24px;
+            font-size: 20px;
+        }
+
+        &__description p {
+            font-size: 16px;
+        }
+        &__content__icon {
+            padding-left: 0;
+        }
+    }
+    .highlightcards {
+        &__wrapper {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            gap: 24px;
+        }
+        &__wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        &__container {
+            flex-shrink: 0;
+            width: 90%;
+        }
+    }
+}

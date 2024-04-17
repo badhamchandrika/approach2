@@ -1,0 +1,103 @@
+.wcmmode-edit{
+  color: color('grey') !important;
+  font-weight: bold!important;
+}
+
+coral-dialog{
+  .cq-divider{
+    border-bottom: 2px solid #AAAAAA !important;
+    padding-bottom: 1rem;
+  }
+  .cq-box-wrapper{
+    border: 1px solid #AAAAAA;
+    padding: 1rem;
+  }
+  .cq-multi-field{
+    border-bottom: 2px dashed #231F20 !important;
+    padding: 0;
+    .coral3-Multifield-item{
+      padding-right: 0;
+    }
+    &--inner{
+      //border: 1px solid color('body-copy')!important;
+      &__text{
+        //border-bottom: 1px solid color('body-copy')!important;
+      }
+    }
+  }
+  .rte-ui.is-desktop{
+    .coral3-ButtonGroup.rte-toolbar.is-sticky.is-active{
+      visibility: visible!important;
+    }
+  }
+  .cq-alert-detail{
+    //background-color: var(--cq-random-bg-color);
+  }
+  .cq-alert-accordion{
+    background-image: linear-gradient(#e9e9e9, #dedede);
+    .richtext-container{
+      background-color: #FFF;
+      border-radius: .25rem;
+    }
+  }
+  .cq-background-grey{
+    background-image: linear-gradient(#fefefe, #e1e1e1);
+  }
+  .cq-background-blue{
+    background-image: linear-gradient(#f7f7fc, #ededff);
+  }
+  .cq-background-yellow{
+    background-image: linear-gradient(#fffff7, #ffffe9);
+  }
+  .cq-background-red{
+    background-image: linear-gradient(#f3ebeb, #f1e1e1);
+  }
+  .cq-background-green{
+    background-image: linear-gradient(#f7fff7, #ecffec);
+  }
+  .cq-background-purple{
+    background-image: linear-gradient(#fff7ff, #ffebff);
+  }
+  .cq-background-cyan{
+    background-image: linear-gradient(#f7ffff, #ebffff);
+  }
+  .cq-background-grey-frame{
+    border: solid 1px #9e9e9e;
+  }
+  .cq-background-red-frame{
+    border: solid 1px #ae9e9e;
+  }
+  .cq-background-green-frame{
+    border: solid 1px #9eae9e;
+  }
+  .cq-background-blue-frame{
+    border: solid 1px #9e9eae;
+  }
+  .cq-background-grey-solid-100{
+    background-color: #fafafa;
+  }
+  .cq-background-grey-solid-200{
+    background-color: #f7f7f7;
+  }
+  .cq-background-grey-solid-300{
+    background-color: #f3f3f3;
+  }
+  .cq-background-grey-solid-400{
+    background-color: #f1f1f1;
+  }
+  .cq-background-grey-solid-500{
+    background-color: #efefef;
+  }
+  .cq-background-grey-solid-600{
+    background-color: #eaeaea;
+  }
+  .cq-background-grey-solid-700{
+    background-color: #e6e6e6;
+  }
+  .cq-background-grey-solid-800{
+    background-color: #dedede;
+  }
+  .cq-background-grey-solid-900{
+    background-color: #dbdbdb;
+  }
+}

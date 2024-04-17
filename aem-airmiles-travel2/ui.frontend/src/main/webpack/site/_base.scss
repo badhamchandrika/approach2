@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+  font-size:   $font-size;
+  font-family: $font-regular;
+  line-height: $font-height;
+  header{
+    top: 0;
+    &.xf-header{
+      z-index: 100;
+      position: sticky;
+    }
+  }
+}
+
+*:focus,.am-focused {
+  @include focus-outline();
+}

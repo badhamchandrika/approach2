@@ -1,0 +1,16 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Offers - Top Partners" class="cq-placeholder"></div>
+<div data-sly-use.offersPartnersModel="com.aem.airmiles.web.core.models.OffersPartnersModel" class="offers-top-partners w-100${wcmmode.edit?'':' d-none'}"
+     data-plogo-num="${offersPartnersModel.suggestPartnerNum}" data-standalone="${offersPartnersModel.standalone}">
+    <div class="row">
+        <div class="col-7 d-flex justify-content-start align-items-center">
+            <sly data-sly-resource="${@path='partners/title', resourceType='aem-airmiles-web/components/airmiles-core/common/title/v1/title'}"></sly>
+        </div>
+        <div class="col-5 p-0 d-flex justify-content-end align-items-center">
+            <sly data-sly-resource="${@path='partners/seeAllLink', resourceType='aem-airmiles-web/components/cta-button'}"></sly>
+        </div>
+        <div class="col-12">
+            <div class="partner-logo-container"></div>
+        </div>
+    </div>
+</div>
+

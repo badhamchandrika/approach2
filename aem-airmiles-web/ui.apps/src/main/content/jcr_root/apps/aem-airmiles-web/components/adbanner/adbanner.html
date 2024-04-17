@@ -1,0 +1,9 @@
+<sly data-sly-use.adCountModel="com.aem.airmiles.web.core.models.AdBannersModel" />
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Ad Banner" class="cq-placeholder">${adCountModel.adID} - ${adCountModel.adSlotEnabled ? 'Enabled':'Disabled'}</div>
+<div data-sly-test="${adCountModel.adSlotEnabled}" class="adBanner-element text-center${adCountModel.removeStyles? '':' py-5 py-md-3'}" id="${adCountModel.adID}">
+    <script>
+        googletag.cmd.push(function () {
+            googletag.display("${adCountModel.adID @ context='attribute'}");
+        });
+    </script>
+</div>

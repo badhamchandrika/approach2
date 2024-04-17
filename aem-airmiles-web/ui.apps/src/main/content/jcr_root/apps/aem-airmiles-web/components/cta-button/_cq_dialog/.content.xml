@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="CTA Button"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <linkdetails
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Site Details"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tabs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                        maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <properties
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Properties"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <linkType
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Choose CTA type"
+                                        fieldLabel="CTA Type"
+                                        name="./linkType">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ctaLink
+                                                jcr:primaryType="nt:unstructured"
+                                                text="CTA Link with Chevron"
+                                                value="link"/>
+                                            <extLink
+                                                jcr:primaryType="nt:unstructured"
+                                                text="External Link"
+                                                value="extlink"/>
+                                            <arrowLink
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Link with Arrow icon"
+                                                value="arrowlink"/>
+                                            <arrowLinkNew
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Link with Arrow icon New"
+                                                value="arrowlinkNew"/>
+                                            <arrowDownLink
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Link with Down Arrow icon"
+                                                value="arrowDownLink"/>
+                                            <leftarrowLink
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Link with Left Arrow icon (for back cta links)"
+                                                value="leftarrowlink"/>
+                                            <leftcloseLink
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Link with Left Close icon (for cancel cta links)"
+                                                value="leftcloselink"/>
+                                            <button
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Button"
+                                                value="button"/>
+                                            <frameButton
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Halo Button"
+                                                value="framebutton"/>
+                                            <pill
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Pill Button"
+                                                value="pill"/>
+                                            <framePill
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Halo Pill Button"
+                                                value="framedpill"/>
+                                        </items>
+                                    </linkType>
+                                    <id
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="ID"
+                                        fieldLabel="ID"
+                                        name="./id"/>
+                                    <linkText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="Label"
+                                        fieldLabel="Link Label"
+                                        name="./linkText"
+                                        required="{Boolean}true"/>
+                                    <linkUrl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                        fieldLabel="URL"
+                                        name="./linkUrl"
+                                        required="{Boolean}true"/>
+                                    <linktarget
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/include"
+                                        path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/linktarget"/>
+                                    <fontSize
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Select Font Size(optional)"
+                                        fieldLabel="Font Size"
+                                        name="./fontSize">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <none
+                                                jcr:primaryType="nt:unstructured"
+                                                text="none"
+                                                value=""/>
+                                            <small
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Small(10px)"
+                                                value="cta-sm"/>
+                                            <medium
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Medium(12px)"
+                                                value="cta-md"/>
+                                            <large
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Large(14px)"
+                                                value="cta-lg"/>
+                                        </items>
+                                    </fontSize>
+                                    <accordion
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                        jcr:title="Colour Accordion Tab"
+                                        margin="{Boolean}false"
+                                        maximized="{Boolean}true"
+                                        multiple="{Boolean}true"
+                                        variant="quiet">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <content
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Colour options"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <linkColor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        emptyText="Choose Colour"
+                                                        fieldDescription="Custom colours may overwrite this dropdown colour selection."
+                                                        fieldLabel="Colour"
+                                                        name="./linkColor">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <none
+                                                                jcr:primaryType="nt:unstructured"
+                                                                selected="{Boolean}true"
+                                                                text="none"
+                                                                value=""/>
+                                                            <blue
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Brand Blue"
+                                                                value="primary"/>
+                                                            <secondary
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Light Blue"
+                                                                value="secondary"/>
+                                                            <info
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Sky Blue"
+                                                                value="info"/>
+                                                            <gold
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Gold"
+                                                                value="gold"/>
+                                                            <success
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Success Green"
+                                                                value="success"/>
+                                                            <warning
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Warning Orange"
+                                                                value="warning"/>
+                                                            <danger
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Danger Red"
+                                                                value="danger"/>
+                                                            <dark
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Dark Grey"
+                                                                value="dark"/>
+                                                            <light
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Light Grey"
+                                                                value="light"/>
+                                                        </items>
+                                                    </linkColor>
+                                                    <hexTextColor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Custom text colour by hexcode. i.e. #000000, #1A2B3C, #FFFFFF. Custom colour can overwrites dropdown selection."
+                                                        fieldLabel="Custom Text Colour"
+                                                        name="./hexTextColor"/>
+                                                    <hexBtnColor
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Custom button colour by hexcode. i.e. #000000, #1A2B3C, #FFFFFF. Custom colour can overwrites dropdown selection."
+                                                        fieldLabel="Custom Button Colour"
+                                                        name="./hexBtnColor"/>
+                                                </items>
+                                            </content>
+                                        </items>
+                                    </accordion>
+                                </items>
+                            </properties>
+                            <analytics
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Analytics"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <analytics
+                                        granite:class="cq-divider"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                                        path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options"/>
+                                </items>
+                            </analytics>
+                            <specialIcon
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Icon"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <iconOnRight
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Default position on the left, checked on the right"
+                                        name="./iconOnRight"
+                                        text="Icon position on the RIGHT"
+                                        value="true"/>
+                                    <iconClassGroup
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Class Group"
+                                        name="./iconClassGroup">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <amicon
+                                                jcr:primaryType="nt:unstructured"
+                                                text="am-icon"
+                                                value="am-icon"/>
+                                            <amicon2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="am-icon2"
+                                                selected="true"
+                                                value="am-icon2"/>
+                                        </items>
+                                    </iconClassGroup>
+                                    <iconClassName
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Icon Class Name"
+                                        fieldDescription="i.e. 'am-icon-external-link'. You may also add padding class from bootstrap to space out the icon like 'ps-2', 'pe-2' etc. "
+                                        name="./iconClassName"/>
+                                    <iconColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Icon Color"
+                                        name="./iconColor"/>
+                                </items>
+                            </specialIcon>
+                            <modal
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Modal"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <aboutModal
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                                        granite:class="cq-background-grey-solid-300"
+                                        margin="{Boolean}false">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <isModalTrigger
+                                                granite:class="cq-dialog-dropdown-showhide cq-divider"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Modal Trigger"
+                                                name="./isModalTrigger">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <true
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="is Modal trigger"
+                                                        value="true"/>
+                                                    <false
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="is NOT Modal trigger"
+                                                        selected="true"
+                                                        value="false"/>
+                                                </items>
+                                            </isModalTrigger>
+                                            <modalID
+                                                granite:class="showhidetargets"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="true"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <modalUniqueID
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Modal Unique ID"
+                                                        name="./modalUniqueID"/>
+                                                </items>
+                                            </modalID>
+                                        </items>
+                                    </aboutModal>
+                                </items>
+                            </modal>
+                        </items>
+                    </tabs>
+                </items>
+            </linkdetails>
+        </items>
+    </content>
+</jcr:root>

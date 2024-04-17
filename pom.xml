@@ -26,8 +26,8 @@
 	<description>approach2</description>
 	<modules>
 		<module>aem-airmiles-ai</module>
-		<!--<module>aem-airmiles-web</module>
-		<module>aem-airmiles-travel2</module>-->
+		<module>aem-airmiles-web</module>
+		<module>aem-airmiles-travel2</module>
 	</modules>
 	<properties>
 		<aem.host>localhost</aem.host>

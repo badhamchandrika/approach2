@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="nt:unstructured" jcr:title="Use Miles Section"
+	sling:resourceType="cq/gui/components/authoring/dialog">
+	<content jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+		<items 
+			jcr:primaryType="nt:unstructured">
+			<header 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/container">
+				<items 
+					jcr:primaryType="nt:unstructured">
+					<active
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/include"
+                            path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/active"/>
+					<wayfinder jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+						fieldLabel="Way Finder" name="./wayfinderText"
+						required="{Boolean}true" />
+					<header jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+						fieldLabel="Header" name="./headerText" required="{Boolean}true" />
+					<datatracksection
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+							emptyText="Data Track section"
+							fieldLabel="Data Track section"
+							name="./dataTrackSection"/>
+				</items>
+			</header>
+			<content 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/coral/foundation/container">
+				<items jcr:primaryType="nt:unstructured">
+					<accordionTab1 
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/accordion"
+						margin="{Boolean}false" 
+						maximized="{Boolean}true"
+						multiple="{Boolean}true" 
+						variant="quiet">
+						<items 
+							jcr:primaryType="nt:unstructured">
+							<iconSelection 
+								jcr:primaryType="nt:unstructured"
+								jcr:title="Icon Tab 1"
+								sling:resourceType="granite/ui/components/foundation/container">
+								<items jcr:primaryType="nt:unstructured">		
+									<tabId 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldLabel="Tab Id" 
+										name="./tabs/tab0/tabId" 
+										required="{Boolean}true" />							
+									<image 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+										rootPath="/content/dam" 
+										fieldDescription="Select Icon"
+										fieldLabel="Select Icon" 
+										name="./tabs/tab0/svgIcon" />
+									<tabTitle jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldLabel="Text" 
+										name="./tabs/tab0/tabTitle" />
+									<datatrackid
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											emptyText="Analytics Tracking ID"
+											fieldLabel="Analytics tracking Id"
+											name="./tabs/tab0/dataTrackID"/>
+									<datatracktype
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											emptyText="Track Type"
+											fieldLabel="Search Input - Analytics Track Type"
+											name="./tabs/tab0/dataTrackType">
+										<items jcr:primaryType="nt:unstructured">
+											<internal
+													jcr:primaryType="nt:unstructured"
+													selected="{Boolean}true"
+													text="Internal"
+													value="internal"/>
+											<button
+													jcr:primaryType="nt:unstructured"
+													text="Button"
+													value="button"/>
+											<exit
+													jcr:primaryType="nt:unstructured"
+													text="Exit"
+													value="exit"/>
+											<social
+													jcr:primaryType="nt:unstructured"
+													text="Social"
+													value="social"/>
+											<input
+													jcr:primaryType="nt:unstructured"
+													text="Input"
+													value="input"/>
+										</items>
+									</datatracktype>
+									<dataclickid
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											emptyText="Analytics Click ID"
+											fieldLabel="Analytics click Id"
+											name="./tabs/tab0/dataClickID"/>
+								</items>
+							</iconSelection>
+						</items>
+					</accordionTab1>
+					<accordionTab2 
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/accordion"
+						margin="{Boolean}false" 
+						maximized="{Boolean}true"
+						multiple="{Boolean}true" 
+						variant="quiet">
+						<items 
+							jcr:primaryType="nt:unstructured">
+							<iconSelection 
+								jcr:primaryType="nt:unstructured"
+								jcr:title="Icon Tab 2"
+								sling:resourceType="granite/ui/components/foundation/container">
+								<items jcr:primaryType="nt:unstructured">
+									<tabId 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldLabel="Tab Id" 
+										name="./tabs/tab1/tabId" 
+										required="{Boolean}true" />
+									<image 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+										rootPath="/content/dam" 
+										fieldDescription="Select Icon"
+										fieldLabel="Select Icon" 
+										name="./tabs/tab1/svgIcon" />
+									<tabTitle jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										fieldLabel="Text" 
+										name="./tabs/tab1/tabTitle" />
+									<datatrackid
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										emptyText="Analytics Tracking ID"
+										fieldLabel="Analytics tracking Id"
+										name="./tabs/tab1/dataTrackID"/>
+									<datatracktype
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/select"
+											emptyText="Track Type"
+											fieldLabel="Search Input - Analytics Track Type"
+											name="./tabs/tab1/dataTrackType">
+										<items jcr:primaryType="nt:unstructured">
+											<internal
+													jcr:primaryType="nt:unstructured"
+													selected="{Boolean}true"
+													text="Internal"
+													value="internal"/>
+											<button
+													jcr:primaryType="nt:unstructured"
+													text="Button"
+													value="button"/>
+											<exit
+													jcr:primaryType="nt:unstructured"
+													text="Exit"
+													value="exit"/>
+											<social
+													jcr:primaryType="nt:unstructured"
+													text="Social"
+													value="social"/>
+											<input
+													jcr:primaryType="nt:unstructured"
+													text="Input"
+													value="input"/>
+										</items>
+									</datatracktype>
+									<dataclickid
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+										emptyText="Analytics Click ID"
+										fieldLabel="Analytics click Id"
+										name="./tabs/tab1/dataClickID"/>
+								</items>
+							</iconSelection>
+						</items>
+					</accordionTab2>
+				</items>
+			</content>
+		</items>
+	</content>
+</jcr:root>

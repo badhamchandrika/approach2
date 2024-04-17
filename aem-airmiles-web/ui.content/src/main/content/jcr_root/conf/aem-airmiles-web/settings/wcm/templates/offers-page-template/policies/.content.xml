@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Page">
+    <jcr:content
+            cq:lastModified="{Date}2023-12-21T15:20:46.316Z"
+            cq:lastModifiedBy="sandhyakumari@loyalty.com"
+            cq:lastReplicated="{Date}2023-10-10T13:35:52.409Z"
+            cq:lastReplicatedBy="JYu1@loyalty.com"
+            cq:lastReplicationAction="Activate"
+            cq:policy="aem-airmiles-web/components/structure/page/policy_9231590211746759"
+            jcr:isCheckedOut="{Boolean}true"
+            jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+            jcr:primaryType="nt:unstructured"
+            jcr:uuid="4e3fce85-0440-4031-b12a-488e10a8df3b"
+            sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+                cq:policy="aem-airmiles-web/components/container/policy_1574694950110"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+            <container
+                    cq:policy="aem-airmiles-web/components/container/policy_1574695586800"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping">
+                <aem-airmiles-web jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <container
+                                cq:policy="aem-airmiles-web/components/container/policy_9231701911256058"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <columns
+                                cq:policy="aem-airmiles-web/components/columns/policy_9231843645515455"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <airmiles-core jcr:primaryType="nt:unstructured">
+                            <common jcr:primaryType="nt:unstructured">
+                                <title jcr:primaryType="nt:unstructured">
+                                    <v1 jcr:primaryType="nt:unstructured">
+                                        <title
+                                                cq:policy="aem-airmiles-web/components/airmiles-core/common/title/v1/title/policy_3871645049277119"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v1>
+                                </title>
+                            </common>
+                        </airmiles-core>
+                    </components>
+                </aem-airmiles-web>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

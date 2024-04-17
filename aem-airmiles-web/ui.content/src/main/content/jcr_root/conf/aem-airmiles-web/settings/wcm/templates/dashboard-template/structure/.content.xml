@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2023-04-10T15:03:03.285Z"
+        cq:lastModifiedBy="JYu1@loyalty.com"
+        cq:lastReplicated="{Date}2023-04-10T17:13:53.344Z"
+        cq:lastReplicatedBy="JYu1@loyalty.com"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/dashboard-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="f67139ff-f658-4b2f-b6af-028815e5bbeb"
+        sling:resourceType="aem-airmiles-web/components/structure/empty-page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aem-airmiles-web/components/container"
+            layout="responsiveGrid">
+            <experiencefragment
+                cq:styleIds="[1649366523154]"
+                jcr:created="{Date}2023-04-03T21:20:30.184Z"
+                jcr:createdBy="JYu1@loyalty.com"
+                jcr:lastModified="{Date}2023-04-04T17:15:38.273Z"
+                jcr:lastModifiedBy="JYu1@loyalty.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/experiencefragment"
+                dataTrackType="internal"
+                fragmentVariationPath="/content/experience-fragments/aem-airmiles-web/ca/en/site/header/corporate1"/>
+            <container_1431087783
+                jcr:created="{Date}2023-04-03T21:20:41.807Z"
+                jcr:createdBy="JYu1@loyalty.com"
+                jcr:lastModified="{Date}2023-04-03T21:20:41.807Z"
+                jcr:lastModifiedBy="JYu1@loyalty.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/container"
+                editable="{Boolean}true"/>
+            <experiencefragment_2115033130
+                jcr:created="{Date}2023-04-03T21:21:12.573Z"
+                jcr:createdBy="JYu1@loyalty.com"
+                jcr:lastModified="{Date}2023-04-03T21:22:44.939Z"
+                jcr:lastModifiedBy="JYu1@loyalty.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/experiencefragment"
+                dataTrackType="internal"
+                fragmentVariationPath="/content/experience-fragments/aem-airmiles-web/ca/en/site/footer/corporate"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-airmiles-web/components/container"
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

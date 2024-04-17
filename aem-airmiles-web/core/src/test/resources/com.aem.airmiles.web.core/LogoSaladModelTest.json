@@ -1,0 +1,28 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "sling:resourceType": "aem-airmiles-web/components/logosalad",
+  "uniqueID":"logo-salad-id",
+  "logoSaladTitle": "Logo Salad",
+  "items": "items",
+  "logos": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "hideInMobile": "true",
+      "hideInTablet": "true",
+      "logoUrl": "/content/dam/aem-airmiles-web/partner-logo.jpg"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "hideInMobile": "true",
+      "hideInTablet": "false",
+      "logoUrl": "/content/dam/aem-airmiles-web/partner-logo-1.jpg"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "hideInMobile": "true",
+      "hideInTablet": "true",
+      "logoUrl": "/content/dam/aem-airmiles-web/support.png"
+    }
+  }
+}

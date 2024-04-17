@@ -1,0 +1,47 @@
+.cmp-text {
+  font-family: Montserrat, sans-serif;
+
+  b, strong {
+    font-weight: bold;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  u {
+    text-decoration: underline;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  .am-icon2 {
+    font-size: 24px;
+  }
+}
+
+.cmp-text__paragraph {
+  font-family: Montserrat, sans-serif;
+}
+
+.cmp-text__eyebrow-uppercase {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  padding-top: 48px;
+  padding-bottom: 16px;
+
+  p {
+    color: #1F68DA!important;
+    font-size: 12px!important;
+  }
+}

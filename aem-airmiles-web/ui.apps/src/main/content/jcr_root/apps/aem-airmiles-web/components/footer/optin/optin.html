@@ -1,0 +1,16 @@
+<div class="cmp-optin" data-cmp-is="optin" data-sly-use.model="com.aem.airmiles.web.core.models.OptinModel"
+     data-track-section="${model.dataTrackSection}" role="region" aria-label="Footer - OptIn">
+    <div class="cmp-optin__content row align-items-center">
+        <div class="col-2 col-xl-1">
+            <div class="cmp-optin__icon"><em class="am-icon ${model.icon}"></em></div>
+        </div>
+        <div class="col-10 col-xl-8">
+            <h2 class="cmp-optin__title body-text">${model.title}</h2>
+            <p class="body-text">${model.description}</p>
+        </div>
+        <div class="col-10 offset-2 col-xl-3 offset-xl-0 text-xl-end pt-2 pt-md-0">
+            <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+            <sly data-sly-call="${ctatemplate.ctalink @ type='link', href=model.linkUrl, text=model.linkText, target=model.linkTarget, dataTrackID=model.dataTrackID, dataClickID=model.dataClickID, dataTrackType=model.dataTrackType}"/>
+        </div>
+    </div>
+</div>

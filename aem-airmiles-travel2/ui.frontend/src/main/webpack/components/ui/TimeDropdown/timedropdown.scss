@@ -1,0 +1,228 @@
+.timedropdown {
+  &__input {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #5e5e5e;
+    width: 100%;
+    min-height: $location-input-field-min-height;
+    padding: 2px amSizeUnit(2);
+    display: flex;
+    align-items: center;
+    margin-bottom: amSizeUnit(3);
+  }
+
+  &__inputLabel {
+    font-size: 0.75rem;
+    color: #5e5e5e;
+    margin-bottom: 4px;
+    height: 0.875rem;
+  }
+
+  &__inputDate {
+    font-size: 1.125rem;
+    color: #231f20;
+  }
+
+  &__inputContainer {
+    display: flex;
+  }
+
+  &__chevron {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    padding-right: amSizeUnit(2);
+    margin-left: -28px;
+  }
+
+  &__inputContent {
+    display: flex;
+    flex-direction: column;
+    margin-left: amSizeUnit(1);
+  }
+
+  &__dropdown {
+    height: 254px;
+    width: 276px;
+    margin-top: -254px;
+    background-color: transparent;
+    position: relative;
+    top: 178px;
+    border-radius: 4px;
+    border: 1px solid #5e5e5e;
+  }
+}
+
+.dropdown {
+  &__container {
+    height: 202px;
+    width: 100%;
+    margin-top: -202px;
+    background-color: transparent;
+    position: relative;
+    top: 178px;
+    border-radius: 4px;
+    border: 1px solid #5e5e5e;
+    background-color: white;
+    overflow-y: auto;
+    padding: amSizeUnit(1) 2px 18px 2px;
+    z-index: 1030;
+  }
+
+  &__timeItem {
+    height: 30px;
+    width: 100%;
+    margin: 1px 0;
+    padding-left: 2px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #231f20;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f5f8;
+    }
+  }
+
+  &__header {
+    display: none;
+  }
+}
+
+.dropdown__timeItem--active {
+  background-color: #135582;
+  color: white;
+  &:hover {
+    background-color: #135582;
+  }
+}
+
+.dropdown__iconDiv {
+  padding: 0 12px 0 amSizeUnit(2);
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    &__header {
+      display: block;
+      height: 92px;
+      background-color: white;
+      padding: amSizeUnit(3) amSizeUnit(3) 0 49px;
+      border-bottom: 1px solid #bbbdbf;
+      margin-bottom: 25px;
+    }
+
+    &__closeContainer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -33px;
+      position: relative;
+      top: 33px;
+    }
+
+    &__closeBtn {
+      height: 33px;
+      width: 33px;
+      border-radius: 50%;
+      border: 1px solid #135582;
+      background: #f0f5f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &__headerContent {
+      display: flex;
+      align-items: center;
+    }
+
+    &__dateContainer {
+      min-width: 136px;
+      color: #5e5e5e;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    &__dateIcon {
+      margin: 0 26px 0 26px;
+    }
+
+    &__date {
+      font-size: amSizeUnit(2);
+      font-weight: 600;
+      line-height: amSizeUnit(3);
+    }
+
+    &__dateLabel {
+      font-size: amSizeUnit(2);
+      font-weight: 400;
+      line-height: amSizeUnit(3);
+    }
+
+    &__dateSelection {
+      margin-top: -4px;
+      height: 4px;
+      width: 129px;
+      background-color: #135582;
+      position: relative;
+      top: 19px;
+    }
+
+    &__timeItem {
+      width: 100%;
+    }
+  }
+
+  .dropdown__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .dropdown {
+    &__header {
+      padding: amSizeUnit(2) amSizeUnit(2) 0 amSizeUnit(2);
+      height: 112px;
+    }
+
+    &__closeContainer {
+      position: static;
+      margin: 0 0 6px 0;
+    }
+
+    &__dateIcon {
+      margin: 0 10px 0 10px;
+    }
+
+    &__date {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    &__dateContainer {
+      min-width: 120px;
+    }
+
+    &__dateLabel {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    &__dateSelection {
+      width: 101px;
+      top: amSizeUnit(2);
+    }
+  }
+}

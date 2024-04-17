@@ -1,0 +1,55 @@
+div.root.shell {
+  #landing-shell,
+  #requirements,
+  #participant-info {
+    div.text {
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      padding: 0px 16px 43px 16px;
+      font-family: ArchivoRegular;
+      color: #4A4A4A;
+      b {
+        font-family: ArchivoSemiBold;
+      }
+
+      i {
+        font-style: italic;
+      }
+
+      @media screen and (min-width: 768px) {
+      }
+
+      @media screen and (min-width: 1280px) {
+      }
+    }
+  }
+
+  #contest-already-participating,
+  #contest-success,
+  #contest-expired {
+    div.text {
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 1px;
+      padding: 14px 54px 0px 54px;
+      font-family: ArchivoRegular;
+      color: #4A4A4A;
+      b {
+        font-family: ArchivoSemiBold;
+      }
+
+      i {
+        font-style: italic;
+      }
+
+      .cmp-text {
+        p {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}

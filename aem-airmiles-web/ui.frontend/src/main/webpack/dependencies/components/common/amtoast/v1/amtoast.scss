@@ -1,0 +1,154 @@
+$darkwire: #1C2D3F;
+@mixin frameCommon{
+    border-radius: var(--AM-Base-Radius-radius-md, .5rem);
+    background: var(--AM-Base-Colour-Functional-Basics-white, #FFF);
+    color: $darkwire;
+}
+.amtoast {
+    &-container{
+        z-index: 110;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    &-box{
+        padding: .75rem;
+        border-radius: .5rem;
+        box-shadow: 0 .25rem .25rem 0 rgba(40, 47, 64, 0.10);
+        margin: 0 .75rem .75rem;
+        max-width: 100%;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: all .5s ease-in-out;
+        &.toast-blue{
+            background: var(--Gradients-Sapphire-Gradient, linear-gradient(273deg, #4185E2 0%, #1F68DA 98.25%));
+            color: white;
+        }
+        &.toast-yellow{
+            background: var(--Gradients-Citrine-Gradient, linear-gradient(273deg, #FDC82F 0%, #E19708 98.25%));
+            color: $darkwire;
+        }
+        &.toast-red{
+            background: var(--Gradients-Ruby-Gradient, linear-gradient(273deg, #FD4D55 0%, #E71823 98.25%));
+            color: white;
+        }
+        &.toast-green{
+            background: var(--Gradients-Emerald-Gradient, linear-gradient(273deg, #3BD6B8 0%, #16A78A 98.25%));
+            color: $darkwire;
+        }
+        &.toast-blue-frame{
+            @include frameCommon;
+            border: 2px solid var(--AM-Base-Colour-Functional-Sapphire-sapphire-900, #1F68DA);
+            .amtoast-icon{
+                color:#1F68DA;
+            }
+        }
+        &.toast-yellow-frame{
+            @include frameCommon;
+            border: 2px solid var(--AM-Base-Colour-Functional-Citrine-citrine-900, #E19708);
+            .amtoast-icon{
+                color:#E19708;
+            }
+        }
+        &.toast-red-frame{
+            @include frameCommon;
+            border: 2px solid var(--AM-Base-Colour-Functional-Ruby-ruby-900, #E71823);
+            .amtoast-icon{
+                color:#E71823;
+            }
+        }
+        &.toast-green-frame{
+            @include frameCommon;
+            border: 2px solid var(--AM-Base-Colour-Functional-Emerald-emerald-900, #16A78A);
+            .amtoast-icon{
+                color:#16A78A;
+            }
+        }
+        &.show{
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &.fadeout{
+            opacity: 0!important;
+            transform: translateY(8px)!important;
+        }
+    }
+    &-icon{
+        padding-right: .5rem;
+        &:before{
+            font-size: 1.25rem;
+            position: relative;
+            top: 2px;
+        }
+    }
+    &-content{
+        font-family: "OpenSans", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        width: 100%;
+    }
+    &-title{
+        font-size: .875rem;
+        font-weight: 700;
+    }
+    &-body{
+        font-size: .875rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &-close{
+        border: 2px solid transparent;
+        border-radius: 2rem;
+        background-color: #FFF;
+        color: $darkwire;
+        width: 1.5rem;
+        height: 1.5rem;
+        em{
+            &:before{
+                position: relative;
+                top: -3px;
+                right: 3px;
+                font-size: .875rem;
+            }
+        }
+        &:hover{
+            border: 2px solid #16A78A;
+        }
+        &:focus{
+            border: 2px solid #16A78A;
+            box-shadow: none;
+        }
+    }
+    &-test-button{
+        color: white;
+        background-color: navy;
+        border-radius: 0.25rem;
+        padding: 0.5rem 2rem;
+        margin: 1rem;
+    }
+}
+@media (min-width: breakpoint('md')) {
+    .amtoast {
+        &-box{
+            min-width: 22.5rem;
+            max-width: 22.5rem;
+            margin: 0 1.5rem 1.5rem auto;
+        }
+        &-title{
+            font-size: 1rem;
+        }
+        &-body {
+            font-size: 1rem;
+        }
+    }
+}
+@media (min-width: breakpoint('lg')) {
+    .amtoast {
+
+    }
+}

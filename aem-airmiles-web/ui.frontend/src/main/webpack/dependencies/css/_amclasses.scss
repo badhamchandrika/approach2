@@ -1,0 +1,124 @@
+@for $i from 1 to 22 {
+  $step: 125;
+  $start: 375;
+  .--am-base-font-size-#{$i} {
+    $num: $step*$i+$start;
+    font-size: #{divide($num, 1000)}rem;
+  }
+}
+@for $i from 1 to 10 {
+  $step: 100;
+  .--am-base-font-weight-#{$i*100} {
+    font-weight: $step*$i;
+  }
+}
+.--am-base-font-weight-bold {
+  font-weight: bold;
+}
+
+$fonttypes: 'ArchivoRegular','Montserrat','Cailbri','Arial','Helvetica','Helvetica Neue','san-serif';
+@each $type in $fonttypes {
+  $i: index($fonttypes, $type);
+  .--am-base-font-san-serif-#{$i} {
+    font-family: $type, sans-serif;
+  }
+}
+
+$fontcolors: ("black": "#000", "dark": "#555", "grey": "#888", "lite-grey": "#BBB", "brand-blue": "#135582", "white": "#FFF", "cash": "#023438", "dream": "#592340");
+@each $name, $hexcode in $fontcolors {
+  .--am-base-font-color-#{$name} {
+    color: #{$hexcode};
+  }
+}
+@for $i from 1 to 11 {
+  $percent: $i*10+'%';
+  .--am-base-gray-scale-#{$i*10} {
+    filter: #{"grayscale(#{$percent})"};
+  }
+}
+@for $i from 1 to 61 {
+  $height: $i*0.5;
+  .--am-base-height-#{$i} {
+    height: #{$height}rem!important;
+  }
+}
+
+.--am-base-color-transparent {
+  color: #FFFFFF00;
+}
+
+.--am-base-bgcolor-white{
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  .bg-white-mobile {
+    background-color: #FFFFFF;
+  }
+}
+
+$citrinecolors: '#FFFAEC','#FFF5D7','#FFEFC1','#FFE395','#FFD969','#FFD14D','#FDC82F','#FFBD00','#C18511';
+@each $code in $citrinecolors {
+  $i: index($citrinecolors, $code);
+  .--am-base-color-citrine-#{$i}00 {
+    color: #{$code};
+  }
+  .--am-base-bgcolor-citrine-#{$i}00 {
+    background-color: #{$code};
+  }
+}
+
+$emeraldcolors: '#EAFEFA','#D9FFF7','#8BFAED','#98F1E0','#68E9D0','#4FE1C5','#3BD6B8','#24C9A9','#17B596';
+@each $code in $emeraldcolors {
+  $i: index($emeraldcolors, $code);
+  .--am-base-color-emerald-#{$i}00 {
+    color: #{$code};
+  }
+  .--am-base-bgcolor-emerald-#{$i}00 {
+    background-color: #{$code};
+  }
+}
+
+$saphirecolors: '#E7F0F9','#D9E9FF','#C3DDFF','#9CC5FC','#6FA6F1','#5B97EA','#4185E2','#2AE5DB','#1F68Da';
+@each $code in $saphirecolors {
+  $i: index($saphirecolors, $code);
+  .--am-base-color-saphire-#{$i}00 {
+    color: #{$code};
+  }
+  .--am-base-bgcolor-saphire-#{$i}00 {
+    background-color: #{$code};
+  }
+}
+
+$amethystcolors: '#F9F6FF','#F1EBFF','#E8DDFF','#E1D2FF','#CDB5FF','#B795FF','#9868FF','#834BFA','#6D37E0';
+@each $code in $amethystcolors {
+  $i: index($amethystcolors, $code);
+  .--am-base-color-amethyst-#{$i}00 {
+    color: #{$code};
+  }
+  .--am-base-bgcolor-amethyst-#{$i}00 {
+    background-color: #{$code};
+  }
+}
+
+$rubycolors: '#FFE0E1','#FFC5C7','#FFA6A9','#FF9498','#FF8388','#FC767C','#FE6067','#FD4D55','#EA3A42';
+@each $code in $rubycolors {
+  $i: index($rubycolors, $code);
+  .--am-base-color-ruby-#{$i}00 {
+    color: #{$code};
+  }
+  .--am-base-bgcolor-ruby-#{$i}00 {
+    background-color: #{$code};
+  }
+}
+
+$steelcolors: '#EDF1F4','#C7D2DC','#A6B1BB','#8A99A7','#5A6B7B','#485B6C','#384A5B','#2C3E50','#1C2D3F';
+@each $code in $steelcolors {
+  $i: index($steelcolors, $code);
+  .--am-base-color-steel-#{$i}00 {
+    color: #{$code};
+  }
+  .--am-base-bgcolor-steel-#{$i}00 {
+    background-color: #{$code};
+  }
+}

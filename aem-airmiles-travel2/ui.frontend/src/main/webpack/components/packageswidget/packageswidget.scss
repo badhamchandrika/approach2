@@ -1,0 +1,62 @@
+.packages-widget{
+    .col {
+        flex-grow: 2;
+    }
+    .products-heading{
+        color: amSteel(9);
+        font-family: amFontFamily(2);
+        font-size: amFontSize(4);
+        margin-bottom: amSizeUnit(1);
+
+        @include media-breakpoint-up('md'){
+            font-size: amFontSize(5);
+        }
+    }
+
+    .widget-header__options-top .dropdown-box {
+        right: 0;
+    }
+
+    .another-item{
+        text-align: center;
+        margin-bottom: amSizeUnit(3);
+
+        &__title{
+            color: amSteel(9);
+            font-family: amFontFamily(9);
+            font-weight: 700;
+            font-size: amFontSize(6);
+            line-height: 1.6875rem;
+
+            @include media-breakpoint-up('md'){
+                font-size: amFontSize(7);
+            }
+        }
+
+        &__subtitle{
+            color: amSteel(9);
+            font-family: amFontFamily(2);
+            font-size: amFontSize(4);
+
+            @include media-breakpoint-up('md'){
+                font-size: amFontSize(5);
+            }
+        }
+
+        &__icon{
+            display: flex;
+            justify-content: center;
+
+            .am-icon{
+                color: amTierBlue(3);
+                font-size: 30px;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+
+
+
+

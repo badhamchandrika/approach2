@@ -1,0 +1,79 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Breadcrumb",
+    "cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-template",
+    "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+    "themeName": "corporate",
+    "sling:resourceType": "aem-airmiles-web/components/structure/page",
+    "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "aem-airmiles-web/components/container",
+      "breadcrumbValid": {
+        "jcr:primaryType": "nt:unstructured",
+        "startLevel": "2",
+        "active": "true",
+        "disableShadowing": "true",
+        "id": "testId",
+        "showHidden": "true",
+        "dataTrackClick": "breadcrumb",
+        "hideCurrent": "false",
+        "sling:resourceType": "aem-airmiles-web/components/breadcrumb",
+        "analyticsOptions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "option": "data-track-click",
+            "trackingId": "test-click"
+          }
+        }
+      },
+      "breadcrumbNull": {},
+      "breadcrumbNoMasterFields": {
+        "jcr:primaryType": "nt:unstructured",
+        "startLevel": "2",
+        "disableShadowing": "true",
+        "id": "testId",
+        "showHidden": "true",
+        "hideCurrent": "false",
+        "sling:resourceType": "aem-airmiles-web/components/breadcrumb"
+      },
+      "breadcrumbNoActive": {
+        "jcr:primaryType": "nt:unstructured",
+        "startLevel": "2",
+        "disableShadowing": "true",
+        "id": "testId",
+        "showHidden": "true",
+        "hideCurrent": "false",
+        "sling:resourceType": "aem-airmiles-web/components/breadcrumb",
+        "analyticsOptions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "option": "data-track-click",
+            "trackingId": "test-click"
+          }
+        }
+      },
+      "breadcrumbAnalyticsNoValid": {
+        "jcr:primaryType": "nt:unstructured",
+        "startLevel": "2",
+        "disableShadowing": "true",
+        "id": "testId",
+        "showHidden": "true",
+        "hideCurrent": "false",
+        "sling:resourceType": "aem-airmiles-web/components/breadcrumb",
+        "analyticsOptions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "option": "data-track-click"
+          }
+        }
+      }
+    }
+  }
+}

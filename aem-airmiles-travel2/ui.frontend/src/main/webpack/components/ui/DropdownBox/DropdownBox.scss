@@ -1,0 +1,118 @@
+@import "../../../site/variables";
+@import "../../../site/mixins";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+$dropdown-box-width: 353px;
+
+.dropdown-box {
+  background-color: $--am-base-colour-white-100;
+  display: flex;
+  flex-direction: column;
+  gap: amSizeUnit(2);
+
+  @include media-breakpoint-down("md") {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: amSizeUnit(2) 1.25rem;
+    position: fixed;
+    z-index: 1030;
+  }
+
+  @include media-breakpoint-up("md") {
+    border-radius: amSizeMicro(4);
+    border: 1px solid amGrey(3);
+    box-shadow: 0px amSizeMicro(4) amSizeMicro(4) 0px rgba(0, 0, 0, 0.25);
+    min-height: 290px;
+    padding: amSizeUnit(3);
+    position: absolute;
+    width: $dropdown-box-width;
+    z-index: 99;
+  }
+
+  &__header {
+    &-button {
+      $button-size: 33px;
+
+      align-items: center;
+      background: white;
+      border-radius: 50%;
+      border: 2px solid amTierBlue(3);
+      color: amTierBlue(3);
+      cursor: pointer;
+      display: flex;
+      font-size: amFontSize(2);
+      height: $button-size;
+      justify-content: center;
+      line-height: 1;
+      position: fixed;
+      right: amSizeUnit(2);
+      text-align: end;
+      top: amSizeUnit(2);
+      width: $button-size;
+    }
+    &-title {
+      color: amSteel(9);
+      font-family: amFontFamily(2);
+      font-size: amFontSize(5);
+      line-height: 1;
+      margin-bottom: amSizeUnit(1);
+
+      @include media-breakpoint-down("md") {
+        border-bottom: 1px solid amGrey(5);
+        padding-bottom: amSizeUnit(2);
+        margin-top: amSizeUnit(8);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .add-room {
+    border: 0;
+    line-height: 1;
+    margin: amSizeUnit(1) auto;
+  }
+
+  &__content {
+    font-family: amFontFamily(2);
+    font-size: amFontSize(4);
+    color: amSteel(9);
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      gap: amSizeUnit(2);
+      padding: amSizeMicro(4);
+
+      .heading {
+        font-family: amFontFamily(9);
+      }
+    }
+
+    a {
+      color: amTierBlue(3);
+
+      &:hover {
+        color: amStarySky(9);
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include media-breakpoint-down("md") {
+      bottom: 0;
+      left: 0;
+      padding: amSizeUnit(2) 1.25rem;
+      position: absolute;
+    }
+
+    &-submit {
+      @include cta-button;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "optin": {
+        "jcr:primaryType": "nt:unstructured",
+        "description": "Never miss a chance to get Miles - plus contests, updates and more!",
+        "icon": "am-icon-inbox-unopened",
+        "title": "Keep connected",
+        "linkText": "Opt in to emails",
+        "linkUrl": "https://oauth.airmiles.ca/login",
+        "linkType": "extlink",
+        "linkTarget": "_self",
+        "trackClick": "clickID",
+        "trackID": "trackID",
+        "trackType": "internal",
+        "sling:resourceType": "aem-airmiles-web/components/footer/optin"
+    }
+}

@@ -1,0 +1,85 @@
+@import "../../../site/variables";
+@import "../../../site/mixins";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+.promo-code{
+  .cta-button {
+    align-items: center;
+  }
+
+  .moving-label {
+    color: amSteel(9);
+    font-family: amFontFamily(2);
+    font-size: amFontSize(5);
+    left: amSizeUnit(5);
+    line-height: 1.5;
+    margin: auto 0;
+    overflow: visible;
+    position: relative;
+    transform: translate(0px, 0px) scale(1);
+    transition: all 0.2s ease-out;
+    white-space: nowrap;
+    width: 0;
+    z-index: 32;
+  
+    &--focused {
+      background-color: $--am-base-colour-white-100;
+      overflow: visible;
+      transform: translate(-45%, -1.5rem) scale(0.7);
+      @include media-breakpoint-up("xl") {
+        transform: translate(-40%, -1.6rem) scale(0.7);
+      }
+      position: absolute;
+      transition: all 0.15s ease-out;
+      width: auto;
+    }
+  
+    @include media-breakpoint-down("md") {
+      font-size: amFontSize(4);
+    }
+  
+    @include media-breakpoint-up("xl") {
+      left: calc(amSizeUnit(1) * 4.375);
+    }
+  }
+
+  &__inner {
+      padding: amFontSize(2);
+      position: relative;
+      border: amSizeMicro(1) solid amSteel(3);
+      border-radius: 4px;
+
+      @include media-breakpoint-up("xl") {
+        padding: amFontSize(3);
+      }
+
+      &:focus-within {
+        @include focus-outline();
+      }
+  }
+
+  &__icon {
+    color: amTierBlue(3);
+    padding: amSizeUnit(2);
+    top: 50%;
+    position: absolute;
+    transform: translateY( -50% );
+  }
+
+  &__input{
+    // Adding an extra selector for increasing specificity due to clash with airmiles web project
+    @at-root input#{&} {    
+      box-shadow: none;
+      width: 100%;
+      padding: 0 0 0 amSizeUnit(5);
+      height: auto;
+      border: none;
+      &:focus{
+        border: none;
+        padding: 0 0 0 amSizeUnit(5);
+      }
+    }
+  }
+}
+
+

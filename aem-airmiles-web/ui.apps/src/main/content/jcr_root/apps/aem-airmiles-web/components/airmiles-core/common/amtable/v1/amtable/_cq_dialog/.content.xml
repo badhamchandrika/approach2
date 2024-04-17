@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="AM Table Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Main"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Column Type"
+                                        name="./type"
+                                        required="{Boolean}true">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <static
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Static"
+                                                value="static"/>
+                                            <dynamic
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dynamic"
+                                                value="dynamic"/>
+                                        </items>
+                                    </type>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <rounded
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./rounded"
+                                        text="Rounded Corner"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <shadow
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./shadow"
+                                        text="Cast Shadow"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <tableHeader
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./tableHeader"
+                                        text="Table Header"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <tableFooter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./tableFooter"
+                                        text="Table Footer"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <fullWidth
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./fullwidth"
+                                        text="Full Width"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </style>
+                    <background
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Background"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <backgroundcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Background color"
+                                        name="./backgroundcolor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <transparent
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Transparent"
+                                                value="bg-transparent"/>
+                                            <blue
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Blue"
+                                                value="bg-primary text-white"/>
+                                            <lightblue
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light Blue"
+                                                value="bg-secondary text-white"/>
+                                            <dark
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dark"
+                                                value="bg-dark text-white"/>
+                                            <grey
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light Grey"
+                                                value="bg-light text-white"/>
+                                        </items>
+                                    </backgroundcolor>
+                                </items>
+                            </column>
+                        </items>
+                    </background>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

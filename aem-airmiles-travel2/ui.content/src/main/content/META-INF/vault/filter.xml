@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/aem-airmiles-travel2" mode="merge" />
+    <filter root="/content/aem-airmiles-travel2"  mode="merge"/>
+    <filter root="/content/dam/aem-airmiles-travel2" mode="merge"/>
+    <filter root="/content/experience-fragments/aem-airmiles-travel2" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/airmiles-travel-json-update"/>
+    <filter root="/var/workflow/models/airmiles-travel-json-update"/>
+    <filter root="/var/workflow/models/airmiles-travel-excel-to-json"/>
+    <filter root="/conf/global/settings/workflow/models/add-tag"/>
+    <filter root="/conf/global/settings/workflow/models/airmiles-travel-excel-to-json"/>
+    <filter root="/var/workflow/models/add-tag"/>
+    <filter root="/conf/global/settings/workflow/launcher/config/travel-partners-config"/>
+    <filter root="/conf/global/settings/workflow/launcher/config/travel-excel-to-json"/>
+</workspaceFilter>

@@ -1,0 +1,288 @@
+@import '~@loyaltyone-am/am-mediaqueries/mediaqueries.scss';
+@import './CtaLinkV2Rebrand.scss';
+@import '../../site/variables';
+@import "../../site/mixins";
+
+.CtaLinkV2--container {
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+  .link-blue {
+    color: #0a6fb3;
+  }
+  .white {
+    color: white;
+  }
+
+  .CtaLinkV2.CtaLinkV2--leftAlign {
+    justify-content: flex-start;
+  }
+
+  .CtaLinkV2.CtaLinkV2--rightAlign {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.CtaLinkV2.CtaLinkV2--type--ghost.CtaLinkV2--light {
+  border: solid 2px #0a6fb3;
+  color: #0a6fb3;
+  padding: 14px 40px;
+}
+
+.CtaLinkV2.CtaLinkV2--type--textButton {
+  border: none;
+  font: inherit;
+  padding: 0;
+  background-color: unset;
+  color: #0a6fb3;
+  cursor: pointer;
+  text-align: left;
+}
+
+.CtaLinkV2.CtaLinkV2--type--textBackButton {
+  border: none;
+  font: inherit;
+  padding: 0;
+  background-color: unset;
+  color: #0a6fb3;
+  cursor: pointer;
+  text-align: left;
+}
+
+.CtaLinkV2 {
+  $self: &;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding: 16px 40px;
+  white-space: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  min-width: 168px;
+
+  &:focus {
+    @include focus-outline();
+  }
+
+  &__linkText {
+    position: relative;
+
+    &.link-blue {
+      & #{ $self }__animated-underline {
+        background: #0a6fb3;
+      }
+    }
+
+    & #{ $self }__animated-underline {
+      position: absolute;
+      bottom: 2px;
+      display: block;
+      width: 0;
+      height: 1px;
+      background: white;
+      transition: width 0.2s ease-out;
+    }
+  }
+
+  &__rightIcon {
+    line-height: 1;
+    transition: all 0.2s ease-out;
+    font-size: 11px;
+    width: 26px;
+
+    @include tablet {
+      font-size: 9px;
+    }
+
+    @include mobile {
+      font-size: 8px;
+    }
+
+    &::before {
+      position: relative;
+      transition: left 0.2s ease-out;
+      left: 8px;
+      @include tablet {
+        left: 6px;
+      }
+      @include mobile {
+        left: 4px;
+      }
+    }
+
+    &--sameTab {
+      &.am-icon {
+        font-weight: 600;
+      }
+      width: 16px;
+    }
+  }
+
+  &__leftIcon {
+    line-height: 1;
+    transition: all 0.2s ease-out;
+    font-size: 11px;
+    width: 26px;
+
+    @include tablet {
+      font-size: 9px;
+    }
+
+    @include mobile {
+      font-size: 8px;
+    }
+
+    &::before {
+      position: relative;
+      transition: right 0.2s ease-out;
+      left: 6px;
+      @include tablet {
+        left: 4px;
+      }
+      @include mobile {
+        left: 2px;
+      }
+    }
+
+    &--sameTab {
+      &.am-icon {
+        font-weight: 600;
+      }
+      width: 16px;
+    }
+  }
+
+  &--type--noBorder,
+  &--type--textBackButton,
+  &--type--textButton {
+    padding: 0px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      #{ $self }__rightIcon {
+        &::before {
+          left: 12px;
+          @include tablet {
+            left: 10px;
+          }
+          @include mobile {
+            left: 8px;
+          }
+        }
+      }
+
+      #{ $self }__leftIcon {
+        &::before {
+          left: 2px;
+          @include tablet {
+            left: 0px;
+          }
+          @include mobile {
+            left: 0px;
+          }
+        }
+      }
+
+      #{ $self }__linkText {
+        & #{ $self }__animated-underline {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &--type {
+    &--primary {
+      background-color: color('link-blue');
+    }
+
+    &--ghost {
+      background-color: transparent;
+      border: solid 2px color('white');
+      color: white;
+
+      &#{$self}--light {
+        border: solid 2px #0a6fb3;
+        color: #0a6fb3;
+      }
+    }
+
+    &--noBorder {
+      color: white;
+
+      &#{$self}--light {
+        border: none;
+        color: #0a6fb3;
+      }
+
+      &#{$self}--white-space-normal {
+        white-space: normal;
+      }
+    }
+
+    &--primary,
+    &--ghost {
+      &:hover,
+      &:focus {
+        background-color: #0e4d7b;
+        text-decoration: none;
+
+        &#{$self}--light {
+          span {
+            color: color('white');
+          }
+        }
+      }
+
+      &:active {
+        background-color: color('link-blue');
+
+        &#{$self}--light {
+          span {
+            color: color('white');
+          }
+        }
+      }
+    }
+
+    &--ghost {
+      &#{$self}--light {
+        span {
+          color: #0a6fb3;
+        }
+      }
+
+      &:hover {
+        &#{$self}--light {
+          span {
+            color: white;
+          }
+        }
+      }
+
+      &:visited {
+        &#{$self}--light {
+          background-color: white;
+          span {
+            color: #0a6fb3;
+          }
+        }
+      }
+    }
+  }
+
+  &--icon {
+    padding-right: 8.4px;
+    display: flex;
+    font-size: 30px;
+  }
+}
+
+@import './CtaLinkV2Rebrand.scss';

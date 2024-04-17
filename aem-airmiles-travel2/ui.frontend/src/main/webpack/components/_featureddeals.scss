@@ -1,0 +1,81 @@
+.featureddeals {
+    .featured-partners-deals__container {
+        background-color: amGrey(7);
+    }
+
+    .featured-partners {
+        justify-content: center;
+        display: contents;
+
+        &__container {
+            padding-bottom: amSizeUnit(3);
+            padding-top: amSizeUnit(3);
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+
+            @include media-breakpoint-up('md') {
+                padding-bottom: amSizeUnit(4);
+                padding-top: amSizeUnit(4);
+            }
+            
+            @include media-breakpoint-up('xl') {
+                padding-bottom: amSizeUnit(5);
+                padding-top: amSizeUnit(5);
+            }
+
+            &__ul-container {
+                @include media-breakpoint-down('md') {
+                    padding-top: 0;
+                }
+
+                ul {
+                   display: flex;
+                   flex-wrap: wrap;
+                   -webkit-box-pack: center;
+                   justify-content: space-around;
+                   align-items: center;
+
+                   @include media-breakpoint-up('md') {
+                        justify-content: center;
+
+                   }
+
+                   li {
+                       display: block;
+                       padding-top: amSizeUnit(3);
+
+                       a {
+                            height: auto;
+                            display: inline-block;
+
+                            img {
+                                max-height: amSizeUnit(6);
+                                max-width: amSizeUnit(18);
+                                width: 100%;
+                                @media (max-width: 992px) {
+                                    max-height: amSizeUnit(7);
+                                }
+                                @media (max-width: 767px) {
+                                    max-height: amSizeUnit(6);
+                                    max-width: amSizeUnit(14);
+                                }
+                            }
+                       }
+                   }
+               }
+            }
+        }
+    }
+}
+// Style system clases
+.back-color-blue {
+    .featured-partners-deals__container {
+        background-color: amGrey(7);
+    }
+}
+.back-color-white {
+    .featured-partners-deals__container {
+        background-color: $--am-base-colour-white-100;
+    }
+}

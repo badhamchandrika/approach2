@@ -1,0 +1,161 @@
+@mixin header-nav-items {
+  @include nav-link;
+  display: flex;
+  color: color('body-copy');
+  height: 100%;
+}
+
+.columns {
+  &.v-padding{
+    .columns-inner {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  &.h-padding{
+    .columns-inner {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  &-theme{
+    background-color: color('brand-blue');
+  }
+  // Header Styles ________________________________________________
+   &-header__sky{
+      .new.section{
+        display: none;
+      }
+    }
+  &-header__top{
+    background-color: color('blue-background');
+    color: color('body-copy');
+    a, a:hover{
+      color: color('body-copy');
+    }
+    .new.section{
+      display: none;
+    }
+  }
+  &-header__bottom{
+    background-color: color('brand-blue');
+    color: #FFF;
+    a, a:hover{
+      color: #FFF;
+    }
+    .new.section{
+      display: none;
+    }
+  }
+  padding: 0;
+  .text-white{
+    a{
+      color: #FFF;
+    }
+  }
+
+  // Footer Styles ________________________________________________
+  &-footer__top{
+    border-top: solid 5px color('alert-neutral');
+    padding: 1rem 0;
+  }
+  &-footer__mid{
+    background-color: color('blue-background');
+    color: #000;
+    padding: 1.5625rem;
+    border-top: 1px solid color('grey-light');
+    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 21%);
+    .bsp-container {
+      display: flex;
+      @media (max-width: breakpoint('lg')) {
+        max-width: 100%;
+        padding: 0 2vw;
+      }
+      .row {
+        max-width: 350px;
+        margin: auto;
+        @media (min-width: breakpoint('md')) {
+          max-width: unset;
+          margin: unset;
+        }
+        .col {
+          min-height: 136px;
+          height: auto;
+          &:not(:last-child){
+            border-right: none;
+          }
+          @media (min-width: breakpoint('md')) {
+            max-width: unset;
+            margin: unset;
+            &:not(:last-child){
+              border-right: 1px solid color('grey-light');
+            }
+          }
+  
+          @media (max-width: 767px) {
+            &:not(:last-child){
+              &:after {
+                content: "";
+                width: 200px;
+                margin: 20px auto;
+                border-top: 1px solid color('body-copy-grey');
+                display: block;
+              }  
+            }
+          }
+          @media (min-width: breakpoint('lg')) {
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-footer__bottom{
+    background-color: color('brand-blue');
+    color: #FFF;
+    padding: 1rem 0;
+    a, a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.flex-teaser-container .columns .bsp-container {
+  padding: 0 !important;
+}
+
+// Responsive Breakpoints ________________________________________________
+@media (min-width: breakpoint('md')) {
+  .columns {
+    &-footer__top {
+      padding: .625rem 0;
+    }
+
+    &-footer__mid {
+      padding: 1.5rem 0;
+    }
+
+    &-footer__bottom {
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+@media (min-width: breakpoint('lg')) {
+  .columns {
+    &-header__bottom{
+      .logo-fix{
+        width: auto;
+      }
+    }
+    &-footer__bottom {
+      padding: 1.875rem 0;
+    }
+    &-header__px{
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+}

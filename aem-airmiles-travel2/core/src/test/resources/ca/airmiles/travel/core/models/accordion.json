@@ -1,0 +1,9 @@
+{
+  "jcr:primaryType": "cq:Component",
+  "jcr:createdBy": "admin",
+  "jcr:title": "Accordion",
+  "cq:isContainer": true,
+  "jcr:created": "Thu Dec 01 2022 22:11:19 GMT+0000",
+  "sling:resourceSuperType": "core/wcm/components/accordion/v1/accordion",
+  "componentGroup": "aem-airmiles-travel2 - Content"
+}

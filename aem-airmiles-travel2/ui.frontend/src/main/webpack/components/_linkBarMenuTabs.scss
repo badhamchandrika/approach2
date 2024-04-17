@@ -1,0 +1,161 @@
+/* TRA-4197 - Since we applied the new CSS for link bar Menu,
+moved the styles for link bar in Tabs component and adjusted Tabs component html */
+
+.pn-ProductNavTabs {
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__Nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    position: relative;
+    font-size: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &[data-overflowing="none"] {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__Contents {
+    float: left;
+    transition: 30ms all ease;
+    padding: amSizeUnit(2);
+
+    &-Link {
+      text-decoration: none;
+      display: inline-flex;
+      font-family: amFontFamily(9);
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 400;
+      font-size: amFontSize(2);
+      line-height: amSizeUnit(3);
+      color: amSteel(9);
+      flex-direction: row;
+      align-items: center;
+      padding: amSizeUnit(1) amSizeUnit(2);
+      gap: 8px;
+      border-radius: 31px;
+      height: 40px;
+      border: 2px solid transparent;
+      margin: amSizeMicro(5) amSizeMicro(4);
+
+      @include media-breakpoint-up("md") {
+        margin: amSizeMicro(5) amSizeUnit(1);
+      }
+
+      .cmp-tabsai__wrapper-nav & {
+        padding: 0 12px amSizeUnit(1);
+
+        @include media-breakpoint-up("md") {
+          margin: 0;
+        }
+
+        @include media-breakpoint-up("xl") {
+          padding: 0 amSizeUnit(2) amSizeUnit(1);
+        }
+      }
+
+      transition: 0.3s all ease;
+      &:hover {
+        color: #231f20;
+        background: #f0f5f8;
+      }
+
+      &:focus {
+        background: #f0f5f8;
+      }
+
+      &--active {
+        background: #ffffff;
+        color: amSapphire(9);
+        border-color: amSapphire(9);
+      }
+    }
+  }
+
+  &__Contents-no-transition {
+    transition: none;
+  }
+
+  &__Advancer {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 32px;
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--Left {
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 30%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      svg {
+        transform: translateX(-5px);
+      }
+    }
+    &--Right {
+      right: 0;
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 1) 30%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      svg {
+        transform: translateX(5px);
+      }
+    }
+
+    &__Icon {
+      width: 20px;
+      height: 44px;
+      fill: #bbb;
+    }
+  }
+}
+[data-overflowing="both"] ~ .pn-ProductNav__Advancer--Left,
+[data-overflowing="left"] ~ .pn-ProductNav__Advancer--Left {
+  opacity: 1;
+}
+
+[data-overflowing="both"] ~ .pn-ProductNav__Advancer--Right,
+[data-overflowing="right"] ~ .pn-ProductNav__Advancer--Right {
+  opacity: 1;
+}
+
+.js {
+  .pn-ProductNav__Nav,
+  .cmp-tabsai__nav {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .pn-ProductNav__Nav::-webkit-scrollbar,
+  .cmp-tabsai__nav::-webkit-scrollbar {
+    display: none;
+  }
+}

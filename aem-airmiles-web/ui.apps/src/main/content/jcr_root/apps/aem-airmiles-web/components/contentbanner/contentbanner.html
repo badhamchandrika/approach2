@@ -1,0 +1,16 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.ContentBannerModel"></sly>
+<div class="cmp-content-banner bsp-container">
+  <div class="cmp-content-banner__left pb-2 pb-md-0">
+    <img class="cmp-content-banner__img" src="${model.imageSrc}" alt="${model.imageAlt}">
+    <div class="cmp-content-banner__text pe-2">
+      <h3 class="cmp-content-banner__heading h3-subsection">${model.headerText @ context = 'html'}</h3>
+      <p class="cmp-content-banner__body-text d-none d-md-block">${model.bodyText @ context = 'html'}</p>
+    </div>
+  </div>
+  <div class="cmp-content-banner__cta my-auto">
+    <a href="${model.linkUrl}" class="cmp-content-banner__btn" data-track-id="${model.dataTrackID}" data-track-click="${model.dataClickID}" data-track-type="${model.dataTrackType}">
+      <span class="d-none d-md-block text-center text-nowrap">${model.linkText}</span>
+      <span class="d-md-none text-center">${model.mobileLinkText}</span>
+    </a>
+  </div>
+</div>

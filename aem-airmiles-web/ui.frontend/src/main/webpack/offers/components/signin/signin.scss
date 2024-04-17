@@ -1,0 +1,49 @@
+.signin{
+  .alloffers-login{
+    &__logo{
+      padding: 0 1rem;
+      color: #FFF;
+      font-size: 3rem;
+    }
+  }
+  &-download{
+    a{
+      width: 100%;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: .625rem!important;
+      line-height: 2.5!important;
+      font-family: 'Montserrat', sans-serif !important;
+      .am-icon2-arrow-right{
+        margin-top: auto;
+        margin-bottom: auto;
+        &:before{
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+  &-btn{
+    a{
+      width: 100%;
+      padding: .625rem 1.2rem!important;
+    }
+  }
+}
+@media (min-width: breakpoint('md')) {
+  .signin{
+    .alloffers-login {
+      &__logo {
+        padding: .5rem 1rem;
+      }
+    }
+    &-btn{
+      display: flex;
+      justify-content: end;
+      padding-right: 0;
+      a{
+        width: auto;
+      }
+    }
+  }
+}

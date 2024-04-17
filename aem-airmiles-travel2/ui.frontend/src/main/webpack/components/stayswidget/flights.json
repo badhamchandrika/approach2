@@ -1,0 +1,179 @@
+{
+  "Package": {
+    "Id": "A01",
+    "Name": "BLUE TEST - AIR ONLY - TEST FILE",
+    "Description": "",
+    "Origins": [
+      {
+        "Code": "YYC",
+        "Name": "Calgary",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YUL",
+        "Name": "Montreal - Trudeau Int'l",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YYZ",
+        "Name": "Toronto",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YTZ",
+        "Name": "Toronto City Centre",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YVR",
+        "Name": "Vancouver",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YYJ",
+        "Name": "Victoria, British Columbia",
+        "CountryCode": "CA"
+      }
+    ],
+    "Destinations": [
+      {
+        "Code": "YYC",
+        "Name": "Calgary",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "CUN",
+        "Name": "Cancun - Cancun AND Riviera Maya",
+        "CountryCode": "MX"
+      },
+      {
+        "Code": "PUJ",
+        "Name": "Dominican Republic, Punta Cana",
+        "CountryCode": "DO"
+      },
+      {
+        "Code": "YEG",
+        "Name": "Edmonton",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YHZ",
+        "Name": "Halifax",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YLW",
+        "Name": "Kelowna",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "LAS",
+        "Name": "Las Vegas",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "LHR",
+        "Name": "London - Heathrow, United Kingdom",
+        "CountryCode": "GB"
+      },
+      {
+        "Code": "LAX",
+        "Name": "Los Angeles",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "YUL",
+        "Name": "Montreal - Trudeau Int'l",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "JFK",
+        "Name": "New York - JFK",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "LGA",
+        "Name": "New York - La Guardia",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "EWR",
+        "Name": "Newark",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "YOW",
+        "Name": "Ottawa",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "CDG",
+        "Name": "Paris - Charles De Gaulle, France",
+        "CountryCode": "FR"
+      },
+      {
+        "Code": "YQR",
+        "Name": "Regina",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "SFO",
+        "Name": "San Francisco",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "YXE",
+        "Name": "Saskatoon",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "SEA",
+        "Name": "Seattle",
+        "CountryCode": "US"
+      },
+      {
+        "Code": "YYZ",
+        "Name": "Toronto",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YVR",
+        "Name": "Vancouver",
+        "CountryCode": "CA"
+      },
+      {
+        "Code": "YWG",
+        "Name": "Winnipeg",
+        "CountryCode": "CA"
+      }
+    ],
+    "ProductRules": {
+      "Air": {
+        "Rule": "Required"
+      },
+      "Hotel": {
+        "Rule": "Optional",
+        "MaxNumberOfRooms": 4
+      },
+      "Feature": {
+        "Rule": "Optional",
+        "MinNumberOfFeatures": 0,
+        "MaxNumberOfFeatures": 1
+      },
+      "Vehicle": {
+        "Rule": "Optional"
+      }
+    },
+    "RestrictedPackageTravelDateRules": {
+      "TravelHighDateRule": null,
+      "BookingDateRule": null,
+      "TravelDateRangesRule": null
+    },
+    "RequiredFeatureOptionSelections": {
+      "MinNumberSelections": 0,
+      "FeatureOptions": []
+    },
+    "AssociatedPackages": [],
+    "PromotionCodeIsRequired": false
+  }
+}

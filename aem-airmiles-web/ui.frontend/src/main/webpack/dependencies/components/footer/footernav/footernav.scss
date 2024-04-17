@@ -1,0 +1,36 @@
+ .footernav{
+     a{
+        cursor: pointer;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+     ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 10px 25px;
+        line-height: 13px;
+    }
+
+ 
+     ul li {
+        margin: 20px 20px 0px 0px;
+        border-right: 1px solid color('white');
+        padding-right: 20px;
+
+        &:last-child{
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+     ul a{
+        font-weight: 500;
+        color: color('white');
+        font-size: 14px;
+        white-space: nowrap
+    }
+    
+ }

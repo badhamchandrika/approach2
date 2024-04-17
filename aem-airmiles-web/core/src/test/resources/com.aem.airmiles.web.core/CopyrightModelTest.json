@@ -1,0 +1,17 @@
+{
+  "testGetTextAndIsRichTextIsTrue": {
+    "text": "<p>Copyright component test</p>",
+    "textIsRich": true,
+    "active": "true"
+  },
+  "testGetTextAndIsRichTextIsFalse":  {
+    "text": "<p>Copyright component test</p>",
+    "textIsRich": false
+  },
+  "testTextIsNullAndIsRichTextIsFalse": {
+    "textIsRich": false
+  },
+  "testTextIsNullAndIsRichTextIsTrue": {
+    "textIsRich": true
+  }
+}

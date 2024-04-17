@@ -1,0 +1,7 @@
+<sly data-sly-use.model="ca.airmiles.travel.core.models.MultiWidgets"/>
+<sly data-sly-list.widget="${model.widgets}">
+    <div data-prop-msg_tabname="${widget.tabName}">
+        <sly data-sly-resource="${@ path=widget.path,
+                                    selectors='content', wcmmode='disabled'}"></sly>
+    </div>
+</sly>

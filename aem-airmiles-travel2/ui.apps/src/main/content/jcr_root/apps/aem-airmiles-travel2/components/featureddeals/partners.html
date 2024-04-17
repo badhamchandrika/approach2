@@ -1,0 +1,30 @@
+<div data-sly-use.model="ca.airmiles.travel.core.models.FeaturedPartners">
+    <div class="row featured-partners">
+        <div class="col featured-partners__container">
+            <div class="row section-header">
+                <div class="col-xl-6 offset-xl-3">
+                  <h2 class="section-header__title">${model.title}</h2>
+                </div>
+                <div class="col-xl-3">
+                  <div class="section-header__cta" data-sly-include="/apps/aem-airmiles-travel2/components/cta-button/cta-button.html"></div>
+                </div>
+              </div>
+            <div class="featured-partners__container__ul-container">
+                <ul class="row row-cols-2 row-cols-md-6" data-sly-list.detailList="${model.details}">
+                    <li class="col">
+                        <a href="${detailList.linkUrl}"
+                           target="${detailList.linkTarget}"
+                           data-track-id="${detailList.dataTrackID}"
+                           data-track-click="${detailList.dataClickID}"
+                           data-track-type="${detailList.dataTrackType}">
+                            <img data-sly-test="${detailList.imagePath}"
+                                 alt="${detailList.altText}"
+                                 src="${detailList.imagePath @context = 'uri'}"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

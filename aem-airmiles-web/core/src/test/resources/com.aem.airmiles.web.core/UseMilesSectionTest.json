@@ -1,0 +1,96 @@
+{
+  "usemiles": {
+    "jcr:primaryType": "nt:unstructured",
+    "active": "true",
+    "jcr:lastModifiedBy": "admin",
+    "dataClickID": [
+      "tab0-click-id",
+      "tab1-click-id"
+    ],
+    "dataTrackSection": "usemiles-section",
+    "sling:resourceType": "aem-airmiles-web/components/usemiles",
+    "wayfinderText": "USE MILES",
+    "dataTrackID": [
+      "tab0-track-id",
+      "tab1-track-id"
+    ],
+    "headerText": "WELCOME TO YOUR HAPPY PLACE",
+    "tabs": {
+      "jcr:primaryType": "nt:unstructured",
+      "tab0": {
+        "jcr:primaryType": "nt:unstructured",
+        "svgIcon": "/content/dam/aem-airmiles-web/images/dollar_icon.png",
+        "tabTitle": "CASH REWARDS",
+        "dataClickID": "tab1-click-id",
+        "tabId": "tab1",
+        "dataTrackID": "tab1-track-id",
+        "offersleft": {
+          "jcr:primaryType": "nt:unstructured",
+          "imageTarget": "_blank",
+          "paragraphScope": "all",
+          "description": "<p>Take everything you love and add a big helping of &quot;free.&quot; That's what it feels like when you use AIR MILES Cash Miles in-store and online.</p>\r\n<p><b>95 Cash Miles = $10 towards your purchases*</b></p>\r\n",
+          "fileReference": "/content/dam/aem-airmiles-web/images/Cash_images@1x-160px-padding-horizontal.png",
+          "active": "true",
+          "headline": "EXTRAS IN AN INSTANT",
+          "dataClickID": "hpto-cash-rewards",
+          "text": "Use Miles EXTRAS IN AN INSTANT Take everything you love and add a big helping of \"free.\" That's what it feels like when you use AIR MILES Cash Miles in-store and online. 95 Cash Miles = $10 towards your purchases* https://rewards.airmiles.ca/cashrewards/list?locale=en_CA&cash_reward_filter=all&order_by=HERO_WEIGHT&order_dir=DESCENDING&region_filter=ON",
+          "variationName": "master",
+          "linkTarget": "_blank",
+          "ctaLink": "https://rewards.airmiles.ca/cashrewards/list?locale=en_CA&cash_reward_filter=all&order_by=HERO_WEIGHT&order_dir=DESCENDING",
+          "ctaText": "All AIR MILES Cash partners",
+          "sling:resourceType": "aem-airmiles-web/components/text-image",
+          "textIsRich": "true",
+          "ctaDisclaimerText": "* Standard daily Cash Miles usage limits and terms and conditions apply.",
+          "displayMode": "multi",
+          "dataTrackID": "meet-our-cash-partners",
+          "fragmentPath": "/content/dam/aem-airmiles-web/cfs/use-miles"
+        },
+        "offersright": {
+          "jcr:primaryType": "nt:unstructured",
+          "paragraphScope": "all",
+          "variationName": "use_miles_1",
+          "sling:resourceType": "aem-airmiles-web/components/contentfragments/staticofferitem",
+          "displayMode": "multi",
+          "fragmentPath": "/content/dam/aem-airmiles-web/cfs/poc-offer-item"
+        }
+      },
+      "tab1": {
+        "jcr:primaryType": "nt:unstructured",
+        "svgIcon": "/content/dam/aem-airmiles-web/images/cloude_icon.png",
+        "tabTitle": "DREAM REWARDS",
+        "dataClickID": "tab2-click-id",
+        "tabId": "tab2",
+        "dataTrackID": "tab2-track-id",
+        "offersleft": {
+          "jcr:primaryType": "nt:unstructured",
+          "imageTarget": "_blank",
+          "paragraphScope": "all",
+          "description": "<p>Entertainment? Merchandise? Travel? Donations? Any way you look at it, using Dream Miles is completely rewarding.</p>\r\n<p><b>Rewards starting from 250 Dream Miles</b><sup>™</sup></p>\r\n",
+          "fileReference": "/content/dam/aem-airmiles-web/images/61176_Marquee_Rewards_Cluster_Master.jpg",
+          "active": "true",
+          "jcr:lastModifiedBy": "admin",
+          "headline": "Big, bold, all caps, EXTRAS",
+          "dataClickID": "hpto-dream-rewards",
+          "text": "Use Miles BIG, BOLD, ALL CAPS, EXTRAS Entertainment? Merchandise? Travel? Donations? Any way you look at it, using Dream Miles is completely rewarding. Rewards starting from 250 Dream Miles™ https://rewards.airmiles.ca/merchandise?locale=en_CA",
+          "variationName": "use_miles_2",
+          "linkTarget": "_blank",
+          "ctaLink": "https://rewards.airmiles.ca/merchandise?locale=en_CA",
+          "ctaText": "Browse Dream catalogue",
+          "sling:resourceType": "aem-airmiles-web/components/text-image",
+          "textIsRich": "true",
+          "displayMode": "multi",
+          "dataTrackID": "browse-rewards-catalogue",
+          "fragmentPath": "/content/dam/aem-airmiles-web/cfs/use-miles"
+        },
+        "offersright": {
+          "jcr:primaryType": "nt:unstructured",
+          "paragraphScope": "all",
+          "variationName": "use_miles_2",
+          "sling:resourceType": "aem-airmiles-web/components/contentfragments/staticofferitem",
+          "displayMode": "multi",
+          "fragmentPath": "/content/dam/aem-airmiles-web/cfs/poc-offer-item"
+        }
+      }
+    }
+  }
+}

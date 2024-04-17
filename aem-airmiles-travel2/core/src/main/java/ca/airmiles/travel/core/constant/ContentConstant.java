@@ -1,0 +1,56 @@
+package ca.airmiles.travel.core.constant;
+
+public class ContentConstant {
+
+    public static final String DOT_HTML = ".html";
+    public static final String SLASH = "/";
+    public static final String SLASH_CONTENT_DAM = SLASH + "content/dam";
+    public static final String TRISEPTS_DAM = SLASH_CONTENT_DAM.concat("/aem-airmiles-travel2/trisept-jsons");
+    public static final String ROOT_TRAVEL_PATH = SLASH +"content/aem-airmiles-travel2/ca";
+    public static final String TRAVEL_SERVICE_USER = "travel-service-user";
+    public static final String MIMETYPE_JSON = "application/json";
+    public static final String JCR_CONTENT = "/jcr:content";
+    public static final String CARD_TITLE = "cardTitle";
+    public static final String CARD_DESTINATION_COUNTRY = "cardDestinationCountry";
+    public static final String CARD_DESCRIPTION = "cardDescription";
+    public static final String CARD_TAGICON = "cardTagIcon";
+    public static final String CARD_IMAGEPATH = "cardImagePath";
+    public static final String CARD_IMAGEALT = "cardImageAlt";
+    public static final String LINK_TARGET = "linkTarget";
+    public static final String HIDE_IN_LISTING = "hideInListing";
+    public static final String CARD_DEAL_TYPE = "dealType";
+    public static final String URL = "url";
+    public static final String PAGE_URL = "pageUrl";
+    public static final String DATE_TEXT = "dateText";
+    public static final String DATE = "date";
+    public static final String START_DATE = "startDate";
+    public static final String ICON = "icon";
+    public static final String ADULT = "adult";
+    public static final String CHILD = "child";
+    public static final String INFANT = "infant";
+    public static final String AGE1 = ">18 <25";
+    public static final String AGE2 = ">25 <45";
+    public static final String AGE3 = ">45 <60";
+    public static final String AGE4 = ">60";
+    public static final String DATATRACKID = "dataTrackID";
+    public static final String DATATRACKCLICK = "dataClickID";
+    public static final String DATATRACKTYPE = "dataTrackType";
+    public static final String FLIGHT_JSON_DATA_URL = "/content/dam/aem-airmiles-travel2/trisept-jsons/flights/flights.json/jcr:content/renditions/original/jcr:content";
+    public static final String UTF8_STRING = "UTF-8";
+    public static final String JCR_DATA_STRING = "jcr:data";
+    public static final String PACKAGE_NODE_JSON = "Package";
+    public static final String SOURCE_NODE_JSON = "Destinations";
+    public static final String FLIGHT_JSON_VALUE_TEXT = "Name";
+    public static final String FLIGHT_JSON_VALUE_VALUE = "Code";
+    public static final String DEFAULT_VALUE_COMMA_SEPARATOR = ", ";
+    public static final String DEFAULT_VALUE_SPACE_SEPARATOR = " ";
+    public static final String DEFAULT_VALUE_CODE_LEFT = "(";
+    public static final String DEFAULT_VALUE_CODE_RIGHT = ")";
+    public static final String DEFAULT_VALUE_COUNTRY_CODE = "CountryCode";
+    public static final String DEFAULT_VALUE_DROPDOWN_VALUE = "value";
+    public static final String DEFAULT_VALUE_DROPDOWN_TEXT = "text";
+    public static final String DEFAULT_VALUE_DROPDOWN_SELECTED = "selected";
+    public static final String DEFAULT_VALUE_DROPDOWN_DISABLED = "disabled";
+    public static final String DEFAULT_VALUE_SERVLET_PATH =  SLASH + "bin/JsonDataWidgetsDefaultValues";
+    public static final String DEFAULT_VALUE_SERVLET_RESOURCE_TYPE = "utils/granite/components/select/datasource/json";
+}

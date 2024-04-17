@@ -1,0 +1,247 @@
+<div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.model="${'com.aem.airmiles.web.core.models.ContentBlockShell'}">
+
+<!--   <div class="contentBlock__prizes" data-sly-list.item="${model.cardsList}" data-sly-test="${model.type == 'prizes'}">
+    <div class="shell-primary ${item.backgroundColor} ${item.swapPlacement}">
+      <div class="contentBlock__card">
+        <a href="${item.foregroundImageOneUrl}">
+          <img class="contentBlock__fgimage" src="${item.foregroundImage}" alt="${item.foregroundImageOneAltText}">
+        </a>
+        <div class="contentBlock__text">
+          <h3>${item.title}</h3>
+          <p>${item.description @ context = 'html'}</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="contentBlock__requirements" data-sly-list.item="${model.cardsList}"
+    data-sly-test="${model.type == 'requirements'}">
+
+    <!-- If foregroundImageTwo is not present -->
+    <div data-sly-test="${!item.foregroundImageTwo}" class="contentBlock__container">
+      <div class="shell-primary ${item.backgroundColor} ${item.swapPlacement}">
+
+        <div class="contentBlock__bgimage">
+          <img src="${item.backgroundImage}" alt="${item.backgroundImageAltText}">
+        </div>
+        <div class="contentBlock__card">
+          <a href="${item.foregroundImageOneUrl}"  data-track-click="${item.foregroundImageOneDataTrackClick}" data-track-id="${item.foregroundImageOneDataTrackId}" data-track-type="${item.foregroundImageOneDataTrackType}">
+            <img class="contentBlock__fgimage" src="${item.foregroundImage}" alt="${item.foregroundImageOneAltText}">
+          </a>
+          <div class="contentBlock__text">
+            <h3>${item.title}</h3>
+            ${item.description @ context = 'html'}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- If foregroundImageTwo is present (QRs card) -->
+    <div data-sly-test="${item.foregroundImageTwo}" class="contentBlock__container">
+      <div class="shell-primary qr ${item.backgroundColor} ${item.swapPlacement}">
+
+        <div class="contentBlock__bgimage">
+          <img src="${item.backgroundImage}" alt="${item.backgroundImageAltText}">
+        </div>
+        <div class="contentBlock__QRcard">
+          <div class="contentBlock__fgimages">
+            <a href="${item.foregroundImageOneUrl}" data-track-click="${item.foregroundImageOneDataTrackClick}" data-track-id="${item.foregroundImageOneDataTrackId}" data-track-type="${item.foregroundImageOneDataTrackType}">
+              <img class="contentBlock__fgimage" src="${item.foregroundImage}" alt="${item.foregroundImageOneAltText}">
+            </a>
+            <a href="${item.foregroundImageTwoUrl}" data-track-click="${item.foregroundImageTwoDataTrackClick}" data-track-id="${item.foregroundImageTwoDataTrackId}" data-track-type="${item.foregroundImageTwoDataTrackType}">
+              <img class="contentBlock__fgimage" src="${item.foregroundImageTwo}" alt="${item.foregroundImageTwoAltText}">
+            </a>
+          </div>
+          <div class="contentBlock__text">
+            <h3>${item.title}</h3>
+            <p>${item.description @ context = 'html'}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
+<sly data-sly-use.model="${'com.aem.airmiles.web.core.models.ContentBlockShell'}"
+  data-sly-test="${model.type == 'requirements'}">
+
+  <script defer>
+    var cardNumber = "";
+    var profileURL = hostName + "/profile";
+    var shellGoPlusMemberURL = hostName + "/segment/collector-segments/searches-collector";
+    var alreadyParticipatingURL = hostName + "/data-capture/data/searches";
+    var alertSymbol = "<span>&#9888;</span>";
+    var serverErrorMsg = alertSymbol + "${model.submitErrorMessage @ context = 'attribute'}";
+    const isBrowser = () => typeof window !== 'undefined';
+    
+    const getLocale = () => {
+      const availableLocales = ['en-CA', 'fr-CA'];
+      if (isBrowser()) {
+        const locale = document
+            .getElementsByTagName('html')[0]
+            .getAttribute('lang');
+        return availableLocales.indexOf(locale) > -1 ? locale : 'en-CA';
+      }
+      return 'en-CA';
+    };
+
+  const getHeadersContent = () => {
+      return {
+          'Accept-Language': getLocale(),
+          'Content-Type': 'application/json',
+          'Strict-Transport-Security' : 'max-age=10368000; includeSubDomains'
+      };
+  };
+
+    var getCookie = (cookieName) => {
+      const cookieVal = document.cookie.match(new RegExp('(^| )' + cookieName + '=([^;]+)'));
+      return cookieVal ? cookieVal[2] : null;
+    };
+
+    var getMemdeets = () => {
+      return JSON.parse(decodeURIComponent(getCookie("memdeets")));
+    };
+
+    async function getData(url = '') {
+      const response = await fetch(url, {
+        method: 'GET',
+        credentials: 'include',
+        headers: getHeadersContent(),
+      })
+      return response.json();
+    }
+
+    async function postDataSegment(url = '') {
+
+      const parsedMemdeets = getMemdeets();
+      if (!parsedMemdeets) {
+        window.location.href = "${pageProperties.loginURL @ context = 'attribute'}";
+      }
+
+      cardNumber = parsedMemdeets ? parsedMemdeets.cardNumber : undefined;
+      //console.log('cardNumber: ' + cardNumber);
+
+      let segmentHeaders = new Headers();
+      segmentHeaders.append("Content-Type", "application/json");
+
+      var raw = JSON.stringify({
+        "channel": "PM",
+        "cardNumber": cardNumber,
+        "categoryCodes": [
+          "PROF",
+          "BANN"
+        ]
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        credentials: 'include',
+        headers: segmentHeaders,
+        redirect: 'follow',
+        body: raw
+      };
+
+      const response = await fetch(url, requestOptions)
+      return response.json();
+    }
+
+     async function postDataCapture(url = '') {
+        const parsedMemdeets = getMemdeets();
+        if (!parsedMemdeets) {
+          window.location.href = "${pageProperties.loginURL @ context = 'attribute'}";
+        }
+
+        cardNumber = parsedMemdeets ? parsedMemdeets.cardNumber : undefined;
+        //console.log('cardNumber: ' + cardNumber);
+
+        // Request body with the cardNumber value
+        const postDataCaptureBody = {
+          customerId: cardNumber,
+          dataSetId: contestID
+        };
+        // Send the body object in the request payload
+        const response = await fetch(url, {
+          method: 'POST',
+          credentials: 'include',
+          headers: getHeadersContent(),
+          body: JSON.stringify(postDataCaptureBody)
+        })
+
+        if (response.status === 204) {
+          checkShellGoPlusData();
+          return;
+        }
+        if (response.status === 200) {
+          window.location.href = './already-participating.html';
+        }
+        if (!response.ok) {
+          //console.log("Status - error", response.status); // error
+          const responseError = document.querySelector('#response-error');
+          if (!responseError) {
+            const errorMsg = document.createElement('div');
+            errorMsg.setAttribute('id', 'response-error');
+            errorMsg.innerHTML = serverErrorMsg;
+            const button = document.getElementById('requirements-continueBtn');
+            button.insertAdjacentElement('afterend', errorMsg);
+          };
+        }
+      }
+
+    function checkShellGoPlusData() {
+      let isShellGoPlusMember = 0;
+      postDataSegment(shellGoPlusMemberURL)
+        .then((dataShell) => {
+          if (dataShell.length > 0) {
+            //console.log('datashell', dataShell);
+            const segments = dataShell;
+            const filterSegments = segments.filter(function (item) {
+              const segmentCode = item.segmentCode;
+              if (segmentCode && segmentCode == 'SHELLGOPLUS') {
+                isShellGoPlusMember++;
+              }
+            });
+            if (isShellGoPlusMember) {
+              window.location.href = './shell-contest-participant-data.html';
+            } else {
+              const error = document.querySelector('#error');
+              if (!error) {
+                const errorDiv = document.createElement('div');
+                errorDiv.setAttribute('id', 'error');
+                const page = document.querySelector('#requirements');
+                errorDiv.innerHTML = serverErrorMsg;
+                page.appendChild(errorDiv);
+              }
+            }
+            //console.log(filterSegments);
+          }
+        })
+        .catch((error) => { console.error('Error:', error); });
+    }
+
+    function checkParticipantData() {
+        postDataCapture(alreadyParticipatingURL)
+      }
+
+
+    function getCookieg2g() {
+        var match = document.cookie.match(new RegExp('(^| )' + 'g2g' + '=([^;]+)'));
+        if (match === null || match[2] == 'false') {
+            window.location.href = "${pageProperties.loginURL @ context = 'attribute'}";
+        } else {
+            checkParticipantData();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const continueBtn = document.getElementById('requirements-continueBtn');
+      // Found results of the button
+      if (continueBtn) {
+        continueBtn.addEventListener('click', function (e) {
+          getCookieg2g();
+        });
+      }
+    });
+
+  </script>
+</sly>

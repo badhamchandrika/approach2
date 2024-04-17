@@ -1,0 +1,163 @@
+.CtaLinkV2--container.CtaLinkV2__rebrand--container {
+  .link-blue {
+    color: #135582;
+  }
+  .white {
+    color: #ffffff;
+  }
+}
+
+.CtaLinkV2.CtaLinkV2__rebrand.CtaLinkV2__rebrand--type--ghost.CtaLinkV2__rebrand--light,
+.CtaLinkV2.CtaLinkV2__rebrand.CtaLinkV2__rebrand--type--textButton,
+.CtaLinkV2.CtaLinkV2__rebrand.CtaLinkV2__rebrand--type--textBackButton {
+  color: #135582;
+
+  &:hover {
+    color: #00334d;
+  }
+}
+
+.CtaLinkV2.CtaLinkV2__rebrand.CtaLinkV2__rebrand--type--ghost.CtaLinkV2__rebrand--light {
+  border: solid 2px #135582;
+  color: #135582;
+  padding: 14px 40px;
+
+  &:hover,
+  &:focus {
+    background-color: #1355821a;
+  }
+}
+
+.CtaLinkV2.CtaLinkV2__rebrand {
+  &:hover,
+  &:focus {
+    .CtaLinkV2__rebrand__linkText.link-blue {
+      color: #00334d;
+
+      .CtaLinkV2__rebrand__animated-underline {
+        background: #00334d;
+      }
+    }
+  }
+
+  .CtaLinkV2__rebrand__linkText.link-blue {
+    .CtaLinkV2__rebrand__animated-underline {
+      background: #135582;
+    }
+  }
+
+  .CtaLinkV2__rebrand__linkText.white {
+    .CtaLinkV2__rebrand__animated-underline {
+      background: #ffffff;
+    }
+  }
+
+  &--type {
+    &--primary {
+      background-color: #135582;
+
+      &.CtaLinkV2__rebrand--disabled {
+        pointer-events: none;
+      }
+
+      .am-typographyV3 {
+        font-family: ArchivoSemiBold;
+        font-weight: 500;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #00334d;
+
+        &.CtaLinkV2__rebrand--light {
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+
+      &:active {
+        background-color: #135582;
+
+        &.CtaLinkV2__rebrand--light {
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+    }
+
+    &--ghost {
+      border: solid 2px #ffffff;
+      color: #ffffff;
+      background-color: transparent;
+
+      .am-typographyV3 {
+        font-family: ArchivoSemiBold;
+        font-weight: 500;
+      }
+
+      &.CtaLinkV2__rebrand--disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &.CtaLinkV2__rebrand--light {
+        border: solid 2px #135582;
+        color: #135582;
+
+        span {
+          color: #135582;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #135582;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &:visited {
+        &.CtaLinkV2__rebrand--light {
+          background-color: #ffffff;
+
+          span {
+            color: #135582;
+          }
+        }
+      }
+    }
+
+    &--noBorder {
+      color: #ffffff;
+
+      &.CtaLinkV2__rebrand--disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &.CtaLinkV2__rebrand--light {
+        color: #135582;
+
+        &:hover,
+        &:focus {
+          color: #00334d;
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

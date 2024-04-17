@@ -1,0 +1,332 @@
+
+.h1-headline{
+  font-family: MontserratBold;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.625rem;
+  color: color('brand-blue');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 2.125rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 2.625rem;
+  }
+}
+
+.h1-page-title{
+  font-family: ArchivoRegular;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: color('body-copy');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.25rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.375rem;
+  }
+}
+
+.h2-title-v2{
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: #1C2D3F;
+  font-size: 1.5rem;
+}
+
+.h2-wayfinding{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: .75rem;
+  color: color('body-copy');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: .875rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1rem;
+  }
+}
+
+.h3-subsection{
+  font-family: MontserratBold;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  color: color('brand-blue');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.625rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.875rem;
+  }
+}
+
+.h4-sub-subsection{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1rem;
+  color: color('body-copy');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.25rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.375rem;
+  }
+}
+
+.headline{
+  font-family: MontserratBold;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.625rem;
+  color: color('brand-blue');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.875rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 2.125rem;
+  }
+}
+
+.introduction-body-text{
+  font-family: ArchivoRegular;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: color('body-copy');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+.body-text{
+  font-family: ArchivoRegular;
+  font-size: .875rem;
+  line-height: 1.5;
+  color: color('body-copy');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.125rem;
+  }
+}
+
+.body-text-inline-link{
+  font-family: ArchivoRegular;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  color: color('link-blue');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.125rem;
+  }
+}
+
+.legal-text{
+  font-family: ArchivoRegular;
+  font-weight: 400;
+  font-size: .625rem;
+  line-height: 1rem;
+  color: color('body-copy');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.legal-text-inline-link{
+  font-family: ArchivoRegular;
+  font-weight: 400;
+  font-size: .625rem;
+  line-height: 1rem;
+  text-decoration: underline;
+  color: color('link-blue');
+
+  @media (min-width: breakpoint('md')) {
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: .875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* New Heading Styles for h1, h2,h3 headings, body text*/
+
+.h1-large{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 125%;
+  padding-bottom: 16px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('md')) {
+    font-size: 3rem;
+    padding-bottom: 24px;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 3.25rem;
+    line-height: 115%;
+  }
+}
+
+.h1-regular{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 125%;
+  padding-bottom: 16px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('md')) {
+    font-size: 2.625rem;
+    padding-bottom: 24px;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 2.625rem;
+  }
+}
+
+.h1-small, .h2-large{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 125%;
+  padding-bottom: 16px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('md')) {
+    font-size: 2.25rem;
+    padding-bottom: 24px;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 2.375rem;
+  }
+}
+
+.h2-xlarge{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 125%;
+  padding-bottom: 16px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('md')) {
+    font-size: 2.625rem;
+    padding-bottom: 24px;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 3.25rem;
+    line-height: 140%;
+  }
+}
+
+.h2-regular{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 125%;
+  padding-bottom: 16px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.875rem;
+    padding-bottom: 24px;
+  }
+  @media (min-width: breakpoint('lg')) {
+    font-size: 1.875rem;
+  }
+}
+
+.h2-small{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 125%;
+  padding-bottom: 16px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('lg')) {
+    line-height: 150%;
+    padding-bottom: 24px;
+  }
+}
+
+.h3-large{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 125%;
+  padding-bottom: 8px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('lg')) {
+    line-height: 150%;
+  }
+}
+
+.h3-regular{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 150%;
+  padding-bottom: 8px;
+  color: #1C2D3F;
+}
+
+.h3-small{
+  font-family: MontserratBold;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 125%;
+  padding-bottom: 8px;
+  color: #1C2D3F;
+  @media (min-width: breakpoint('lg')) {
+    line-height: 150%;
+  }
+}
+
+.body-x-small, .body-small, .body-regular, .body-large{
+  font-family: Montserrat;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.body-x-small{
+  font-size: 0.75rem;
+}
+
+.body-small{
+  font-size: 0.875rem;
+}
+
+.body-regular{
+  font-size: 1rem;
+}
+
+.body-large{
+  font-size: 1.25rem;
+}
+
+
+

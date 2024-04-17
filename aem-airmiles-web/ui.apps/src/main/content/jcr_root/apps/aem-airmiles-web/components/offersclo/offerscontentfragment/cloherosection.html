@@ -1,0 +1,83 @@
+<template data-sly-template.heroDetails="${@ heroDetailsModel}">
+    <div class="offersheroclo" role="region" aria-label="Card Linked Offer - Hero">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-2 p-lg-3">
+                <div class="offersheroclo__steps step1">
+                    <span class="offersheroclo__number">1</span>
+                    <span class="offersheroclo__text">${heroDetailsModel.step1Title}</span>
+                    <img class="offersheroclo__image" src="${heroDetailsModel.process1ImagePath}" alt="image - ${heroDetailsModel.step1Title}">
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 p-2 p-lg-3">
+                <div class="offersheroclo__steps step2">
+                    <span class="offersheroclo__number">2</span>
+                    <span class="offersheroclo__text">${heroDetailsModel.step2Title}</span>
+                    <img class="offersheroclo__image" src="${heroDetailsModel.process2ImagePath}" alt="image - ${heroDetailsModel.step2Title}">
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 p-2 p-lg-3">
+                <div class="offersheroclo__steps step3">
+                    <span class="offersheroclo__number">3</span>
+                    <span class="offersheroclo__text">${heroDetailsModel.step3Title}</span>
+                    <img class="offersheroclo__image" src="${heroDetailsModel.process3ImagePath}" alt="image - ${heroDetailsModel.step3Title}">
+                </div>
+            </div>
+            <div data-sly-test="${heroDetailsModel.informationText}" class="col-12 d-flex justify-content-center py-3 offersheroclo__information">
+                <span class='am-icon2 am-icon2-critical-empty pe-1'></span> ${heroDetailsModel.informationText}
+            </div>
+            <div class="col-12 d-flex justify-content-center py-2 py-md-3">
+                <sly data-sly-set.linkYourCardCtaUrl="${heroDetailsModel.linkYourCardUrlToDisplay == 'linkYourCardExternalUrl'? heroDetailsModel.linkYourCardExternalUrl :
+            heroDetailsModel.linkYourCardInternalUrl}"/>
+                <sly data-sly-set.learnMoreUrl="${heroDetailsModel.learnMoreUrlToDisplay == 'learnMoreExternalUrl'? heroDetailsModel.learnMoreExternalUrl :
+            heroDetailsModel.learnMoreInternalUrl}"/>
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                      type='pill',
+                      href=linkYourCardCtaUrl,
+                      text=heroDetailsModel.linkYourCardCtaText,
+                      target=heroDetailsModel.linkYourCardTarget,
+                      hexText='#FFF',
+                      hexBtn='#1F68DA',
+                      dataTrackID=heroDetailsModel.linkYourCardDataTrackId,
+                      dataClickID=heroDetailsModel.linkYourCardDataClickId,
+                      dataTrackType=heroDetailsModel.linkYourCardDataTrackType,
+                      classes='',
+                      iconOnRight=true,
+                      iconClassGroup='am-icon',
+                      iconClassName='am-icon-external-link ps-2'
+                      }">
+                </sly>
+            </div>
+            <div class="col-12 d-flex flex-column flex-md-row justify-content-center py-3">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                      type='arrowlink',
+                      href=heroDetailsModel.faqUrl,
+                      text=heroDetailsModel.faqText,
+                      target=heroDetailsModel.faqTarget,
+                      hexText='#1F68DA',
+                      hexBtn='',
+                      dataTrackID=heroDetailsModel.faqDataTrackId,
+                      dataClickID=heroDetailsModel.faqDataClickId,
+                      dataTrackType=heroDetailsModel.faqDataTrackType,
+                      modalUniqueID=heroDetailsModel.faqUrl,
+                      classes='faq-btn mx-auto mx-md-0 pb-4 pb-md-0'}">
+                </sly>
+                <div class="d-none d-md-flex px-3">|</div>
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                      type='extlink',
+                      href=learnMoreUrl,
+                      text=heroDetailsModel.learnMoreText,
+                      target=heroDetailsModel.learnMoreTarget,
+                      hexText='#1F68DA',
+                      hexBtn='',
+                      dataTrackID=heroDetailsModel.learnMoreDataTrackId,
+                      dataClickID=heroDetailsModel.learnMoreClickId,
+                      dataTrackType=heroDetailsModel.learnMoreDataTrackType,
+                      classes='mx-auto mx-md-0'}">
+                </sly>
+            </div>
+        </div>
+    </div>
+ </template>

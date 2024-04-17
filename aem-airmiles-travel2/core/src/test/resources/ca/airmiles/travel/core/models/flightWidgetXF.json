@@ -1,0 +1,89 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Oct 26 2023 11:18:00 GMT-0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Flights Widget",
+    "cq:template": "/libs/cq/experience-fragments/components/experiencefragment/template",
+    "jcr:created": "Thu Oct 26 2023 11:18:00 GMT-0600",
+    "cq:lastModified": "Thu Oct 26 2023 11:18:00 GMT-0600",
+    "cq:tags": [
+
+    ],
+    "sling:resourceType": "cq/experience-fragments/components/experiencefragment",
+    "cq:lastModifiedBy": "admin"
+  },
+  "master": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Oct 26 2023 11:18:00 GMT-0600",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Flights Widget",
+      "cq:template": "/conf/aem-airmiles-travel2/settings/wcm/templates/xf-web-variation",
+      "cq:xfMasterVariation": true,
+      "jcr:created": "Thu Oct 26 2023 11:18:00 GMT-0600",
+      "cq:lastModified": "Thu Oct 26 2023 11:18:32 GMT-0600",
+      "cq:xfVariantType": "web",
+      "cq:tags": [
+        "experience-fragments:variation/web"
+      ],
+      "sling:resourceType": "aem-airmiles-travel2/components/xfpage",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "aem-airmiles-travel2/components/container",
+        "flightwidget_1832760": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "CFotos@loyalty.com",
+          "creditCardDescription": "Get the best available fare and earn Reward Miles™ like never before when you pay with your credit card.",
+          "dreamMilesDescription": "Dream miles description",
+          "creditCardTitle": "credit card titulo",
+          "jcr:lastModifiedBy": "admin",
+          "infant": "Infant 0 - 2 (in seat)",
+          "updateButtonText": "Update",
+          "toLocationText": "To",
+          "departureDateText": "Departure date",
+          "dreamMilesTitle": "dream miles titulo",
+          "jcr:created": "Wed Nov 23 2022 22:22:09 GMT+0000",
+          "cabinHeading": "Cabin preference",
+          "fromInstructionalText": "Where are you leaving from??",
+          "locationSearchText": "Origin",
+          "passengerHeading": "Passengers",
+          "adult": "Adults (13+)",
+          "child": "Children (ages 2 - 11)",
+          "linkUrl": "https://bookings.beta.airmiles.ca/search/default.aspx",
+          "warningMessage": "<p>One adult for every 5 infants</p>\r\n",
+          "buttonText": "Search",
+          "searchSuggestionText": "Search ",
+          "returnDateText": "Return date",
+          "maxWarningMsg": "<p>max reached 2</p>\r\n",
+          "infantWarningMsg": "<p>Max reached</p>\r\n",
+          "jcr:lastModified": "Mon Sep 25 2023 11:52:18 GMT-0600",
+          "tripTypeHeading": "Trip type",
+          "linkText": "advanced search",
+          "sling:resourceType": "aem-airmiles-travel2/components/flightwidget",
+          "advSearchText": "Advanced search page",
+          "toInstructionalText": "Where are you going??",
+          "textIsRich": [
+            "true",
+            "true",
+            "true"
+          ],
+          "fromLocationText": "From",
+          "defaultFromValue": "ABJ",
+          "tripTypeList": {
+            "jcr:primaryType": "nt:unstructured"
+          },
+          "cabinList": {
+            "jcr:primaryType": "nt:unstructured"
+          }
+        }
+      }
+    }
+  }
+}

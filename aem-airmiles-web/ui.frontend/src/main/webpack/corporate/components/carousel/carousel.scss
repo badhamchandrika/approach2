@@ -1,0 +1,72 @@
+.custom-carousel__indicators {
+  display: none;
+}
+.custom-carousel__action-text, .custom-carousel__action--play, .custom-carousel__action--pause {
+  display: none;
+}
+.custom-carousel .h2-title-v2 {
+  padding: 1.25rem 0;
+}
+
+.custom-carousel__content .custom-carousel__item {
+  display: none;
+}
+.custom-carousel__content .custom-carousel__item--active {
+  display: block;
+}
+.custom-carousel__actions {
+  left: 24px;
+  bottom: 24px;
+  position: absolute;
+  display: flex;
+  width: calc(100% - 3rem);
+  .carousel_number {
+    color: #1C2D3F;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 16px;
+    padding-top: 6px;
+    letter-spacing: 3px;
+    flex-grow: 1;
+  }
+  .custom-carousel__action--previous, .custom-carousel__action--next {
+    background: #1F68DA;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    display: inline-flex;
+  }
+  .custom-carousel__action--previous{
+    border-radius: 4px 0 0 4px;
+  }
+  .custom-carousel__action--next{
+    border-radius: 0 4px 4px 0;
+  }
+  .custom-carousel__action--previous, .custom-carousel__action--next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .am-icon2-arrow-left::before, .am-icon2-arrow-right::before {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 5px;
+  }
+  @media (min-width: breakpoint('md')) {
+    right: 4px;
+    left: unset;
+    top: 25px;
+    justify-content: flex-end;
+    .carousel_number {
+      flex-grow: 0;
+    }
+  }
+  @media (min-width: breakpoint('lg')) {
+    right: 24px;
+    bottom: 24px;
+    top: unset;
+  }
+}

@@ -1,0 +1,6 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Skip Nav" class="cq-placeholder"></div>
+<div data-sly-use.skipModel="com.aem.airmiles.web.core.models.SkipNavModel" class="bsp-container d-flex justify-content-start">
+    <a href="#${skipModel.skiptoid}" class="skipnav-anchor" sid="${skipModel.skiptoid}">
+        <p>${skipModel.skiptext ? skipModel.skiptext : 'Skip Navigation'}</p>
+    </a>
+</div>

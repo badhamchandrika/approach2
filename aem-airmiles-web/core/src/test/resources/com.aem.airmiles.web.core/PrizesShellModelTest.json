@@ -1,0 +1,26 @@
+{
+  "content": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Thu Feb 02 2023 10:25:37 GMT-0300",
+    "submitErrorMessage": "We are sorry",
+    "jcr:lastModified": "Wed Feb 08 2023 10:48:26 GMT-0300",
+    "sling:resourceType": "aem-airmiles-web/components/shell/prizes",
+    "cards": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "backgroundColor": "#ffffff",
+        "backgroundImage": "/content/dam/aem-airmiles-web/shellgoplus/Screen-partial.png",
+        "backgroundImageAltText": "\"\"",
+        "textColor": "#ffffff",
+        "textSize": "Large",
+        "title": "redtag.ca Travel Gift Card",
+        "subheader": "this is a sub header",
+        "description": "consectetur adipiscing elit. Curabitur non sollicitudin odio. Curabitur congue elementum metus.",
+        "swapPlacement": "left"
+      }
+    }
+  }
+}

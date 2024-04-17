@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-08-14T09:25:39.239-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/component-library-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="All Offers"
+        sling:resourceType="aem-airmiles-web/components/structure/component-library-page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid_756979268
+                jcr:created="{Date}2023-03-31T00:09:24.956-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:11:11.936-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <text_copy
+                    jcr:created="{Date}2023-06-12T12:11:01.363-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-08-04T10:08:23.316-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h1>All Offers&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_528799759_copy
+                    jcr:created="{Date}2023-06-12T12:11:41.954-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-08-14T09:25:39.235-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>The 'All Offers' component contains and manages offers using various filters and conditions. It depands on many conditions such as authentication, quick links and filters selections. In this demo documentation may limited with some functions. We currently set states as unauthenticated.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Figma URL:&amp;nbsp;&lt;a href=&quot;https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?node-id=3292%3A56337&quot;>https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?node-id=3292%3A56337&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Jira ticket: &lt;a href=&quot;https://amrp.atlassian.net/browse/ACO-108&quot;>https://amrp.atlassian.net/browse/ACO-108&lt;/a>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Component path:&amp;nbsp;&amp;nbsp;&lt;/b>aem-airmiles-web/components/airmiles-core/alloffers&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>** Endpoint might be down due to API server environment conditions. **&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <demo
+                    jcr:created="{Date}2023-08-04T10:07:35.807-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-08-04T10:07:35.807-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/demo">
+                    <component
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/component">
+                        <alloffers
+                            jcr:created="{Date}2023-07-13T12:01:49.029-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2023-08-02T11:15:28.956-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/alloffers"
+                            backText="Back"
+                            backToOfferText="Back to Offers"
+                            barcodeText="Use Code"
+                            buttonText="Online"
+                            clearAllText="Clear All"
+                            collapseSortText="COLLAPSE SORT &amp; FILTER"
+                            couponText="Scan Receipt"
+                            expandSortText="EXPAND SORT &amp; FILTER"
+                            filterByText="Filter by"
+                            filterCategoryTitle="Category"
+                            filterPartnersTitle="Partners"
+                            filterSortText="Filter / Sort"
+                            filterSubCategoryTitle="Sub-category"
+                            filterTypesTitle="Types"
+                            likePartners="partners you might like"
+                            loginMessage="Sign in to see offers for you"
+                            miniFeedTitle="You might also be interested in"
+                            noActionText="Ready to use"
+                            noResultDescription="Sorry, there are no offers that match your selected search criteria. Please adjust your search and try again."
+                            noResultTitle="No Result"
+                            offerEndsText="Offer Ends:"
+                            offersText="offers"
+                            optInText="Opt In"
+                            pageNum="16"
+                            pluText="Mastercard"
+                            resetText="Reset"
+                            seeAllText="See All"
+                            showingText="Showing:"
+                            sortByText="Sort by"
+                            sortFilterText="Sort &amp; Filter"
+                            subtitle="Featured offers"
+                            termsTitle="Terms &amp; Conditions"
+                            title="Browse Offers"
+                            uniqueID="allOffer-12345"
+                            viewResultText="View Result">
+                            <loginButtons jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    dataClickID="dashboard-allOffers-signin"
+                                    dataTrackID="dashboard-allOffers"
+                                    dataTrackType="internal"
+                                    hexBtnColor="#FFFFFF"
+                                    hexTextColor="#1F68DA"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Sign In"
+                                    linkType="pill"
+                                    linkUrl="#"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    dataClickID="dashboard-allOffers-app"
+                                    dataTrackID="dashboard-allOffers"
+                                    dataTrackType="internal"
+                                    hexTextColor="#FFFFFF"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="DOWNLOAD THE APP"
+                                    linkType="arrowlink"
+                                    linkUrl="#"/>
+                            </loginButtons>
+                            <offersTabs jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    activityType="offers"
+                                    tabKey="all-offers"
+                                    tabName="ALL OFFERS"
+                                    tabStatus="both"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    activityType="mini-feed"
+                                    tabKey="offers4u"
+                                    tabName="OFFERS FOR YOU"
+                                    tabStatus="authed"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    activityType="mini-feed"
+                                    tabKey="trending"
+                                    tabName="Trending"
+                                    tabStatus="unauthed"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    activityType="saved-offers"
+                                    tabKey="savedoffer"
+                                    tabName="SAVED OFFERS"
+                                    tabStatus="authed"/>
+                            </offersTabs>
+                            <filterSortBy jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    filterId="default-id"
+                                    filterKey="default"
+                                    filterName="Default"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    filterId="endSoonest-id"
+                                    filterKey="endSoonest"
+                                    filterName="End Soonest"/>
+                            </filterSortBy>
+                            <filterTypes jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="spend"
+                                    filterName="Spend &amp; Get Miles"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="buy"
+                                    filterName="Product-specific"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="amCashEarn, amCashDiscount"
+                                    filterName="AIR MILES Cash"/>
+                            </filterTypes>
+                            <filterPartners jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="11892e84-a87e-48b0-bf13-fcd0be389588"
+                                    filterName="Additional AIR MILES Partners"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="2f15e6db-4d33-480b-bf05-bb939cc99e8e"
+                                    filterName="Card Linked Offers"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="4a755252-876b-478e-9440-42961525e307"
+                                    filterName="METRO"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="e914624c-9676-4287-8ce9-04de68dd0507"
+                                    filterName="airmilesshope.ca"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="22a2cdfd-ff82-45f6-bc94-c14a3a533922"
+                                    filterName="BMO Bank of Montreal"/>
+                            </filterPartners>
+                            <filterCategory jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="22b666ae-97c2-4e57-a437-e977de6beef4"
+                                    filterName="Airmilesshops.ca"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="1ba636e3-799d-44c3-9c84-42a3df6430b0"
+                                    filterName="Financial"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="c7a208f3-8f94-4460-b76c-3c75ae53417d"
+                                    filterName="Fuel &amp; Auto"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="gift-cards"
+                                    filterName="Gift cards"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="38d878d7-c3e0-4ea1-8e6c-d4759f307042"
+                                    filterName="Home &amp; Garden"/>
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="77c6067e-bd25-43a9-826c-7a4788581952"
+                                    filterName="Liquor"/>
+                                <item6
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="office"
+                                    filterName="Office"/>
+                                <item7
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="0333d0e5-68be-4833-939f-3a20d0cc9806"
+                                    filterName="Other"/>
+                                <item8
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="0cbc9203-2811-4eae-9dc1-68da692658b8"
+                                    filterName="Pets"/>
+                                <item9
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="0a889711-9ab8-4972-a0b5-b9eafc8fa312"
+                                    filterName="Pharmacy"/>
+                                <item10
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="e10dea41-3aee-4a24-bc8d-0d8de8c3e5ae"
+                                    filterName="Travel"/>
+                                <item11
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="cc1b19d6-72e0-47bc-8b81-2b1fbb49d050"
+                                    filterName="Retail"/>
+                            </filterCategory>
+                            <filterSubCategory jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="d614fed9-8c17-4c20-a179-2351e54679c1"
+                                    filterName="Beauty"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="873c7bfa-745e-4bdd-afe2-55425821d721"
+                                    filterName="House Hold"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    filterKey="f1f75e01-8b8f-460c-bc89-8bdb40060e7c"
+                                    filterName="Food"/>
+                            </filterSubCategory>
+                            <regionOption jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="AL"
+                                    regionName="Alberta"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="BC"
+                                    regionName="British Columbia"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="ON"
+                                    regionName="Ontario"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="NS"
+                                    regionName="Nova Scotia"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="PEI"
+                                    regionName="Prince Edward Island"/>
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="NL"
+                                    regionName="Newfoundland and Labrador"/>
+                                <item6
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="SK"
+                                    regionName="Saskatchewan"/>
+                                <item7
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="MB"
+                                    regionName="Manitoba"/>
+                                <item8
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="NB"
+                                    regionName="New Brunswick"/>
+                                <item9
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="QC"
+                                    regionName="Quebec"/>
+                                <item10
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="NT"
+                                    regionName="Northwest Territories"/>
+                                <item11
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="YT"
+                                    regionName="Yukon"/>
+                                <item12
+                                    jcr:primaryType="nt:unstructured"
+                                    regionCode="NU"
+                                    regionName="Nunavut"/>
+                            </regionOption>
+                            <cf
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/parsys">
+                                <contentfragment
+                                    jcr:created="{Date}2023-08-03T09:46:51.814-04:00"
+                                    jcr:createdBy="admin"
+                                    jcr:lastModified="{Date}2023-08-03T09:47:17.506-04:00"
+                                    jcr:lastModifiedBy="admin"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aem-airmiles-web/components/contentfragment"
+                                    displayMode="multi"
+                                    fragmentPath="/content/dam/aem-airmiles-web/cfs/nationalpromotions/more-weekend-more-miles"
+                                    paragraphScope="all"
+                                    text="More Weekend More Miles Promotion de8ee701-b21a-4e80-b22d-2272a7d5a274 Promotion Name Round-Up Contest Pre promotion start date 2023-08-31 16:06 promotion Start Date 2023-08-02 16:06 promotion End Date 2023-08-02 16:06 Post promotion End Date 2023-08-02 16:06 Sticky Nav Start date 2023-08-02 16:06 Sticky Nav End Date 2023-08-02 16:06"
+                                    variationName="master"/>
+                                <contentfragment_270882277
+                                    jcr:created="{Date}2023-08-03T09:47:23.869-04:00"
+                                    jcr:createdBy="admin"
+                                    jcr:lastModified="{Date}2023-08-03T09:48:08.757-04:00"
+                                    jcr:lastModifiedBy="admin"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="aem-airmiles-web/components/contentfragment"
+                                    displayMode="multi"
+                                    fragmentPath="/content/dam/aem-airmiles-web/cfs/nationalpromotions/more-weekend-more-miles"
+                                    paragraphScope="all"
+                                    text="More Weekend More Miles Promotion f7cc65f8-dc52-48e7-893e-acda7fbd90e1 Promotion Name Mega Miles Pre promotion start date 2023-08-31 16:06 promotion Start Date 2023-08-02 16:06 promotion End Date 2023-08-02 16:06 Post promotion End Date 2023-08-02 16:06 Sticky Nav Start date 2023-08-02 16:06 Sticky Nav End Date 2023-08-02 16:06"
+                                    variationName="megamiles"/>
+                            </cf>
+                        </alloffers>
+                    </component>
+                    <info
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/tabs/v1/tabs">
+                        <properties
+                            cq:panelTitle="Properties"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/properties"
+                            reference="../../component"/>
+                        <markup
+                            cq:panelTitle="Markup"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/markup"
+                            reference="../../component"/>
+                        <json
+                            cq:panelTitle="JSON"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/json"
+                            reference="../../component"/>
+                    </info>
+                </demo>
+            </responsivegrid_756979268>
+            <responsivegrid_1422613350
+                jcr:created="{Date}2023-03-31T00:09:42.189-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:11:19.661-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+    </jcr:content>
+</jcr:root>

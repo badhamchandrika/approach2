@@ -1,0 +1,70 @@
+<sly data-sly-use.textimage="com.aem.airmiles.web.core.models.TextImageModel" xmlns="http://www.w3.org/1999/html"/>
+<div data-sly-test="${wcmmode.edit && !textimage.description}" data-emptytext="Text Image" class="cq-placeholder"></div>
+<div data-sly-test="${textimage.active == 'true' || wcmmode.edit}"
+     class="text-image__container bsp-container${textimage.active != 'true' ? ' --am-base-gray-scale-100':''}" data-track-section="${textimage.dataTrackSection}">
+    <div class="row text-image__container-row">
+        <div class="col-12 col-md-6 text-image__col-image">
+            <!-- If the user choose a url for the image -->
+            <a  data-sly-test="${textimage.url}"
+                href="${textimage.url}" target="${textimage.imageTarget}">
+                <img data-sly-test="${!textimage.smallScreenFileReference}"
+                     alt="${textimage.altText}"
+                     src="${textimage.fileReference @context = 'uri'}"
+                />
+                <img data-sly-test="${textimage.smallScreenFileReference}"
+                     class="d-none d-xl-inline"
+                     alt="${textimage.altText}"
+                     src="${textimage.fileReference @context = 'uri'}"
+                />
+                <img data-sly-test="${textimage.smallScreenFileReference}"
+                     class="d-xl-none d-xxl-none"
+                     alt="${textimage.altText}"
+                     src="${textimage.smallScreenFileReference @context = 'uri'}"
+                />
+            </a>
+            <img data-sly-test="${!textimage.url && !textimage.smallScreenFileReference}"
+                 alt="${textimage.altText}"
+                 src="${textimage.fileReference @context = 'uri'}"
+            />
+            <img data-sly-test="${!textimage.url && textimage.smallScreenFileReference}"
+                 class="d-none d-xl-inline"
+                 alt="${textimage.altText}"
+                 src="${textimage.fileReference @context = 'uri'}"
+            />
+            <img data-sly-test="${!textimage.url && textimage.smallScreenFileReference}"
+                 class="d-xl-none d-xxl-none"
+                 alt="${textimage.altText}"
+                 src="${textimage.smallScreenFileReference @context = 'uri'}"
+            />
+        </div>
+        <div class="col-12 col-md-6 text-image__col-text text-center text-md-start">
+            <h2 data-sly-test="${textimage.title}"
+                class="text-image__col-text-title">
+                ${textimage.title}
+                <sup>${textimage.titleTrademark}</sup>
+            </h2>
+            <h3 data-sly-test="${textimage.headline}"
+                class="text-image__col-text-headline">
+                ${textimage.headline @ context='html'}
+            </h3>
+
+            <div data-sly-test="${textimage.description}"
+                 class="text-image__col-text-description px-4 px-md-0">
+                ${textimage.description @context='html'}
+            </div>
+
+            <div data-sly-test="${textimage.hasCTA}" class="text-image__col-text-actions">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @ type=textimage.ctaLink.linkType, href=textimage.ctaLink.linkUrl,
+                text=textimage.ctaLink.linkText, target=textimage.ctaLink.linkTarget, dataTrackID=textimage.ctaLink.dataTrackID, dataClickID=textimage.ctaLink.dataClickID, dataTrackType=textimage.ctaLink.dataTrackType,
+                hexText=textimage.ctaLink.hexTextColor, hexBtn=textimage.ctaLink.hexBtnColor, classes=textimage.ctaLink.linkColor}"/>
+            </div>
+
+            <p data-sly-test="${textimage.linkDisclaimerText}" class="text-image__col-text-disclaimer">
+                <span>${textimage.linkDisclaimerText}</span>
+            </p>
+
+        </div>
+    </div>
+    <div data-sly-test="${wcmmode.edit}" class="border-bottom border-secondary w-100 d-flex justify-content-center">Text-Image - ${textimage.active == 'true' ? 'ENABLED' : 'DISABLED'}</div>
+</div>

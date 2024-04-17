@@ -1,0 +1,11 @@
+site_name: 'aem-airmiles-travel2'
+nav:
+  - Home: index.md
+  - Testing: testing.md
+  - 'TechDocs':
+      - 'Local Setup': 'tech-docs/internal/tech-docs-index.md'
+      - 'ci/cd': 'tech-docs/internal/cicd.md'
+  - 'Semantic Release': 'tech-docs/internal/semantic-release.md'
+
+plugins:
+  - techdocs-core

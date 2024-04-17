@@ -1,0 +1,39 @@
+<sly data-sly-use.model="${'ca.airmiles.travel.core.models.ImageGridModel'}"/>
+<div class="p-1 h-25 w-100 text-bg-secondary" data-sly-test="${wcmmode.edit}"><span class="am-icon am-icon-info p-1"></span>${component.title}</div>
+<div class="image-grid-container">
+    <div class="bsp-travel-container">
+        <div data-sly-test="${model.header}" class="row section-header">
+            <div class="col-xl-6 offset-xl-3">
+                <h2 class="section-header__title">${model.header}</h2>
+            </div>
+            <div data-sly-include="/apps/aem-airmiles-travel2/components/cta-button/cta-button.html" class="col-xl-3 section-header__cta"></div>
+        </div>
+        <div class="row image-grid-container__imagecont" data-sly-list.item="${model.items}" >
+            <div class="col image-grid-container__imagecont-element">
+                <div class="row image-grid-container__imagecont-element-contaccess">
+                    <div class="col-12 p-0">
+                        <img data-sly-test="${item.imageAltText}"
+                             class="image-grid-container__imagecont-element-img"
+                             src="${item.fileReference}"
+                             alt="${item.imageAltText}"/>
+                        <img data-sly-test="${!item.imageAltText}"
+                             class="image-grid-container__imagecont-element-img"
+                             src="${item.fileReference}"
+                             alt=""/>
+                    </div>
+                    <div class="col-12 px-0 pb-0 image-grid-container__imagecont-element-text">
+                        <p data-sly-test="${item.linkNameText}" class="image-grid-img-title">${item.linkNameText}</p>
+                        <p data-sly-test="${item.linkBodyText}">${item.linkBodyText}</p>
+                        <a data-sly-test="${item.linkUrl}"
+                           target="${item.linkTarget}"
+                           aria-label="${item.imageAltText}"
+                           data-track-id="${item.dataTrackID}"
+                           data-track-click="${item.dataClickID}"
+                           href="${item.linkUrl @ context='uri'}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

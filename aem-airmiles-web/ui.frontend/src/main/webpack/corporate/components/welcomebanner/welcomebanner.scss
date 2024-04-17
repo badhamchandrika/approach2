@@ -1,0 +1,243 @@
+$banner-font-family: Montserrat, sans-serif;
+.welcomebanner{
+  background: radial-gradient(591.44% 86.80% at 3.85% 100.00%, #1F68DA 0%, #2A75DB 100%);
+}
+.cmp-welcome-banner-wrapper {
+  background: radial-gradient(591.44% 86.80% at 3.85% 100.00%, #1F68DA 0%, #2A75DB 100%);
+  max-width: 1140px;
+  margin: 0 auto;
+  .wish-text{
+    font-family: 'OpenSans';
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+  .wish-text-section{
+    .am-icon2{
+      font-size: 32px;
+      &:before{
+        margin: 0;
+      }
+    }
+  }
+  .collector-name {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+    color: #FFF;
+  }
+  .collector-type {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 4px 8px;
+    letter-spacing: 1.2px;
+    font-family: $banner-font-family;
+  }
+  .benefits-link .ctalink, .balance-preference-section .ctalink{
+    display: inline;
+    .cmp-link {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-family: 'OpenSans';
+      text-decoration: underline;
+      padding: 0;
+      .am-icon, .am-icon2 {
+        display: none;
+      }
+      &:hover{
+        text-decoration-thickness: 2px
+      }
+      &:focus{
+        outline: 2px solid #16a78a !important;
+        box-shadow: none;
+      }
+    }
+  }
+  .benefits-link .ctalink{
+    padding-left: 8px;
+  }
+  .miles-section{
+    .mile-tiles-section{
+      background: #fff;
+      padding: 16px 24px;
+      box-shadow: 0px 16px 40px rgba(40, 47, 64, 0.15);
+      border-radius: 16px;
+      .cash-icon-img{
+        font-size: 24px;
+        color: #023438;
+      }
+      .dream-icon-img{
+        font-size: 24px;
+        color: #592340;
+      }
+      .miles-text{
+        font-size: 14px;
+        font-family: Montserrat;
+        font-weight: 400;
+        line-height: 21px;
+        padding-top: 6px;
+        position: absolute;
+        padding-left: 5px;
+      }
+      .cash-miles{
+        color: #023438;
+      }
+      .dream-miles{
+        color: #592340;
+      }
+      .mile-points{
+        font-size: 24px;
+        font-weight: 700;
+        font-family: Montserrat;
+      }
+      .miles-info{
+        padding-bottom: 12px;
+        padding-top: 8px;
+        .miles-info-text{
+          font-family: OpenSans;
+          font-size: 12px;
+          font-weight: 400;
+          color: #1C2D3F;
+        }
+      }
+      .miles-line-bar{
+        display: flex;
+        gap: 5px;
+      }
+      hr.cash-bar {
+        border: 4px solid #023438;
+        border-radius: 10px;
+        opacity: 1;
+        margin: 0;
+      }
+      hr.dream-bar {
+        border: 4px solid #592340;
+        border-radius: 10px;
+        opacity: 1;
+        margin: 0;
+      }
+      .miles-padding{
+        padding-left: 20px;
+      }
+      .miles-percentage-text{
+        font-family: 'OpenSans';
+        font-weight: 400;
+        font-style: italic;
+        font-size: 12px;
+        line-height: 16px;
+        color: #1C2D3F;
+        padding-top: 8px;
+      }
+      .cash-miles-percentage,.dream-miles-percentage{
+        font-weight: 700;
+      }
+      .dream-miles-percentage{
+        padding-right: 3px;
+      }
+      .balance-pref-update{
+        margin-top: -4px;
+        .cmp-link{
+          color: #1F68DA;
+          font-family: 'OpenSans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          text-decoration: underline;
+          padding-right: 5px;
+        }
+        .cmp-link:hover{
+          color: #1C2D3F;
+          text-decoration: none;
+        }
+        .am-icon{
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  @media (min-width: breakpoint('md')) {
+    padding: 0 24px;
+    .welcome-text-section{
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      place-items: flex-start;
+      padding: 0;
+    }
+    .miles-section{
+      padding: 16px 0;
+      margin-left: auto;
+      .mile-points {
+        font-size: 24px !important;
+      }
+    }
+  }
+
+  @media (min-width: breakpoint('lg')) {
+    padding: 0;
+    .miles-section{
+      width: 356px;
+    }
+  }
+
+  @media screen and (orientation:portrait) and (min-width: 601px) and (max-width: 950px) {
+    padding: 0 24px 0 24px;
+    .collector-name{
+      padding-left: 36px;
+      display: block;
+    }
+    .collector-details{
+      padding-left: 36px;
+      padding-top: 8px;
+    }
+    .miles-section{
+      width: auto;
+    }
+  }
+
+  @media screen and (orientation:landscape) and (min-width: 951px) and (max-width: 1236px) {
+      padding: 0 48px;
+      .miles-section{
+        width: auto
+      }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 16px;
+    .wish-text{
+      font-size: 20px;
+    }
+    .collector-details{
+      padding-left: 36px;
+    }
+    .collector-name {
+      font-size: 20px;
+    }
+    .benefits-link{
+      padding-top: 20px;
+    }
+    .welcome-text-section{
+      padding: 0;
+    }
+    .miles-section{
+      padding: 16px 0 0 0;
+      .mile-tiles-section {
+        padding: 16px;
+      }
+      .mile-points {
+        font-size: 24px !important;
+      }
+    }
+  }
+}

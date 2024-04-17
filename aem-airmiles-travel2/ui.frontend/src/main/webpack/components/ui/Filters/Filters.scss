@@ -1,0 +1,90 @@
+@import "../../../site/variables";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+.filters {
+  $container: &;
+
+  &__title {
+    color: amSteel(9);
+    font-family: amFontFamily(10);
+    font-size: amFontSize(6);
+  }
+
+  &__button {
+    @include cta-link(lowercase);
+
+    border: 0;
+    font-family: amFontFamily(10);
+    font-size: amFontSize(5);
+  }
+
+  &__modal {
+    &-header {
+      padding: amSizeUnit(2);
+      position: relative;
+    }
+    &-title {
+      color: amGrey(1);
+      font-family: MontserratSemiBold;
+      font-size: amFontSize(5);
+      line-height: 1.25;
+      padding: 0 amSizeUnit(4);
+      text-align: center;
+    }
+    &-close {
+      background-color: transparent;
+      border: 0;
+      color: amTierBlue(3);
+      line-height: 1;
+      padding: 0;
+      position: absolute;
+      right: amSizeUnit(4);
+      top: amSizeUnit(2);
+    }
+    &-content {
+      max-height: calc(100% - 52px - 141px);
+      overflow-y: auto;
+      padding: amSizeUnit(1) amSizeUnit(2);
+    }
+    &-footer {
+      background-color: $--am-base-colour-white-100;
+      bottom: 0;
+      box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      padding: amSizeUnit(2);
+      position: absolute;
+      width: 100%;
+
+      .cta-button {
+        button {
+          justify-content: center;
+          width: 100%;
+
+          &.framebutton {
+            border-width: 1px;
+          }
+        }
+        & ~ .cta-button {
+          margin-top: amSizeUnit(1);
+        }
+      }
+    }
+  }
+
+  &__modal .collapsible__collapse-content,
+  .collapsible__collapse-content {
+    $max-visible: 5;
+
+    max-height: calc(amSizeUnit(6) * $max-visible);
+    overflow-y: auto;
+
+    @include media-breakpoint-up("lg") {
+      max-height: calc(amSizeUnit(5) * 1.1 * $max-visible);
+    }
+  }
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}

@@ -1,0 +1,29 @@
+{
+  "testAppsList": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu May 05 2022 09:53:17 GMT-0400",
+    "sling:resourceType": "aem-airmiles-web/components/footer/getapps",
+    "appslist": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "alt": "Android App on Google Play",
+        "link": "https://itunes.apple.com/ca/app/air-miles-reward-program/id388705262?mt=8",
+        "image": "/content/dam/aem-airmiles-web/social-media-appstore.png"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "alt": "iOS App on Apple Store",
+        "link": "https://play.google.com/store/apps/details?id=com.airmiles",
+        "image": "/content/dam/aem-airmiles-web/social-media-playstore.png"
+      },
+      "item2": {
+        "jcr:primaryType": "nt:unstructured",
+        "alt": "Galaxy App on Galaxy Store",
+        "link": "https://apps.samsung.com/appquery/appDetail.as?appId=com.airmiles",
+        "image": "/content/dam/aem-airmiles-web/GalaxyStore_English_alt.png"
+      }
+    }
+  }
+}

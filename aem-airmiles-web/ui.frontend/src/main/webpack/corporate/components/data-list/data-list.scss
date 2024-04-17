@@ -1,0 +1,12 @@
+.cmp-data-list {
+    margin: 24px 0;
+    &__item {
+        font-family: 'Montserrat';
+        color: #384A5B;
+        line-height: 150%;
+        font-weight: 700;
+        span {
+            font-weight: 400;
+        }
+    }
+}

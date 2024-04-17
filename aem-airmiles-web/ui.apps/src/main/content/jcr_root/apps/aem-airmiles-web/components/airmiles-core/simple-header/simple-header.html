@@ -1,0 +1,13 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.SimpleHeaderModel">
+    <div class="airmiles_web_simple_header">
+        <div class="bsp-container-fluid bsp-container-lg">
+            <header class="airmiles_web_simple_header__container">
+                    <a class="airmiles_web_simple_header__logo" href="${model.logoUrl}" data-track-id="${model.dataTrackID}" data-track-click="${model.dataClickID}" data-track-type="internal">
+                        <img src="${model.airmilesLogoPath}" alt="${model.airmilesLogoAltText}" class="logo">
+                    </a>
+                    <div class="airmiles_web_simple_header__page__title" data-sly-test="${pageProperties.showHeaderTitle}">${pageProperties.headerTitle}</div>
+                    <a href="${model.cancelLinkUrl}" class="airmiles_web_simple_header__cancel__link" data-track-id="${model.cancelDataTrackID}" data-track-click="${model.cancelDataClickID}" data-track-type="internal">${model.cancelText}</a>
+            </header>
+        </div>
+    </div>
+</sly>

@@ -1,0 +1,31 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright © 2024 AIR MILES Loyalty Inc.
+  ~
+  ~ HTL file used to include Genesys Chat Widget Script.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<!--/* Genesys chat widget start. */-->
+<script data-sly-use.genesys="com.aem.airmiles.web.core.models.GenesysChatModel"
+        data-sly-test="${genesys.enabled && wcmmode.disabled}"
+        data-sly-attribute.class="${genesys.consentCategory}"
+        data-sly-attribute.type="${genesys.scriptType @ context='scriptComment'}"
+        charset="${genesys.charset @ context='scriptComment'}"
+        id="genesys-chat-widget"
+        data-environment="${runMode.environment @ context='scriptComment'}">
+    (function (g, e, n, es, ys) {
+        g['_genesysJs'] = e;
+        g[e] = g[e] || function () {
+            (g[e].q = g[e].q || []).push(arguments)
+        };
+        g[e].t = 1 * new Date();
+        g[e].c = es;
+        ys = document.createElement('script');
+        ys.async = 1;
+        ys.src = n;
+        ys.charset = '${genesys.charset @ context="scriptComment"}';
+        document.head.appendChild(ys);
+    })(window, 'Genesys', '${genesys.scriptSrc @ context="scriptComment"}', {
+        environment: '${genesys.environmentId @ context="scriptComment"}',
+        deploymentId: '${genesys.deploymentId @ context="scriptComment"}'
+    });
+</script>
+<!--/* Genesys chat widget end. */-->

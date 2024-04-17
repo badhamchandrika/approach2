@@ -1,0 +1,16 @@
+.cmp-text h1{
+        font-size: 45px;
+        font-weight: 700;
+        margin: 0 0 2.5rem 0;
+    }
+.cmp-text h2{
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+.cmp-text p{
+            font-size: 16px;
+        }
+b{
+   font-weight: bold;
+        }

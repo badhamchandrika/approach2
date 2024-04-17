@@ -1,0 +1,27 @@
+
+<div data-sly-use.model="ca.airmiles.travel.core.models.DealsList"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     class="cmp-deals-list"
+     data-resource-path="${resource.path}"
+     data-sly-test.rootPage="${model.rootPage}"> deals list
+</div>
+<div data-component="dealslist"
+     data-prop-title="${properties.title}"
+     data-prop-json_cards_url="${currentNode.path}.model.json"
+     data-prop-json_filters_url="${currentNode.path}.filters.model.json"
+     data-prop-sort_label="${'Sort by:' @ i18n}"
+     data-prop-sort_recent="${'Most recent' @ i18n}"
+     data-prop-sort_expire="${'About to expire' @ i18n}"
+     data-prop-filter_modal_title="${'Filters' @ i18n}"
+     data-prop-filter_title="${'Filters' @ i18n}"
+     data-prop-filter_button_mobile="${'Filters' @ i18n}"
+     data-prop-filter_clear="${'Clear filters' @ i18n}"
+     data-prop-filter_show_all="${'Show all results' @ i18n}"
+     data-prop-results_label="${'results' @ i18n}"
+     data-prop-sort_modal_button="${'Sort deals' @ i18n}"
+     data-prop-has-small-widget="true"
+     data-prop-show-packages-widget="${properties.showPackagesWidget}"
+     data-prop-pagination_background_color="${properties.paginationBackgroundColor}"
+>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty = !rootPage, classAppend='cmp-deals-list', emptyTextAppend='Please configure root page for deals'}"></sly>

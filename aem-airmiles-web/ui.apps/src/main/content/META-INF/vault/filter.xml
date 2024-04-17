@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/aem-airmiles-web/acl"/>
+    <filter root="/apps/aem-airmiles-web/clientlibs"/>
+    <filter root="/apps/aem-airmiles-web/components"/>
+    <filter root="/apps/aem-airmiles-web/i18n"/>
+    <filter root="/apps/msm/aem-airmiles-web_blueprint" mode="merge"/>
+</workspaceFilter>

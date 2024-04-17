@@ -1,0 +1,47 @@
+@import "../../../site/variables";
+@import "../../../site/mixins";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+.button-dropdown {
+  border-bottom: none;
+  border-radius: amSizeMicro(4);
+  cursor: pointer;
+  display: flex;
+  font-family: amFontFamily(2);
+  width: 100%;
+
+  &:focus-within {
+    @include focus-outline();
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: amTierBlue(3);
+    display: flex;
+    font-size: amFontSize(4);
+    justify-content: space-between;
+    padding: 0 0 amSizeMicro(5);
+    width: 100%;
+
+    @include media-breakpoint-up("md") {
+      font-size: amFontSize(5);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &-text {
+      color: amSteel(7);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-icon {
+      align-self: center;
+      font-size: amFontSize(3);
+      margin-left: amSizeUnit(1);
+    }
+  }
+}

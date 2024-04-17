@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cq:dialog xmlns:cq="http://www.day.com/jcr/cq/1.0"
+           xmlns:jcr="http://www.jcp.org/jcr/1.0"
+           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+           xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+           xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+           jcr:primaryType="nt:unstructured" jcr:title="Properties"
+           sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column jcr:primaryType="nt:unstructured" jcr:title="Content Banner Properties"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <headertext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Header Text"
+                        name="./headerText"
+                        required="{Boolean}true"/>
+                    <bodytext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Body Text"
+                        name="./bodyText"
+                        required="{Boolean}true"/>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldLabel="Image src"
+                        name="./imageSrc"
+                        required="{Boolean}true"/>
+                    <imagealt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Image alt"
+                        name="./imageAlt"
+                        required="{Boolean}true"/>
+                    <analytics
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options"/>
+                    <cta jcr:primaryType="nt:unstructured"
+                         jcr:title="CTA Details"
+                         sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <accordion
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                jcr:title="Desktop CTA"
+                                granite:class="alert-accordion"
+                                margin="{Boolean}false"
+                                maximized="{Boolean}true"
+                                multiple="{Boolean}true"
+                                variant="quiet">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <desktop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        emptyText="Desktop"
+                                        jcr:title="Desktop">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ctalink jcr:primaryType="nt:unstructured"
+                                                 sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                 fieldLabel="CTA Link"
+                                                 name="./linkUrl"
+                                                 required="{Boolean}true"/>
+                                            <ctatext jcr:primaryType="nt:unstructured"
+                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                 emptyText="Label"
+                                                 fieldLabel="CTA Text"
+                                                 name="./linkText"
+                                                 required="{Boolean}true"/>
+                                            <target jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="Target"
+                                                fieldLabel="Target"
+                                                name="./linkTarget">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sameTab
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Same Tab"
+                                                        value="_self"/>
+                                                    <newTab
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="New Tab"
+                                                        value="_blank"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </desktop>
+                                    <mobile
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        emptyText="Mobile"
+                                        jcr:title="Mobile">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ctalink jcr:primaryType="nt:unstructured"
+                                                 sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                 fieldLabel="CTA Link"
+                                                 name="./mobileLinkUrl"
+                                                 required="{Boolean}true"/>
+                                            <ctatext jcr:primaryType="nt:unstructured"
+                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                 emptyText="Label"
+                                                 fieldLabel="CTA Text"
+                                                 name="./mobileLinkText"
+                                                 required="{Boolean}true"/>
+                                            <target jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="Target"
+                                                fieldLabel="Target"
+                                                name="./mobileLinkTarget">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sameTab
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Same Tab"
+                                                        value="_self"/>
+                                                    <newTab
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="New Tab"
+                                                        value="_blank"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </mobile>
+                                </items>
+                            </accordion>
+                        </items>
+                    </cta>
+                </items>
+            </column>
+        </items>
+    </content>
+</cq:dialog>

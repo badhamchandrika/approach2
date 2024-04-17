@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Offers Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    mode="edit">
+    <content
+        granite:class="cq-dialog-content-page"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                granite:class="cq-siteadmin-admin-properties-tabs"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <displayofferslist
+                                        cq:showOnCreate="{Boolean}true"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Select the checkbox to display offers list with filters"
+                                        name="./displayOffersList"
+                                        text="Display Offers List"
+                                        value="true"/>
+                                    <menuHide
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./menuHide"
+                                        text="Hide the page tab menu"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <featuredOffersTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Featured Offers Title"
+                                        name="./featuredOffersTitle"/>
+                                    <details
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Offers">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./featuredOffersTabs">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <offerslabel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Offers Label"
+                                                    name="./tabName"/>
+                                                <offersname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Offers API Key "
+                                                    name="./tabKey"/>
+                                                <tabStatus
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Authenticated for"
+                                                    name="./tabStatus">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <authed
+                                                            jcr:primaryType="nt:unstructured"
+                                                            selected="{Boolean}true"
+                                                            text="Authenticated"
+                                                            value="authed"/>
+                                                        <unauthed
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Not Authenticated"
+                                                            value="unauthed"/>
+                                                        <both
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Both"
+                                                            value="both"/>
+                                                    </items>
+                                                </tabStatus>
+                                                <activityType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Filter Type"
+                                                    name="./activityType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <all-offers
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="All Offers"
+                                                            value="all-offers"/>
+                                                        <mini-feed
+                                                            jcr:primaryType="nt:unstructured"
+                                                            selected="true"
+                                                            text="Mini Feed"
+                                                            value="mini-feed"/>
+                                                        <saved-offers
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Saved Offers"
+                                                            value="saved"/>
+                                                        <clo-offers
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="CLO Offers"
+                                                            value="clo-offers"/>
+                                                    </items>
+                                                </activityType>
+                                                <analytics
+                                                    granite:class="cq-divider"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                    path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options"/>
+                                                <pageViewAnalytics
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Page View Analytics Attribute"
+                                                    name="./pageViewAnalytics"/>
+                                                <filterHide
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./filterHide"
+                                                    text="Hide the filter panel"
+                                                    uncheckedValue="false"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </field>
+                                    </details>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+                    <sortfilter
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Sort Filter Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        emptyText="Sort and Filter">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <details
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                margin="{Boolean}false"
+                                                maximized="{Boolean}true"
+                                                multiple="{Boolean}true"
+                                                variant="quiet">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sortfilterinfo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Sort Details"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <sortFilterText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Sort and Filter Title"
+                                                                name="./sortFilterText"/>
+                                                            <sortByText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Text for Sort by"
+                                                                name="./sortByText"/>
+                                                            <filterByText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Text for Filter by"
+                                                                name="./filterByText"/>
+                                                            <filterTypeTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Offer Types Title"
+                                                                name="./filterTypesTitle"/>
+                                                            <filterPartnersTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Partners title"
+                                                                name="./filterPartnersTitle"/>
+                                                            <filterCategoryTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Category title"
+                                                                name="./filterCategoryTitle"/>
+                                                            <filterSubCategoryTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Sub Category title"
+                                                                name="./filterSubCategoryTitle"/>
+                                                            <regionText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Region Text"
+                                                                name="./regionText"/>
+                                                            <resultShowingText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Result 'Showing' Text"
+                                                                name="./resultShowingText"/>
+                                                            <resultOffersText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Numbers of 'Offers' Text"
+                                                                name="./resultOffersText"/>
+                                                            <filterSortText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Text for Filter/Sort (mobile and tablet)"
+                                                                name="./filterSortText"/>
+                                                            <pagination
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                fieldLabel="Pagination"
+                                                                name="./pagination"/>
+                                                            <trendingLimit
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                                fieldLabel="Limited entries of Trending/Offers For You"
+                                                                name="./trendingLimit"/>
+                                                            <clearAllText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Text for Clear All"
+                                                                name="./clearAllText"/>
+                                                            <collapseSortText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Collapse Sort (desktop)"
+                                                                name="./collapseSortText"/>
+                                                            <expandSortText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Expand Sort (desktop)"
+                                                                name="./expandSortText"/>
+                                                        </items>
+                                                    </sortfilterinfo>
+                                                    <filterinfo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Filter Details"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <backText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Text for Back (when filter panel open)"
+                                                                name="./backText"/>
+                                                            <backTextDataTrackID
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Back Text Tracking ID"
+                                                                name="./backTextDataTrackID"/>
+                                                            <backTextDataClickID
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Back Text Click ID"
+                                                                name="./backTextDataClickID"/>
+                                                            <backTextDataTrackType
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                emptyText="Back Text Track Type"
+                                                                fieldLabel="Back Text TrackType"
+                                                                name="./backTextDataTrackType">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <internal
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        selected="{Boolean}true"
+                                                                        text="Internal"
+                                                                        value="internal"/>
+                                                                    <button
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Button"
+                                                                        value="button"/>
+                                                                    <exit
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Exit"
+                                                                        value="exit"/>
+                                                                    <social
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Social"
+                                                                        value="social"/>
+                                                                    <banner
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Banner"
+                                                                        value="banner"/>
+                                                                </items>
+                                                            </backTextDataTrackType>
+                                                            <closeIconDataClickID
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Close Icon Click ID"
+                                                                name="./closeIconDataClickID"/>
+                                                            <closeIconDataTrackID
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Close Icon Track ID"
+                                                                name="./closeIconDataTrackID"/>
+                                                            <closeIconDataTrackType
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                emptyText="Close Icon Track Type"
+                                                                fieldLabel="Close IconTrack Type"
+                                                                name="./closeIconDataTrackType">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <internal
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        selected="{Boolean}true"
+                                                                        text="Internal"
+                                                                        value="internal"/>
+                                                                    <button
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Button"
+                                                                        value="button"/>
+                                                                    <exit
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Exit"
+                                                                        value="exit"/>
+                                                                    <social
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Social"
+                                                                        value="social"/>
+                                                                    <banner
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Banner"
+                                                                        value="banner"/>
+                                                                </items>
+                                                            </closeIconDataTrackType>
+                                                            <offersCardTrackID
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Offers Card Click ID"
+                                                                name="./offersCardTrackID"/>
+                                                            <offersCardClickID
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Offers Card Track ID"
+                                                                name="./offersCardClickID"/>
+                                                            <offersCardTrackType
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                emptyText="Offers Card Track Type"
+                                                                fieldLabel="Offers Card Track Type"
+                                                                name="./offersCardTrackType">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <internal
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        selected="{Boolean}true"
+                                                                        text="Internal"
+                                                                        value="internal"/>
+                                                                    <button
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Button"
+                                                                        value="button"/>
+                                                                    <exit
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Exit"
+                                                                        value="exit"/>
+                                                                    <social
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Social"
+                                                                        value="social"/>
+                                                                    <banner
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Banner"
+                                                                        value="banner"/>
+                                                                </items>
+                                                            </offersCardTrackType>
+                                                            <filterctas
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Details"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Filter Result- CTA buttons">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./filterButtons">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <ctas
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/foundation/include"
+                                                                            path="aem-airmiles-web/components/cta-button/cq:dialog/content/items/linkdetails"/>
+                                                                    </items>
+                                                                </field>
+                                                            </filterctas>
+                                                        </items>
+                                                    </filterinfo>
+                                                    <resultdetails
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Error Messages"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <noResultTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Title when no result"
+                                                                name="./noResultTitle"/>
+                                                            <noResultDescription
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description when no result"
+                                                                name="./noResultDescription"/>
+                                                            <noResultWhenApiFails
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description When Api Fails"
+                                                                name="./noResultWhenApiFails"/>
+                                                            <messageAbort
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description When Request is Aborted"
+                                                                name="./messageAbort"/>
+                                                            <messageNoOffersForYou
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description When No Personalized Offers"
+                                                                name="./messageNoOffersForYou"/>
+                                                            <messageNoSavedOffers
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Description When No Saved Offers"
+                                                                name="./messageNoSavedOffers"/>
+                                                        </items>
+                                                    </resultdetails>
+                                                </items>
+                                            </details>
+                                        </items>
+                                    </field>
+                                </items>
+                            </column>
+                        </items>
+                    </sortfilter>
+                    <offersmodeldetails
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Offer Model Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        emptyText="Offer Model Detaiils">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <backToOfferText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Text for Back to Offers"
+                                                name="./backToOfferText"/>
+                                            <backToOffersDataTrackID
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Back to Offers Tracking ID"
+                                                name="./backToOffersDataTrackID"/>
+                                            <backToOffersDataClickID
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Back to Offers Click ID"
+                                                name="./backToOffersDataClickID"/>
+                                            <backToOffersDataTrackType
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                emptyText="Back to Offers Track Type"
+                                                fieldLabel="Back to Offers TrackType"
+                                                name="./backToOffersDataTrackType">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <internal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="Internal"
+                                                        value="internal"/>
+                                                    <button
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Button"
+                                                        value="button"/>
+                                                    <exit
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Exit"
+                                                        value="exit"/>
+                                                    <social
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Social"
+                                                        value="social"/>
+                                                    <banner
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Banner"
+                                                        value="banner"/>
+                                                </items>
+                                            </backToOffersDataTrackType>
+                                            <fullDetailText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="'...see full detail' link text"
+                                                name="./fullDetailText"/>
+                                            <offerStartText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Offers Start text"
+                                                name="./offerStartText"/>
+                                            <offerEndsText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Offers End text"
+                                                name="./offerEndsText"/>
+                                            <seeAllPartnersTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="'Link text for 'see all partners' in offer detail"
+                                                name="./seeAllPartnersTitle"/>
+                                            <miniFeedTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="'Partners you may like' title in offer detail"
+                                                name="./miniFeedTitle"/>
+                                            <termsTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Terms and Conditions Text"
+                                                name="./termsTitle"/>
+                                            <separation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                level="{Long}4"
+                                                text="___ CLO - Card Linked CTA ________________________________________________"/>
+                                            <ctaDetailCLO
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Card Linked Offer - CTA"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <cloDetailCTA
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/include"
+                                                        path="aem-airmiles-web/components/cta-button/cq:dialog/content/items/linkdetails/items/linkType"/>
+                                                    <ctaDetailCLOText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        emptyText="Label"
+                                                        fieldLabel="Link Label"
+                                                        name="./ctaDetailCLOText"
+                                                        required="{Boolean}true"/>
+                                                    <ctaDetailCLOUrl
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                        fieldLabel="URL"
+                                                        name="./ctaDetailCLOUrl"
+                                                        required="{Boolean}true"/>
+                                                    <ctaDetailTarget
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        name="./ctaDetailTarget"
+                                                        text="Open in new window"
+                                                        uncheckedValue="false"
+                                                        value="{Boolean}true"/>
+                                                    <ctaDetailTrackID
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Click ID"
+                                                        name="./ctaDetailTrackID"/>
+                                                    <ctaDetailClickID
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Track ID"
+                                                        name="./ctaDetailClickID"/>
+                                                    <ctaDetailTrackType
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        emptyText="Select Track Type"
+                                                        fieldLabel="Analytics TrackType"
+                                                        name="./ctaDetailTrackType">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <internal
+                                                                jcr:primaryType="nt:unstructured"
+                                                                selected="{Boolean}true"
+                                                                text="Internal"
+                                                                value="internal"/>
+                                                            <button
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Button"
+                                                                value="button"/>
+                                                            <exit
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Exit"
+                                                                value="exit"/>
+                                                            <social
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Social"
+                                                                value="social"/>
+                                                            <banner
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Banner"
+                                                                value="banner"/>
+                                                        </items>
+                                                    </ctaDetailTrackType>
+                                                </items>
+                                            </ctaDetailCLO>
+                                            <separation2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                level="{Long}4"
+                                                text="___ CLO - Opt-In blue button _____________________________________________"/>
+                                            <optInDetailCLO
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="CLO - Opt-In - CTA"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <optInDetailTarget
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        name="./optInDetailTarget"
+                                                        text="Open in new window"
+                                                        uncheckedValue="false"
+                                                        value="{Boolean}true"/>
+                                                    <optInDetailTrackID
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Click ID"
+                                                        name="./optInDetailTrackID"/>
+                                                    <optInDetailClickID
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Track ID"
+                                                        name="./optInDetailClickID"/>
+                                                    <optInDetailTrackType
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                        emptyText="Select Track Type"
+                                                        fieldLabel="Analytics TrackType"
+                                                        name="./optInDetailTrackType">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <internal
+                                                                jcr:primaryType="nt:unstructured"
+                                                                selected="{Boolean}true"
+                                                                text="Internal"
+                                                                value="internal"/>
+                                                            <button
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Button"
+                                                                value="button"/>
+                                                            <exit
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Exit"
+                                                                value="exit"/>
+                                                            <social
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Social"
+                                                                value="social"/>
+                                                            <banner
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Banner"
+                                                                value="banner"/>
+                                                        </items>
+                                                    </optInDetailTrackType>
+                                                </items>
+                                            </optInDetailCLO>
+                                        </items>
+                                    </field>
+                                </items>
+                            </column>
+                        </items>
+                    </offersmodeldetails>
+                    <offerscommonlist
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Offers Commons List"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        emptyText="Offers Common List">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <details
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                margin="{Boolean}false"
+                                                maximized="{Boolean}true"
+                                                multiple="{Boolean}true"
+                                                variant="quiet">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sortbyoptions
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="SortBy Options"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <details
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="SortBy Options List">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./sortByOptionsList">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <sortbbylabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Sort By Label"
+                                                                            name="./title"/>
+                                                                        <sortbbyvalue
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Value"
+                                                                            name="./value"/>
+                                                                    </items>
+                                                                </field>
+                                                            </details>
+                                                        </items>
+                                                    </sortbyoptions>
+                                                    <offertypes
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Offer Types"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <details
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Offer Types List">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./offersTypeList">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <offerstypelabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Offers Type Label"
+                                                                            name="./title"/>
+                                                                        <offerstypevalue
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Value"
+                                                                            name="./value"/>
+                                                                    </items>
+                                                                </field>
+                                                            </details>
+                                                        </items>
+                                                    </offertypes>
+                                                    <mechanism
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Mechanisms"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        margin="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <details
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldLabel="Mechanism List">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./mechanismList">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <mechanismvalue
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Value"
+                                                                            name="./value"/>
+                                                                        <mechanismlabel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Mechanism Label"
+                                                                            name="./title"/>
+                                                                    </items>
+                                                                </field>
+                                                            </details>
+                                                        </items>
+                                                    </mechanism>
+                                                </items>
+                                            </details>
+                                        </items>
+                                    </field>
+                                </items>
+                            </column>
+                        </items>
+                    </offerscommonlist>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

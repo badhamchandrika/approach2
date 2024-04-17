@@ -1,0 +1,54 @@
+<div data-sly-use.tmp="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${resource.hasChildren}"
+     data-sly-use.model="com.aem.airmiles.web.core.models.HighlightCardsModel" class="bsp-container narrow">
+    <h2 class="card_container_title h2-large">${model.title}</h2>
+    <div class="row highlightcards__wrapper">
+        <div class="col-lg-3 col-md-6 highlightcards__container" data-sly-repeat.card="${model.cardsMap}">
+            <div class="highlightcard">
+                <div class="${card.isIcon?'d-flex align-items-center':'d-inline-flex w-100'}">
+                    <span class="${card.isIcon?' card-icon':'card-image'}" role="img" title="${card.imageAltText}"
+                          style="background-image: url(${card.cardImage @ context='uri'});"></span>
+                </div>
+                <div class="${card.isIcon?' highlightcard__content__icon':'highlightcard__content__image'}">
+                    <div class="highlightcard__text">
+                        <h3 class="highlightcard__title">${card.title}</h3>
+                        <div class="highlightcard__description">${card.description @ context='html'}</div>
+                    </div>
+                    <div class="highlightcard__cta d-lg-none d-sm-none d-none d-md-block"
+                         data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"
+                         data-sly-test="${card.linkText}">
+                        <sly data-sly-call="${ctatemplate.ctalink @
+                            type='arrowlink',
+                            href=card.linkUrl,
+                            text=card.linkText,
+                            target=card.linkTarget,
+                            hexText=card.hexTextColor,
+                            hexBtn=card.hexBtnColor,
+                            dataTrackID=card.dataTrackID,
+                            dataClickID=card.dataClickID,
+                            dataTrackType=card.dataTrackType,
+                            classes=card.linkColor}">
+                        </sly>
+                    </div>
+                    <div class="highlightcard__cta d-lg-block d-sm-block d-md-none"
+                         data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"
+                         data-sly-test="${card.linkText}">
+                        <sly data-sly-call="${ctatemplate.ctalink @
+                            type=card.linkType,
+                            href=card.linkUrl,
+                            text=card.linkText,
+                            target=card.linkTarget,
+                            hexText=card.hexTextColor,
+                            hexBtn=card.hexBtnColor,
+                            dataTrackID=card.dataTrackID,
+                            dataClickID=card.dataClickID,
+                            dataTrackType=card.dataTrackType,
+                            classes=card.linkColor}">
+                        </sly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${tmp.placeholder @ isEmpty=!hasContent, classAppend='cmp-highlight-cards__placeholder'}"></sly>

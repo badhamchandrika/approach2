@@ -1,0 +1,884 @@
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
+@use "sass:string";
+
+$font-regular:          'ArchivoRegular', Calibri, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size:             1rem;
+$font-height:           1.5;
+
+
+// Travel 2.0 Design Tokens
+
+// Brand Update start
+
+// Functional Colours:
+
+// Steel
+$--am-base-colour-steel-100: #edf1f4;
+$--am-base-colour-steel-200: #c7d2dc;
+$--am-base-colour-steel-300: #a6b1bb;
+$--am-base-colour-steel-400: #8a99a7;
+$--am-base-colour-steel-500: #5a6b7b;
+$--am-base-colour-steel-600: #485b6c;
+$--am-base-colour-steel-700: #384a5b;
+$--am-base-colour-steel-800: #2c3e50;
+$--am-base-colour-steel-900: #1c2d3f;
+
+$am-steel: (
+    $--am-base-colour-steel-100,
+    $--am-base-colour-steel-200,
+    $--am-base-colour-steel-300,
+    $--am-base-colour-steel-400,
+    $--am-base-colour-steel-500,
+    $--am-base-colour-steel-600,
+    $--am-base-colour-steel-700,
+    $--am-base-colour-steel-800,
+    $--am-base-colour-steel-900,
+);
+
+// Sapphire
+$--am-base-colour-sapphire-100: #f0f5f8;
+$--am-base-colour-sapphire-200: #daeaff;
+$--am-base-colour-sapphire-300: #c3ddff;
+$--am-base-colour-sapphire-400: #9cc5fc;
+$--am-base-colour-sapphire-500: #6fa6f1;
+$--am-base-colour-sapphire-600: #5b97ea;
+$--am-base-colour-sapphire-700: #4185e2;
+$--am-base-colour-sapphire-800: #2a75db;
+$--am-base-colour-sapphire-900: #1f68da;
+
+$am-sapphire: (
+    $--am-base-colour-sapphire-100,
+    $--am-base-colour-sapphire-200,
+    $--am-base-colour-sapphire-300,
+    $--am-base-colour-sapphire-400,
+    $--am-base-colour-sapphire-500,
+    $--am-base-colour-sapphire-600,
+    $--am-base-colour-sapphire-700,
+    $--am-base-colour-sapphire-800,
+    $--am-base-colour-sapphire-900,
+);
+
+// Emerald
+$--am-base-colour-emerald-100: #EAFEFA;
+$--am-base-colour-emerald-200: #D9FFF7;
+$--am-base-colour-emerald-300: #B8FAED;
+$--am-base-colour-emerald-400: #98F1E0;
+$--am-base-colour-emerald-500: #68E9D0;
+$--am-base-colour-emerald-600: #4FE1C5;
+$--am-base-colour-emerald-700: #3BD6B8;
+$--am-base-colour-emerald-800: #24C9A9;
+$--am-base-colour-emerald-900: #16A78A;
+
+$am-emerald: (
+    $--am-base-colour-emerald-100,
+    $--am-base-colour-emerald-200,
+    $--am-base-colour-emerald-300,
+    $--am-base-colour-emerald-400,
+    $--am-base-colour-emerald-500,
+    $--am-base-colour-emerald-600,
+    $--am-base-colour-emerald-700,
+    $--am-base-colour-emerald-800,
+    $--am-base-colour-emerald-900,
+);
+
+// Ruby
+$--am-base-colour-ruby-100: #FFE0E1;
+$--am-base-colour-ruby-200: #FFC5C7;
+$--am-base-colour-ruby-300: #FFA6A9;
+$--am-base-colour-ruby-400: #FF9498;
+$--am-base-colour-ruby-500: #FF8388;
+$--am-base-colour-ruby-600: #FC767C;
+$--am-base-colour-ruby-700: #FE6067;
+$--am-base-colour-ruby-800: #FD4D55;
+$--am-base-colour-ruby-900: #EA3A42;
+
+$am-ruby: (
+    $--am-base-colour-ruby-100,
+    $--am-base-colour-ruby-200,
+    $--am-base-colour-ruby-300,
+    $--am-base-colour-ruby-400,
+    $--am-base-colour-ruby-500,
+    $--am-base-colour-ruby-600,
+    $--am-base-colour-ruby-700,
+    $--am-base-colour-ruby-800,
+    $--am-base-colour-ruby-900,
+);
+
+// Citrine
+$--am-base-colour-citrine-100: #FFFAEC;
+$--am-base-colour-citrine-200: #FFF5D7;
+$--am-base-colour-citrine-300: #FFEFC1;
+$--am-base-colour-citrine-400: #FFE395;
+$--am-base-colour-citrine-500: #FFD969;
+$--am-base-colour-citrine-600: #FFD14D;
+$--am-base-colour-citrine-700: #FDC82F;
+$--am-base-colour-citrine-800: #FFBD00;
+$--am-base-colour-citrine-900: #E19708;
+
+$am-citrine: (
+    $--am-base-colour-citrine-100,
+    $--am-base-colour-citrine-200,
+    $--am-base-colour-citrine-300,
+    $--am-base-colour-citrine-400,
+    $--am-base-colour-citrine-500,
+    $--am-base-colour-citrine-600,
+    $--am-base-colour-citrine-700,
+    $--am-base-colour-citrine-800,
+    $--am-base-colour-citrine-900,
+);
+
+// Brand Solids colours:
+// Starky sky
+$--am-base-colour-stary-sky-100: #537CC3;
+$--am-base-colour-stary-sky-200: #3367BA;
+$--am-base-colour-stary-sky-300: #2C59A0;
+$--am-base-colour-stary-sky-400: #244985;
+$--am-base-colour-stary-sky-500: #1D3B6A;
+$--am-base-colour-stary-sky-600: #162C4F;
+$--am-base-colour-stary-sky-700: #19284C;
+$--am-base-colour-stary-sky-800: #0F1D35;
+$--am-base-colour-stary-sky-900: #080E1A;
+
+$am-stary-sky: (
+    $--am-base-colour-stary-sky-100,
+    $--am-base-colour-stary-sky-200,
+    $--am-base-colour-stary-sky-300,
+    $--am-base-colour-stary-sky-400,
+    $--am-base-colour-stary-sky-500,
+    $--am-base-colour-stary-sky-600,
+    $--am-base-colour-stary-sky-700,
+    $--am-base-colour-stary-sky-800,
+    $--am-base-colour-stary-sky-900,
+);
+
+// Char-truth
+$--am-base-colour-char-truth-100: #FDFFEF;
+$--am-base-colour-char-truth-200: #F9FEDE;
+$--am-base-colour-char-truth-300: #F3FDBD;
+$--am-base-colour-char-truth-400: #EEFC9D;
+$--am-base-colour-char-truth-500: #F2FFAD;
+$--am-base-colour-char-truth-600: #E9FC88;
+$--am-base-colour-char-truth-700: #D7FA29;
+$--am-base-colour-char-truth-800: #B5D612;
+$--am-base-colour-char-truth-900: #A5C214;
+
+$am-char-truth: (
+    $--am-base-colour-char-truth-100,
+    $--am-base-colour-char-truth-200,
+    $--am-base-colour-char-truth-300,
+    $--am-base-colour-char-truth-400,
+    $--am-base-colour-char-truth-500,
+    $--am-base-colour-char-truth-600,
+    $--am-base-colour-char-truth-700,
+    $--am-base-colour-char-truth-800,
+    $--am-base-colour-char-truth-900,
+);
+
+// Tier Solids colours:
+// Blue
+$--am-tier-colour-blue-700: #4185e2;
+$--am-tier-colour-blue-800: #2a75db;
+$--am-tier-colour-blue-900: #1f68da;
+
+$am-tier-blue: (
+    $--am-tier-colour-blue-700,
+    $--am-tier-colour-blue-800,
+    $--am-tier-colour-blue-900,
+);
+// Brand Update end
+
+// Colours
+$--am-base-colour-purple-100: #683e68;
+$--am-base-colour-purple-200: #874f87;
+$--am-base-colour-purple-300: #592340;
+$--am-base-colour-purple-400: #7c3159;
+$--am-base-colour-purple-500: #bf84ab;
+$--am-base-colour-purple-600: #c9a7c0;
+
+$am-purple: (
+    $--am-base-colour-purple-100,
+    $--am-base-colour-purple-200,
+    $--am-base-colour-purple-300,
+    $--am-base-colour-purple-400,
+    $--am-base-colour-purple-500,
+    $--am-base-colour-purple-600,
+);
+
+$--am-base-colour-blue-100: #00334D;
+$--am-base-colour-blue-200: #135582;
+$--am-base-colour-blue-300: #0A6FB3;
+$--am-base-colour-blue-400: #3A92E9;
+$--am-base-colour-blue-500: #68ABEE;
+$--am-base-colour-blue-600: #5ADCEA;
+$--am-base-colour-blue-700: #A9E6EF;
+
+$am-blue: (
+    $--am-base-colour-blue-100,
+    $--am-base-colour-blue-200,
+    $--am-base-colour-blue-300,
+    $--am-base-colour-blue-400,
+    $--am-base-colour-blue-500,
+    $--am-base-colour-blue-600,
+    $--am-base-colour-blue-700,
+);
+
+$--am-base-colour-green-100: #023438;
+$--am-base-colour-green-200: #0f5d58;
+$--am-base-colour-green-300: #0f5d58;
+$--am-base-colour-green-400: #387a74;
+$--am-base-colour-green-500: #3b8c32;
+$--am-base-colour-green-600: #44a648;
+
+$am-green: (
+    $--am-base-colour-green-100,
+    $--am-base-colour-green-200,
+    $--am-base-colour-green-300,
+    $--am-base-colour-green-400,
+    $--am-base-colour-green-500,
+    $--am-base-colour-green-600,
+);
+
+$--am-base-colour-yellow-100: #8a6a0a;
+$--am-base-colour-yellow-200: #94710a;
+$--am-base-colour-yellow-300: #fcb813;
+$--am-base-colour-yellow-400: #f1e400;
+$--am-base-colour-yellow-500: #fff424;
+
+$am-yellow: (
+    $--am-base-colour-yellow-100,
+    $--am-base-colour-yellow-200,
+    $--am-base-colour-yellow-300,
+    $--am-base-colour-yellow-400,
+    $--am-base-colour-yellow-500,
+);
+
+$--am-base-colour-red-100: #9e2519;
+$--am-base-colour-red-200: #cb3720;
+$--am-base-colour-red-300: #db141b;
+$--am-base-colour-red-400: #d73b23;
+$--am-base-colour-red-500: #f56762;
+$--am-base-colour-red-600: #fd807d;
+$--am-base-colour-red-700: #ffb0ad;
+$--am-base-colour-red-800: #feb3b1;
+$--am-base-colour-red-900: #ffe6e6;
+
+$am-red: (
+    $--am-base-colour-red-100,
+    $--am-base-colour-red-200,
+    $--am-base-colour-red-300,
+    $--am-base-colour-red-400,
+    $--am-base-colour-red-500,
+    $--am-base-colour-red-600,
+    $--am-base-colour-red-700,
+    $--am-base-colour-red-700,
+    $--am-base-colour-red-900,
+);
+
+$--am-base-colour-grey-100: #231f20;
+$--am-base-colour-grey-200: #3e3739;
+$--am-base-colour-grey-300: #5e5e5e;
+$--am-base-colour-grey-400: #7c7e80;
+$--am-base-colour-grey-500: #bbbdbf;
+$--am-base-colour-grey-600: #93a9bf;
+$--am-base-colour-grey-700: #f0f5f8;
+
+$am-grey: (
+    $--am-base-colour-grey-100,
+    $--am-base-colour-grey-200,
+    $--am-base-colour-grey-300,
+    $--am-base-colour-grey-400,
+    $--am-base-colour-grey-500,
+    $--am-base-colour-grey-600,
+    $--am-base-colour-grey-700,
+);
+    
+$--am-base-colour-black-100: #000000;
+$--am-base-colour-white-100: #ffffff;
+
+// Font
+$--am-base-font-size-1: 0.5rem;
+$--am-base-font-size-2: 0.625rem;
+$--am-base-font-size-3: 0.75rem;
+$--am-base-font-size-4: 0.875rem;
+$--am-base-font-size-5: 1rem;
+$--am-base-font-size-6: 1.125rem;
+$--am-base-font-size-7: 1.25rem;
+$--am-base-font-size-8: 1.375rem;
+$--am-base-font-size-9: 1.5rem;
+$--am-base-font-size-10: 1.625rem;
+$--am-base-font-size-11: 1.75rem;
+$--am-base-font-size-12: 1.875rem;
+$--am-base-font-size-13: 2rem;
+$--am-base-font-size-14: 2.125rem;
+$--am-base-font-size-15: 2.25rem;
+$--am-base-font-size-16: 2.375rem;
+$--am-base-font-size-17: 2.5rem;
+$--am-base-font-size-18: 2.625rem;
+$--am-base-font-size-19: 2.75rem;
+$--am-base-font-size-20: 2.875rem;
+$--am-base-font-size-21: 3rem;
+$--am-base-font-size-22: 3.125rem;
+$--am-base-font-size-23: 3.25rem;
+$--am-base-font-size-24: 3.375rem;
+$--am-base-font-size-25: 3.5rem;
+$--am-base-font-size-26: 3.625rem;
+$--am-base-font-size-27: 3.75rem;
+
+$am-font-size: (
+    $--am-base-font-size-1,
+    $--am-base-font-size-2,
+    $--am-base-font-size-3,
+    $--am-base-font-size-4,
+    $--am-base-font-size-5,
+    $--am-base-font-size-6,
+    $--am-base-font-size-7,
+    $--am-base-font-size-8,
+    $--am-base-font-size-9,
+    $--am-base-font-size-10,
+    $--am-base-font-size-11,
+    $--am-base-font-size-12,
+    $--am-base-font-size-13,
+    $--am-base-font-size-14,
+    $--am-base-font-size-15,
+    $--am-base-font-size-16,
+    $--am-base-font-size-17,
+    $--am-base-font-size-18,
+    $--am-base-font-size-19,
+    $--am-base-font-size-20,
+    $--am-base-font-size-21,
+    $--am-base-font-size-22,
+    $--am-base-font-size-23,
+    $--am-base-font-size-24,
+    $--am-base-font-size-25,
+    $--am-base-font-size-26,
+    $--am-base-font-size-27,
+);
+
+$--am-base-font-weight-100: 100;
+$--am-base-font-weight-200: 200;
+$--am-base-font-weight-300: 300;
+$--am-base-font-weight-400: 400;
+$--am-base-font-weight-500: 500;
+$--am-base-font-weight-600: 600;
+$--am-base-font-weight-700: 700;
+$--am-base-font-weight-800: 800;
+$--am-base-font-weight-900: 900;
+
+$am-font-weight: (
+    $--am-base-font-weight-100,
+    $--am-base-font-weight-200,
+    $--am-base-font-weight-300,
+    $--am-base-font-weight-400,
+    $--am-base-font-weight-500,
+    $--am-base-font-weight-600,
+    $--am-base-font-weight-700,
+    $--am-base-font-weight-800,
+    $--am-base-font-weight-900,
+);
+
+
+$--am-base-font-san-serif-1: Archivo;
+$--am-base-font-san-serif-2: Montserrat;
+$--am-base-font-san-serif-3: Omnes;
+$--am-base-font-san-serif-4: Calibri;
+$--am-base-font-san-serif-5: Arial;
+$--am-base-font-san-serif-6: Helvetica;
+$--am-base-font-san-serif-7: Helvetica Neue;
+$--am-base-font-san-serif-8: san-serif;
+$--am-base-font-san-serif-9: MontserratBold;
+$--am-base-font-san-serif-10: MontserratSemiBold;
+
+$am-font-family: (
+    $--am-base-font-san-serif-1,
+    $--am-base-font-san-serif-2,
+    $--am-base-font-san-serif-3,
+    $--am-base-font-san-serif-4,
+    $--am-base-font-san-serif-5,
+    $--am-base-font-san-serif-6,
+    $--am-base-font-san-serif-7,
+    $--am-base-font-san-serif-8,
+    $--am-base-font-san-serif-9,
+    $--am-base-font-san-serif-10,
+);
+
+$--am-base-font-style-1: normal;
+$--am-base-font-style-2: underline;
+$--am-base-font-style-3: strikethrough;
+$--am-base-font-style-4: italics;
+$--am-base-font-style-5: uppercase;
+
+$am-font-style: (
+    $--am-base-font-style-1,
+    $--am-base-font-style-2,
+    $--am-base-font-style-3,
+    $--am-base-font-style-4,
+    $--am-base-font-style-5,
+);
+
+// Sizing
+$--am-base-sizing-micro-1: 1px;
+$--am-base-sizing-micro-2: 2px;
+$--am-base-sizing-micro-3: 3px;
+$--am-base-sizing-micro-4: 4px;
+$--am-base-sizing-micro-5: 5px;
+
+$am-micro: (
+    $--am-base-sizing-micro-1,
+    $--am-base-sizing-micro-2,
+    $--am-base-sizing-micro-3,
+    $--am-base-sizing-micro-4,
+    $--am-base-sizing-micro-5,  
+);
+
+$--am-base-sizing-unit-1x: 8px;
+$--am-base-sizing-unit-2x: 16px;
+$--am-base-sizing-unit-3x: 24px;
+$--am-base-sizing-unit-4x: 32px;
+$--am-base-sizing-unit-5x: 40px;
+$--am-base-sizing-unit-6x: 48px;
+$--am-base-sizing-unit-7x: 56px;
+$--am-base-sizing-unit-8x: 64px;
+$--am-base-sizing-unit-9x: 72px;
+$--am-base-sizing-unit-10x: 80px;
+$--am-base-sizing-unit-11x: 88px;
+$--am-base-sizing-unit-12x: 96px;
+$--am-base-sizing-unit-13x: 104px;
+$--am-base-sizing-unit-14x: 112px;
+$--am-base-sizing-unit-15x: 120px;
+$--am-base-sizing-unit-16x: 128px;
+$--am-base-sizing-unit-17x: 136px;
+$--am-base-sizing-unit-18x: 144px;
+
+
+$am-unit: (
+    $--am-base-sizing-unit-1x,
+    $--am-base-sizing-unit-2x,
+    $--am-base-sizing-unit-3x,
+    $--am-base-sizing-unit-4x,
+    $--am-base-sizing-unit-5x,
+    $--am-base-sizing-unit-6x,
+    $--am-base-sizing-unit-7x,
+    $--am-base-sizing-unit-8x,
+    $--am-base-sizing-unit-9x,
+    $--am-base-sizing-unit-10x,
+    $--am-base-sizing-unit-11x,
+    $--am-base-sizing-unit-12x,
+    $--am-base-sizing-unit-13x,
+    $--am-base-sizing-unit-14x,
+    $--am-base-sizing-unit-15x,
+    $--am-base-sizing-unit-16x,
+    $--am-base-sizing-unit-17x,
+    $--am-base-sizing-unit-18x,
+);
+
+$--am-base-sizing-percent-0: 0%;
+$--am-base-sizing-percent-10: 10%;
+$--am-base-sizing-percent-20: 20%;
+$--am-base-sizing-percent-30: 30%;
+$--am-base-sizing-percent-40: 40%;
+$--am-base-sizing-percent-50: 50%;
+$--am-base-sizing-percent-60: 60%;
+$--am-base-sizing-percent-70: 70%;
+$--am-base-sizing-percent-80: 80%;
+$--am-base-sizing-percent-90: 90%;
+$--am-base-sizing-percent-100: 100%;
+
+$am-percent: (
+    $--am-base-sizing-percent-0,
+    $--am-base-sizing-percent-10,
+    $--am-base-sizing-percent-20,
+    $--am-base-sizing-percent-30,
+    $--am-base-sizing-percent-40,
+    $--am-base-sizing-percent-50,
+    $--am-base-sizing-percent-60,
+    $--am-base-sizing-percent-70,
+    $--am-base-sizing-percent-80,
+    $--am-base-sizing-percent-90,
+    $--am-base-sizing-percent-100,
+);
+
+$--am-base-alignment-left: left;
+$--am-base-alignment-right: right;
+$--am-base-alignment-center: center;
+
+
+/* 
+Short-hand functions for referencing the variables defined above. 
+
+Usage examples:  
+amPurple('1') // returns $--am-base-colour-purple-100 
+*/
+
+// Color functions 
+@function amSteel($num) {
+    @return list.nth($am-steel, $num);
+}
+@function amSapphire($num) {
+    @return list.nth($am-sapphire, $num);
+}
+@function amEmerald($num) {
+    @return list.nth($am-emerald, $num);
+}
+@function amRuby($num) {
+    @return list.nth($am-ruby, $num);
+}
+@function amCitrine($num) {
+    @return list.nth($am-citrine, $num);
+}
+@function amStarySky($num) {
+    @return list.nth($am-stary-sky, $num);
+}
+@function amCharTruth($num) {
+    @return list.nth($am-char-truth, $num);
+}
+@function amTierBlue($num) {
+    @return list.nth($am-tier-blue, $num);
+}
+@function amPurple($num) {
+    @return list.nth($am-purple, $num);
+}
+@function amBlue($num) {
+    @return list.nth($am-blue, $num);
+}
+@function amGreen($num) {
+    @return list.nth($am-green, $num);
+}
+@function amYellow($num) {
+    @return list.nth($am-yellow, $num);
+}
+@function amRed($num) {
+    @return list.nth($am-red, $num);
+}
+@function amGrey($num) {
+    @return list.nth($am-grey, $num);
+};
+
+// Font functions
+@function amFontSize($num) {
+   @return list.nth($am-font-size, $num)
+};
+
+@function amFontWeight($num) {
+   @return list.nth($am-font-weight, $num)
+};
+
+@function amFontFamily($num) {
+   @return list.nth($am-font-family, $num)
+};
+
+@function amFontStyle($num) {
+   @return list.nth($am-font-style, $num)
+};
+
+// Sizing functions
+@function amSizeMicro($num) {
+    @return list.nth($am-micro, $num)
+ };
+@function amSizeUnit($num) {
+    @return list.nth($am-unit, $num)
+ };
+@function amSizePercent($num) {
+    @return list.nth($am-percent, $num)
+ };
+
+// helper function to strip unit from value
+@function strip-unit($value) {
+    @if type-of($value) == 'number' {
+      @return $value;
+    } @else if type-of($value) == 'string' {
+      $unit-index: string.index($value, 'px');
+      
+      // If the unit is not found, return the original value
+      @if $unit-index == null {
+        @return $value;
+      } @else {
+        // Extract the numerical part of the value
+        @return string.slice($value, 1, $unit-index - 1);
+      }
+    }
+  }
+
+// Convert function from px to rem (helpful for accessibility zooming)
+@function px-to-rem($pxValue) {
+    $html-font-size: amSizeUnit(2);
+    
+    @return #{math.div(strip-unit($pxValue), strip-unit($html-font-size))}rem;
+}
+
+ /* - Utility classes - */
+
+ // Color classes
+.am-bg-white {
+    background-color: $--am-base-colour-white-100;
+}
+
+ @for $i from 1 through length($am-steel) {
+    .am-font-steel-#{$i}{
+        color: amSteel($i)
+    }
+
+    .am-bg-steel-#{$i}{
+        background-color: amSteel($i)
+    }
+ };
+
+ @for $i from 1 through length($am-sapphire) {
+    .am-font-sapphire-#{$i}{
+        color: amSapphire($i)
+    }
+
+    .am-bg-sapphire-#{$i}{
+        background-color: amSapphire($i)
+    }
+ };
+
+@for $i from 1 through length($am-emerald) {
+    .am-font-emerald-#{$i}{
+        color: amEmerald($i)
+    }
+
+    .am-bg-emerald-#{$i}{
+        background-color: amEmerald($i)
+    }
+ };
+
+ @for $i from 1 through length($am-ruby) {
+    .am-font-ruby-#{$i}{
+        color: amRuby($i)
+    }
+
+    .am-bg-ruby-#{$i}{
+        background-color: amRuby($i)
+    }
+ };
+
+ @for $i from 1 through length($am-citrine) {
+    .am-font-citrine-#{$i}{
+        color: amCitrine($i)
+    }
+
+    .am-bg-citrine-#{$i}{
+        background-color: amCitrine($i)
+    }
+ };
+
+ @for $i from 1 through length($am-stary-sky) {
+    .am-font-am-stary-sky-#{$i}{
+        color: amStarySky($i)
+    }
+
+    .am-bg-am-stary-sky-#{$i}{
+        background-color: amStarySky($i)
+    }
+ };
+
+ @for $i from 1 through length($am-char-truth) {
+    .am-font-char-truth-#{$i}{
+        color: amCharTruth($i)
+    }
+
+    .am-bg-char-truth-#{$i}{
+        background-color: amCharTruth($i)
+    }
+ };
+
+ @for $i from 1 through length($am-tier-blue) {
+    .am-font-tier-blue-#{$i}{
+        color: amTierBlue($i)
+    }
+
+    .am-bg-tier-blue-#{$i}{
+        background-color: amTierBlue($i)
+    }
+ };
+
+ @for $i from 1 through length($am-purple) {
+    .am-font-purple-#{$i}{
+        color: amPurple($i)
+    }
+
+    .am-bg-purple-#{$i}{
+        background-color: amPurple($i)
+    }
+ };
+
+ @for $i from 1 through length($am-blue) {
+    .am-font-blue-#{$i}{
+        color: amBlue($i)
+    }
+
+    .am-bg-blue-#{$i}{
+        background-color: amBlue($i)
+    }
+ };
+
+ @for $i from 1 through length($am-green) {
+    .am-font-green-#{$i}{
+        color: amGreen($i)
+    }
+
+    .am-bg-green-#{$i}{
+        background-color: amGreen($i)
+    }
+ };
+
+ @for $i from 1 through length($am-yellow) {
+    .am-font-yellow-#{$i}{
+        color: amYellow($i)
+    }
+
+    .am-bg-yellow-#{$i}{
+        background-color: amYellow($i)
+    }
+ };
+
+ @for $i from 1 through length($am-red) {
+    .am-font-red-#{$i}{
+        color: amRed($i)
+    }
+
+    .am-bg-red-#{$i}{
+        background-color: amRed($i)
+    }
+ };
+
+ @for $i from 1 through length($am-grey) {
+    .am-font-grey-#{$i}{
+        color: amGrey($i)
+    }
+
+    .am-bg-grey-#{$i}{
+        background-color: amGrey($i)
+    }
+ }
+
+ // Font classes
+ @for $i from 1 through length($am-font-size) {
+    .am-font-size-#{$i}{
+        font-size: amFontSize($i)
+    }
+ }
+
+ @for $i from 1 through length($am-font-family) {
+    .am-font-family-#{$i}{
+        font-size: amFontFamily($i)
+    }
+ }
+
+ @for $i from 1 through length($am-font-style) {
+    .am-font-style-#{$i}{
+        font-size: amFontStyle($i)
+    }
+ }
+
+// Size classes
+@for $i from 1 through length($am-micro) {
+    .am-pad-#{$i}px{
+        padding: amSizeMicro($i)
+    }
+
+    .am-pad-x-#{$i}px{
+        padding: amSizeMicro($i)
+    }
+
+    .am-pad-y-#{$i}px{
+        padding: amSizeMicro($i)
+    }
+
+    .am-margin-#{$i}px{
+        margin: amSizeMicro($i)
+     }
+
+    .am-margin-x-#{$i}px{
+       margin-left: amSizeMicro($i);
+       margin-right: amSizeMicro($i)
+    }
+
+    .am-margin-y-#{$i}px{
+       margin-top: amSizeMicro($i);
+       margin-bottom: amSizeMicro($i)
+    }
+
+    .am-height-#{$i}px {
+        height: amSizeMicro($i)
+    }
+ };
+
+ @for $i from 1 through length($am-unit) {
+    .am-pad-unit-#{$i}{
+        padding: amSizeUnit($i)
+    }
+
+    .am-pad-x-unit-#{$i}{
+        padding: amSizeUnit($i)
+    }
+
+    .am-pad-y-unit-#{$i}{
+        padding: amSizeUnit($i)
+    }
+
+    .am-margin-unit-#{$i}{
+        margin: amSizeUnit($i)
+     }
+
+    .am-margin-x-unit-#{$i}{
+       margin-left: amSizeUnit($i);
+       margin-right: amSizeUnit($i)
+    }
+
+    .am-margin-y-unit-#{$i}{
+       margin-top: amSizeUnit($i);
+       margin-bottom: amSizeUnit($i)
+    }
+
+    .am-height-unit-#{$i} {
+        height: amSizeUnit($i)
+    }
+ };
+
+ @for $i from 1 through length($am-percent) {
+    .am-pad-#{$i}percent{
+        padding: amSizePercent($i)
+    }
+
+    .am-pad-x-#{$i}percent{
+        padding: amSizePercent($i)
+    }
+
+    .am-pad-y-#{$i}percent{
+        padding: amSizePercent($i)
+    }
+
+    .am-margin-#{$i}percent{
+        margin: amSizePercent($i)
+     }
+
+    .am-margin-x-#{$i}percent{
+       margin-left: amSizePercent($i);
+       margin-right: amSizePercent($i)
+    }
+
+    .am-margin-y-#{$i}percent{
+       margin-top: amSizePercent($i);
+       margin-bottom: amSizePercent($i)
+    }
+
+    .am-height-#{$i}percent {
+        height: amSizePercent($i)
+    }
+ };
+
+ 
+ // other variables used across widgets
+$box-shadow-2: 0px 2px 10px 0px rgba(40, 47, 64, 0.15);
+$bsp-travel-container-max-width-xl: 1224px;
+$bsp-travel-container-side-margin: 20px;
+$form-gap: 0 amSizeUnit(3);
+$location-input-field-min-height: 48px;
+$rounded-full: 999rem;
+$sticky_notibar_height_md_down: 202px;
+$sticky_notibar_height_md_up: 129px;
+$transition-button: all 0.3s ease-in-out;
+$widget-min-width: 310px;

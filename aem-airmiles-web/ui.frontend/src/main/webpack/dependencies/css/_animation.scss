@@ -1,0 +1,27 @@
+.loader-shin{
+  z-index: 1;
+  img {
+    width: 100%;
+    -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    -webkit-mask-size: 800%;
+    mask-size: 800%;
+    -webkit-mask-position: 0;
+    mask-position: 0;
+    animation: maskShinAnimation 1s infinite;
+  }
+  &__footer{
+    height: 3rem!important;
+    width: 100%!important;
+  }
+}
+@keyframes maskShinAnimation {
+  0% {
+    -webkit-mask-position: 0;
+    mask-position: 0;
+  }
+  100% {
+    -webkit-mask-position: 120%;
+    mask-position: 120%;
+  }
+}

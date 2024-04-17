@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+		xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+		xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+		xmlns:cq="http://www.day.com/jcr/cq/1.0"
+		xmlns:jcr="http://www.jcp.org/jcr/1.0"
+		xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		jcr:primaryType="nt:unstructured"
+		jcr:title="Content block"
+		sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/coral/foundation/container">
+		<items jcr:primaryType="nt:unstructured">
+			<tabs
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/coral/foundation/tabs"
+					maximized="{Boolean}true">
+				<items jcr:primaryType="nt:unstructured">
+					<cards
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Properties"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+						<items jcr:primaryType="nt:unstructured">
+							<columns
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+									margin="{Boolean}true">
+								<items jcr:primaryType="nt:unstructured">
+									<column
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/container">
+										<items jcr:primaryType="nt:unstructured">
+											<type
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/select"
+													fieldLabel="Style type"
+													name="./type">
+												<items jcr:primaryType="nt:unstructured">
+													<prizes
+															jcr:primaryType="nt:unstructured"
+															text="prizes"
+															value="prizes" />
+													<requirements
+															jcr:primaryType="nt:unstructured"
+															text="requirements"
+															value="requirements" />
+												</items>
+											</type>
+											<accordion
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+													composite="{Boolean}true"
+													fieldLabel="Content Block Cards">
+												<granite:data
+														jcr:primaryType="nt:unstructured"
+														max-item="4"
+														min-item="2" />
+												<field
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/accordion"
+														name="./cards">
+													<items jcr:primaryType="nt:unstructured">
+														<section
+																jcr:title="Card"
+																jcr:primaryType="nt:unstructured"
+																sling:resourceType="granite/ui/components/coral/foundation/container">
+															<items jcr:primaryType="nt:unstructured">
+																<backgroundColor
+																	jcr:primaryType="nt:unstructured"
+																	sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																	fieldLabel="Background Color (Must use # + 6 hex digits e.g. #fff000)"
+																	name="./backgroundColor"
+																	required="{Boolean}false"/>
+																<backgroundImage
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																		fieldLabel="Background Image"
+																		name="./backgroundImage"
+																		rootPath="/content/dam/aem-airmiles-web/shellgoplus" />
+																<backgroundImageAltText
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="Background Image Alt Text"
+																		name="./backgroundImageAltText" />
+																<foregroundImageOne
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																		fieldLabel="ForeGround Image 1"
+																		name="./foregroundImage"
+																		rootPath="/content/dam/aem-airmiles-web/shellgoplus" />
+																<foregroundImageOneAltText
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="Foreground Image 1 Alt Text"
+																		name="./foregroundImageOneAltText" />
+																<foregroundImageOneUrl
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="Foreground Image URL"
+																		name="./foregroundImageOneUrl" />
+																<analyticsImageOne
+																			jcr:primaryType="nt:unstructured"
+																			jcr:title="Analytics Image One"
+																			sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+																			<items jcr:primaryType="nt:unstructured">
+																				<foregroundImageOneDataTrackId
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"																			emptyText="Analytics Track ID"
+																						fieldLabel="Analytics Tracking ID"
+																						name="./foregroundImageOneDataTrackId"/>
+																				<foregroundImageOneDataTrackClick
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																						fieldLabel="Analytics Click ID"
+																						name="./foregroundImageOneDataTrackClick"/>
+																				<foregroundImageOneDataTrackType
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																						fieldLabel="Analytics TrackType"
+																						name="./foregroundImageOneDataTrackType">
+																							<items jcr:primaryType="nt:unstructured">
+																								<internal
+																									jcr:primaryType="nt:unstructured"
+																									selected="{Boolean}true"
+																									text="Internal"
+																									value="internal"/>
+																								<button
+																									jcr:primaryType="nt:unstructured"
+																									text="Button"
+																									value="button"/>
+																								<exit
+																									jcr:primaryType="nt:unstructured"
+																									text="Exit"
+																									value="exit"/>
+																								<social
+																									jcr:primaryType="nt:unstructured"
+																									text="Social"
+																									value="social"/>
+																								<banner
+																									jcr:primaryType="nt:unstructured"
+																									text="Banner"
+																									value="banner"/>
+																							</items>
+																				</foregroundImageOneDataTrackType>	
+																			</items>
+																</analyticsImageOne>		
+																<foregroundImageTwo
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+																		fieldLabel="ForeGround Image 2"
+																		name="./foregroundImageTwo"
+																		rootPath="/content/dam/aem-airmiles-web/shellgoplus" />
+																<foregroundImageTwoAltText
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="Foreground Image 2 Alt Text"
+																		name="./foregroundImageTwoAltText" />
+																<foregroundImageTwoUrl
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="Foreground Image 2 URL"
+																		name="./foregroundImageTwoUrl" />
+																<analyticsImageTwo
+																			jcr:primaryType="nt:unstructured"
+																			jcr:title="Analytics Image Two"
+																			sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+																			<items jcr:primaryType="nt:unstructured">		
+																				<foregroundImageTwoDataTrackId
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																						fieldLabel="Analytics Tracking ID"
+																						name="./foregroundImageTwoDataTrackId"/>
+																				<foregroundImageTwoDataTrackClick
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																						fieldLabel="Analytics Click ID"
+																						name="./foregroundImageTwoDataTrackClick"/>
+																				<foregroundImageTwoDataTrackType
+																						jcr:primaryType="nt:unstructured"
+																						sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																						fieldLabel="Analytics TrackType"
+																						name="./foregroundImageTwoDataTrackType">
+																							<items jcr:primaryType="nt:unstructured">
+																								<internal
+																									jcr:primaryType="nt:unstructured"
+																									selected="{Boolean}true"
+																									text="Internal"
+																									value="internal"/>
+																								<button
+																									jcr:primaryType="nt:unstructured"
+																									text="Button"
+																									value="button"/>
+																								<exit
+																									jcr:primaryType="nt:unstructured"
+																									text="Exit"
+																									value="exit"/>
+																								<social
+																									jcr:primaryType="nt:unstructured"
+																									text="Social"
+																									value="social"/>
+																								<banner
+																									jcr:primaryType="nt:unstructured"
+																									text="Banner"
+																									value="banner"/>
+																							</items>
+																				</foregroundImageTwoDataTrackType>
+																			</items>
+																</analyticsImageTwo>							
+																<title
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="Title"
+																		name="./title" />
+																<subHeader
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+																		fieldLabel="SubHeader"
+																		name="./subheader" />
+																<description
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+																		fieldLabel="Description"
+																		name="./description"
+																		useFixedInlineToolbar="{Boolean}true">
+																	<text
+																			jcr:primaryType="nt:unstructured"
+																			sling:resourceType="granite/ui/components/foundation/include"
+																			path="/apps/core/wcm/components/text/v2/text/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text" />
+																</description>		
+																<swapPlacement
+																		jcr:primaryType="nt:unstructured"
+																		sling:resourceType="granite/ui/components/coral/foundation/form/select"
+																		fieldLabel="Swap Placement"
+																		name="./swapPlacement">
+																	<items jcr:primaryType="nt:unstructured">
+																		<left
+																				jcr:primaryType="nt:unstructured"
+																				text="Foreground Image Left"
+																				value="left" />
+																		<right
+																				jcr:primaryType="nt:unstructured"
+																				text="Foreground Image Right"
+																				value="right" />
+																		<rightMobile
+																				jcr:primaryType="nt:unstructured"
+																				text="Right only on mobile"
+																				value="right-mobile" />
+																	</items>
+																</swapPlacement>
+															</items>
+														</section>
+													</items>
+												</field>
+											</accordion>
+											<submitErrorMessage
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+													fieldLabel="Submit Error Message"
+													name="./submitErrorMessage"
+													fieldDescription="This message appears when there is an error after submitting the form" />
+										</items>
+									</column>
+								</items>
+							</columns>
+						</items>
+					</cards>
+				</items>
+			</tabs>
+		</items>
+	</content>
+</jcr:root>

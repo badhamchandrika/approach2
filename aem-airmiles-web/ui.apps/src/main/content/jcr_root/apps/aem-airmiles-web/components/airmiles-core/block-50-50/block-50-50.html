@@ -1,0 +1,42 @@
+<div data-sly-use.model="com.aem.airmiles.web.core.models.Block5050Model"
+     class="bsp-container narrow">
+    <div class="cmp-block-50-50" id="${model.imageTextId}">
+        <div class="row cmp-block-50-50__wrapper">
+            <div class="col-lg-6 col-12 text-section">
+                <div data-sly-test="${model.preTitle}" class="cmp-block-50-50__pretitle">
+                    <span>${model.preTitle @context='html'}</span>
+                </div>
+                <h2 class="cmp-block-50-50__title">
+                    ${model.titleText @context='html'}
+                </h2>
+                <div class="cmp-block-50-50__description" data-demo="${!model.ctas.isEmpty}">
+                    ${model.descriptionText @ context='html'}
+                </div>
+                <div data-sly-test="${!model.ctas.isEmpty}"
+                     class="cmp-block-50-50__cta"
+                     data-sly-list.cta="${model.ctas}">
+                    <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                    <sly data-sly-call="${ctatemplate.ctalink @
+                        type=cta.linkType,
+                        href=cta.linkUrl,
+                        text=cta.linkText,
+                        target=cta.linkTarget,
+                        hexText=cta.hexTextColor,
+                        hexBtn=cta.hexBtnColor,
+                        dataTrackID=cta.dataTrackID,
+                        dataClickID=cta.dataClickID,
+                        dataTrackType=cta.dataTrackType,
+                        dataBannerName=model.trackName,
+                        dataBannerCategory=model.trackCategory,
+                        classes=cta.linkColor}">
+                    </sly>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 cmp-block-50-50__image image-section ${model.imageAlign}">
+                <picture data-aos="fade-up">
+                    <img src="${model.fileReference}" alt="${model.imageAltText}"/>
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>

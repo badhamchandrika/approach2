@@ -1,0 +1,73 @@
+{
+  "logo": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Mon Mar 28 2022 11:22:04 GMT-0400",
+    "logo": "/content/dam/aem-airmiles-web/asset.jpg",
+    "logoUrl": "/content/aem-airmiles-web/language-masters/en",
+    "jcr:lastModified": "Thu Mar 31 2022 11:51:24 GMT-0400",
+    "sling:resourceType": "aem-airmiles-web/components/logo"
+  },
+  "without-logo": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logourl": "/content/aem-airmiles-web/language-masters/en"
+  },
+  "without-logourl": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/aem-airmiles-web/asset.jpg"
+  },
+  "verify-logourlwith.html": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/aem-airmiles-web/asset.jpg",
+    "logourl": "/content/aem-airmiles-web/language-masters/en.html"
+  },
+  "logo-with-png_file": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/aem-airmiles-web/asset.png",
+    "logourl": "/content/aem-airmiles-web/language-masters/en.html"
+  },
+  "logo-with-pdf_file": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/wknd/en/magazine/western-australia/WA_camping_Adobe.pdf",
+    "logourl": "/content/aem-airmiles-web/language-masters/en.html"
+  },
+  "logo-with-svg_file": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/core-components-examples/library/adobe-logo.svg",
+    "logourl": "/content/aem-airmiles-web/language-masters/en.html"
+  },
+  "logo-with-gif_file": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/aem-airmiles-web/asset.gif",
+    "logourl": "/content/aem-airmiles-web/language-masters/en.html"
+  },
+  "logo-logourl-is-empty":{
+     "jcr:primaryType":"nt:unstructured",
+     "sling:resourceType":"aem-airmiles-web/components/logo"
+},
+  "verify-logo-logourl-with-int":
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Wed Jun 01 2022 15:04:32 GMT-0400",
+  "logo": "12412",
+  "logoUrl": "23746",
+  "jcr:lastModified": "Wed Jun 01 2022 15:05:00 GMT-0400",
+  "sling:resourceType": "aem-airmiles-web/components/logo"
+  },
+  "logo-with-mp4": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/logo",
+    "logo": "/content/dam/aem-airmiles-web/asset.mp4",
+    "logourl": "/content/aem-airmiles-web/language-masters/en.html"
+  }
+}

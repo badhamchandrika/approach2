@@ -1,0 +1,95 @@
+.accordion {
+    .cmp-accordion {
+
+        padding-top: $--am-base-sizing-unit-2x;
+        padding-bottom: $--am-base-sizing-unit-2x;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include media-breakpoint-down('md'){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__item {
+            border-radius: amSizeUnit(1);
+            box-shadow: $box-shadow-2;
+            margin-bottom: 10px;
+
+            &:focus-within {
+                @include focus-outline();
+            }
+        }
+
+        &__button {
+            display: flex;
+            box-shadow: none;
+            background-color: transparent;
+            border: 0;
+            padding: 17.5px amSizeUnit(3);
+            @include media-breakpoint-down('md'){
+                padding: 14.5px amSizeUnit(3);
+            }
+            margin-left: inherit;
+            border-radius: 6px;
+            &:hover {
+                background-color: amSapphire(2);
+            }
+
+            &--expanded {
+                span {
+                    font-family: amFontFamily(9);
+                }
+                > .cmp-accordion__divtitle > .cmp-accordion__icon{
+                    rotate: 180deg;
+                }
+            }
+        }
+        &__title {
+            font-family: amFontFamily(2);
+            font-weight: $--am-base-font-weight-400;
+            font-style: $--am-base-font-style-1;
+            color: $--am-base-colour-grey-100;
+            font-size: amFontSize(4);
+        }
+        &__divtitle {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: amSapphire(9);
+            font-size: 10px;
+        }
+        &__panel {
+
+            &--expanded {
+                padding-left: $--am-base-sizing-unit-2x;
+                padding-right: $--am-base-sizing-unit-4x;
+                padding-top: 16px;
+                padding-bottom: $--am-base-sizing-unit-3x;
+
+                @include media-breakpoint-down('md'){
+                    padding-top: 8px;
+                }
+
+                p {
+                    font-family: amFontFamily(2);
+                    color: $--am-base-colour-grey-100;
+                    font-size: amFontSize(4);
+                    overflow-wrap: break-word;
+
+                    a {
+                        color: amTierBlue(3);
+
+                        &:hover {
+                            color: amStarySky(9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

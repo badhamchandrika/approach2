@@ -1,0 +1,54 @@
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.bsp-container{
+  @media (min-width: breakpoint('md')) {
+    padding: 0 1rem!important;
+  }
+  @media (min-width: breakpoint('xl')) {
+    &.narrow {
+      max-width: 1224px;
+      padding: 0 !important;
+    }
+  }
+}
+
+.bg-primary {
+  background-color: color('brand-blue') !important;
+}
+
+.bg-secondary {
+  background-color: color('secondary-blue') !important;
+}
+
+.bg-success {
+  background-color: color('green') !important;
+}
+
+.bg-info {
+  background-color: color('blue') !important;
+}
+
+.bg-warning {
+  background-color: color('orange') !important;
+}
+
+.bg-danger {
+  background-color: color('functional-red') !important;
+}
+
+.bg-light {
+  background-color: color('grey-light') !important;
+}
+
+.bg-dark {
+  background-color: color('grey-dark') !important;
+}

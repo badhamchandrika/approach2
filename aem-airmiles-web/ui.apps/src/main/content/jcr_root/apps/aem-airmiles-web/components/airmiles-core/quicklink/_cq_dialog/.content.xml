@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Quick Link - Configuration"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tab
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <button
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Quick Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <quickLinkTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        name="./quickLinkTitle"
+                                        required="{Boolean}true"/>
+                                    <quickLinkSubTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Sub Title"
+                                        name="./quickLinkSubTitle"/>
+                                    <threeColumnsOnDesktop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./threeColumnsOnDesktop"
+                                        text="Three columns on Desktop"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <expandTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Expand Title"
+                                        fieldDescription="Please enter text to show for expanding hidden topics"
+                                        name="./expandTitle"/>
+                                    <collapseTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Collapse Title"
+                                        fieldDescription="Please enter text to collapse shown topics to view fewer items"
+                                        name="./collapseTitle"/>
+                                    <linkdetails
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        granite:class="link-detail"
+                                        composite="{Boolean}true"
+                                        required="{Boolean}false">
+                                        <field
+                                            granite:class="cq-multi-field"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            emptyText="Link Details"
+                                            name="./linkDetails">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <accordion
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                                    jcr:title="Link Tab"
+                                                    granite:class="link-accordion"
+                                                    margin="{Boolean}false"
+                                                    maximized="{Boolean}true"
+                                                    multiple="{Boolean}true"
+                                                    variant="quiet">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <content
+                                                            jcr:primaryType="nt:unstructured"
+                                                            jcr:title="Link Detail"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <iconPicker
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Icon"
+                                                                    name="./iconPicker">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <browseRewards
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Browse rewards"
+                                                                            value="am-icon2-browse-rewards"/>
+                                                                        <help
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Help"
+                                                                            value="am-icon2-help"/>
+                                                                        <feature
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Feature rewards"
+                                                                            value="am-icon2-flag"/>
+                                                                        <offers
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="View offer"
+                                                                            value="am-icon2-offers"/>
+                                                                        <profile
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Update profile"
+                                                                            value="am-icon2-profile"/>
+                                                                        <travel
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Explore Travel"
+                                                                            value="am-icon2-travel-bookings"/>
+                                                                        <report
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Report missing miles"
+                                                                            value="am-icon2-warn"/>
+                                                                        <transactions
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="View Transactions"
+                                                                                value="am-icon2-receipt"/>
+                                                                        <ordercards
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Order Cards"
+                                                                                value="am-icon2-order-cards"/>
+                                                                        <transfermiles
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Transfer miles"
+                                                                                value="am-icon2-transfer-miles"/>
+                                                                        <myorders
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="My Orders"
+                                                                                value="am-icon2-my-orders"/>
+                                                                        <lockcashaccount
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Lock Cash Account"
+                                                                                value="am-icon2-lock-cash-account"/>
+                                                                        <creditcards
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Explore Credit Cards"
+                                                                                value="am-icon2-explore-credit-cards"/>
+                                                                        <resetpin
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Reset and create pin"
+                                                                                value="am-icon2-password"/>
+                                                                        <setbalance
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Set Balance"
+                                                                                value="am-icon2-balance"/>
+                                                                        <merchandise
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Merchandise"
+                                                                                value="am-icon2-shopping_bag"/>
+                                                                        <signature
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Signature"
+                                                                                value="am-icon2-signature"/>
+                                                                        <milesBadge
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Miles Badge"
+                                                                                value="am-icon2-badge"/>
+                                                                        <rewards
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Rewards"
+                                                                                value="am-icon2-rewards"/>
+                                                                        <statusBenefits
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Status Benefits"
+                                                                                value="am-icon2-pending"/>
+                                                                        <agent
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Tech Support"
+                                                                                value="am-icon2-support-agent"/>
+                                                                        <travelInformation
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Travel information"
+                                                                                value="am-icon2-travel-information"/>
+                                                                        <statusBenefitsFAQ
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Status Benefits FAQ"
+                                                                                value="am-icon2-status-benefits"/>
+                                                                        <managingMyAccount
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Managing my account"
+                                                                                value="am-icon2-manage-my-account"/>
+                                                                        <airMilesCash
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="AIR MILES Cash"
+                                                                                value="am-icon2-cash"/>
+                                                                        <getRewarded
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Get rewarded"
+                                                                                value="am-icon2-get-rewarded"/>
+                                                                        <airMilesForBusiness
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="AIR MILES for Business"
+                                                                                value="am-icon2-business"/>
+                                                                        <offersFAQ
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Offers FAQ"
+                                                                                value="am-icon2-offers"/>
+                                                                        <shippingAndDelivery
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                text="Shipping &amp; Delivery"
+                                                                                value="am-icon2-shipping"/>
+                                                                    </items>
+                                                                </iconPicker>
+                                                                <iconColor
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                    fieldLabel="Icon color"
+                                                                    name="./iconColor">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <none
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="None (default)"
+                                                                            value=""/>
+                                                                        <black
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Black"
+                                                                            value="icon-black-color"/>
+                                                                        <white
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="White"
+                                                                            value="icon-white-color"/>
+                                                                    </items>
+                                                                </iconColor>
+                                                                <linkText
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Link name"
+                                                                    name="./linkText"
+                                                                    required="{Boolean}true"/>
+                                                                <linkDescription
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Short description"
+                                                                    name="./linkDescription"/>
+                                                                <linkUrl
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                                    fieldLabel="Link URL"
+                                                                    name="./linkUrl"
+                                                                    required="{Boolean}true"/>
+                                                                <id
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="ID"
+                                                                    name="./id"/>
+                                                                <bgcolor-options
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/include"
+                                                                    path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/bgcolor-options"/>
+                                                                <analytics
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                                                                        path="aem-airmiles-web/components/includes/mastercomponent/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/analytics-options"/>
+                                                                <newTab
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                    name="./newTab"
+                                                                    text="Open in new tab"
+                                                                    uncheckedValue="false"
+                                                                    value="{Boolean}true"/>
+                                                                <hideLink
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                    name="./hideLink"
+                                                                    text="Hide the Quick link"
+                                                                    uncheckedValue="false"
+                                                                    value="{Boolean}true"/>
+                                                            </items>
+                                                        </content>
+                                                    </items>
+                                                </accordion>
+                                            </items>
+                                        </field>
+                                    </linkdetails>
+                                </items>
+                            </column>
+                        </items>
+                    </button>
+                    <personalization
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Personalization"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <personalizationId
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="id"
+                                    name="./id"/>
+                        </items>
+                    </personalization>
+                </items>
+            </tab>
+        </items>
+    </content>
+</jcr:root>

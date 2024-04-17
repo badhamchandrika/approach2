@@ -1,0 +1,75 @@
+.widget-header {
+  & > .row:first-child {
+    justify-content: space-between;
+
+    @include media-breakpoint-up("md") {
+      align-items: center;
+    }
+
+    .flights-widget &,
+    .packages-widget & {
+      @include media-breakpoint-up("md") {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .advanced-search-link {
+    @include media-breakpoint-up("md") {
+      align-self: flex-end;
+    }
+  }
+
+  &-advanced {
+    display: none;
+    flex-direction: column;
+    gap: amSizeUnit(2);
+    margin-bottom: amSizeUnit(3);
+
+    &--md,
+    &--xl {
+      display: flex;
+    }
+
+    .advanced-search-link {
+      display: none;
+    }
+    &--md,
+    &--xl {
+      .advanced-search-link {
+        display: inline-flex;
+      }
+    }
+  }
+  &__options-top {
+    display: none;
+    
+    form{
+      position: relative;
+    }
+
+    &--xl {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+  }
+  &__options-bottom {
+    justify-content: flex-start;
+    margin-bottom: amSizeUnit(3);
+    .col-selector {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &--md {
+      .col-selector {
+        width: auto;
+        max-width: 50%;
+      }
+    }
+    &--xl {
+      display: none;
+    }
+  }
+}

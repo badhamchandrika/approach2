@@ -1,0 +1,72 @@
+@import "../../../site/variables";
+
+.pax {
+  align-items: center;
+  display: grid;
+  font-size: 14px;
+  grid-template-columns: 3fr 1fr;
+  justify-content: inherit;
+  width: 100%;
+
+  &__font-size {
+    font-size: 12px;
+  }
+}
+
+.pax-list {
+  display: grid;
+  flex-direction: column;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+}
+
+.pax .buttons {
+  align-items: center;
+  display: grid;
+  gap: amSizeUnit(2);
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+
+  &__mobile {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.pax .buttons button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: amTierBlue(3);
+  border: none;
+  color: color("white");
+  font-size: 1rem;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  padding: 0;
+}
+.pax .buttons button:disabled {
+  color: amSteel(9);
+  border: 2px solid amSteel(9);
+  background-color: transparent;
+  opacity: .4;
+}
+.pax .buttons button:hover {
+  color: color("white");
+  background-color: amStarySky(9);
+}
+
+.pax .buttons p {
+  font-family: amFontFamily(9);
+  min-width: 10px;
+}
+
+.pax-widget {
+  &__text{
+    line-height: 1;
+  }
+}

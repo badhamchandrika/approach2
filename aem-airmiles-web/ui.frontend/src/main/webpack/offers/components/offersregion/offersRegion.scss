@@ -1,0 +1,91 @@
+$brand-blue: #1F68DA;
+$dark-blue: #1C2D3F;
+$hover-border: #16A78A;
+$hover-bg: #E9FC88;
+.offers-region{
+  font-family: Montserrat, sans-serif;
+  font-size: .875rem;
+  font-weight: 700;
+  color: $brand-blue;
+  margin: auto 0;
+  &__location {
+    position: relative;
+    z-index: 2;
+    .am-icon2-location{
+      font-size: 1.25rem;
+    }
+    &__region{
+      max-width: max-content;
+      cursor: pointer;
+      color: $brand-blue;
+      font-weight: 700;
+      &.active{
+        +.offers-region__regionlist{
+          display: flex;
+        }
+      }
+      .region-name {
+        font-size: .875rem;
+      }
+      .am-icon-functional-arrow-down.my-auto.ps-2.ms-auto {
+        font-size: .75rem;
+      }
+    }
+  }
+  &__mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(255,255,255,0);
+    z-index: 1;
+  }
+  &__regionlist{
+    display: none;
+    position: absolute;
+    top: 1.75rem;
+    width: 200px;
+    right: 0;
+    left: auto;
+    flex-direction: column;
+    background: #FFF;
+    border: 1px solid grey;
+    z-index: 10;
+    border-radius: .25rem;
+    overflow: hidden;
+    &__item{
+      max-width: 200px;
+      font-weight: normal;
+      cursor: pointer;
+      border: solid 1px transparent;
+      padding: .5rem .75rem;
+      background: #FFF;
+      text-align: start;
+      color: $dark-blue;
+      &:hover{
+        background-color: $hover-bg;
+      }
+      &:focus{
+        border: solid 2px $hover-border;
+      }
+      &.active{
+        color: #FFF;
+        background-color: $brand-blue;
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('md')) {
+}
+
+@media (min-width: breakpoint('lg')) {
+  .offers-region {
+    &__regionlist {
+
+    }
+  }
+}
+

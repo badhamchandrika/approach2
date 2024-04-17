@@ -1,0 +1,20 @@
+{
+  "contentbanner": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:lastModifiedBy": "admin",
+    "imageAlt": "Image Alt",
+    "imageSrc": "/content/dam/aem-airmiles-web/images/dollar_icon.png",
+    "dataClickID": "test-click",
+    "mobileLinkTarget": "_blank",
+    "linkUrl": "https://sandbox-beta.airmiles.ca/ca/en/profile/convert.html",
+    "mobileLinkUrl": "https://sandbox-beta.airmiles.ca/ca/en/profile/convert.html",
+    "linkTarget": "_self",
+    "jcr:lastModified": "Mon Oct 24 2022 12:48:36 GMT+0530",
+    "linkText": "Set up now",
+    "sling:resourceType": "aem-airmiles-web/components/contentbanner",
+    "bodyText": "Now you can set up an email and password as a new, secure way of signing in to your AIR MILES® account.",
+    "dataTrackID": "track-cta",
+    "mobileLinkText": "Set up secure sign-in by email",
+    "headerText": "Switch the way you sign in"
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"validContentBlockObj": {		
+		"ctaURL": "www.google.com",		
+		"image": "/content/dam/aem-airmiles-web/asset.jpg",		
+		"ctaText": "google CTA",		
+		"wayfinderText": "testWayFinderText",
+		"wayfinderTag": "testWayFinderTag",
+		"textIsRich": "true",
+		"bodyText": "This is a test text",
+		"headerText": "headerText",
+		"invertContent": true
+	},
+	"nullContentBlockObj": {
+		
+	}
+}

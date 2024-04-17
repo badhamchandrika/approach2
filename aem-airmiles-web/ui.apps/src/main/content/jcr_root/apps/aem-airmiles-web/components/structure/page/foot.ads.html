@@ -1,0 +1,33 @@
+<script>
+    const refreshAd = () => {
+        if (window.googletag !== 'undefined'){
+            window.googletag.cmd.push(() => {
+                window.googletag.pubads().refresh();
+            });
+        }
+    };
+    const resetAdSize = (_adDev, _devSize) => {
+        _adDev.setAttribute('data-device', _devSize);
+        refreshAd();
+        // Stop observing to prevent mobile inflated impressions.
+        adBannerObserver.unobserve(_adDev);
+    };
+    const _adBanners = document.querySelectorAll('.adbanner');
+    const adBannerObserver = new ResizeObserver(_entries => {
+        for(const _ent of _entries){
+            const currentAdView = _ent.target.getAttribute('data-device');
+            if (_ent.contentRect.width > 985 && currentAdView!=='desktop') {
+                resetAdSize(_ent.target,'desktop');
+            } else if (_ent.contentRect.width >= 768 && _ent.contentRect.width <= 985 && currentAdView!=='tablet') {
+                resetAdSize(_ent.target,'tablet');
+            } else if (_ent.contentRect.width < 768 && currentAdView!=='mobile') {
+                resetAdSize(_ent.target,'mobile');
+            }
+        }
+    });
+
+    for(const _banner of _adBanners){
+        adBannerObserver.observe(_banner);
+    }
+
+</script>

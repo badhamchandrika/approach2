@@ -1,0 +1,102 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.WelcomeBannerModel"
+     data-sly-use.basePageModel="com.aem.airmiles.web.core.models.BasePageModel">
+    <sly data-sly-test.linkColor="${properties.linkColor!=null ? properties.linkColor : 'white'}"/>
+    <sly data-sly-test.cta2LnkColor="${model.cta2LnkColor!=null ? model.cta2LnkColor : 'white'}"/>
+    <div class="cmp-welcome-banner-wrapper" id="${model.id}" data-api="${basePageModel.apiUrl @ context = 'attribute'}">
+        <div class="row m-0">
+            <div class="col-12 col-md-6 welcome-text-section">
+                <div class="wish-text-section">
+                    <span class="am-icon2 am-icon2-day --am-base-font-color-white d-none"></span>
+                    <span class="am-icon2 am-icon2-night --am-base-font-color-white d-none"></span>
+                    <span class="am-icon2 am-icon2-morning --am-base-font-color-white d-none"></span>
+                    <span class="wish-text" data-morningText="${model.goodMorningText @ context = 'attribute'}" data-afternoonText="${model.goodAfternoonText @ context = 'attribute'}" data-eveningText="${model.goodEveningText @ context = 'attribute'}"></span>
+                    <span class="collector-name"></span>
+                </div>
+                <div class="collector-details">
+                    <span class="collector-type" data-blueTierColor="${model.blueTierColor}" data-goldTierColor="${model.goldTierColor}" data-onyxTierColor="${model.onyxTierColor}">
+                    <img src="/etc.clientlibs/aem-airmiles-web/clientlibs/clientlib-corporate-site/resources/images/magic_button.svg" role="presentation"/>
+                    <span class="d-none bc-user">
+                        ${model.blueCollectorText}
+                    </span>
+                    <span class="d-none gc-user">
+                        ${model.goldCollectorText}
+                    </span>
+                    <span class="d-none oc-user">
+                        ${model.onyxCollectorText}
+                    </span>
+                </span>
+                    <span class="benefits-link">
+                    <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                    <sly data-sly-call="${ctatemplate.ctalink @
+                          type=properties.linkType,
+                          href=properties.linkUrl,
+                          text=properties.linkText,
+                          target=properties.linkTarget,
+                          hexText=properties.hexTextColor,
+                          hexBtn=properties.hexBtnColor,
+                          dataTrackID=properties.dataTrackID,
+                          dataClickID=properties.dataClickID,
+                          dataTrackType=properties.dataTrackType,
+                          classes=linkColor}">
+                    </sly>
+                </span>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 miles-section">
+                <div class="mile-tiles-section">
+                    <div class="row">
+                        <div class="col-7 col-md-9 col-lg-7">
+                            <span class="d-inline am-icon2 am-icon2-new_cash_miles cash-icon-img"></span>
+                            <span class="mile-points cash-miles">1,767</span>
+                        </div>
+                        <div class="col-5 col-md-3 col-lg-5 d-flex justify-content-end align-items-baseline">
+                            <span class="d-inline am-icon2 am-icon2-dream_miles dream-icon-img"></span>
+                            <span class="mile-points dream-miles">567</span>
+                        </div>
+                    </div>
+                    <div class="row miles-info">
+                        <div class="col-10">
+                            <div class="miles-info-text">
+                                ${model.milesAllocationText}
+                            </div>
+                        </div>
+                        <div class="col-2 justify-content-end d-flex balance-pref-update">
+                            <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                            <sly data-sly-call="${ctatemplate.ctalink @
+                                  type=model.cta2LinkType,
+                                  href=model.setBalancePreferenceCTAUrl,
+                                  text=model.setBalancePreferenceCTATxt,
+                                  target=model.balancePreferenceUrlTarget,
+                                  hexText=model.cta2HexTextColor,
+                                  hexBtn=model.cta2HexBtnColor,
+                                  dataTrackID=model.balDataTrackID,
+                                  dataClickID=model.balDataClickID,
+                                  dataTrackType=model.balDataTrackType,
+                                  classes=cta2LnkColor}">
+                            </sly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="miles-line-bar">
+                                <hr class="cash-bar">
+                                <hr class="dream-bar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 miles-percentage-text miles-padding">
+                            <strong class="cash-miles-percentage"></strong> ${model.cashPercentageText}
+                        </div>
+                        <div class="col-6 miles-percentage-text justify-content-end d-flex">
+                            <strong class="dream-miles-percentage"></strong> ${model.dreamPercentageText}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</sly>
+<div data-sly-test="${model.mockJson}" class="d-none" id="js-welcome-banner-json">
+</div>

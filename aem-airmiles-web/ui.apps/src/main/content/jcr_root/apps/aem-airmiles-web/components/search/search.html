@@ -1,0 +1,64 @@
+<div class="search__wrapper d-flex justify-content-md-end" data-sly-use.search="com.aem.airmiles.web.core.models.SearchModel"
+     data-searchresult-url="${search.searchResultPage}" data-pagination="${search.pagination}" >
+  <div class="d-md-none">
+    <button type="submit" class="search__button-mobile" data-track-id="${search.dataTrackID}" data-track-type="${search.dataTrackType}"
+            data-track-click="${search.dataClickID}" aria-label="${search.searchLabel}">
+      <span class="am-icon am-icon-search --am-base-font-size-10" aria-hidden="true"></span>
+    </button>
+    <div class="search__modal d-none bsp-container">
+      <div class="row border-bottom border-secondary">
+        <div class="col-9 d-flex p-0">
+          <span class="am-icon am-icon-search --am-base-font-size-10 mobile" aria-hidden="true"></span>
+          <input class="search__input-mobile" placeholder="${search.searchPlaceholderText}" name="${search.searchLabel}" value ="" aria-label="${search.searchLabel}">
+        </div>
+        <div class="col-3 d-flex justify-content-end p-0">
+          <span class="search__mobile-clear-btn am-icon am-icon-functional-secondary-close d-none _search"></span>
+          <button type="submit" class="search__button-mobile-cancel align-self-center" aria-label="${search.cancelLabel}" data-track-id="${search.searchCancelTrackID}" data-track-click="${search.searchCancelClickID}" data-track-type="${search.searchCancelTrackType}">
+            ${search.cancelLabel}
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <hr />
+        <h3 class="search__mobile-quicklinks-header">${'Quick Links' @ i18n}</h3>
+        <div class="col-12 search__mobile-quicklinks">
+          <ul class="search__mobile-quicklinks-items" data-sly-list="${search.searchQuickLinks}">
+            <li class="search__mobile-quicklinks-item">
+              <a 
+                class="search__mobile-quicklink" 
+                href="${item.ctaUrl}" 
+                data-track-click="${item.dataClickID}" 
+                data-track-id="${item.dataTrackID}"
+                data-track-type="${item.dataTrackType}"
+                >${item.text}</a>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <div class="d-none d-md-flex">
+    <button type="submit" class="search__toggle _search" data-track-id="${search.searchButtonTrackID}" data-track-click="${search.searchButtonClickID}" data-track-type="${search.searchButtonTrackType}">
+      <span class="search__toggle-text _search">
+        <span id="header-search-icon" class="am-icon am-icon-search --am-base-font-size-10 _search" aria-hidden="true"></span>
+        <span id="cancel-label" class="d-none py-1">${search.cancelLabel}</span>
+        <span id="header-search-label" class="_search py-1">${search.searchLabel}</span>
+      </span>
+      <div class="search__toggle-underline search"></div>
+    </button>
+  </div>
+</div>
+
+<div class="d-none d-md-flex">
+  <div class="search__input-overlay d-none _search">
+    <div class="search__input-fieldset _search">
+      <input class="search__input _search" data-track-id="${search.searchInputTrackID}" data-track-click="${search.searchInputClickID}" data-track-type="${search.searchInputTrackType}"
+             placeholder="${search.searchPlaceholderText}" name="${search.searchLabel}" value ="" aria-label="${search.searchLabel}">
+      <span class="search__desktop-clear-btn am-icon am-icon-functional-secondary-close d-none _search"></span>
+      <button type="submit" class="search__button _search" data-track-id="${search.searchSubmitTrackID}" data-track-type="${search.searchSubmitTrackType}" data-track-click="${search.searchSubmitClickID}">
+        <span class="am-icon am-icon-search --am-base-font-size-10 _search" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</div>

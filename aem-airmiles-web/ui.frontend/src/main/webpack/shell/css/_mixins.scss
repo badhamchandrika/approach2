@@ -1,0 +1,188 @@
+/*---------------Variables-------------*/
+$shell-primary-yellow: #ffcd00;
+$shell-primary-red: #da291c;
+$shell-primary-blue: #135582;
+$shell-gray: #4a4a4a;
+$shell-light-gray: #f3f3f3;
+$shell-warning-border: #ac4a04;
+$shell-warning-bg: #fff1d9;
+$shell-dark-blue:#002F6C;
+$shell-accent-blue:#0E4D7B;
+$shell-greys-grey-02: #4A4A4A; //contentBlock title
+/*---------------Mixins-------------*/
+
+//== Error Message Red
+@mixin error-message-red {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 14px;
+  color: $shell-gray;
+  border: 1px solid $shell-primary-red;
+  background-color: #fdebeb;
+  margin: 0px 16px 16px 16px;
+  span {
+    padding: 0px 18px 0px 0px;
+    font-size: 20px;
+    color: #ce0007;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 320px;
+  }
+}
+
+//== Yellow Border-Bottom
+@mixin yellow-border-bottom {
+  border-bottom: 4px solid #ffcd00;
+}
+
+//== Centered Style
+@mixin centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+//== Text Futura-pt-300
+@mixin text-futura-300 {
+  font-family: futura-pt-300;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  p {
+    padding-bottom: 20px;
+  }
+  b {
+    font-family: futura-pt-500;
+  }
+}
+//styleName: ShellGO+/Desktop/H1 - Desk;
+@mixin title-desktop-h1 {
+  font-family: futura-pt-400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1.5px;
+}
+//styleName: ShellGO+/Mobile/H1;
+@mixin title-mobile-h1 {
+  font-family: futura-pt-400;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -2.5px;
+}
+
+// ShellGO+/Desktop/H2 
+@mixin title-desktop-h2 {
+  font-family: futura-pt-400;
+  font-size: 50px;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: -0.5px;
+}
+
+// ShellGO+/Mobile/H2 /
+@mixin title-mobile-h2 {
+  font-family: futura-pt-300;
+  font-size: 42px;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: -1.5px;
+}
+/* ShellGO+/Mobile/H3 */
+@mixin title-desktop-h3 {
+  font-family: futura-pt-400;
+  font-size: 48px;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: -1.5px;
+}
+/* ShellGO+/Mobile/H3 */
+@mixin title-mobile-h3 {
+  font-family: futura-pt-400;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 56px;
+  letter-spacing: -1px;
+}
+/* contentBlock ShellGO+/Desktop/H4 | Desk -  Mobile */
+@mixin title-desktop-h4 {
+  font-family: futura-pt-300;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+//styleName: Hero ShellGO+/Desktop/H5 - Desk;
+@mixin description-desktop-h5 {
+  font-family: futura-pt-300;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+}
+
+//styleName: Hero ShellGO+/Mobile/H5 - Mob;
+@mixin description-mobile-h5 {
+    font-family: futura-pt-300;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+//styleName: ShellGO+/Desktop/H6 - Desk;
+@mixin subtitle-desktop-h6 {
+  font-family: futura-pt-400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.15000000596046448px;
+}
+//styleName: ShellGO+/Mobile/H6 - Mob;
+@mixin subtitle-mobile-h6 {
+  font-family: futura-pt-400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.15000000596046448px;
+  
+}
+
+//styleName: Hero ShellGO+/Desktop/Sub 02;
+@mixin terms-checkbox-container {
+  font-family: futura-pt-400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* contentBlock ShellGO+/Desktop/Sub 02 | Desk - Mobile*/ 
+@mixin subHeader-desktop {
+  font-family: futura-pt-400;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+/* contentBlock ShellGO+/Desktop/Sub 01 | Desk - Mobile*/ 
+@mixin subHeader-desktop {
+  font-family: futura-pt-400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+/* contentBlock ShellGO+/Desktop/Body 01  | Desk - Mobile*/ 
+@mixin contentBlock-body-desktop {
+  font-family: futura-pt-400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}

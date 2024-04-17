@@ -1,0 +1,82 @@
+.cmp-title {
+  &.title-padding {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  &__text{
+    &.wayfinder{
+      font-size: .75rem;
+      line-height: normal;
+      color: color('body-copy');
+      text-transform: uppercase;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      text-align: center;
+      sup {
+        font-size: .75rem!important;
+        font-weight: 300!important;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+        top: -.5em;
+        position: relative;
+      }
+    }
+    &.boldtitle{
+      color: color('brand-blue');
+      font-size: 1.375rem;
+      line-height: normal;
+      text-transform: uppercase;
+      letter-spacing: normal;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  &__link{
+
+  }
+}
+
+@media (min-width: breakpoint('md')) {
+  .cmp-title {
+    &.title-padding {
+      padding-top: 48px;
+      padding-bottom: 24px;
+    }
+    &__text{
+      &.wayfinder {
+        font-size: .875rem;
+        text-align: left;
+      }
+      &.boldtitle {
+        font-size: 1.625rem;
+        text-align: left;
+      }
+    }
+    &__link{
+
+    }
+  }
+}
+@media (min-width: breakpoint('lg')) {
+  .cmp-title {
+    line-height: 3.75rem;
+    &.title-padding{
+      padding-top: 48px;
+      padding-bottom: 24px;
+    }
+    &__text{
+      &.wayfinder {
+        font-size: 1rem;
+      }
+      &.boldtitle {
+        font-size: 1.875rem;
+      }
+    }
+    &__link{
+
+    }
+  }
+}

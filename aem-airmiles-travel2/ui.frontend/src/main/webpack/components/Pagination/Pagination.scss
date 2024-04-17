@@ -1,0 +1,99 @@
+// @import '~@loyaltyone-am/colors/colors.scss';
+@import '~@loyaltyone-am/mediaqueries/mediaqueries.scss';
+@import '../../site/variables';
+@import '../../components/css-dependencies/breakpoints';
+
+
+// This is added because somewhere on preprod a package is importing an old version of TypographyV1
+// which is causing the font-family to be inherit. This is a temp fix till we update all preprod packages
+// TODO: remove me once packages are updated on preprod
+.AMPagination {
+  li {
+    a {
+      font-family: 'ArchivoRegular', Calibri, 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+    }
+  } 
+}
+
+.AMPagination {
+  font-size: 16px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__arrow {
+    font-size: 12.9px;
+  }
+
+  ul {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  li, li a {
+    cursor: pointer;
+    display: inline-flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: amSizeUnit(4);
+    height: amSizeUnit(4);
+    border-radius: 50%;
+
+    @media screen and (min-width: breakpoint('xs')) and (max-width: breakpoint('md')) {
+      width: amSizeUnit(3);
+      height: amSizeUnit(3);
+    }
+  }
+
+  li:first-child,
+  li:last-child {
+    color: amSapphire(9);
+  }
+
+  li:first-child {
+    @media screen and (min-width: breakpoint('md')){
+      margin-right: 2px;
+    }
+  }
+
+  li:last-child {
+    @media screen and (min-width: breakpoint('md')) {
+      margin-left: 2px;
+    }
+  }
+
+  &__li-item {
+      margin: 0 2px;
+      height: amSizeUnit(4);
+      width: amSizeUnit(4);
+      border-radius: 50%;
+    a:hover {
+      background-color: amCharTruth(6);
+      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__active {
+    color: #ffffff;
+    background-color: $--am-base-colour-blue-300;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

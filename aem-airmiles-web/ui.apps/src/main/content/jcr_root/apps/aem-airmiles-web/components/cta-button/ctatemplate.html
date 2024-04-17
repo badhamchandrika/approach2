@@ -1,0 +1,67 @@
+<template data-sly-template.ctalink="${@ type, text, href, target, dataTrackID, dataClickID, dataTrackType, classes,
+fontSize, hexText, hexBtn, modalUniqueID, dataBannerName, dataBannerCategory, id, iconOnRight, iconClassGroup, iconClassName, iconColor}">
+
+  <sly data-sly-set.barStyle="${hexText ? hexText : '#135582' }" />
+  <sly data-sly-set.modalID="#${modalUniqueID}" />
+  <sly data-sly-set.iHref="${modalUniqueID ? modalID : href @ context = 'uri'}" />
+
+  <div data-sly-test="${type=='link' || type=='extlink' || type=='arrowlink' || type=='arrowlinkNew' || type=='arrowDownLink'}" class="ctalink ${classes} ${type=='arrowlinkNew' ? 'ctalink--arrowlink-new' : ''}">
+    <a class="cmp-link ${fontSize}" target="${target}" id="${id}" href="${iHref}" data-bs-toggle="${modalUniqueID ? 'modal' : ''}"
+       data-track-id="${dataTrackID}" data-track-click="${dataClickID}" data-track-type="${dataTrackType}"
+       data-banner-name="${dataBannerName}" data-banner-category="${dataBannerCategory}"
+       style="color:${hexText @ context='styleToken'};--bar-color: ${type=='arrowlink' || type=='arrowlinkNew' ? '':barStyle @ context='unsafe'};">
+      ${text @ context='html'}
+      <em data-sly-test="${type=='link'}" class="am-icon am-icon-functional-toggle-arrow-right"></em>
+      <em data-sly-test="${type=='extlink'}" class="am-icon am-icon-external-link"></em>
+      <em data-sly-test="${type=='arrowlink'}" class="am-icon2 am-icon2-arrow-right"></em>
+      <em data-sly-test="${type=='arrowlinkNew'}" class="am-icon2 am-icon2-arrow-right"></em>
+      <em data-sly-test="${type=='arrowDownLink'}" class="am-icon am-icon-functional-arrow-down"></em>
+    </a>
+  </div>
+  <div data-sly-test="${type=='leftarrowlink' || type=='leftcloselink'}" class="ctalink ${classes}">
+    <a class="cmp-link ${fontSize}" target="${target}" id="${id}" href="${iHref}" data-bs-toggle="${modalUniqueID ? 'modal' : ''}"
+       data-track-id="${dataTrackID}" data-track-click="${dataClickID}" data-track-type="${dataTrackType}"
+       data-banner-name="${dataBannerName}" data-banner-category="${dataBannerCategory}"
+       style="color:${hexText @ context='styleToken'};--bar-color: ${type=='leftarrowlink' || type=='leftcloselink' ? '':barStyle @ context='unsafe'};">
+      <em data-sly-test="${type=='leftarrowlink'}" class="am-icon2 am-icon2-arrow-left"></em>
+      <em data-sly-test="${type=='leftcloselink'}" class="am-icon am-icon-functional-secondary-close"></em>
+      ${text @ context='html'}
+    </a>
+  </div>
+  <div data-sly-test="${type=='button' || type=='framebutton' || type=='pill' || type=='framedpill'}" class="ctabutton ${classes}">
+    <sly data-sly-test="${type=='button'}">
+      <a class="cmp-button ${fontSize}" target="${target}" id="${id}" href="${iHref}" data-bs-toggle="${modalUniqueID ? 'modal' : ''}" data-track-id="${dataTrackID}" data-track-click="${dataClickID}" data-track-type="${dataTrackType}"
+         data-banner-name="${dataBannerName}" data-banner-category="${dataBannerCategory}" style="background-color: ${hexBtn @ context='styleToken'}; color:${hexText @ context='styleToken'}">
+        <em data-sly-test="${iconClassName && !iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+        ${text @ context='html'}
+        <em data-sly-test="${iconClassName && iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+      </a>
+    </sly>
+    <sly data-sly-test="${type=='framebutton'}">
+      <sly data-sly-set.btnStyle="${hexBtn ? hexBtn : '' }" />
+      <a class="cmp-button framebutton ${fontSize}" target="${target}" id="${id}" href="${iHref}" data-bs-toggle="${modalUniqueID ? 'modal' : ''}" data-track-id="${dataTrackID}" data-track-click="${dataClickID}" data-track-type="${dataTrackType}"
+         data-banner-name="${dataBannerName}" data-banner-category="${dataBannerCategory}"
+         style="border-color:${btnStyle @ context='unsafe'}; color:${btnStyle @ context='unsafe'}">
+        <em data-sly-test="${iconClassName && !iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+        ${text @ context='html'}
+        <em data-sly-test="${iconClassName && iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+      </a>
+    </sly>
+    <sly data-sly-test="${type=='pill'}">
+      <a class="cmp-button ctabuttonround ${fontSize}" target="${target}" id="${id}" href="${iHref}" data-bs-toggle="${modalUniqueID ? 'modal' : ''}" data-track-id="${dataTrackID}" data-track-click="${dataClickID}" data-track-type="${dataTrackType}"
+         data-banner-name="${dataBannerName}" data-banner-category="${dataBannerCategory}" style="background-color: ${hexBtn @ context='styleToken'}; border-color:${hexBtn @ context='styleToken'}; color:${hexText @ context='styleToken'}">
+        <em data-sly-test="${iconClassName && !iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+        ${text @ context='html'}
+        <em data-sly-test="${iconClassName && iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+      </a>
+    </sly>
+    <sly data-sly-test="${type=='framedpill'}">
+      <a class="cmp-button ctabuttonroundhalo ${fontSize}" target="${target}" id="${id}" href="${iHref}" data-bs-toggle="${modalUniqueID ? 'modal' : ''}" data-track-id="${dataTrackID}" data-track-click="${dataClickID}" data-track-type="${dataTrackType}"
+         data-banner-name="${dataBannerName}" data-banner-category="${dataBannerCategory}" style="border-color:${hexBtn @ context='styleToken'}; color:${hexText @ context='styleToken'}">
+        <em data-sly-test="${iconClassName && !iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+        ${text @ context='html'}
+        <em data-sly-test="${iconClassName && iconOnRight}" class="${iconClassGroup} ${iconClassName}" style="color:${iconColor @ context='styleToken'};"></em>
+      </a>
+    </sly>
+  </div>
+</template>

@@ -1,0 +1,46 @@
+.cmp-breadcrumb {
+    &__list {
+        min-height: 48px;
+        padding: 16px 0;
+        margin: 0 0 4px;
+        @media (min-width: breakpoint('md')) {
+            margin-top: 16px;
+        }
+    }
+    &__item {
+        color: color('body-copy');
+        display: none;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        &:first-child {
+            display: inline;
+        }
+        @media (min-width: breakpoint('md')) {
+            display: inline;
+            font-size: 1rem;
+        }
+        &-link {
+            color: color('brand-blue');
+            font-family: ArchivoSemiBold;
+            font-weight: 500;
+            text-decoration: none;
+            &:hover {
+                color: color('blue-hover');
+                text-decoration: underline;
+            }
+        }
+        &-arrow-left {
+            padding: 10px 10px 10px 0;
+        }
+        &-arrow-left,
+        &-arrow-right {
+            color: color('brand-blue');
+            font-size: .625rem;
+            font-weight: 400;
+            padding: 10px;
+        }
+    }
+}

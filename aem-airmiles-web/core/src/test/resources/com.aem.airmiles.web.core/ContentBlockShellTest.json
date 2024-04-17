@@ -1,0 +1,45 @@
+{
+  "content": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Thu Feb 02 2023 10:25:37 GMT-0300",
+    "type": "prizes",
+    "submitErrorMessage": "We are sorry",
+    "jcr:lastModified": "Wed Feb 08 2023 10:48:26 GMT-0300",
+    "sling:resourceType": "aem-airmiles-web/components/shell/contentblock",
+    "cards": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "description": "consectetur adipiscing elit. Curabitur non sollicitudin odio. Curabitur congue elementum metus.",
+        "foregroundImage": "/content/dam/aem-airmiles-web/shellgoplus/Screen-partial.png",
+        "swapPlacement": "left",
+        "title": "redtag.ca Travel Gift Card",
+        "backgroundColor": "#ffffff",
+        "textColor": "#ffffff",
+        "foregroundImageOneAltText": "\"\""
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "description": "consectetur adipiscing elit. Curabitur non sollicitudin odio. Curabitur congue elementum metus.",
+        "foregroundImage": "/content/dam/aem-airmiles-web/shellgoplus/Screen-partial.png",
+        "swapPlacement": "right-mobile",
+        "title": "50% discount on selected Car Rentals",
+        "backgroundColor": "#000000",
+        "textColor": "#ffffff",
+        "foregroundImageOneAltText": "\"\""
+      },
+      "item2": {
+        "jcr:primaryType": "nt:unstructured",
+        "description": "consectetur adipiscing elit. Curabitur non sollicitudin odio. Curabitur congue elementum metus.",
+        "foregroundImage": "/content/dam/aem-airmiles-web/shellgoplus/Screen-partial.png",
+        "swapPlacement": "left",
+        "title": "3 Nights Stay Sheraton Hotels",
+        "backgroundColor": "#ffffff",
+        "textColor": "#ffff00",
+        "foregroundImageOneAltText": "\"\""
+      }
+    }
+  }
+}

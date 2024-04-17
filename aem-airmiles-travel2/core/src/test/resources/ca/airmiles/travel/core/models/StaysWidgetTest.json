@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "checkoutLabel": "Check-out",
+  "toLocationText": "Going to",
+  "checkinLabel": "Check-in",
+  "buttonText": "Search",
+  "roomsTypeHeading": "Rooms",
+  "sling:resourceType": "aem-airmiles-travel2/components/stayswidget",
+  "advSearchText": "Advanced Search Page",
+  "checkinText": "Select Check in date",
+  "checkoutText": "Select checkout date",
+  "roomsTypeList": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "typeList": "1 Room, 2 Adults"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "typeList": "2 Room, 5 Adults"
+    }
+  }
+}

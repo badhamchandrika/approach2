@@ -1,0 +1,9 @@
+<sly data-sly-set.script="${properties.script}"></sly>
+<div data-sly-test.editor="${wcmmode.edit && !wcmmode.disabled}"
+     data-emptytext="${script ? 'embedded@' :'Please embed a script.'}${script}"
+     class="cq-placeholder">
+</div>
+<script data-sly-test="${!editor && properties.script}"
+        src="${script @ context='scriptComment'}">
+</script>
+<div data-sly-test.id="${properties.id}" id=${id}></div>

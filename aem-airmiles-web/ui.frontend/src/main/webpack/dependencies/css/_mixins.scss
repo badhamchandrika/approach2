@@ -1,0 +1,9 @@
+@mixin nav-link {
+    text-decoration: none;
+    font-family: $font-regular;
+    color: color('onyx');
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

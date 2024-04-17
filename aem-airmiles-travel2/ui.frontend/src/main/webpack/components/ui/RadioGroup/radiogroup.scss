@@ -1,0 +1,153 @@
+.payment {
+  &__radiogroup {
+    margin-bottom: amSizeUnit(3);
+  }
+
+  &__text {
+    font-family: amFontFamily(2);
+    font-size: amFontSize(5);
+    line-height: 1.5;
+    color: amSteel(9);
+    margin-bottom: amSizeUnit(1);
+    @include media-breakpoint-down("md") {
+      line-height: 20px;
+      font-size: amFontSize(4);
+    }
+  }
+
+  &__radioItem {
+    display: flex;
+    margin-bottom: amSizeUnit(2);
+
+    @include media-breakpoint-down("md") {
+      margin-bottom: amSizeUnit(1);
+    }
+  }
+
+  &__radioBtn {
+    cursor: pointer;
+    height: amSizeUnit(3);
+    width: amSizeUnit(3);
+    min-width: amSizeUnit(3);
+    border: 1px solid amSteel(5);
+    border-radius: 50%;
+
+    &:focus {
+      @include focus-outline();
+    }
+
+    &--selected {
+      border: 1px solid amTierBlue(3);
+      &::before {
+        content: "";
+        position: relative;
+        width: amSizeUnit(2);
+        height: amSizeUnit(2);
+        top: 3px;
+        left: 3px;
+        background: amTierBlue(3);
+        border: 1px solid amTierBlue(3);
+        display: block;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 11px;
+  }
+
+  &__title {
+    font-family: amFontFamily(2);
+    font-weight: 400;
+    font-size: amFontSize(4);
+    line-height: amSizeUnit(3);
+    color: amSteel(9);
+    &--selected {
+      font-family: MontserratBold;
+      font-weight: 700;
+    }
+  }
+
+  &__desc {
+    font-family: amFontFamily(2);
+    font-weight: 400;
+    font-size: amFontSize(4);
+    line-height: 20px;
+    color: amSteel(7);
+    font-size: amFontSize(4);
+    padding: 12px 0 0 3px;
+    @include media-breakpoint-down("xl") {
+      line-height: amSizeUnit(2);
+    }
+  }
+}
+
+.radioGroup {
+  $rootParent: &;
+  &__header {
+    font-family: MontserratBold;
+    margin-bottom: amSizeUnit(2);
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: amSizeUnit(3);
+    margin-bottom: amSizeUnit(3);
+  }
+  &__option {
+    border-radius: amSizeUnit(2);
+    outline: amSizeMicro(1) solid amSteel(5);
+    cursor: pointer;
+    padding: amSizeUnit(2);
+    width: 100%;
+    
+    &--selected {
+      outline: amSizeMicro(5) solid amTierBlue(3);
+    }
+    
+    &:hover {
+      outline: amSizeMicro(5) solid amCharTruth(6);
+    }
+  }
+  &__optionHeader {
+    display: flex;
+    gap: 8px;
+    font-family: MontserratSemiBold;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  &__optionIcon {
+    height: amSizeUnit(3);
+    width: amSizeUnit(3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__optionBody {
+    color: #5e5e5e;
+    font-size: 12px;
+  }
+
+  &--md,
+  &--xl {
+    > .radioGroup__options {
+      flex-direction: row;
+    }
+  }
+
+  &--md {
+    > .radioGroup__options > .radioGroup__option {
+      width: 50%;
+    }
+  }
+
+  &--xl {
+    > .radioGroup__options > .radioGroup__option {
+      width: calc(33% - 12px);
+      > .radioGroup__optionBody {
+        font-size: 14px;
+      }
+    }
+  }
+}

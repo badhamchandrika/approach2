@@ -1,0 +1,32 @@
+.AMTravelVideo {
+    margin-top: 40px;
+    &--centered {
+        display: flex;
+        justify-content: center;
+    }
+
+  &__player {
+    aspect-ratio: 16 / 9;
+    max-width: $bsp-travel-container-max-width-xl;
+    width: 100%;
+
+    .video-25 & {
+      @include media-breakpoint-up("md") {
+        width: 25%;
+      }
+    }
+    .video-half & {
+      @include media-breakpoint-up("md") {
+        width: 50%;
+      }
+    }
+    .video-75 & {
+      @include media-breakpoint-up("md") {
+        width: 75%;
+      }
+    }
+    .video-full & {
+      width: 100%;
+    }
+  }
+}

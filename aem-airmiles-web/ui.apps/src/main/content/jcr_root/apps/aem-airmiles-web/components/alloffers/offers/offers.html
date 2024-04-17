@@ -1,0 +1,59 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Offers -Main Component" class="cq-placeholder"></div>
+
+<div class="alloffers bsp-container" data-sly-use.offersModel="com.aem.airmiles.web.core.models.FeaturedOffers"
+    data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" data-featured-offers>
+    <div class="d-none">
+        <template id="alloffers-mechanisms"
+        data-clo-cta-text="${offersModel.ctaDetailCLOText}"
+        data-clo-cta-link="${offersModel.ctaDetailCLOUrl}"
+        data-clo-cta-track-id="${offersModel.ctaDetailTrackID}"
+        data-clo-cta-click-id="${offersModel.ctaDetailClickID}"
+        data-clo-cta-track-type="${offersModel.ctaDetailTrackType}"
+        data-clo-cta-target="${offersModel.ctaDetailTarget ? '_blank' : '_self'}"
+        data-clo-optin-track-id="${offersModel.optInDetailTrackID}"
+        data-clo-optin-click-id="${offersModel.optInDetailClickID}"
+        data-clo-optin-track-type="${offersModel.optInDetailTrackType}"
+        data-clo-optin-target="${offersModel.optInDetailTarget ? '_blank' : '_self'}">
+            <sly data-sly-list.mech="${offersModel.mechanismList}">
+                <span data-code="${mech.value}" data-name="${mech.title}"></span>
+            </sly>
+        </template>
+        <template id="alloffers-sortBy">
+            <sly data-sly-list.sortby="${offersModel.sortByOptionsList}">
+                <span data-code="${sortby.value}" data-name="${sortby.title}"></span>
+            </sly>
+        </template>
+        <template id="alloffers-regionlist">
+            <sly data-sly-list.regionlist="${offersModel.regionList}">
+                <span data-code="${regionlist.value}" data-name="${regionlist.title}"></span>
+            </sly>
+        </template>
+        <template id="alloffers-typeList">
+            <sly data-sly-list.typelist="${offersModel.offersTypeList}">
+                <span data-code="${typelist.value}" data-name="${typelist.title}"></span>
+            </sly>
+        </template>
+    </div>
+
+    <sly data-sly-test="${offersModel.displayOffersList =='true'}">
+        <sly data-sly-use.offerstemplate="/apps/aem-airmiles-web/components/alloffers/offers/featured-offers.html"/>
+        <sly data-sly-call="${offerstemplate.modalParameters @ model=offersModel,page=page}"/>
+    </sly>
+</div>
+
+<sly data-sly-use.modaltemplate="/apps/aem-airmiles-web/components/alloffers/offerstemplates/offersmodaltemplate.html"/>
+<sly data-sly-call="${modaltemplate.modalParameters @
+    backToOfferText=offersModel.backToOfferText,
+    backToOffersDataTrackID=offersModel.backToOffersDataTrackID,
+    backToOffersDataClickID=offersModel.backToOffersDataClickID,
+    backToOffersDataTrackType=offersModel.backToOffersDataTrackType,
+    fullDetailText=offersModel.fullDetailText,
+    offerStartText=offersModel.offerStartText,
+    offerEndsText=offersModel.offerEndsText,
+    seeAllPartnersTitle=offersModel.seeAllPartnersTitle,
+    miniFeedTitle=offersModel.miniFeedTitle,
+    termsTitle=offersModel.termsTitle
+    }">
+</sly>
+
+<sly data-sly-resource="${@path='offersTemplate', resourceType='aem-airmiles-web/components/alloffers/offerstemplates'}"></sly>

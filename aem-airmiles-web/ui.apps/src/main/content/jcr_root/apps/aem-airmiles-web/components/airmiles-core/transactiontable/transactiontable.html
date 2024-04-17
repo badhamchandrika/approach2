@@ -1,0 +1,214 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.TransactionTable"
+     data-sly-use.basePageModel="com.aem.airmiles.web.core.models.BasePageModel"
+     data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"></sly>
+<sly data-sly-set.cta = "${model.cta}"></sly>
+<div class="transaction-table-wrapper"  id="${model.id}" data-lang="${page.language}" data-contentPath="${resource.path}">
+<div class="amtable">
+<div class="d-md-flex justify-content-between amtable-outer">
+    <div class="amtable-ext__title">
+        <h2 class="h2-title-v2">${model.tableTitle}</h2>
+    </div>
+    <div class="amtable-ext__button d-none d-md-block my-auto">
+        <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+        <sly data-sly-call="${ctatemplate.ctalink @
+              type='arrowlink',
+              href=model.tableCTALink,
+              text=model.tableCTAText,
+              target=cta.linkTarget,
+              hexText='#1F68DA',
+              hexBtn=cta.hexBtnColor,
+              dataTrackID=model.tableCTATrackID,
+              dataClickID=model.tableCTAClickID,
+              dataTrackType=model.tableCTATrackType,
+              classes=cta.linkColor}">
+        </sly>
+    </div>
+</div>
+
+<div class="amtable-main${model.fullwidth?' amtable-main__full':''}${model.rounded?' amtable-main__rounded':''}${model.shadow?' amtable-main__shadow':''}"
+     id="${model.uniqueId}"
+     data-api="${pageProperties.apiUrl @ context = 'attribute'}"
+     data-default-logo="${model.noLogoPath}">
+    <div class="row amtable-header d-none d-md-flex">
+        <div class="amtable-cell d-none d-md-block col-md-3">
+            ${model.columnHead1}
+        </div>
+        <div class="amtable-cell col-3 col-md-2 amtable-cell__partner">
+            ${model.columnHead2}
+        </div>
+        <div class="amtable-cell col-6 col-md-4">
+            ${model.columnHead3}
+        </div>
+        <div class="amtable-cell col-3 col-md-3">
+            ${model.columnHead4}
+        </div>
+    </div>
+    <div class="row amtable-footer no-data-${model.uniqueId}">
+        <div class="col-12">
+            <div class="amtable-mobile__msg pb-4" data-api-error="${model.apiErrorMessage}">${model.noTransText}</div>
+            <div class="amtable-mobile__link">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                  type='pill',
+                  href=cta.linkUrl,
+                  text=cta.linkText,
+                  target=cta.linkTarget,
+                  hexText=cta.hexTextColor,
+                  hexBtn='#1F68DA',
+                  dataTrackID=cta.dataTrackID,
+                  dataClickID=cta.dataClickID,
+                  dataTrackType=cta.dataTrackType,
+                  classes=cta.linkColor}">
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex d-md-none justify-content-center amtable-outer">
+    <div class="amtable-ext__button">
+        <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+        <sly data-sly-call="${ctatemplate.ctalink @
+              type='arrowlink',
+              href=model.tableCTALink,
+              text=model.tableCTAText,
+              target=cta.linkTarget,
+              hexText='#1F68DA',
+              hexBtn=cta.hexBtnColor,
+              dataTrackID=model.tableCTATrackID,
+              dataClickID=model.tableCTAClickID,
+              dataTrackType=model.tableCTATrackType,
+              classes=cta.linkColor}">
+        </sly>
+    </div>
+</div>
+</div>
+</div>
+<div data-sly-test="${model.mockJson}" class="d-none" id="js-trans-table-json">
+    {
+    "_embedded": {
+    "genericActivityDtoList": [
+    {
+    "cardNumber": "80000005253",
+    "activityType": "ISSUANCE",
+    "transactionDate": "2023-01-21T00:00:13.289Z",
+    "transactionDescription": "Standard Offer",
+    "transactionValue": 30,
+    "cashMiles": 15,
+    "dreamMiles": 15,
+    "externalReferenceNumber": "TEST",
+    "channel": "RTC",
+    "sponsorCode": "CFCO",
+    "sponsorDescriptionEnglish": "VOILA ONLINE GROCERY",
+    "sponsorDescriptionFrench": "BONUS MILES",
+    "offerClass": "BASE",
+    "offerCode": "STANDARD",
+    "offerDescriptionEnglish": "Standard offer",
+    "offerDescriptionFrench": "Offre de base",
+    "locationCode": "3809",
+    "locationDescription": "Customer fulfillment centre",
+    "logo": "//images.ctfassets.net/7m10wxejlkq7/CrAGN2ZKiks6e2e88mmEy/3b8867c2ef697c5a7814d2de82f769b1/MLCC.png_dl_1"
+    },
+    {
+    "cardNumber": "80000005253",
+    "activityType": "ISSUANCE",
+    "transactionDate": "2023-01-13T00:00:13.289Z",
+    "transactionDescription": "Liquor Marts Base Offer",
+    "transactionValue": 10,
+    "cashMiles": 5,
+    "dreamMiles": 5,
+    "externalReferenceNumber": "TEST",
+    "channel": "RTC",
+    "sponsorCode": "MLCC",
+    "sponsorDescriptionEnglish": "MANITOBA LIQ CONTROL COMM",
+    "sponsorDescriptionFrench": "MANITOBA LIQUOR MARTS",
+    "offerClass": "BASE",
+    "offerCode": "STANDARD",
+    "offerDescriptionEnglish": "Liquor marts base offer",
+    "offerDescriptionFrench": "Liquor marts base offer",
+    "locationCode": "0030",
+    "locationDescription": "",
+    "logo": "//images.ctfassets.net/7m10wxejlkq7/CrAGN2ZKiks6e2e88mmEy/3b8867c2ef697c5a7814d2de82f769b1/MLCC.png_dl_1",
+    "partnerName": "Manitoba Liquor Mart"
+    },
+    {
+    "cardNumber": "80000005253",
+    "activityType": "ISSUANCE",
+    "transactionDate": "2023-01-05T05:00:13.289Z",
+    "transactionDescription": "Standard Offer",
+    "transactionValue": 500,
+    "cashMiles": 250,
+    "dreamMiles": 250,
+    "externalReferenceNumber": "TESTClientReferenceID",
+    "channel": "RTC",
+    "sponsorCode": "SHEL",
+    "sponsorDescriptionEnglish": "SHELL CANADA",
+    "sponsorDescriptionFrench": "SHELL REGULAR MILES",
+    "offerClass": "BASE",
+    "offerCode": "REGULAR",
+    "offerDescriptionEnglish": "Standard offer",
+    "offerDescriptionFrench": "Offre de base",
+    "locationCode": "0333",
+    "locationDescription": "4314 w 10th av",
+    "logo": "//images.ctfassets.net/7m10wxejlkq7/3H1yjbQz8IQ2Iq6S6ygKEu/b9ee2fedfbd425c737ecf48b76961db5/Shell.png_dl_1",
+    "partnerName": "Shell Retail"
+    },
+    {
+    "cardNumber": "80000005253",
+    "activityType": "ISSUANCE",
+    "transactionDate": "2023-01-05T05:00:13.289Z",
+    "transactionDescription": "Standard Offer",
+    "transactionValue": 50,
+    "cashMiles": 25,
+    "dreamMiles": 25,
+    "externalReferenceNumber": "TESTClientReferenceID",
+    "channel": "RTC",
+    "sponsorCode": "SHEL",
+    "sponsorDescriptionEnglish": "SHELL CANADA",
+    "sponsorDescriptionFrench": "SHELL REGULAR MILES",
+    "offerClass": "BASE",
+    "offerCode": "REGULAR",
+    "offerDescriptionEnglish": "Standard offer",
+    "offerDescriptionFrench": "Offre de base",
+    "locationCode": "0333",
+    "locationDescription": "4314 w 10th av",
+    "logo": "//images.ctfassets.net/7m10wxejlkq7/3H1yjbQz8IQ2Iq6S6ygKEu/b9ee2fedfbd425c737ecf48b76961db5/Shell.png_dl_1",
+    "partnerName": "Shell Retail"
+    },
+    {
+    "cardNumber": "80000005253",
+    "activityType": "ISSUANCE",
+    "transactionDate": "2023-01-05T05:00:13.289Z",
+    "transactionDescription": "Standard Offer",
+    "transactionValue": 5,
+    "cashMiles": 3,
+    "dreamMiles": 2,
+    "externalReferenceNumber": "TESTClientReferenceID",
+    "channel": "RTC",
+    "sponsorCode": "SHEL",
+    "sponsorDescriptionEnglish": "SHELL CANADA",
+    "sponsorDescriptionFrench": "SHELL REGULAR MILES",
+    "offerClass": "BASE",
+    "offerCode": "REGULAR",
+    "offerDescriptionEnglish": "Standard offer",
+    "offerDescriptionFrench": "Offre de base",
+    "locationCode": "0333",
+    "locationDescription": "4314 w 10th av",
+    "logo": "//images.ctfassets.net/7m10wxejlkq7/3H1yjbQz8IQ2Iq6S6ygKEu/b9ee2fedfbd425c737ecf48b76961db5/Shell.png_dl_1",
+    "partnerName": "Shell Retail"
+    }
+    ],
+    "transactionSummary": {
+    "cashMilesUsed": 0,
+    "cashMilesEarned": 298,
+    "dreamMilesUsed": 0,
+    "dreamMilesEarned": 297
+    }
+    },
+    "page": {
+    "size": 5,
+    "totalElements": 6,
+    "totalPages": 2,
+    "number": 1
+    }
+    }
+</div>

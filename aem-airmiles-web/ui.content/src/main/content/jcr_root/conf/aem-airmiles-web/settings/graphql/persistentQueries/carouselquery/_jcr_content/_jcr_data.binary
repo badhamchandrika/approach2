@@ -1,0 +1,29 @@
+query getElements {
+  offersCarouselByPath(_path:"/content/dam/aem-airmiles-web/cfs/en/offers/offers-carousel"){
+    item {
+      carouselTitle
+      carouselDescription
+      carouselCta
+      carouselCtaUrl {
+        ... on PageRef {
+          _path
+        }
+      }
+      numberOfOffersInCarousel
+    offersCustomCardDetails {
+      _path
+      description
+      ctaText
+    }
+      cloQueryParamDetails{
+        massOffer
+        partnerId
+        programType
+        promotionId
+        categoryId
+        subcategoryId
+        sortOptions
+      }
+    }
+  }
+}

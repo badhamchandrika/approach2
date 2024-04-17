@@ -1,0 +1,21 @@
+<sly data-sly-use.model="${'com.aem.airmiles.web.core.models.CTALink'}" data-sly-use.ctatemplate="ctatemplate.html"/>
+<div data-sly-test="${wcmmode.edit && !model.linkText}" data-emptytext="CTA Button" class="cq-placeholder"></div>
+<sly data-sly-call="${ctatemplate.ctalink @
+    type=model.linkType,
+    id=model.id,
+    href=model.linkUrl,
+    text=model.linkText,
+    fontSize=model.fontSize,
+    target=model.linkTarget,
+    dataTrackID=model.dataTrackID,
+    dataClickID=model.dataClickID,
+    dataTrackType=model.dataTrackType,
+    classes=model.linkColor,
+    hexText=model.hexTextColor,
+    hexBtn=model.hexBtnColor,
+    modalUniqueID=model.modalUniqueID,
+    iconOnRight=model.iconOnRight,
+    iconClassGroup=model.iconClassGroup,
+    iconClassName=model.iconClassName,
+    iconColor=model.iconColor
+}"/>

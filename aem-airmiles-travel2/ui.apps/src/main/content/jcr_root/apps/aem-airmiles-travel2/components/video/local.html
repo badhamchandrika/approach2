@@ -1,0 +1,12 @@
+<template data-sly-template.template="${@ model}>">
+  <div class="AMTravelVideo ${model.isCenteredVideo ? 'AMTravelVideo--centered' : ''}">
+    <video
+      id="localVideoPlayer"
+      class="AMTravelVideo__player"
+      controls
+    >
+      <source src="${model.localSource}" type="${model.mimeType}" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</template>

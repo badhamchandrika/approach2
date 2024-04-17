@@ -1,0 +1,67 @@
+.footer-social {
+  @media screen and (max-width: 767px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    padding: 20px 0;
+    h3 {
+      font-family: ArchivoRegular;
+      text-transform: none;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    @media (min-width: breakpoint('lg')) {
+      padding: 0 0 30px 0;
+    }
+  }
+  &-icons {
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 auto;
+      justify-content: center;
+    }
+    @media (min-width: breakpoint('lg')) {
+      padding: 0 0 30px 0;
+    }
+    @media (max-width: 767px) {
+      max-width: 95%;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        padding-right: 10px;
+      }
+      @media (min-width: breakpoint('md')) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__item {
+    font-size: 1.125rem;
+    display: inline-flex;
+    margin: 5px;
+  }
+
+  &__image {
+    transition: all .2s ease;
+    margin-top: 0;
+    width: 31px;
+    height: 31px;
+    object-fit: contain;
+
+    &:hover {
+      margin-top: -5px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// @import '~@loyaltyone-am/colors/colors.scss';
+@import '../../site/variables';
+.AMPagination.AMPagination__rebrand {
+
+  .am-grid--container {
+    margin: auto;
+    width:fit-content;
+  }
+
+  li:first-child,
+  li:last-child {
+    color: amSapphire(9);
+    &:hover {
+      color: amStarySky(7);
+    }
+  }
+
+  .AMPagination__rebrand__arrow { 
+    &--disabled {
+      color: color('disabled') !important;
+    }
+  }
+
+
+  .AMPagination__rebrand__li-item {
+    a:hover {
+      background-color: amCharTruth(6);;
+      color: amStarySky(9);
+    }
+  }
+
+  .AMPagination__rebrand__active {
+    background-color: amSapphire(9);
+    pointer-events: none;
+  }
+
+  &.AMPagination__background {
+    &--rebrand {
+      background-color: color('blue-background');
+    }
+  }
+}

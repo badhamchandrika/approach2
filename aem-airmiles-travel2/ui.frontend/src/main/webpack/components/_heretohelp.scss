@@ -1,0 +1,190 @@
+.heretohelp {
+    .heretohelp-container {
+        background-color: $--am-base-colour-grey-700;
+
+        &__rowcont {
+            padding-bottom: amSizeUnit(3);
+            padding-top: amSizeUnit(3);
+            justify-content: space-between;
+            
+            @include media-breakpoint-up('md') {
+                padding-bottom: amSizeUnit(4);
+                padding-top: amSizeUnit(4);
+            }
+            
+            @include media-breakpoint-up('xl') {
+                padding-bottom: amSizeUnit(5);
+                padding-top: amSizeUnit(5);
+            }
+        }
+
+        &__leftsection {
+            text-align: left;
+
+            @include media-breakpoint-down('md') {
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+            }
+
+            &-title {
+                @include cmp-title();
+            }
+
+            &-text {
+                padding-top: amSizeUnit(3);
+                padding-bottom: amSizeUnit(3);
+                text-align: left;
+
+                p {
+                    font-family: amFontFamily(2);
+                    font-size: amFontSize(5);
+                    color: amSteel(7);
+                    font-weight: 400;
+                    line-height: 1.5;
+
+                    @include media-breakpoint-down('md') {
+                        font-size: amFontSize(4);
+                    }
+                }
+            }
+            .cta-button {
+                @include media-breakpoint-down('md') {
+                    width: 100%;
+                }
+            }
+            .cta-link {
+                a {
+                    font-family: ArchivoRegular;
+                    font-size: amFontSize(6);
+                    line-height: amSizeUnit(3);
+                    font-weight: 400;
+
+                    @include media-breakpoint-down('xl') {
+                        font-size: amFontSize(5);
+                    }
+                    @include media-breakpoint-down('md') {
+                        font-size: amFontSize(6);
+                    }
+                }
+            }
+        }
+        &__rightsection {
+            padding-top: amSizeUnit(3);
+
+            @include media-breakpoint-down('md') {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            &-li {
+                background-color: white;
+                border: amSizeMicro(2) solid white;
+                border-radius: amSizeUnit(1);
+                margin-bottom: amSizeUnit(2);
+                box-shadow: 0px 2px 10px 0px rgba(40,47,64,0.15);
+
+                &:hover {
+                    background-color: amSapphire(1);
+                    border: amSizeMicro(2) solid amSapphire(9);
+                }
+
+                &-iconrow {
+                    display: flex;
+                    align-items: center;
+                }
+                a {
+                    padding-top: amSizeMicro(4);
+                    padding-bottom: amSizeMicro(4);
+                    padding-left: amSizeUnit(3);
+                    padding-right: amSizeUnit(3);
+                    text-decoration: none;
+                    color: $--am-base-colour-blue-100;
+                    height: auto;
+                    display: inline-block;
+                    width: 100%;
+                    border-radius: amSizeMicro(4);
+
+                    &:focus {
+                        background-color: amSapphire(1);
+                        @include focus-outline()
+                    }
+                }
+                &-textdiv {
+                    text-align: left;
+
+                    @include media-breakpoint-down("xl") {
+                      padding-left: 0;
+                    }
+
+                    p {
+                        font-size: amFontSize(5);
+                        font-family: amFontFamily(2);
+                        line-height: 1.5;
+                        color: amSapphire(9);
+
+                        @include media-breakpoint-down("md") {
+                          font-size: amFontSize(4);
+                        }
+                    }
+                }
+                &-icondiv {
+                    text-align: end;
+
+                    @include media-breakpoint-down("xl") {
+                      padding: 0;
+                    }
+
+                    span {
+                        color: amSapphire(9);
+                        font-size: amFontSize(12);
+                    }
+                }
+            }
+        }
+        &__simplesection {
+            padding-top: amSizeUnit(3);
+            padding-bottom: amSizeUnit(3);
+
+            &-titlediv {
+                text-align: center;
+                padding-bottom: amSizeUnit(3);
+
+                &-title {
+                    font-family: amFontFamily(9);
+                    font-weight: 700;
+                    font-size: amFontSize(12);
+                    line-height: 1.25;
+                    color: amSteel(9);
+
+                    @include media-breakpoint-down('md') {
+                        font-size: amFontSize(9);
+                    }
+                }
+            }
+
+            ul {
+                padding-right: 0;
+            }
+        }
+    }
+}
+// Style system clases
+.back-color-blue {
+    .heretohelp-container {
+        background-color: $--am-base-colour-grey-700;
+    }
+    .heretohelp-container__rightsection-li {
+        background-color: $--am-base-colour-white-100;
+        border: amSizeMicro(2) solid $--am-base-colour-white-100;
+    }
+}
+.back-color-white {
+    .heretohelp-container {
+        background-color: $--am-base-colour-white-100;
+    }
+    .heretohelp-container__rightsection-li {
+        background-color: $--am-base-colour-grey-700;
+        border: amSizeMicro(2) solid $--am-base-colour-grey-700;
+    }
+}

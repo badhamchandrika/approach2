@@ -1,0 +1,243 @@
+div.root.shell {
+  div[id^='contest-'] {
+    @media screen and (min-width: 768px) {
+      div.text {
+        text-align: center;
+      }
+    }
+    div.button {
+      @media screen and (min-width: 768px) {
+        margin: 52px 0px 315px 0px;
+      }
+    }
+    div.title {
+      @media screen and (min-width: 1280px) {
+        padding: 0px 0px 30px 0px;
+      }
+    }
+  }
+  /*---------------Landing-------------*/
+  #landing-shell {
+    div.aem-Grid {
+      width: 100%;
+    }
+  }
+}
+
+/*-----------Terms & Conditions---------*/
+div.root.shell {
+  #terms-and-conditions {
+    font-family: futura-pt-400;
+    div.text {
+      font-size: 14px;
+      line-height: 22px;
+      height: 418px;
+      overflow-y: auto;
+      padding-right: 16px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      b {
+        font-family: futura-pt-500;
+      }
+
+      i {
+        font-style: italic;
+      }
+
+      ol {
+        list-style: auto;
+      }
+
+      ul {
+        list-style: disc;
+      }
+
+      /* Scrollbar: Works on Firefox */
+      scrollbar-width: thin;
+      scrollbar-color: $shell-primary-blue $shell-light-gray;
+
+      /* Scrollbar: Works on Chrome, Edge, and Safari */
+      &::-webkit-scrollbar {
+        width: 9px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $shell-primary-blue;
+        background-clip: content-box;
+        border: 2px solid transparent;
+        border-radius: 20px;
+        height: 192px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $shell-light-gray;
+        border-radius: 20px;
+      }
+
+      @media screen and (min-width: 768px) {
+        height: 100%;
+        overflow: hidden;
+        padding-left: 16px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      div.button {
+        padding: 0px 130px 130px 130px;
+        justify-content: flex-start;
+        a {
+          width: 207px;
+        }
+      }
+      div.title {
+        padding: 0px 0px 60px 0px;
+      }
+      div.text {
+        padding: 0px 130px;
+      }
+    }
+  }
+}
+
+/*------------Requirements----------*/
+div.root.shell {
+  #requirements {
+    div.title {
+      margin-bottom: 0;
+    }
+
+    div.button {
+      flex-direction: column;
+      align-items: center;
+      button {
+        margin-bottom: 10px;
+      }
+    }
+
+    #response-error {
+      @include error-message-red;
+    }
+
+    @media screen and (min-width: 768px) {
+      div.button > button {
+        width: 208px;
+        margin: 15px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: 800px;
+      div.text {
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+/*------------Participant Information----------*/
+div.root.shell {
+  #participant-info {
+
+    form {
+      display: grid;
+
+      div.cmp-form-text {
+        font-family: ArchivoRegular;
+        text-align: left;
+        font-size: 12px;
+        color: #7c7e80;
+        display: flex;
+        flex-direction: column;
+        .cmp-form-text__text {
+          font-size: 16px;
+        }
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid #7C7E80;
+      }
+
+      div.button {
+        grid-column: 1/2;
+      }
+    }
+
+    .container + div.text {
+      text-align: left;
+    }
+
+    .error,
+    #response-error {
+      @include error-message-red;
+    }
+
+    @media screen and (min-width: 768px) {
+      .error,
+      #response-error {
+        margin: 0px auto 10px auto;
+        width: 457px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      .error,
+      #response-error {
+        margin: 0px auto 10px 156px;
+        width: 457px;
+      }
+      p {
+        padding: 40px 140px;
+      }
+
+      form {
+        width: auto;
+        margin: 0px 140px 50px 140px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        div:first-of-type {
+          grid-column: 1;
+        }
+
+        div.cmp-form-text {
+          width: 415px;
+        }
+
+        div.button {
+          justify-content: flex-start;
+          grid-column: 1;
+          margin: 0px 16px;
+        }
+        .cmp-form-text__help-block {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  /*------------Contest Success----------*/
+  div.root.shell {
+    #contest-success {}
+  }
+
+  /*------------Contest Validate Participation----------*/
+  div.root.shell {
+    #contest-already-participating {}
+  }
+
+  /*------------Contest Expired----------*/
+  div.root.shell {
+    #contest-expired {
+
+      #expired-img {
+        margin: 0px auto 50px auto;
+        width: 101px;
+        height: 108px;
+      }
+    }
+  }
+}

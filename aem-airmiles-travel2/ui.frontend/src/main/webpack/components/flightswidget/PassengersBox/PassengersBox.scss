@@ -1,0 +1,38 @@
+.link-to {
+  display: flex;
+  gap: 0.5rem;
+
+  a {
+    display: flex;
+    gap: amSizeUnit(1);
+    text-decoration: none;
+
+    &:hover {
+      color: amBlue(1);
+      text-decoration: underline;
+    }
+
+    span {
+      font-size: amFontSize(3);
+    }
+  }
+}
+
+.select-child {
+  $margin-select: amSizeUnit(1);
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc(50% - calc($margin-select * 0.5));
+
+    &:not(:only-child) {
+      margin-right: $margin-select;
+    }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}

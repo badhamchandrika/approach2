@@ -1,0 +1,110 @@
+<div data-sly-test="${wcmmode.edit}" class="d-flex justify-content-center">
+    <p class="p-1 mb-2 w-50 d-flex justify-content-center">Global Alert</p>
+</div>
+<sly data-sly-use.alertModel="com.aem.airmiles.web.core.models.GlobalAlertModel" />
+<sly data-sly-test="${alertModel.isInjectable}">
+    <div data-sly-test="${wcmmode.edit}" data-sly-list.details="${alertModel.globalAlertDetails}" class="int-view text-danger px-3 mx-2"
+         data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}">
+        <span data-sly-test="${details.globalAlertIsTrue}" class='am-icon am-icon-help-centre-where-can-i-fly' aria-label='icon' role='img'> | </span>
+        <span data-sly-test="${details.globalAlertType=='check'}" class='am-icon2 am-icon2-success --am-base-color-emerald-900' aria-hidden="true" role='img'></span>
+        <span data-sly-test="${details.globalAlertType=='warning'}" class='am-icon2 am-icon2-warning --am-base-color-citrine-800' aria-hidden="true" role='img'></span>
+        <span data-sly-test="${details.globalAlertType=='stop'}" class='am-icon2 am-icon2-error --am-base-color-ruby-900' aria-hidden="true" role='img'></span>
+        <span data-sly-test="${details.globalAlertType=='info'}" class='am-icon2 am-icon2-information --am-base-color-saphire-900' aria-hidden="true" role='img'></span>
+
+        <span>Date: | ${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime} - ${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}</span>
+        <h3 style="font-weight:bold; font-size: 20px">${details.globalAlertTitle @ context='html'}</h3>
+        <span>${details.globalAlertText @ context='html'}</span>
+        <span data-sly-test="${details.alertPages}"><strong>Shown Page(s):</strong></span>
+        <ol data-sly-list.localPage="${details.alertPages}"><li>${localPage.alertPage}</li></ol>
+        <hr />
+    </div>
+
+    <sly data-sly-list.details="${alertModel.globalAlertDetails}"
+         data-sly-use.template="globalAlertTemplate.html"
+         data-sly-test="${!wcmmode.edit}">
+    <sly data-sly-list.localPage="${details.alertPages}">
+        <sly data-sly-test="${localPage.alertPage == currentPage.path && !details.isGlobalAlert}">
+            <div class="globalalert-display__slide"
+                 data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}"
+                 data-alert-name="${details.globalAlertName}" data-alert-category="${details.globalAlertCategory}" data-alert-pos="${details.globalAlertCategory}-pos-${detailsList.count}"
+                 id="alert_${alertModel.uniqueId}_${detailsList.count}">
+                <sly data-sly-call="${template.elements @ data=details, count=detailsList.count, uid=alertModel.uniqueId}"></sly>
+            </div>
+        </sly>
+    </sly>
+    <sly data-sly-test="${details.globalAlertIsTrue}">
+        <div class="globalalert-display__slide"
+             data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}"
+             data-alert-name="${details.globalAlertName}" data-alert-category="${details.globalAlertCategory}" data-alert-pos="${details.globalAlertCategory}-pos-${detailsList.count}"
+             id="alert_${alertModel.uniqueId}_${detailsList.count}">
+            <sly data-sly-call="${template.elements @ data=details, count=detailsList.count, uid=alertModel.uniqueId}"></sly>
+        </div>
+    </sly>
+    </sly>
+</sly>
+<div class="global-alert-wrapper" id="${alertModel.id}" data-sly-test="${!alertModel.isInjectable}">
+    <div data-sly-test="${alertModel.active}" class="globalalert-container bsp-container">
+        <div class="d-block d-md-flex">
+            <div class="globalalert-display" data-duration="${alertModel.duration || '10'}">
+                <sly data-sly-test="${alertModel.globalAlertDetails}">
+                    <sly data-sly-list.details="${alertModel.globalAlertDetails}"
+                         data-sly-use.template="globalAlertTemplate.html">
+                        <!--/* Get 'total' alerts number. */-->
+                        <sly data-sly-test="${detailsList.last}"><sly data-sly-set.total="${detailsList.count}"/></sly>
+
+                        <!--/* For authoring only. */-->
+                        <div data-sly-test="${wcmmode.edit}" class="int-view text-danger px-3 mx-2"
+                             data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}">
+                            <span data-sly-test="${details.globalAlertIsTrue}" class='am-icon am-icon-help-centre-where-can-i-fly' aria-label='icon' role='img'> | </span>
+                            <span data-sly-test="${details.globalAlertType=='check'}" class='am-icon2 am-icon2-success --am-base-color-emerald-900' aria-hidden="true" role='img'></span>
+                            <span data-sly-test="${details.globalAlertType=='warning'}" class='am-icon2 am-icon2-warning --am-base-color-citrine-800' aria-hidden="true" role='img'></span>
+                            <span data-sly-test="${details.globalAlertType=='stop'}" class='am-icon2 am-icon2-error --am-base-color-ruby-900' aria-hidden="true" role='img'></span>
+                            <span data-sly-test="${details.globalAlertType=='info'}" class='am-icon2 am-icon2-information --am-base-color-saphire-900' aria-hidden="true" role='img'></span>
+
+                            <span>Date: | ${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime} - ${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}</span>
+                            <h3 style="font-weight:bold; font-size: 20px">${details.globalAlertTitle @ context='html'}</h3>
+                            <span>${details.globalAlertText @ context='html'}</span>
+                            <span data-sly-test="${details.alertPages}"><strong>Shown Page(s):</strong></span>
+                            <ol data-sly-list.localPage="${details.alertPages}"><li>${localPage.alertPage}</li></ol>
+                            <hr />
+                        </div>
+                        <!--/* For publish view only. */-->
+                        <sly data-sly-test="${!wcmmode.edit}">
+                            <sly data-sly-list.localPage="${details.alertPages}">
+                                <sly data-sly-test="${localPage.alertPage == currentPage.path && !details.isGlobalAlert}">
+                                    <div class="globalalert-display__slide"
+                                         data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}"
+                                         data-alert-name="${details.globalAlertName}" data-alert-category="${details.globalAlertCategory}" data-alert-pos="${details.globalAlertCategory}-pos-${detailsList.count}"
+                                         id="alert_${alertModel.uniqueId}_${detailsList.count}">
+                                        <sly data-sly-call="${template.elements @ data=details, count=detailsList.count, uid=alertModel.uniqueId}"></sly>
+                                    </div>
+                                </sly>
+                            </sly>
+                            <sly data-sly-test="${details.globalAlertIsTrue}">
+                                <div class="globalalert-display__slide"
+                                     data-start-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertStartTime}" data-end-time="${ 'YYYY-MM-dd HH:mm:ss' @ format=details.globalAlertEndTime}"
+                                     data-alert-name="${details.globalAlertName}" data-alert-category="${details.globalAlertCategory}" data-alert-pos="${details.globalAlertCategory}-pos-${detailsList.count}"
+                                     id="alert_${alertModel.uniqueId}_${detailsList.count}">
+                                    <sly data-sly-call="${template.elements @ data=details, count=detailsList.count, uid=alertModel.uniqueId}"></sly>
+                                </div>
+                            </sly>
+                        </sly>
+
+                    </sly>
+                </sly>
+            </div>
+            <div class="d-flex justify-content-between justify-content-md-end pt-3 pt-md-0 globalalert-controller" data-sly-test="${!wcmmode.edit}">
+                <div class="globalalert-pagination text-nowrap">
+                    <span class='am-icon am-icon-functional-arrow-left --am-base-color-saphire-900 globalalert-pagination__prev' aria-label='previous icon' role='img'></span>
+                    <span class="globalalert-pagination__numbers"> </span>
+                    <span class='am-icon am-icon-functional-arrow-right --am-base-color-saphire-900 globalalert-pagination__next' aria-label='next icon' role='img'></span>
+                </div>
+                <div class="globalalert-player text-nowrap --am-base-color-steel-900">
+                    <div class="globalalert-player__play d-none"><span class='am-icon2 am-icon2-play' aria-label='play button' role='img'></span> <span class="globalalert-player__text">${'Play' @ i18n}</span></div>
+                    <div class="globalalert-player__pause d-none"><span class='am-icon2 am-icon2-pause' aria-label='pause button' role='img'></span> <span class="globalalert-player__text">${'Pause' @ i18n}</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

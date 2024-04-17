@@ -1,0 +1,4 @@
+{
+  "apiUrl": "https://int-services.api.airmiles.ca",
+  "domBFFUrl": "https://dev-bff.api.airmiles.ca/dombff-contents"
+}

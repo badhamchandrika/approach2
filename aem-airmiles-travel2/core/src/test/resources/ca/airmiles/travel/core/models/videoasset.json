@@ -1,0 +1,446 @@
+{
+  "jcr:primaryType": "dam:Asset",
+  "jcr:mixinTypes": [
+    "mix:referenceable"
+  ],
+  "jcr:createdBy": "tpersad",
+  "jcr:created": "Wed Apr 20 2022 03:56:42 GMT+0000",
+  "jcr:uuid": "0077a311-dec2-4392-b986-d3ab8eeb5d4a",
+  "jcr:content": {
+    "jcr:primaryType": "dam:AssetContent",
+    "jcr:mixinTypes": [
+      "cq:ReplicationStatus"
+    ],
+    "cq:lastReplicationAction": "Activate",
+    "cq:lastReplicatedBy": "tpersad",
+    "jcr:lastModifiedBy": "tpersad",
+    "cq:lastReplicated": "Wed Apr 20 2022 03:56:49 GMT+0000",
+    "dam:assetState": "processed",
+    "jcr:lastModified": "Wed Apr 20 2022 03:56:43 GMT+0000",
+    "renditions": {
+      "jcr:primaryType": "nt:folder",
+      "jcr:createdBy": "tpersad",
+      "jcr:created": "Wed Apr 20 2022 03:56:42 GMT+0000",
+      "original": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "tpersad",
+        "jcr:created": "Wed Apr 20 2022 03:56:42 GMT+0000",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:lastModifiedBy": "tpersad",
+          "jcr:mimeType": "video/mp4",
+          "jcr:lastModified": "Wed Apr 20 2022 03:56:42 GMT+0000",
+          ":jcr:data": 7292219
+        }
+      }
+    },
+    "related": {
+      "jcr:primaryType": "nt:unstructured"
+    },
+    "metadata": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:mixinTypes": [
+        "cq:Taggable"
+      ],
+      "xmpDM:videoFieldOrder": "Progressive",
+      "xmpDM:startTimeScale": 30000,
+      "xmp:CreatorTool": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+      "xmpDM:audioSampleRate": 48000,
+      "xmpDM:audioSampleType": "16Int",
+      "dam:extracted": "Wed Apr 20 2022 03:56:42 GMT+0000",
+      "dc:format": "video/mp4",
+      "xmpMM:DocumentID": "5981e2fa-0e91-5c73-f518-68150000007d",
+      "tiff:Orientation": 1,
+      "xmpDM:videoFrameRate": "29.970030",
+      "xmpMM:OriginalDocumentID": "xmp.did:111c79f2-f284-485a-9c6e-12f821080836",
+      "xmpDM:videoPixelAspectRatio": "1/1",
+      "xmpDM:audioChannelType": "Stereo",
+      "xmp:MetadataDate": "Mon Apr 11 2022 12:53:26 GMT-0400",
+      "xmpMM:InstanceID": "xmp.iid:275e8346-bef6-41cd-8c5f-603b434b9da9",
+      "xmp:ModifyDate": "Mon Apr 11 2022 16:53:26 GMT+0000",
+      "xmp:CreateDate": "Mon Apr 11 2022 16:53:11 GMT+0000",
+      "dam:sha1": "87024ad920bda7c8cf776c607d122018e3e263f9",
+      "dam:size": 7292219,
+      "xmpDM:startTimeSampleSize": 1001,
+      "xmpDM:videoFrameSize": {
+        "jcr:primaryType": "nt:unstructured",
+        "stDim:h": "1162",
+        "stDim:w": "2810",
+        "xmpNodeType": "xmpStruct",
+        "stDim:unit": "pixel"
+      },
+      "xmpDM:startTimecode": {
+        "jcr:primaryType": "nt:unstructured",
+        "xmpDM:timeValue": "00;00;00;00",
+        "xmpNodeType": "xmpStruct",
+        "xmpDM:timeFormat": "2997DropTimecode"
+      },
+      "xmpDM:altTimecode": {
+        "jcr:primaryType": "nt:unstructured",
+        "xmpDM:timeValue": "00;00;00;00",
+        "xmpNodeType": "xmpStruct",
+        "xmpDM:timeFormat": "2997DropTimecode"
+      },
+      "xmpDM:duration": {
+        "jcr:primaryType": "nt:unstructured",
+        "xmpDM:scale": "1/90000",
+        "xmpDM:value": 1353600,
+        "xmpNodeType": "xmpStruct"
+      },
+      "xmpMM:History": {
+        "1": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "saved",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 12:53:26 GMT-0400",
+          "stEvt:changed": "/",
+          "stEvt:instanceID": "8afa5927-a694-046e-2d11-daed000000aa"
+        },
+        "2": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "created",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 10:44:33 GMT-0400",
+          "stEvt:instanceID": "xmp.iid:81523d95-bc73-4bc6-b78d-0af945ca659f"
+        },
+        "3": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "saved",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 10:46:35 GMT-0400",
+          "stEvt:changed": "/content",
+          "stEvt:instanceID": "xmp.iid:847b665b-b116-4a34-a9e1-f13d695efa1c"
+        },
+        "4": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "saved",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 12:50:01 GMT-0400",
+          "stEvt:changed": "/content",
+          "stEvt:instanceID": "xmp.iid:199318b7-ef15-4c35-900d-205e8f08e2fa"
+        },
+        "5": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "derived",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:parameters": "saved to new location"
+        },
+        "6": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "saved",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 12:50:01 GMT-0400",
+          "stEvt:changed": "/",
+          "stEvt:instanceID": "xmp.iid:08166b10-61c5-431c-a905-98ea5cc386da"
+        },
+        "7": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "saved",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 12:53:26 GMT-0400",
+          "stEvt:changed": "/",
+          "stEvt:instanceID": "xmp.iid:2ef63cad-5d3c-44fd-bfbc-8358646ae8c1"
+        },
+        "8": {
+          "jcr:primaryType": "nt:unstructured",
+          "stEvt:action": "saved",
+          "xmpNodeType": "xmpStruct",
+          "stEvt:softwareAgent": "Adobe Photoshop 22.5 (20210825.orig.371 f9e5e2d)  (Macintosh)",
+          "stEvt:when": "Mon Apr 11 2022 12:53:26 GMT-0400",
+          "stEvt:changed": "/metadata",
+          "stEvt:instanceID": "xmp.iid:275e8346-bef6-41cd-8c5f-603b434b9da9"
+        },
+        "jcr:primaryType": "nt:unstructured",
+        "xmpNodeType": "xmpArray",
+        "xmpArraySize": 8,
+        "xmpArrayType": "rdf:Seq"
+      },
+      "xmpMM:DerivedFrom": {
+        "jcr:primaryType": "nt:unstructured",
+        "stRef:instanceID": "xmp.iid:7c836705-f4aa-4c1c-a08a-80d134286930",
+        "stRef:originalDocumentID": "xmp.did:81523d95-bc73-4bc6-b78d-0af945ca659f",
+        "xmpNodeType": "xmpStruct",
+        "stRef:documentID": "xmp.did:7c836705-f4aa-4c1c-a08a-80d134286930"
+      },
+      "xmpMM:Ingredients": {
+        "1": {
+          "jcr:primaryType": "nt:unstructured",
+          "stRef:instanceID": "xmp.iid:4883dd0a-776d-49cd-8864-77794105b342",
+          "stRef:maskMarkers": "None",
+          "stRef:toPart": "time:0d3603600f240000",
+          "xmpNodeType": "xmpStruct",
+          "stRef:fromPart": "time:0d3603600f240000"
+        },
+        "jcr:primaryType": "nt:unstructured",
+        "xmpNodeType": "xmpArray",
+        "xmpArraySize": 1,
+        "xmpArrayType": "rdf:Bag"
+      },
+      "xmpMM:Pantry": {
+        "1": {
+          "jcr:primaryType": "nt:unstructured",
+          "xmpTPg:PlateNames": [
+            "Cyan",
+            "Yellow"
+          ],
+          "illustrator:StartupProfile": "Web",
+          "xmpTPg:HasVisibleTransparency": "False",
+          "xmpTPg:PlateNames_xmpArrayType": "rdf:Seq",
+          "xmp:CreatorTool": "Adobe Illustrator 26.0 (Macintosh)",
+          "dc:format": "application/pdf",
+          "illustrator:CreatorSubTool": "AIRobin",
+          "xmpMM:DocumentID": "xmp.did:a9f07308-9504-4b69-80a2-34fb77630f5f",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:OriginalDocumentID": "uuid:65E6390686CF11DBA6E2D887CEACB407",
+          "xmpTPg:NPages": 1,
+          "xmp:MetadataDate": "Mon Apr 11 2022 11:17:48 GMT-0400",
+          "xmpMM:RenditionClass": "proof:pdf",
+          "pdf:Producer": "Adobe PDF library 16.03",
+          "xmpTPg:HasVisibleOverprint": "False",
+          "xmpMM:InstanceID": "uuid:2ed9e32c-9a97-3440-ae75-8ffe63ba0a53",
+          "xmp:ModifyDate": "Mon Apr 11 2022 11:17:48 GMT-0400",
+          "xmp:CreateDate": "Mon Apr 11 2022 11:17:47 GMT-0400",
+          "illustrator:Type": "Document",
+          "dc:title": "Cash_Icon",
+          "pdfx:CreatorVersion": "21.0.0"
+        },
+        "2": {
+          "jcr:primaryType": "nt:unstructured",
+          "xmpTPg:PlateNames": [
+            "Cyan",
+            "Magenta",
+            "Yellow"
+          ],
+          "illustrator:StartupProfile": "Web",
+          "xmpTPg:HasVisibleTransparency": "False",
+          "xmpTPg:PlateNames_xmpArrayType": "rdf:Seq",
+          "xmp:CreatorTool": "Adobe Illustrator 26.0 (Macintosh)",
+          "dc:format": "application/pdf",
+          "illustrator:CreatorSubTool": "AIRobin",
+          "xmpMM:DocumentID": "xmp.did:2b3591bd-5549-4703-a2f1-03f5306d7991",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:OriginalDocumentID": "uuid:65E6390686CF11DBA6E2D887CEACB407",
+          "xmpTPg:NPages": 1,
+          "xmp:MetadataDate": "Mon Apr 11 2022 11:14:04 GMT-0400",
+          "xmpMM:RenditionClass": "proof:pdf",
+          "pdf:Producer": "Adobe PDF library 16.03",
+          "xmpTPg:HasVisibleOverprint": "False",
+          "xmpMM:InstanceID": "uuid:bb19b8c4-45d5-a54c-953e-57025f5c1e7c",
+          "xmp:ModifyDate": "Mon Apr 11 2022 11:14:04 GMT-0400",
+          "xmp:CreateDate": "Mon Apr 11 2022 11:14:04 GMT-0400",
+          "illustrator:Type": "Document",
+          "dc:title": "Moon",
+          "pdfx:CreatorVersion": "21.0.0"
+        },
+        "3": {
+          "jcr:primaryType": "nt:unstructured",
+          "xmpTPg:PlateNames": [
+            "Cyan",
+            "Magenta",
+            "Yellow",
+            "Black"
+          ],
+          "illustrator:StartupProfile": "Web",
+          "xmpTPg:HasVisibleTransparency": "False",
+          "xmpTPg:PlateNames_xmpArrayType": "rdf:Seq",
+          "xmp:CreatorTool": "Adobe Illustrator 26.0 (Macintosh)",
+          "dc:format": "application/pdf",
+          "illustrator:CreatorSubTool": "AIRobin",
+          "xmpMM:DocumentID": "xmp.did:16cb8eb8-6f68-4c92-90d1-9b5cf4028f54",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:OriginalDocumentID": "uuid:65E6390686CF11DBA6E2D887CEACB407",
+          "xmpTPg:NPages": 1,
+          "xmp:MetadataDate": "Mon Apr 11 2022 11:17:11 GMT-0400",
+          "xmpMM:RenditionClass": "proof:pdf",
+          "pdf:Producer": "Adobe PDF library 16.03",
+          "xmpTPg:HasVisibleOverprint": "False",
+          "xmpMM:InstanceID": "uuid:ea7ecbc6-17a7-7843-bd95-68ac3313f76d",
+          "xmp:ModifyDate": "Mon Apr 11 2022 11:17:11 GMT-0400",
+          "xmp:CreateDate": "Mon Apr 11 2022 11:17:10 GMT-0400",
+          "illustrator:Type": "Document",
+          "dc:title": "Dream_Icon",
+          "pdfx:CreatorVersion": "21.0.0"
+        },
+        "4": {
+          "jcr:primaryType": "nt:unstructured",
+          "illustrator:StartupProfile": "Web",
+          "xmpTPg:HasVisibleTransparency": "False",
+          "xmp:CreatorTool": "Adobe Illustrator 26.0 (Macintosh)",
+          "dc:format": "application/pdf",
+          "illustrator:CreatorSubTool": "AIRobin",
+          "xmpMM:DocumentID": "xmp.did:dd8a865a-4e3d-4f77-9410-b2f401b1d355",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:OriginalDocumentID": "uuid:65E6390686CF11DBA6E2D887CEACB407",
+          "xmpTPg:NPages": 1,
+          "xmp:MetadataDate": "Mon Apr 11 2022 11:02:34 GMT-0400",
+          "xmpMM:RenditionClass": "proof:pdf",
+          "pdf:Producer": "Adobe PDF library 16.03",
+          "xmpTPg:HasVisibleOverprint": "False",
+          "xmpMM:InstanceID": "uuid:f544414c-759e-a14d-8b78-4eea983f1fde",
+          "xmp:ModifyDate": "Mon Apr 11 2022 11:02:34 GMT-0400",
+          "xmp:CreateDate": "Mon Apr 11 2022 11:02:32 GMT-0400",
+          "illustrator:Type": "Document",
+          "dc:title": "Damask_Background",
+          "pdfx:CreatorVersion": "21.0.0"
+        },
+        "5": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:09e13b2a-0898-4d3b-9ba5-b1b33ba191bf",
+          "dc:title": "air miles dream 2"
+        },
+        "6": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:1e6a26e0-3f72-4b99-846f-ebd23e134788",
+          "dc:title": "Dream Box"
+        },
+        "7": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:23d79a56-6221-4a88-b4d7-1f7ccc0afe72",
+          "dc:title": "bottom left square"
+        },
+        "8": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:299ea9c8-27ff-463e-a95e-f720c72188f3",
+          "dc:title": "top left square"
+        },
+        "9": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:29c07f0b-756d-4713-8d43-db80b5777251",
+          "dc:title": "right side square"
+        },
+        "10": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.comp",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:4883dd0a-776d-49cd-8864-77794105b342",
+          "dc:title": "Profile Details Test Generic Option 1"
+        },
+        "11": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:561729be-8725-4595-abd5-fdb622d1b51a",
+          "dc:title": "air miles dream"
+        },
+        "12": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.comp",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:61649519-dd5e-43c5-82a2-400c3de7f0e6",
+          "dc:title": "Damask_Background"
+        },
+        "13": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:8665404f-ef5f-4a75-844e-bc4aae437413",
+          "dc:title": "Dream_Icon.ai"
+        },
+        "14": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:86e1dc7e-b2e9-4df3-b670-69f8cb83d19a",
+          "dc:title": "Damask_Background"
+        },
+        "15": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:88f1251a-5413-40d6-8117-33bd97669ab9",
+          "dc:title": "Moon"
+        },
+        "16": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:93d1559d-7adc-4c9c-9af3-e3fd1ab72a0f",
+          "dc:title": "If you like to travel, you’ll love using Dream Miles™to reward yourself. Or, perhaps you’ll want use Cash Miles™ to get free stuff. Join now and get rewarded the way you want."
+        },
+        "17": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:9cddf992-63d8-4ed8-8818-1d4c41d2f712",
+          "dc:title": "Cash_Icon.ai"
+        },
+        "18": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:ad026544-fe11-4945-861f-560397846994",
+          "dc:title": "100,000 TRIPS TO THE MOON"
+        },
+        "19": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.comp",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:c0a5aee7-d444-4554-9329-959aa241c63e",
+          "dc:title": "Moon"
+        },
+        "20": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:c743b51c-d9f4-4410-934a-53ecb8898985",
+          "dc:title": "Collectors have travelled the equivalent of"
+        },
+        "21": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:c8e52557-18d3-4e29-a905-41b688cb8b5a",
+          "dc:title": "air miles cash 2"
+        },
+        "22": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:d2e4d40d-a9e2-487a-a6d0-b5818ae33769",
+          "dc:title": "air miles cash"
+        },
+        "23": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:ea83d45a-7338-4399-9553-e5c02e118d49",
+          "dc:title": "Layer 1"
+        },
+        "24": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:ed32781b-f2c6-4eec-9d91-5d4c82fe99dc",
+          "dc:title": "Layer 1"
+        },
+        "25": {
+          "jcr:primaryType": "nt:unstructured",
+          "dc:format": "application/vnd.adobe.aftereffects.layer",
+          "xmpNodeType": "xmpStruct",
+          "xmpMM:InstanceID": "xmp.iid:f83aafc0-32ce-461b-b699-72ffbb9f6f3b",
+          "dc:title": "Cash Box"
+        },
+        "jcr:primaryType": "nt:unstructured",
+        "xmpNodeType": "xmpArray",
+        "xmpArraySize": 25,
+        "xmpArrayType": "rdf:Bag"
+      }
+    }
+  }
+}

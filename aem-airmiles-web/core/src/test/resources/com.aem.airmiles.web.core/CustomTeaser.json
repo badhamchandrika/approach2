@@ -1,0 +1,58 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "teaser" : {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Teaser Title",
+    "imageFromPageImage": "false",
+    "fileReference": "/content/dam/aem-airmiles-web/images/cloude_icon.png",
+    "mobileImage": "/content/dam/aem-airmiles-web/images/dollar_icon.png",
+    "titleFromPage": "false",
+    "alt": "alt-text",
+    "linkURL": "/content/aem-airmiles-web/ca/en",
+    "jcr:description": "<p>Teaser description</p>",
+    "linkTarget": "_blank",
+    "tabletImage": "/content/dam/aem-airmiles-web/images/search.png",
+    "descriptionFromPage": "false",
+    "sling:resourceType": "aem-airmiles-web/components/airmiles-core/teaser",
+    "isDecorative": "false",
+    "textIsRich": "true",
+    "altValueFromDAM": "false",
+    "desktopImage": "/content/dam/aem-airmiles-web/images/desktop-image.png",
+    "imageAlt": "alt-text"
+  },
+  "emptyTeaser" : {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Teaser Title",
+    "imageFromPageImage": "false",
+    "fileReference": "/content/dam/aem-airmiles-web/images/cloude_icon.png",
+    "titleFromPage": "false",
+    "alt": "alt-text",
+    "linkURL": "/content/aem-airmiles-web/ca/en",
+    "jcr:description": "<p>Teaser description</p>",
+    "linkTarget": "_blank",
+    "descriptionFromPage": "false",
+    "sling:resourceType": "aem-airmiles-web/components/airmiles-core/teaser",
+    "isDecorative": "false",
+    "textIsRich": "true",
+    "altValueFromDAM": "false"
+  },
+
+  "desktopTeaser" : {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "Teaser Title",
+    "imageFromPageImage": "false",
+    "fileReference": "/content/dam/aem-airmiles-web/images/cloude_icon.png",
+    "titleFromPage": "false",
+    "alt": "alt-text",
+    "linkURL": "/content/aem-airmiles-web/ca/en",
+    "jcr:description": "<p>Teaser description</p>",
+    "linkTarget": "_blank",
+    "descriptionFromPage": "false",
+    "sling:resourceType": "aem-airmiles-web/components/airmiles-core/teaser",
+    "isDecorative": "false",
+    "textIsRich": "true",
+    "altValueFromDAM": "false",
+    "desktopImage": "/content/dam/aem-airmiles-web/images/desktop-image.png"
+  }
+
+}

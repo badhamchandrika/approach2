@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+// ---------- Breakpoint Variable Map ---------
+
+// Mobile: Below 767
+// Tablet: between 768 and 1279
+// Desktop: 1280 +
+$header-desktop-large: 1500px;
+$header-desktop-medium: 1366px;
+$header-desktop-min: 1280px;
+$header-tablet-xlarge: 1112px;
+$header-tablet-large: 1024px;
+$header-tablet-medium-large: 992px;
+$header-tablet-medium: 950px;
+$header-tablet-small: 860px;
+$header-tablet-xsmall: 834px;
+$header-tablet-xxsmall: 812px;
+$header-tablet-min: 768px;
+$header-mobile-small: 544px;
+$header-mobile-xsmall: 320px;
+
+$breakpoints: (
+  'sm': 767px,
+  'md': 768px,
+  'lg': 1280px,
+);
+
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoints, 'md') - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoints, 'md')) and (max-width: map-get($breakpoints, 'lg') - 1px) {
+    @content;
+  }
+}
+
+@mixin tabletAndUp {
+  @media screen and (min-width: map-get($breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin mobileLandscape {
+  @media screen and (max-width: map-get($breakpoints, 'md') - 1px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Target print and desktop
+@mixin printAndDesktop {
+  @media print, (min-width: map-get($breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin extraSmall {
+  @media screen and (min-width: 0) and (max-width:$header-mobile-xsmall){
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+{
+	  "jcr:primaryType": "nt:unstructured",
+	  "altSrc": "/content/dam/airmiles/ca/en/get-miles/lens-3.png",
+	  "disableHover": "true",
+	  "imageAlt": "lens-3",
+	  "size": "small",
+	  "webpSrc": "/content/dam/airmiles/ca/en/get-miles/lens-3.webp",
+	  "dataTestId": "lens-item-3",
+	  "type": "testType",
+	  "src":"",
+	  "reference":"/content/dam/airmiles/ca/en/get-miles/lens-3.png"
+	  
+}

@@ -1,0 +1,196 @@
+{
+  "topnav": {
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html",
+        "sitename":"airmiles.ca"
+      }},
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html",
+        "name":"English"
+      }}}
+  ,
+  "invalid_websitename_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"//www.airmiles.ca",
+        "sitename":"airmiles.ca1`23456sddfg111"
+      }}},
+
+  "valid_websitename_invalid_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"//www.airmiles.ca",
+        "sitename":"airmiles.ca"
+      }}},
+
+  "invalid_websitename_valid_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html",
+        "sitename":"airmiles34546456dd"
+      }}},
+
+  "null_websitename_valid_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html"
+      }}},
+
+  "valid_websitename_null_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "sitename":"airmiles.ca"}}},
+
+  "null_websitename_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured"
+      }}},
+
+  "with_new_websitename_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "sitedetailswithmap":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html",
+        "sitename":"airmiles.ca",
+        "clickaction": "_self",
+        "dataTrackID": "top_nav",
+        "dataClickID": "airmiles_ca",
+        "dataTrackType": "internal"
+      },
+      "item1":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmilesshops.ca/en.html",
+        "sitename":"airmilesshops.ca",
+        "clickaction": "_target",
+        "dataTrackID": "top_nav",
+        "dataClickID": "airmilesshops_ca",
+        "dataTrackType": "internal"
+      }}},
+
+  "with_empty_sitedetails_profiletools_tabs":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav"
+      },
+
+
+  "invalid_profiletooltitle_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"//www.airmiles",
+        "name":"12323423"}}},
+
+  "valid_profiletooltitle_invalid_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"//www.airmiles",
+        "name":"English"
+      }}},
+
+  "invalid_profiletooltitle_valid_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html",
+        "name":"English@#$%"
+      }}},
+
+  "null_profiletooltitle_valid_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html"
+      }}},
+
+  "valid_profiletooltitle_null_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "name":"English"}}},
+
+  "null_profiletooltitle_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured"
+      }}},
+
+  "with_new_profiletooltitle_websiteurl":{
+    "jcr:primaryType":"nt:unstructured",
+    "sling:resourceType":"aem-airmiles-web/components/topnav",
+    "profiletoolsdetails":{
+      "jcr:primaryType":"nt:unstructured",
+      "item0":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en.html",
+        "name":"English"
+      },
+      "item1":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/fr.html",
+        "name":"Français"
+      },
+      "item2":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://oauth.airmiles.ca/login",
+        "name":"Sign in"
+      },
+      "item3":{
+        "jcr:primaryType":"nt:unstructured",
+        "weburl":"https://www.airmiles.ca/en/join.html",
+        "name":"Join now"
+      }}}
+}

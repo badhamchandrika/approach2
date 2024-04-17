@@ -1,0 +1,365 @@
+@mixin header-nav-items {
+  display: flex;
+  color: color('body-copy');
+  height: 100%;
+}
+
+$mobile-old-px: 12px 25px;
+$mobile-menu-height:calc(100vh - 53px);
+.navigationlinks {
+  .headnav {
+    @include header-nav-items;
+    &__items, &__item{
+      @include header-nav-items;
+    }
+    &__item{
+      padding: 0 .525rem;
+      height: 100%;
+      &-href{
+        text-decoration: none;
+        white-space: nowrap;
+        padding: .75rem 0;
+        border: 2px solid rgba(0,0,0,0);
+        @media (min-width: breakpoint('md')) {
+          font-size: 1.25rem;
+        }
+        @media (min-width: breakpoint('lg')) {
+          font-size: 1.375rem;
+        }
+        &:active{
+          border: 2px solid color('white');
+        }
+      }
+      &__hover{
+        & .headnav__subitem{
+          display: block;
+        }
+        .am-icon-functional-arrow-down {
+          transform: rotateZ(180deg);
+        }
+      }
+      &-arrow{
+        border: 2px solid color('transparent');
+        &:active{
+          border: 2px solid color('white');
+        }
+      }
+      @media (min-width: breakpoint('xl')) {
+        padding: 0 1rem;
+      }
+    }
+    &__underbar{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      border-bottom: 2px solid color('light-blue');
+      transition: all .25s ease;
+      pointer-events: none;
+    }
+    &__subitem{
+      display: none;
+      background-color: color('white');
+      position: absolute;
+      padding: 27px 22px;
+      z-index: 10;
+      margin: 0 1rem;
+      width: 100vw;
+      box-shadow: $nav-box-shadow;
+      @media (min-width: breakpoint('md')) {
+        top: 3.6rem;
+        left: -5.625rem;
+        min-width: 100vw;
+        padding: 1rem!important;
+      }
+      @media (min-width: 820px) {
+        left: -5.9rem;
+      }
+      @media (min-width: breakpoint('lg')) {
+        top: 3.8rem;
+        left: -7rem;
+        min-width: auto;
+        padding: 1.5rem!important;
+      }
+      &-block{
+        padding-left: 2.5rem;
+        &:first-child{
+          padding-left: 0;
+        }
+      }
+      .h2-wayfinding{
+        margin: 0 1rem 1.5rem 0;
+        font-family: ArchivoSemibold, serif;
+      }
+      &-link{
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        a,a:hover{
+          color: color('link-blue');
+          white-space: normal;
+        }
+        a{
+          text-decoration: none;
+          display: block;
+          margin-bottom: calc(46px - 1rem);
+          min-width: 11.25rem;
+          .am-icon-external-link{
+            font-size: .75rem;
+            padding-left: .5rem;
+          }
+        }
+        a:hover{
+          text-decoration: underline;
+          border: 0;
+        }
+        &.column-break{
+          column-count: 2;
+        }
+        &.second-column-break{
+          column-count: 1;
+        }
+        sup{
+          font-size: smaller;
+        }
+        @media (min-width: breakpoint('lg')) {
+          &.last-column-break {
+            column-count: 2;
+          }
+        }
+      }
+      &-border{
+        border-left: 1px solid color('grey-light');
+      }
+    }
+    .am-icon-functional-arrow-down {
+      color: #FFF;
+      transition: all .25s ease;
+      padding: 0 .125rem;
+      font-size: .75rem;
+    }
+
+
+    // Mobile Style
+    &__mobile-mbSpacing {
+      transition: height .2s ease-out;
+    }
+    &__item-mobile {
+      padding: 0;
+      width: 100vw;
+      border: 1px solid color('white');
+      a {
+        text-decoration: none;
+        font-size: 1.125rem;
+        .am-icon{
+          color: color('body-copy');
+          &.am-icon-external-link{
+            font-size: .75rem;
+            padding-left: .5rem;
+          }
+        }
+      }
+      &.active, &:focus{
+        .headnav__item-title{
+          border: 2px solid color('cyan');
+          text-decoration: underline;
+        }
+        .headnav__subitem-mobile{
+          display: block;
+        }
+        .am-icon-functional-arrow-down:before {
+          content: "\e904";
+        }
+      }
+      .headnav__item-title-text{
+        width: 100%;
+        a{
+          display: block;
+        }
+      }
+    }
+    &__subitem-mobile{
+      display: none;
+      background-color: color('white');
+      .h2-wayfinding{
+        margin: 15px 15px 15px 45px;
+        padding: 0 0 0.25rem 0;
+        font-size: .875rem;
+        border-bottom: 1px solid color('grey-light');
+      }
+      &-button, li{
+        padding-left: 20px;
+        a{
+          padding: $mobile-old-px;
+          font-size: 1.125rem;
+          width: 100%;
+          display: block;
+          color: color('brand-blue');
+          &:hover{
+            color: color('brand-blue');
+          }
+        }
+      }
+    }
+    &__item-title{
+      background-color: color('blue-background');
+      padding: $mobile-old-px;
+      border: 2px solid #FFFFFF00;
+      .am-icon{
+        color: color('body-copy');
+      }
+      &:active, &:focus{
+        background-color: color('grey-light');
+        text-decoration: underline;
+      }
+    }
+    &__icon-menu{
+      color: color('white');
+      border: 2px solid #FFFFFF00;
+      &:active{
+        border: 2px solid color('white');
+      }
+    }
+    &__mobile-menu{
+      position: absolute;
+      top: 3.325rem;
+      left: 0;
+      min-width: 100vw;
+      max-height: $mobile-menu-height;
+      min-height: $mobile-menu-height;
+      overflow-y: scroll;
+      background-color: color('white');
+      padding-bottom: 3rem;
+      z-index: 5;
+      &-link{
+        color: color('body-copy');
+        &:hover {
+          color: color('body-copy');
+        }
+      }
+      a{
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    &__button-signin{
+      background-color: color('white');
+      border-bottom: 1px solid color('grey-light');
+    }
+    &__button-join{
+      background-color: color('light-blue');
+    }
+    &__button-signin, &__button-join{
+      width: 100%;
+      a{
+        color: color('body-copy');
+        text-decoration: none;
+        padding: 1rem;
+        border: 1px solid color('transparent');
+        font-weight: bold;
+        font-size: 1.125rem;
+        &:active{
+          color: color('body-copy');
+          text-decoration: underline;
+          border: 1px solid color('white');
+        }
+        &:hover{
+          color: color('body-copy');
+        }
+      }
+    }
+    &__bottomnav-wrapper{
+      font-size: 1.125rem;
+      a{
+        padding: .875rem 1.25rem;
+        display: block;
+        &:active{
+          background-color: color('brand-blue-tenpercent');
+        }
+      }
+      ul{
+        border-bottom: 1px solid color('grey-light');
+        li{
+          a{
+            text-decoration: none;
+            font-weight: bold;
+            color: color('body-copy');
+          }
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+      &-shops{
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: .375rem;
+        text-transform: uppercase;
+        a{
+          color: color('brand-blue');
+          text-decoration: none;
+          &:hover{
+            color: color('brand-blue');
+          }
+        }
+        .reg-md{
+          font-size: .25rem;
+          position: relative;
+          letter-spacing: 0;
+          top: -.625rem;
+        }
+      }
+      &-airmiles{
+        font-weight: bold;
+        background-color: color('brand-blue');
+        padding-left: .625rem;
+        a{
+          color: color('light-blue');
+          text-decoration: none;
+          &:hover{
+            color: color('light-blue');
+          }
+          &:hover{
+            text-decoration: underline;
+            text-decoration-color: color('white');
+          }
+        }
+      }
+      &-others{
+        font-weight: bold;
+        .headnav__bottomnav-mobile{
+          border-bottom: 1px solid color('grey-light');
+          padding-bottom: .25rem;
+          a{
+            color: color('body-copy');
+            text-decoration: none;
+            font-size: 1.125rem;
+            &:hover{
+              color: color('body-copy');
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    &__menu-item-wrapper{
+      button{
+        border: 0;
+        width: 100%;
+        background-color: transparent;
+        .AMLabeledIcon{
+          width: 100%;
+          img{
+            width: 2.5rem;
+          }
+        }
+        &:hover{
+          background-color: color('grey-light');
+        }
+      }
+    }
+  }
+  @media (min-width: breakpoint('md')) {
+    position: relative;
+  }
+}

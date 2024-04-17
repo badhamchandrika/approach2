@@ -1,0 +1,18 @@
+<sly data-sly-test="${request.requestParameterMap['offers'][0].toString == 'trending' || request.requestParameterMap['offers'][0].toString == 'personalized'}">
+    <link rel="canonical" href="${properties.cq:canonicalUrl}">
+</sly>
+<sly data-sly-test="${request.requestParameterMap['offers'][0].toString == 'alloffers'}">
+    <link rel="canonical" href="${properties.allOffersCanonicalLink}">
+</sly>
+<sly data-sly-test="${request.requestParameterMap['offers'][0].toString == 'savedoffers'}">
+    <link rel="canonical" href="${properties.savedOffersCanonicalLink}">
+</sly>
+<sly data-sly-test="${!request.requestParameterMap['offers'][0].toString}">
+    <link data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+          data-sly-test="${page.canonicalLink}"
+          rel="canonical" href="${properties.cq:canonicalUrl || page.canonicalLink}">
+</sly>
+<link data-sly-test="${page.alternateLanguageLinks}"
+      data-sly-repeat="${page.alternateLanguageLinks.entrySet}"
+      rel="alternate" hreflang="${item.key.toLanguageTag}" href="${item.value}">
+

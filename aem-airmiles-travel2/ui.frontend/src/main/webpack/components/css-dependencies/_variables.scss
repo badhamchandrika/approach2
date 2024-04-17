@@ -1,0 +1,18 @@
+
+
+$font-regular:          'ArchivoRegular', Calibri, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size:             1rem;
+$font-height:           1.5;
+//== Color
+
+// Normal mode
+$color-foreground:      #202020;
+$color-background:      #ECECEC;
+$color-link:            #2020E0;
+
+// Dark mode
+$color-foreground-dark: invert($color-foreground);
+$color-background-dark: invert($color-background);
+$color-link-dark:       invert($color-link);
+
+$nav-box-shadow: 0 4px 2px 0 rgb(0 0 0 / 25%)

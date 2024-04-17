@@ -1,0 +1,33 @@
+<sly data-sly-use.heroModel="com.aem.airmiles.web.core.models.HeroBannerModel" />
+<div data-sly-test="${wcmmode.edit && !heroModel.titleText || wcmmode.edit && !heroModel.descriptionText}" data-emptytext="Hero Banner" class="cq-placeholder"></div>
+<div class="herobanner">
+    <div class="bsp-container narrow">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-6 my-auto herobanner__content py-2 pt-5 ps-3">
+                <h1 class="herobanner__title">${heroModel.titleText}</h1>
+                <div class="herobanner__description">${heroModel.descriptionText @ context = 'html'}</div>
+                <div class="herobanner__cta">
+                    <sly data-sly-list.ctaDetails="${heroModel.ctaButtons}">
+                        <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                        <sly data-sly-call="${ctatemplate.ctalink @
+                            type=ctaDetails.linkType,
+                            href=ctaDetails.linkUrl,
+                            text=ctaDetails.linkText,
+                            hexText=ctaDetails.hexTextColor,
+                            hexBtn=ctaDetails.hexBtnColor,
+                            dataTrackID=ctaDetails.dataTrackID,
+                            dataClickID=ctaDetails.dataClickID,
+                            dataTrackType=ctaDetails.dataTrackType,
+                            classes=ctaDetails.linkColor}">
+                        </sly>
+                    </sly>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-6 my-auto herobanner__image pb-4 py-2">
+                <div>
+                    <img data-sly-test="${heroModel.fileReference}" src="${heroModel.fileReference}" alt="${heroModel.imageAlt || 'support image for main image'}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

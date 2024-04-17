@@ -1,0 +1,517 @@
+@import "./bootstrap/bootstrap-utilities";
+@import "./variables";
+@import "../site/variables";
+
+@mixin cta-base {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  font-family: amFontFamily(9);
+  font-size: amFontSize(2);
+  font-weight: amFontWeight(7);
+  gap: amSizeUnit(1);
+  letter-spacing: amSizeMicro(2);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@mixin nav-link {
+  text-decoration: none;
+  font-family: $font-regular;
+  color: color("onyx");
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin focus-outline($style: simple, $main-color: amEmerald(9)) {
+  outline: none !important;
+
+  @if $style == double {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px $main-color; // double: inserts a double box-shadow outside element. e.g CTAs.
+  } @else if $style == inset {
+    box-shadow: inset
+      0
+      0
+      0
+      2px
+      $main-color; // inset: inserts a single box-shadow inside element. e.g dropdown item.
+  } @else {
+    box-shadow: 0 0 0 2px $main-color; // simple: default style.
+  }
+}
+
+@mixin cta-primary-variant($color: amTierBlue(3)) {
+  background-color: $color;
+
+  &:disabled,
+  &.disabled {
+    background-color: rgba($color, 0.4);
+  }
+}
+
+@mixin cta-secondary-variant($color: amTierBlue(3)) {
+  background-color: transparent;
+  border: 2px solid $color;
+  color: $color;
+
+  &:disabled,
+  &.disabled {
+    background-color: transparent;
+    border-color: rgba($color, 0.4);
+    color: rgba($color, 0.4);
+  }
+}
+
+@mixin cta-tertiary-variant($color: amTierBlue(3)) {
+  color: $color;
+
+  &:disabled,
+  &.disabled {
+    color: rgba($color, 0.4);
+  }
+}
+
+@mixin cta-text-variant($color: amTierBlue(3)) {
+  background-color: transparent;
+  border-color: transparent;
+  color: $color;
+
+  &:disabled,
+  &.disabled {
+    background-color: transparent;
+    color: rgba($color, 0.4);
+  }
+}
+
+@mixin cta-link($transform: none) {
+  $main-color: amTierBlue(3);
+
+  @include cta-base();
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: amSizeMicro(4);
+  color: $main-color;
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  @include transition($transition-button);
+
+  @include media-breakpoint-up("md") {
+    font-size: amFontSize(3);
+  }
+
+  // NOTE: large style commented since is not used so far.
+  // @include media-breakpoint-up("xl") {
+  //   font-size: amFontSize(4);
+  // }
+
+  @if $transform == lowercase {
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  sup {
+    font-size: 0.75rem;
+  }
+
+  .am-icon {
+    font-weight: 600;
+    left: 0;
+    line-height: 1;
+    position: relative;
+    @include transition(left 0.3s ease-in-out);
+
+    // NOTE: cleaning a default margin apllied
+    // on "am-icon2-" class by airmiles-web
+    &::before {
+      margin: 0;
+    }
+
+    &:not(:first-child) {
+      font-size: amFontSize(3);
+
+      &.am-icon2-arrow-right {
+        font-size: amFontSize(5);
+        transform: translateY(-1px); // added for fixing a small misalignment due the am-font.
+
+        @include media-breakpoint-up("md") {
+          font-size: amFontSize(9);
+        }
+      }
+    }
+  }
+
+  // :after is being used for adding an underline for hover state
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0;
+    pointer-events: none;
+    display: block;
+    width: 0;
+    height: 1px;
+    @include transition($transition-button);
+  }
+
+  &:hover,
+  &:active {
+    color: amStarySky(7);
+
+    .am-icon {
+      // animate only second element inside a cta-link eg: arrow-right or external-link
+      &:not(:first-child) {
+        left: amSizeMicro(4);
+      }
+    }
+    &:after {
+      width: 100%;
+      background-color: var(--bar-color);
+      @media (min-width: breakpoint("md")) {
+        width: calc(100% - 2rem);
+      }
+    }
+  }
+
+  &:active {
+    color: amStarySky(9);
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    color: $main-color;
+    font-weight: 500;
+
+    &:disabled,
+    &.disabled {
+      border-color: transparent;
+      color: rgba($main-color, 0.4);
+    }
+
+    &-rebrand-blue {
+      $main-color: amTierBlue(3);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-brand-blue,
+    &-primary {
+      $main-color: amBlue(2);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-light-blue,
+    &-secondary {
+      $main-color: amBlue(6);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-info {
+      $main-color: amBlue(4);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-gold {
+      $main-color: amYellow(1);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-success {
+      $main-color: amGreen(6);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-warning {
+      $main-color: #fd7e14;
+      @include cta-tertiary-variant($main-color);
+    }
+    &-danger {
+      $main-color: amRed(3);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-dark {
+      $main-color: amGrey(4);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-light {
+      $main-color: amGrey(5);
+      @include cta-tertiary-variant($main-color);
+    }
+    &-white {
+      $main-color: white;
+      @include cta-tertiary-variant($main-color);
+    }
+  }
+}
+
+@mixin cta-button {
+  $main-color: amTierBlue(3);
+  $variant-color: amCharTruth(6);
+  $text-color: white;
+
+  @include cta-base();
+  background-color: $main-color;
+  border-color: transparent;
+  border-style: solid;
+  border-width: amSizeMicro(2);
+  border-radius: $rounded-full;
+  color: $text-color;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 2.4;
+  padding: amFontSize(2) amFontSize(9);
+  @include transition($transition-button);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // NOTE: "md" media-query skipped since large style is no used so far.
+  @include media-breakpoint-up("xl") {
+    font-size: amFontSize(3);
+    line-height: 2;
+    padding: amFontSize(3) amFontSize(21);
+  }
+
+  // NOTE: large style commented since is not used so far.
+  // @include media-breakpoint-up("xl") {
+  //   font-size: amFontSize(4);
+  //   line-height: 1.7;
+  //   padding: amFontSize(5) amFontSize(25);
+  // }
+
+  sup,
+  span {
+    font-size: amFontSize(3);
+  }
+
+  &:focus {
+    @include focus-outline(double);
+  }
+
+  &:hover {
+    $text-color: amStarySky(9);
+
+    background-color: $variant-color;
+    color: $text-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: rgba($main-color, 0.4);
+    pointer-events: none;
+  }
+
+  &--primary {
+    $main-color: amTierBlue(3);
+
+    &-rebrand-blue {
+      @include cta-primary-variant($main-color);
+    }
+    &-brand-blue,
+    &-primary {
+      $main-color: amBlue(2);
+      @include cta-primary-variant($main-color);
+    }
+    &-light-blue,
+    &-secondary {
+      $main-color: amBlue(6);
+      @include cta-primary-variant($main-color);
+    }
+    &-info {
+      $main-color: amBlue(4);
+      @include cta-primary-variant($main-color);
+    }
+    &-gold {
+      $main-color: amYellow(1);
+      @include cta-primary-variant($main-color);
+    }
+    &-success {
+      $main-color: amGreen(6);
+      @include cta-primary-variant($main-color);
+    }
+    &-warning {
+      $main-color: #fd7e14;
+      @include cta-primary-variant($main-color);
+    }
+    &-danger {
+      $main-color: amRed(3);
+      @include cta-primary-variant($main-color);
+    }
+    &-dark {
+      $main-color: amGrey(4);
+      @include cta-primary-variant($main-color);
+    }
+    &-light {
+      $main-color: amGrey(5);
+      @include cta-primary-variant($main-color);
+    }
+    &-white {
+      $main-color: white;
+      @include cta-primary-variant($main-color);
+      color: amTierBlue(3);
+    }
+  }
+
+  &--secondary {
+    $main-color: amTierBlue(3);
+    $text-color: amSteel(9);
+
+    @include cta-secondary-variant($main-color);
+
+    &:hover {
+      background-color: $variant-color;
+      border-color: $variant-color;
+      box-shadow: none;
+      color: $text-color;
+    }
+    &-rebrand-blue {
+      @include cta-secondary-variant($main-color);
+    }
+    &-brand-blue,
+    &-primary {
+      $main-color: amBlue(2);
+      @include cta-secondary-variant($main-color);
+    }
+    &-light-blue,
+    &-secondary {
+      $main-color: amBlue(6);
+      @include cta-secondary-variant($main-color);
+    }
+    &-info {
+      $main-color: amBlue(4);
+      @include cta-secondary-variant($main-color);
+    }
+    &-gold {
+      $main-color: amYellow(1);
+      @include cta-secondary-variant($main-color);
+    }
+    &-success {
+      $main-color: amGreen(6);
+      @include cta-secondary-variant($main-color);
+    }
+    &-warning {
+      $main-color: #fd7e14;
+      @include cta-secondary-variant($main-color);
+    }
+    &-danger {
+      $main-color: amRed(3);
+      @include cta-secondary-variant($main-color);
+    }
+    &-dark {
+      $main-color: amGrey(4);
+      @include cta-secondary-variant($main-color);
+    }
+    &-light {
+      $main-color: amGrey(5);
+      @include cta-secondary-variant($main-color);
+    }
+    &-white {
+      $main-color: white;
+      @include cta-secondary-variant($main-color);
+    }
+  }
+
+  &--text {
+    $main-color: amTierBlue(3);
+    $text-color: amSteel(9);
+
+    @include cta-text-variant($main-color);
+
+    &:hover {
+      background-color: $variant-color;
+      border-color: $variant-color;
+      box-shadow: none;
+      color: $text-color;
+    }
+    &-rebrand-blue {
+      @include cta-text-variant($main-color);
+    }
+    &-brand-blue,
+    &-primary {
+      $main-color: amBlue(2);
+      @include cta-text-variant($main-color);
+    }
+    &-light-blue,
+    &-secondary {
+      $main-color: amBlue(6);
+      @include cta-text-variant($main-color);
+    }
+    &-info {
+      $main-color: amBlue(4);
+      @include cta-text-variant($main-color);
+    }
+    &-gold {
+      $main-color: amYellow(1);
+      @include cta-text-variant($main-color);
+    }
+    &-success {
+      $main-color: amGreen(6);
+      @include cta-text-variant($main-color);
+    }
+    &-warning {
+      $main-color: #fd7e14;
+      @include cta-text-variant($main-color);
+    }
+    &-danger {
+      $main-color: amRed(3);
+      @include cta-text-variant($main-color);
+    }
+    &-dark {
+      $main-color: amGrey(4);
+      @include cta-text-variant($main-color);
+    }
+    &-light {
+      $main-color: amGrey(5);
+      @include cta-text-variant($main-color);
+    }
+    &-white {
+      $main-color: white;
+      @include cta-text-variant($main-color);
+    }
+  }
+}
+
+@mixin cmp-title($transform: uppercase) {
+  color: amSteel(9);
+  font-family: amFontFamily(9);
+  font-size: amFontSize(9);
+  font-weight: amFontWeight(7);
+  line-height: 1.25;
+  @if $transform == none {
+    text-transform: none;
+  } @else {
+    text-transform: uppercase; // uppercase: default style.
+  }
+
+  @include media-breakpoint-up("md") {
+    font-size: amFontSize(12);
+  }
+}
+
+@mixin alert-edge($radius: amSizeMicro(5)) {
+  $size: 4px;
+
+  background-color: amTierBlue(3);
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+  bottom: -1px;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: $size;
+
+  @include media-breakpoint-up("md") {
+    $size: 7px;
+    width: $size;
+  }
+}
+
+@mixin alert-icon($color: amTierBlue(3)) {
+  color: $color;
+  font-size: amFontSize(12);
+  line-height: 1;
+
+  @include media-breakpoint-up("md") {
+    font-size: amFontSize(15);
+  }
+}

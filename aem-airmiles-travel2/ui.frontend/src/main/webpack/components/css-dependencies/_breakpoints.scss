@@ -1,0 +1,29 @@
+$breakpoint-map: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  tab: 1140px,
+  xl: 1280px,
+  xxl: 1400px,
+);
+
+
+
+// ---------- Breakpoint Map Function ---------
+// Function that allows you to pull from the breakpoint map
+// Usage: @media (breakpoint('sm') @breakpoint-md){...} ;
+
+@function breakpoint($point) {
+  @if map-has-key($breakpoint-map, $point) {
+    $point: map-get($breakpoint-map, $point);
+    @return $point;
+  }
+
+  @else {
+    // Throw error if breakpoint string is not in the map
+    @error 'You have entered `#{$point}`, which is a breakpoint that doesn\'t exist. '
+      + 'Please make sure it is defined in `$breakpoint-map` map.';
+    @return '';
+  }
+}

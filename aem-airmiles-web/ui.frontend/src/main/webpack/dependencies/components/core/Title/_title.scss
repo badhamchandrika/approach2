@@ -1,0 +1,28 @@
+.cmp-title {
+  h1,h2,h3,h4,h5,h6{
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+  }
+  &__text{
+
+  }
+  &__link{
+
+  }
+
+  &--no-padding {
+    h1,h2,h3,h4,h5,h6 {
+      padding: 0!important;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &--margin-bottom-default {
+    margin-bottom: 16px;
+
+    @media (min-width: 769px) {
+      margin-bottom: 24px;
+    }
+  }
+}

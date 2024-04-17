@@ -1,0 +1,31 @@
+<sly data-sly-use.model ="${'com.aem.airmiles.web.core.models.QuickLinkModel'}">
+<div class="cmp-quick-link-wrapper" id="${model.id}">
+    <div class="quicklink">
+        <div>
+            <h2 class="h2-title-v2">${model.quickLinkTitle}</h2>
+            <p class="cmp-text" data-sly-test="${model.quickLinkSubTitle}">${model.quickLinkSubTitle}</p>
+        </div>
+        <div class="row quicklink__items" data-sly-list.link="${model.linkDetails}">
+            <div class="col-12 col-md-6 ${model.threeColumnsOnDesktop ? 'col-lg-4' : 'col-lg-12'} ${linkList.count > 4 ? 'hide-on-mobile' : ''}" data-sly-test="${!link.hideLink}" id="${link.id}">
+                <a href="${link.linkUrl}" target="${link.newTab ? '_blank' : '_self'}" class="quicklink-link" data-track-id="${link.dataTrackID}" data-track-click="${link.dataClickID}" data-track-type="${link.dataTrackType}">
+                    <div class="quicklink-wrapper d-flex --am-base-color-steel-900">
+                        <div class="quicklink-icon ${link.bgcolor}">
+                            <span class="am-icon2 ${link.iconPicker} ${link.iconColor}"></span>
+                        </div>
+                        <div class="flex-grow-1 ps-3">
+                            <p class="quicklink-title">${link.linkText}</p>
+                            <p data-sly-test="${link.linkDescription}" class="quicklink-description">${link.linkDescription}</p>
+                        </div>
+                        <div class="quicklink-arrow-icon">
+                            <span class="am-icon2 am-icon2-arrow-right"></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="quicklink__expand-tools" data-expand-text="${model.expandTitle}" data-collapse-text="${model.collapseTitle}">
+            <span>${model.expandTitle}</span>
+        </div>
+    </div>
+</div>
+</sly>

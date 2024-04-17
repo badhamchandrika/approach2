@@ -1,0 +1,390 @@
+{
+  "empty_rootpagechildren_and_check_showchildren_checkbox":{
+    "jcr:primaryType":"nt:unstructured",
+    "showChildren":"true",
+    "sling:resourceType":"aem-airmiles-web/components/navitem"
+    },
+  "empty_rootpagechildren_and_uncheck_showchildren_checkbox":{
+    "jcr:primaryType":"nt:unstructured",
+    "showChildren":"false",
+    "sling:resourceType":"aem-airmiles-web/components/navitem"
+    },
+  "select_different_parentpagechildren": {
+    "jcr:primaryType":"nt:unstructured",
+    "rootPage":"/content/aem-airmiles-web",
+    "showChildren":"true",
+    "sling:resourceType":"aem-airmiles-web/components/navitem"
+    },
+  "rootpagechildrenwithvaliddata_and_check_showchildren_checkbox":{
+    "jcr:primaryType":"nt:unstructured",
+    "rootPage":"/menunavmodelcontent/page_with_validdata",
+    "showChildren":"true",
+    "sling:resourceType":"aem-airmiles-web/components/navitem"
+    },
+  "rootpagechildrenwithvaliddata_and_uncheck_showchildren_checkbox":{
+    "jcr:primaryType":"nt:unstructured",
+    "rootPage":"/content/aem-airmiles-web/language-masters",
+    "showChildren":"false",
+    "sling:resourceType":"aem-airmiles-web/components/navitem"
+  },
+  "ValidDataChildrenAndSubChildrenPage": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/navitem",
+    "showChildren": true,
+    "rootPage": "/menunavmodelcontent/resourcePageValid"
+  },
+  "validDataOneChildrenPage": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/navitem",
+    "showChildren": true,
+    "rootPage": "/menunavmodelcontent/resourcePageValid/en"
+  },
+  "childlessPage": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/menunavmodelcontent/page/navitem",
+    "showChildren": true,
+    "rootPage": "/menunavmodelcontent/resourcePageValid/en/offers"
+  },
+  "invalidDataShowChildren": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "aem-airmiles-web/components/navitem",
+    "showChildren": true,
+    "rootPage": "/noValid/root/ca/"
+  },
+  "resourcePageValid": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Language Masters",
+      "cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-content",
+      "cq:redirectTarget": "/content/aem-airmiles-web/ca/en",
+      "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+      "hideInNav": true,
+      "sling:resourceType": "aem-airmiles-web/components/structure/page"
+    },
+    "en": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "English",
+        "cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-template",
+        "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+        "cq:lastModified": "Tue May 17 2022 16:34:19 GMT-0500",
+        "sling:resourceType": "aem-airmiles-web/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "aem-airmiles-web/components/container",
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "aem-airmiles-web/components/container",
+            "title": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title"
+            },
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "layout": "responsiveGrid",
+              "sling:resourceType": "aem-airmiles-web/components/container",
+              "text": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Mon Feb 07 2022 16:33:56 GMT-0500",
+                "text": "<p>This is language master - english page</p>\r\n",
+                "jcr:lastModified": "Mon Feb 07 2022 16:34:20 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/text",
+                "textIsRich": "true"
+              },
+              "topnav": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Wed May 11 2022 15:09:59 GMT-0500",
+                "jcr:lastModified": "Wed May 11 2022 15:09:59 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/topnav"
+              },
+              "navitem": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "admin",
+                "rootPage": "/content/invalid/ca",
+                "showChildren": "false",
+                "jcr:lastModified": "Mon May 16 2022 09:00:19 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              },
+              "navitem_1339322438": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Mon May 16 2022 10:48:20 GMT-0500",
+                "rootPage": "/content/aem-airmiles-web/ca/en/offers",
+                "showChildren": "false",
+                "jcr:lastModified": "Mon May 16 2022 14:54:30 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              },
+              "navitem_381125815": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Mon May 16 2022 14:55:37 GMT-0500",
+                "rootPage": "/content/aem-airmiles-web/ca/en/offers",
+                "showChildren": "false",
+                "jcr:lastModified": "Mon May 16 2022 14:56:28 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              },
+              "navitem_863958251": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Mon May 16 2022 15:24:17 GMT-0500",
+                "rootPage": "/content/",
+                "showChildren": "false",
+                "jcr:lastModified": "Mon May 16 2022 15:24:28 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              },
+              "navitem_2085366303": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Tue May 17 2022 10:45:16 GMT-0500",
+                "rootPage": "/content/aem-airmiles-web/cadcx",
+                "showChildren": "false",
+                "jcr:lastModified": "Tue May 17 2022 10:45:28 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              },
+              "navitem_1172287423": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Tue May 17 2022 15:55:58 GMT-0500",
+                "rootPage": "/content/aem-airmiles-web/language-masters/en/offers",
+                "showChildren": "false",
+                "jcr:lastModified": "Tue May 17 2022 15:56:26 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              },
+              "navitem_221903543": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Tue May 17 2022 16:33:46 GMT-0500",
+                "rootPage": "/content/aem-airmiles-web/ca",
+                "showChildren": "false",
+                "jcr:lastModified": "Tue May 17 2022 16:34:19 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/navitem"
+              }
+            }
+          }
+        }
+      },
+      "offers": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Offers",
+          "cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-template",
+          "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+          "cq:lastModified": "Wed May 18 2022 12:49:36 GMT-0500",
+          "sling:resourceType": "aem-airmiles-web/components/structure/page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "aem-airmiles-web/components/container",
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "layout": "responsiveGrid",
+              "sling:resourceType": "aem-airmiles-web/components/container",
+              "title": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:title": "Offers",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:lastModified": "Mon Feb 07 2022 16:41:13 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title"
+              },
+              "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "aem-airmiles-web/components/container",
+                "text": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Mon Feb 07 2022 16:35:19 GMT-0500",
+                  "text": "<h1>FEATURED OFFERS</h1>\r\n<p>Don’t miss out on these Bonus Miles!</p>\r\n",
+                  "jcr:lastModified": "Mon Feb 07 2022 16:35:27 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/text",
+                  "textIsRich": "true"
+                },
+                "navitem": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Mon May 16 2022 11:13:33 GMT-0500",
+                  "rootPage": "/content/aem-airmiles-web/ca/en/offers",
+                  "showChildren": "false",
+                  "jcr:lastModified": "Mon May 16 2022 11:25:13 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/navitem"
+                },
+                "navitem_720384487": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Mon May 16 2022 11:25:20 GMT-0500",
+                  "rootPage": "/content/aem-airmiles-web/cal",
+                  "showChildren": "false",
+                  "jcr:lastModified": "Mon May 16 2022 11:25:31 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/navitem"
+                },
+                "navitem_1698964888": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Wed May 18 2022 12:13:44 GMT-0500",
+                  "rootPage": "/content/aem-airmiles-web/ca/en/offers",
+                  "showChildren": "false",
+                  "jcr:lastModified": "Wed May 18 2022 12:42:55 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/navitem"
+                },
+                "navitem_105513461": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Wed May 18 2022 12:46:05 GMT-0500",
+                  "rootPage": "/content/aem-airmiles-web/ca/en/offers",
+                  "showChildren": "false",
+                  "jcr:lastModified": "Wed May 18 2022 12:46:18 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/navitem"
+                },
+                "navitem_380361964": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Wed May 18 2022 12:49:36 GMT-0500",
+                  "jcr:lastModified": "Wed May 18 2022 12:49:36 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/navitem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "fr": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Français",
+        "cq:translationMethod": "MACHINE_TRANSLATION",
+        "cq:translationStatus": "APPROVED",
+        "cq:translationProject": [
+          "/content/projects/airmiles_aem_translationproject/airmiles_aem_translation_project"
+        ],
+        "cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-template",
+        "cq:lastTranslationUpdate": "Mon Feb 07 2022 16:36:35 GMT-0500",
+        "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+        "cq:lastModified": "Mon Feb 07 2022 16:38:11 GMT-0500",
+        "themeName": "corporate",
+        "cq:translationSourcePath": "/content/aem-airmiles-web/language-masters/en",
+        "cq:lastTranslationDone": "Mon Feb 07 2022 16:38:11 GMT-0500",
+        "cq:translationProviderCloudConfig": "/libs/settings/cloudconfigs/translation/msft-translation/msft_trial",
+        "sling:resourceType": "aem-airmiles-web/components/structure/page",
+        "cq:translationProviderName": "microsoft",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "aem-airmiles-web/components/container",
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "aem-airmiles-web/components/container",
+            "title": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title"
+            },
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "layout": "responsiveGrid",
+              "sling:resourceType": "aem-airmiles-web/components/container",
+              "text": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Mon Feb 07 2022 16:33:56 GMT-0500",
+                "text": "<p>Ceci est le maître de langue - page anglaise</p>\r\n",
+                "jcr:lastModified": "Mon Feb 07 2022 16:34:20 GMT-0500",
+                "sling:resourceType": "aem-airmiles-web/components/text",
+                "textIsRich": "true"
+              }
+            }
+          }
+        }
+      },
+      "offers": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Offre",
+          "cq:translationMethod": "MACHINE_TRANSLATION",
+          "cq:translationStatus": "APPROVED",
+          "cq:template": "/conf/aem-airmiles-web/settings/wcm/templates/page-template",
+          "cq:lastTranslationUpdate": "Mon Feb 07 2022 16:36:35 GMT-0500",
+          "jcr:created": "Wed May 11 2022 14:58:59 GMT-0500",
+          "cq:lastModified": "Mon Feb 07 2022 16:38:11 GMT-0500",
+          "cq:translationSourcePath": "/content/aem-airmiles-web/language-masters/en/offers",
+          "cq:lastTranslationDone": "Mon Feb 07 2022 16:38:11 GMT-0500",
+          "cq:translationProviderCloudConfig": "/libs/settings/cloudconfigs/translation/msft-translation/msft_trial",
+          "sling:resourceType": "aem-airmiles-web/components/structure/page",
+          "cq:translationProviderName": "microsoft",
+          "cq:lastModifiedBy": "translation-job-service",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "layout": "responsiveGrid",
+            "sling:resourceType": "aem-airmiles-web/components/container",
+            "container": {
+              "jcr:primaryType": "nt:unstructured",
+              "layout": "responsiveGrid",
+              "sling:resourceType": "aem-airmiles-web/components/container",
+              "title": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "aem-airmiles-web/components/airmiles-core/common/title/v1/title"
+              },
+              "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "layout": "responsiveGrid",
+                "sling:resourceType": "aem-airmiles-web/components/container",
+                "text": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "jcr:createdBy": "admin",
+                  "jcr:lastModifiedBy": "admin",
+                  "jcr:created": "Mon Feb 07 2022 16:35:19 GMT-0500",
+                  "text": "<h1>OFFRES EN VEDETTE</h1>\r\n<p>Ne manquez pas ces Miles Bonus !</p>\r\n",
+                  "jcr:lastModified": "Mon Feb 07 2022 16:35:27 GMT-0500",
+                  "sling:resourceType": "aem-airmiles-web/components/text",
+                  "textIsRich": "true"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

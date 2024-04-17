@@ -1,0 +1,36 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright © 2024 AIR MILES Loyalty Inc.
+  ~
+  ~ HTL file used to include Genesys Chat Widget Script.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<!--/* Mindful Feedback integration start. */-->
+<sly data-sly-use.mindful="com.aem.airmiles.web.core.models.MindfulSurveyModel"
+     data-sly-test="${mindful.enabled && wcmmode.disabled}">
+    <script data-sly-attribute.class="${mindful.consentCategory}"
+            data-sly-attribute.type="${mindful.scriptType @ context='scriptComment'}"
+            data-sly-attribute.charset="${mindful.charset @ context='scriptComment'}"
+            data-sly-attribute.src="${mindful.scriptSrc @ context='scriptComment'}"
+            id="mindful-survey_sdk__chat-widget__airmiles-ca">
+    </script>
+    <script data-sly-attribute.class="${mindful.consentCategory}"
+            data-sly-attribute.type="${mindful.scriptType @ context='scriptComment'}"
+            charset="${mindful.charset @ context='scriptComment'}"
+            id="mindful-survey__chat-widget__airmiles-ca">
+        SDXWebMessengerSurvey.showSurvey({
+            "survey_url": "${mindful.surveyLanding @ context='scriptComment'}",
+            "trigger_type": "${mindful.triggerType @ context='scriptComment'}",
+            "trigger_text": "${mindful.triggerTxt @ context='scriptComment'}",
+            "config": {
+                "survey_prompt_text_color": "${mindful.surveyPromptTextColor @ context='scriptComment'}",
+                "survey_prompt_background_color": "${mindful.surveyPromptBgColor @ context='scriptComment'}",
+                "survey_prompt_text": "${mindful.surveyPromptTxt @ context='scriptComment'}",
+                "survey_prompt_button_text": "${mindful.surveyPromptBtnTxt @ context='scriptComment'}",
+                "survey_prompt_rejection_text": "${mindful.surveyPromptRejectionTxt @ context='scriptComment'}"
+            },
+            "survey_attributes": {
+                "respondent_language": "${mindful.locale @ context='scriptComment'}"
+            }
+        });
+    </script>
+</sly>
+<!--/* Mindful Feedback integration end. */-->

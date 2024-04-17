@@ -1,0 +1,22 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.CarouselModel">
+    <div class="custom-carousel" id="${model.id}">
+        <div>
+            <h2 class="h2-title-v2">${model.title}</h2>
+        </div>
+        <div class="custom-carousel__content">
+            <sly data-sly-list.fragment="${model.carouselSlides}">
+                <div class="custom-carousel__item" id="${fragment.carouselSlideId}">
+                    <sly data-sly-resource="${@path=fragment.slideXFPath, selectors='content', wcmmode='disabled'}"></sly>
+                </div>
+            </sly>
+        </div>
+        <div class="custom-carousel__actions">
+            <button class="custom-carousel__action custom-carousel__action--previous" type="button" aria-label="Previous">
+                <span class="custom-carousel__action-icon am-icon2 am-icon2-arrow-left"></span>
+            </button>
+            <button class="custom-carousel__action custom-carousel__action--next" type="button" aria-label="Next">
+                <span class="custom-carousel__action-icon am-icon2 am-icon2-arrow-right"></span>
+            </button>
+        </div>
+    </div>
+</sly>

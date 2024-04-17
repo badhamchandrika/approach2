@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+
+  src: url("../resources/fa-solid-900.ttf") format("truetype"), url("../resources/fa-solid-900.svg#fontawesome") format("svg"); }
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+.fa-angle-down:before {
+  content: "\f107"; }
+.fa-angle-up:before {
+  content: "\f106"; }
+.fa-copy:before {
+  content: "\f0c5"; }
+.fa-bars:before {
+  content: "\f0c9"; }

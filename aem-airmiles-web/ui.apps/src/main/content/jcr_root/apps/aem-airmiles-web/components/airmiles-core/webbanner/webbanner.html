@@ -1,0 +1,33 @@
+<sly data-sly-use.model="com.aem.airmiles.web.core.models.WebBannerModel" />
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Web Banner Component"></div>
+    <sly data-sly-test.large="${model.imageLargeScreen}" />
+    <sly data-sly-test.medium="${model.imageMediumScreen}" />
+    <sly data-sly-test.small="${model.imageSmallScreen}" />
+    <sly data-sly-test="${!medium}">
+        <sly data-sly-test.medium="${large}" />
+    </sly>
+    <sly data-sly-test="${!small}">
+        <sly data-sly-test.small="${large}" />
+    </sly>
+    <sly data-sly-test.longDescId="${'promo-unit-long-desc-{0}' @ format=[resource.path.hashCode]}" />
+    <div id="${model.id}">
+        <div class="bsp-container web_banner_promo_unit" data-sly-test="${large || model.adUrl}">
+            <a  href="${model.adUrl}"
+                target="${model.adUrlTarget}"
+                aria-label="${model.linkAriaLabel}"
+                data-track-click="${model.dataTrackClick}"
+                data-track-id="${model.dataTrackId}"
+                data-track-type="${model.dataTrackType}"
+                data-banner-name="${model.dataBannerName}"
+                data-banner-category="${model.dataBannerCategory}"
+                data-banner-location="">
+                <img class="am-ep-mobile" src="${small}" alt="${model.imageAlt}" longdesc="${model.addLongDesc ? longDescId : ''}" />
+                <img class="am-ep-tablet" src="${medium}" alt="${model.imageAlt}" longdesc="${model.addLongDesc ? longDescId : ''}" />
+                <img class="am-ep-desktop" src="${large}" alt="${model.imageAlt}" longdesc="${model.addLongDesc ? longDescId : ''}" />
+
+                <div id="${longDescId}" class="promo-unit-long-desc" data-sly-test="${model.addLongDesc}">
+                    ${properties.imageLongDesc}
+                </div>
+            </a>
+        </div>
+    </div>

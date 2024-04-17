@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-06-13T11:57:05.849-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/aem-airmiles-web/settings/wcm/templates/component-library-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Highlight Cards"
+        sling:resourceType="aem-airmiles-web/components/structure/component-library-page"
+        themeName="corporate">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid_756979268
+                jcr:created="{Date}2023-03-31T00:09:24.956-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:11:11.936-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <text_copy
+                    jcr:created="{Date}2023-06-12T12:11:01.363-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-13T11:41:47.542-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h1>Highlight Cards&lt;/h1>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_528799759_copy
+                    jcr:created="{Date}2023-06-12T12:11:41.954-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-13T11:43:37.596-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>Highlight cards component is the component which has group of cards. Each card contains image, text and button. This component is currently used on the unauthenticated homepage.&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Figma URL:&amp;nbsp;&lt;/b>&lt;a href=&quot;https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?type=design&amp;amp;node-id=955-11029&amp;amp;t=ZYBgX2JXcGsvoZxb-0&quot; target=&quot;_blank&quot;>https://www.figma.com/file/rQJHyzlL7CDwVqm0CUcYeU/2---AM.ca-Sticker-Sheet?type=design&amp;amp;node-id=955-11029&amp;amp;t=ZYBgX2JXcGsvoZxb-0&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Jira ticket:&amp;nbsp;&lt;/b>&lt;a href=&quot;https://loyaltyone.atlassian.net/browse/DEP-11436&quot; target=&quot;_blank&quot;>https://loyaltyone.atlassian.net/browse/DEP-11436&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Component path:&amp;nbsp;&amp;nbsp;&lt;/b>aem-airmiles-web/components/airmiles-core/highlightcards&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;b>Dashboard page:&amp;nbsp;&lt;/b>&lt;a href=&quot;https://www.airmiles.ca/en.html&quot;>https://www.airmiles.ca/en.html&lt;/a>&lt;a href=&quot;https://airmiles.ca/en.html&quot;>&lt;/a>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <text_897733156_copy_
+                    jcr:created="{Date}2023-03-31T00:19:28.038-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-03-31T00:19:41.366-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;h2>&lt;b>Examples&lt;/b>&lt;/h2>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <separator_copy_copy
+                    jcr:created="{Date}2023-03-31T00:19:59.553-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-03-31T00:19:59.553-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/separator/v1/separator">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="8"/>
+                    </cq:responsive>
+                </separator_copy_copy>
+                <text_1753619954_copy
+                    jcr:created="{Date}2023-03-31T00:20:34.009-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-13T11:46:53.103-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>&lt;b>1. Highlight cards component displaying 4 cards with icons&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <demo
+                    jcr:created="{Date}2023-06-13T11:44:04.407-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-13T11:44:04.407-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/demo">
+                    <component
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/component">
+                        <highlightcards
+                            jcr:created="{Date}2023-06-08T20:04:12.934-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2023-06-13T11:50:11.536-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/highlightcards"
+                            textIsRich="[true,true,true,true]"
+                            title="Welcoming Onlia Insurance to the Program!">
+                            <cardsMap jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/Vector.jpg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok. &lt;/p>&#xd;&#xa;"
+                                    hexBtnColor="#FFFFFF"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="true"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Join now"
+                                    linkType="pill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="Groceries &amp; Gasz"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/facebook.svg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok. &lt;/p>&#xd;&#xa;"
+                                    hexBtnColor="#FFFFFF"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="true"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Browse offers"
+                                    linkType="pill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="Merchandise"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/twitter.svg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok. &lt;/p>&#xd;&#xa;"
+                                    hexBtnColor="#FFFFFF"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="true"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Browse offers"
+                                    linkType="pill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="Travel"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/youtube.svg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok. &lt;/p>&#xd;&#xa;"
+                                    hexBtnColor="#FFFFFF"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="true"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Browse offers"
+                                    linkType="pill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="eVouchers"/>
+                            </cardsMap>
+                        </highlightcards>
+                    </component>
+                    <info
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/tabs/v1/tabs">
+                        <properties
+                            cq:panelTitle="Properties"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/properties"
+                            reference="../../component"/>
+                        <markup
+                            cq:panelTitle="Markup"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/markup"
+                            reference="../../component"/>
+                        <json
+                            cq:panelTitle="JSON"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/json"
+                            reference="../../component"/>
+                    </info>
+                </demo>
+                <text_1753619954_copy_880170225
+                    jcr:created="{Date}2023-03-31T00:20:34.009-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-13T11:47:18.521-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/common/text/v1/text"
+                    text="&lt;p>&lt;b>2. Highlight cards component displaying 4 cards with images&lt;/b>&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <demo_820135504
+                    jcr:created="{Date}2023-06-13T11:47:26.561-04:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2023-06-13T11:47:26.561-04:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="aem-airmiles-web/components/airmiles-core/demo">
+                    <component
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/component">
+                        <highlightcards_570321321
+                            jcr:created="{Date}2023-06-10T14:43:56.228-04:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2023-06-13T11:51:35.015-04:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/highlightcards"
+                            textIsRich="[true,true,true,true]"
+                            title="New Dashboard">
+                            <cardsMap jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/f893c60dafcfe7a4ce6efd878e5e2858 1.jpg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="false"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Join now"
+                                    linkType="framedpill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="Featured Card1"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/GettyImages-1175879282 1.jpg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="false"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Button Label"
+                                    linkType="framedpill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="Featured card2"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/GettyImages-1355360575 1.jpg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="false"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Sign In"
+                                    linkType="framedpill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="Travel"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    cardImage="/content/dam/aem-airmiles-web/images/74d7dff82072abd72b0a2997f01162d9 1.jpg"
+                                    dataTrackType="internal"
+                                    description="&lt;p>Art party retro whatever, ethical tilde selvage echo park iceland pok pok.&amp;nbsp;&lt;/p>&#xd;&#xa;"
+                                    hexTextColor="#1F68DA"
+                                    isIcon="false"
+                                    isModalTrigger="false"
+                                    linkTarget="_blank"
+                                    linkText="Browse Offers"
+                                    linkType="framedpill"
+                                    linkUrl="/content/aem-airmiles-web/ca/en"
+                                    title="eVouchers"/>
+                            </cardsMap>
+                        </highlightcards_570321321>
+                    </component>
+                    <info
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/tabs/v1/tabs">
+                        <properties
+                            cq:panelTitle="Properties"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/properties"
+                            reference="../../component"/>
+                        <markup
+                            cq:panelTitle="Markup"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/markup"
+                            reference="../../component"/>
+                        <json
+                            cq:panelTitle="JSON"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="aem-airmiles-web/components/airmiles-core/demo/json"
+                            reference="../../component"/>
+                    </info>
+                </demo_820135504>
+            </responsivegrid_756979268>
+            <responsivegrid_1422613350
+                jcr:created="{Date}2023-03-31T00:09:42.189-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-03-31T00:11:19.661-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
+        <cq:featuredimage
+            jcr:lastModified="{Date}2023-06-13T11:57:05.845-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="core/wcm/components/image/v3/image"
+            altValueFromDAM="false"/>
+    </jcr:content>
+</jcr:root>

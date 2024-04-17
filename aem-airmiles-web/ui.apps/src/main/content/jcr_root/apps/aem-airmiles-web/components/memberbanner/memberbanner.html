@@ -1,0 +1,92 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Member Banner" class="cq-placeholder"></div>
+<div class="memberbanner d-flex justify-content-between ps-3 ps-md-0" data-sly-use.mbModel="com.aem.airmiles.web.core.models.MemberBannerModel">
+    <div class="memberbanner-item order-2 order-md-0">
+        <div class="d-block d-md-flex text-center align-items-center memberbanner-item__wrapper">
+            <div class="memberbanner-item__icon"><span class='am-icon am-icon-tier-oynx' aria-label='icon' role='img'></span></div>
+            <div class="memberbanner-item__name pe-3 d-none d-md-flex text-nowrap"> </div>
+            <div class="d-flex">
+                <div class="memberbanner-item__profile text-nowrap">${'Your profile' @ i18n}</div>
+                <span class='am-icon am-icon-functional-arrow-down' aria-label='icon' role='img'></span>
+            </div>
+        </div>
+        <div class="memberbanner-item__modal${wcmmode.edit ? ' d-none':''}">
+            <div class="d-flex justify-content-end js-close"><span class='am-icon am-icon-functional-secondary-close' aria-label='icon' role='img'></span></div>
+            <h2 class="memberbanner-item__title py-2 d-flex align-items-center"><span>${'Hi' @ i18n}, <span class="memberbanner-item__name px-2"> </span></span><span class="memberbanner-item__tag">0</span></h2>
+            <sly data-sly-list.link="${mbModel.linkDetails}">
+                <div class="py-2 memberbanner-item__link" id="${link.id}">
+                    <sly data-sly-test="${link.type=='bell'}">
+                        <a href="${link.weburl}" target="${link.clickact}"
+                           data-track-id="${link.dataTrackID}"
+                           data-track-click="${link.dataClickID}"
+                           data-track-type="${link.dataTrackType}">
+                            <span class="pe-2">
+                                <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.181 13.766v-5.2l-.004-.22c-.1-2.248-1.603-4.128-3.7-4.97a2.85 2.85 0 0 0 .08-.668C10.557 1.223 9.43 0 8.012 0S5.466 1.223 5.466 2.708c0 .222.026.444.078.66-2.108.836-3.62 2.718-3.72 4.96l-.005.22v5.218C.7 13.958-.087 14.988.008 16.136c.095 1.148 1.04 2.03 2.174 2.03H5.46l-.001.063-.002.063C5.457 19.777 6.586 21 8.003 21c1.417 0 2.545-1.223 2.545-2.708 0-.042 0-.084-.003-.126h3.278c1.133-.002 2.076-.885 2.17-2.032.093-1.147-.694-2.176-1.812-2.368zM6.921 2.708c0-.69.5-1.231 1.09-1.231.592 0 1.092.541 1.092 1.231 0 .094-.01.188-.03.28a6.78 6.78 0 0 0-2.124-.003 1.372 1.372 0 0 1-.028-.277zM3.277 8.38l-.005.186v5.17h9.454V8.582l-.004-.186C12.624 6.176 10.556 4.38 8 4.38c-2.556 0-4.624 1.797-4.723 4zm5.814 9.913c0 .69-.5 1.231-1.091 1.231s-1.091-.54-1.091-1.23c0-.043 0-.085.006-.127h2.17c.004.042.006.084.006.126zM1.455 15.95c0 .408.325.739.727.739h11.636c.402 0 .727-.33.727-.739a.733.733 0 0 0-.727-.738H2.182a.733.733 0 0 0-.727.738z" fill="#D73B23"></path></svg>
+                            </span>
+                            <strong>${link.title}</strong>
+                            <span class='am-icon am-icon-functional-arrow-right' aria-label='icon' role='img'></span>
+                        </a>
+                    </sly>
+                    <sly data-sly-test="${!link.type}">
+                        <a href="${link.weburl}" target="${link.clickact}"
+                           data-track-id="${link.dataTrackID}" data-track-type="${link.dataTrackType}"
+                           data-track-click="${link.dataClickID}">${link.title}</a>
+                    </sly>
+                </div>
+            </sly>
+        </div>
+    </div>
+    <div class="memberbanner-item">
+        <div class="d-block d-md-flex text-center align-items-center memberbanner-item__wrapper">
+            <div class="memberbanner-item__icon"><span class='am-icon am-icon-cash-miles-icon' aria-label='icon' role='img'></span></div>
+            <div class="d-flex justify-content-center">
+                <div class="memberbanner-item__cashNum">0</div>
+                <span class='am-icon am-icon-functional-arrow-down' aria-label='icon' role='img'></span>
+            </div>
+        </div>
+        <div class="memberbanner-item__modal cash${wcmmode.edit ? ' d-none':''}">
+            <div class="d-flex justify-content-end js-close"><span class='am-icon am-icon-functional-secondary-close' aria-label='icon' role='img'></span></div>
+            <h2 class="memberbanner-item__title pb-1">${mbModel.cashTitle}</h2>
+            <div class="memberbanner-item__body">${mbModel.cashContent @ context = 'html'}</div>
+            <div class="text-center p-3">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                      type='button',
+                      href=mbModel.linkUrl,
+                      text=mbModel.linkText,
+                      hexText=mbModel.hexTextColor,
+                      hexBtn=mbModel.hexBtnColor,
+                      dataTrackID=mbModel.cashDataTrackID,
+                      dataClickID=mbModel.dataTrackClickID,
+                      classes=''}">
+                </sly>
+            </div>
+        </div>
+    </div>
+    <div class="memberbanner-item">
+        <div class="d-block d-md-flex text-center align-items-center memberbanner-item__wrapper">
+            <div class="memberbanner-item__icon"><span class='am-icon am-icon-dream-rewards-icon' aria-label='icon' role='img'></span></div>
+            <div class="d-flex justify-content-center">
+                <div class="memberbanner-item__dreamNum">0</div>
+                <span class='am-icon am-icon-functional-arrow-down' aria-label='icon' role='img'></span>
+            </div>
+        </div>
+        <div class="memberbanner-item__modal dream${wcmmode.edit ? ' d-none':''}">
+            <div class="d-flex justify-content-end js-close"><span class='am-icon am-icon-functional-secondary-close' aria-label='icon' role='img'></span></div>
+            <h2 class="memberbanner-item__title pb-1">${mbModel.dreamTitle}</h2>
+            <div class="memberbanner-item__body">${mbModel.dreamContent @ context = 'html'}</div>
+            <div class="text-center p-3">
+                <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                <sly data-sly-call="${ctatemplate.ctalink @
+                  type='button',
+                  href=mbModel.linkUrl,
+                  text=mbModel.linkText,
+                  hexText=mbModel.hexTextColor,
+                  hexBtn=mbModel.hexBtnColor,
+                  dataTrackID=mbModel.dreamDataTrackID,
+                  dataClickID=mbModel.dataTrackClickID,
+                  classes=''}">
+                </sly>
+            </div>
+        </div>
+    </div>
+</div>

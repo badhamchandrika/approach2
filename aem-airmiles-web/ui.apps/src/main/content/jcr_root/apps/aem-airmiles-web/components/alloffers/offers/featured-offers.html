@@ -1,0 +1,175 @@
+<template data-sly-template.modalParameters="${@ model,page}">
+<div class="alloffers-container row" data-lang="${page.language}"
+    data-quick-filter="${request.requestParameterMap['offers'][0].toString}"
+    data-err-msg-abort="${model.messageAbort}"
+    data-login-page="/${page.language}/login"
+    data-saved-page="/${page.language}/offers/saved-offers">
+
+        <div class="${model.menuHide ? 'col-6':'col-12'} alloffers-subtitle"><h3 class="subtitle-text" aria-hidden="true">${model.featuredOffersTitle}</h3></div>
+
+        <!--/* Item per page indicator */-->
+        <div data-sly-test="${model.menuHide}" class="col-6 alloffers-showing text-end text-lg-end my-auto text-nowrap" aria-hidden="true">
+            <span class="alloffers-showing__title" aria-hidden="true">${model.resultShowingText}</span>
+            <span class="alloffers-showing__numbers" data-shownum="${model.pagination}" data-shownum-trending="${model.trendingLimit}" aria-hidden="true">0</span>
+            ${model.resultOffersText}
+        </div>
+        <div class="col-12 row alloffers-tabs m-0">
+            <!--/* Quick Filter Tabs */-->
+            <div class="col-12 col-lg-10 alloffers-tabs__container d-flex justify-content-between px-0${model.menuHide ? ' d-none':''}">
+                <div class="alloffers-tabs__slides d-flex my-auto" data-sly-list.tab="${model.featuredOffersTabs}" role="region" aria-label="quick filters">
+                    <button class="alloffers-tabs__slides__tab text-center d-none" data-type="${tab.activityType}"
+                         data-key="${tab.tabKey}"
+                         data-panel-hide="${tab.filterHide}"
+                         data-status="${tab.tabStatus}"
+                         data-track-id="${tab.dataTrackID}"
+                         data-track-click="${tab.dataClickID}"
+                         data-track-type="${tab.dataTrackType}" data-page-name="${tab.pageViewAnalytics}">${tab.tabName}</button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-2 alloffers-tabs__apart p-0 py-1 d-flex d-lg-block justify-content-between text-lg-end">
+                <!--/* Original Region area */-->
+                <!--/* <sly data-sly-use.regiontemplate="/apps/aem-airmiles-web/components/alloffers/offerstemplates/offersregion.html"/> */-->
+                <!--/* <sly data-sly-call="${regiontemplate.regionParameters @ regionModel = model}"></sly> */-->
+                <!--/* Filter toggle - mobile/tablet only */-->
+                <a href="javascript:void(0);" aria-label="${model.filterSortText}" class="alloffers-tabs__apart__sort d-lg-none my-auto pb-0 pb-md-3 d-none">
+                    <span class='am-icon2 am-icon2-filter' aria-hidden="true"></span> ${model.filterSortText}
+                </a>
+            </div>
+            <div class="col-12 alloffers-tag__container d-none flex-wrap p-0 py-3${model.menuHide ? ' d-none':''}">
+                <button class="alloffers-tag clear" aria-label="${model.clearAllText}"><span class='am-icon am-icon-functional-secondary-close'></span> ${model.clearAllText}</button>
+            </div>
+            <!--/* User Location - desktop only*/-->
+            <div class="col-6 d-none d-lg-flex my-auto py-2" role="region" aria-label="filter panel control">
+                <div class="alloffers-panel__toggle d-lg-none">
+                    <a href="javascript:void(0);" class="alloffers-panel__toggle__expand">
+                        ${model.expandSortText} <span class='am-icon2 am-icon2-arrow-right' aria-hidden="true"></span>
+                    </a>
+                    <a href="javascript:void(0);" class="alloffers-panel__toggle__collapse">
+                        <span class='am-icon2 am-icon2-arrow-left' aria-hidden="true"></span> ${model.collapseSortText}
+                    </a>
+                </div>
+            </div>
+            <!--/* Item per page indicator */-->
+            <div data-sly-test="${!model.menuHide}" class="col-6 alloffers-showing text-lg-end pt-2 p-md-0 my-auto text-nowrap" aria-hidden="true">
+                <span class="alloffers-showing__title" aria-hidden="true">${model.resultShowingText}</span>
+                <span class="alloffers-showing__numbers" data-shownum="${model.pagination}" data-shownum-trending="${model.trendingLimit}" aria-hidden="true">0</span>
+                ${model.resultOffersText}
+            </div>
+        </div>
+        <div class="alloffers-offers__result-container col-8 d-flex flex-column text-center justify-content-center d-none" role="region" aria-label="error message container">
+            <h3 class="alloffers-offers__no-result-title">${model.noResultTitle}</h3>
+            <p class="alloffers-offers__no-offers-description d-none">${model.noResultDescription}</p>
+            <p class="alloffers-offers__no-result-apifails-description d-none">${model.noResultWhenApiFails}</p>
+            <p class="alloffers-offers__no-result-no-offers-for-you d-none">${model.messageNoOffersForYou}</p>
+            <p class="alloffers-offers__no-result-no-saved-offers d-none">${model.messageNoSavedOffers}</p>
+            <p class="alloffers-offers__no-result-custom d-none"></p>
+        </div>
+        <div class="col-12 alloffers-offers row m-0">
+            <div class="alloffers-offers__filter-panel col-12 col-lg-3">
+                <div class="d-flex justify-content-end alloffers-offers__filter-bg">
+                    <div class="d-flex flex-column alloffers-offers__filter-box" role="region" aria-label="filter panel">
+                        <a class="alloffers-offers__close-btn" data-track-click="${model.closeIconDataClickID}" data-track-id="${model.closeIconDataTrackID}"
+                           data-track-type="${model.closeIconDataTrackType}" aria-label="close button">
+                            <span class='am-icon am-icon-functional-secondary-close'></span>
+                        </a>
+                        <div class="col-12 alloffers-filters__title py-3 d-flex justify-content-lg-between">
+                            <h3 class="me-3" aria-hidden="true">${model.sortFilterText}</h3> <div class="alloffers-filters__total"></div>
+                        </div>
+                        <div class="alloffers-filters__sort-by">
+                            <h4 aria-hidden="true">${model.sortByText}</h4>
+                            <div class="alloffers-filters__slides__filter d-flex flex-column" data-sly-list.sortBy="${model.sortByOptionsList}">
+                                <div class="p-2">
+                                    <input class="form-check-input sort-by-input" type="radio" name="filterSortBy" id="sort-${sortBy.value}" value="${sortBy.value}">
+                                    <label class="form-check-label" for="sort-${sortBy.value}">
+                                        ${sortBy.title}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="py-3" aria-hidden="true">${model.filterByText}</h4>
+                        <div class="alloffers-filters__filter-by">
+                            <!--/* FILTER - PARTNERS */-->
+                            <button class="alloffers-filters__accordion-btn partners d-flex justify-content-between" aria-label="${model.filterPartnersTitle}">
+                                <div class="d-flex"><div class="my-auto" aria-hidden="true">${model.filterPartnersTitle}</div><div class="alloffers-filters__partners__total ms-2">0</div></div>
+                                <span class='am-icon am-icon-functional-arrow-down d-none d-lg-block' aria-hidden="true"></span>
+                                <span class='am-icon2 am-icon2-arrow-right d-lg-none' aria-hidden="true"></span>
+                            </button>
+                            <div class="alloffers-filters__sub-panel filter-by__partners">
+                                <div class="col-12 alloffers-filters__slides d-lg-none">
+                                    <a href="javascript:void(0);" class="alloffers-filters__slides__backbutton" data-track-id="${model.backTextDataTrackID}" data-track-click="${model.backTextDataClickID}"
+                                    data-track-type="${model.backTextDataTrackType}">
+                                        <span class='am-icon2 am-icon2-arrow-left' aria-hidden="true"></span>
+                                        ${model.backText}
+                                    </a>
+                                    <h4 class="alloffers-filters__slides__title">${model.filterByText} ${model.filterPartnersTitle}</h4>
+                                </div>
+                                <div class="col-12 alloffers-filters__container d-flex flex-column"></div>
+                            </div>
+                            <!--/* FILTER - TYPES */-->
+                            <button class="alloffers-filters__accordion-btn types d-flex justify-content-between" aria-label="${model.filterTypesTitle}">
+                                <div class="d-flex"><div class="my-auto" aria-hidden="true">${model.filterTypesTitle}</div><div class="alloffers-filters__types__total ms-2">0</div></div>
+                                <span class='am-icon am-icon-functional-arrow-down d-none d-lg-block' aria-hidden="true"></span>
+                                <span class='am-icon2 am-icon2-arrow-right d-lg-none' aria-hidden="true"></span>
+                            </button>
+                            <div class="alloffers-filters__sub-panel filter-by__types">
+                                <div class="col-12 alloffers-filters__slides d-lg-none">
+                                    <div class="alloffers-filters__slides__backbutton">
+                                        <span class='am-icon2 am-icon2-arrow-left' aria-hidden="true"></span>
+                                        ${model.backText}
+                                    </div>
+                                    <h4 class="alloffers-filters__slides__title">${model.filterByText} ${model.filterTypesTitle}</h4>
+                                </div>
+                                <div class="col-12 alloffers-filters__container d-flex flex-column" data-sly-list.types="${model.offersTypeList}">
+                                    <div class="alloffers-filters__slides__filter p-2" data-key="${types.value}">
+                                        <input class="form-check-input types-input" type="checkbox" value="${types.value}" id="types-${types.value}">
+                                        <label class="form-check-label" for="types-${types.value}">
+                                            <span class="alloffers-filters__name">${types.title}</span>
+                                            <span class="alloffers-filters__count"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/* FILTER - CATEGORY */-->
+                            <button class="alloffers-filters__accordion-btn category d-flex justify-content-between" aria-label="${model.filterCategoryTitle}">
+                                <div class="d-flex"><div class="my-auto" aria-hidden="true">${model.filterCategoryTitle}</div><div class="alloffers-filters__categories__total ms-2">0</div></div>
+                                <span class='am-icon am-icon-functional-arrow-down d-none d-lg-block' aria-hidden="true"></span>
+                                <span class='am-icon2 am-icon2-arrow-right d-lg-none' aria-hidden="true"></span>
+                            </button>
+                            <div class="alloffers-filters__sub-panel filter-by__categories">
+                                <div class="col-12 alloffers-filters__slides d-lg-none">
+                                    <div class="alloffers-filters__slides__backbutton">
+                                        <span class='am-icon2 am-icon2-arrow-left' aria-hidden="true"></span>
+                                        ${model.backText}
+                                    </div>
+                                    <h4 class="alloffers-filters__slides__title">${model.filterByText} ${model.filterCategoryTitle}</h4>
+                                </div>
+                                <div class="col-12 alloffers-filters__container d-flex flex-column"></div>
+                            </div>
+                        </div>
+                        <div class="alloffers-filters__buttons d-flex justify-content-around flex-lg-column-reverse">
+                            <sly data-sly-list.ctaDetails="${model.filterButtons}">
+                                <div class="pb-lg-3 ${ctaDetailsList.count==1?'alloffers-filters__buttons__reset':''} ${ctaDetailsList.count==2?'alloffers-filters__buttons__viewresult':''}">
+                                    <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+                                    <sly data-sly-call="${ctatemplate.ctalink @
+                                        type=ctaDetails.linkType,
+                                        href=ctaDetails.linkUrl,
+                                        text=ctaDetails.linkText,
+                                        hexText=ctaDetails.hexTextColor,
+                                        hexBtn=ctaDetails.hexBtnColor,
+                                        dataTrackID=ctaDetails.dataTrackID,
+                                        dataClickID=ctaDetails.dataClickID,
+                                        dataTrackType=ctaDetails.dataTrackType,
+                                        classes='special'}">
+                                    </sly>
+                                </div>
+                            </sly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/* Main Display for Offers */-->
+            <div class="alloffers-offers__showcase col-12 px-0 pt-3 ${wcmmode.edit ? 'd-none' : ''}"></div>
+        </div>
+    </div>
+
+</template>

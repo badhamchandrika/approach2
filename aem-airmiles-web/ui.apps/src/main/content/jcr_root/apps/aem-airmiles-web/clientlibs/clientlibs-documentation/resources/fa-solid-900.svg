@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?> 
+<!--
+Font Awesome Free 5.6.3 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+-->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="fontawesome-free" horiz-adv-x="640">
+    <font-face font-family="Font Awesome 5 Free"
+      units-per-em="512" ascent="448"
+      descent="64"
+      font-weight="900"
+      font-style="Solid" />
+    <missing-glyph horiz-adv-x="0" />
+	<glyph glyph-name="angle-down"
+      unicode="&#xF107;"
+      horiz-adv-x="320" d=" M143 95.7L7 231.7C-2.4 241.1 -2.4 256.3 7 265.6L29.6 288.2C39 297.6 54.2 297.6 63.5 288.2L159.9 191.8L256.3 288.2C265.7 297.6 280.9000000000001 297.6 290.2 288.2L312.8 265.6C322.2 256.2 322.2 241 312.8 231.7L176.8 95.6999999999999C167.6 86.3 152.4 86.3 143 95.6999999999999z" />
+	<glyph glyph-name="angle-up"
+      unicode="&#xF106;"
+      horiz-adv-x="320" d=" M177 288.3L313 152.3C322.4 142.9 322.4 127.7 313 118.4L290.4 95.8C281 86.4 265.8 86.4 256.5 95.8L160 192.1L63.6 95.7C54.2 86.3 39 86.3 29.7 95.7L7 118.3C-2.4 127.7 -2.4 142.9 7 152.2L143 288.2C152.4 297.7 167.6 297.7 177 288.3z" />
+	<glyph glyph-name="copy"
+      unicode="&#xF0C5;"
+      horiz-adv-x="448" d=" M320 0V-40C320 -53.255 309.255 -64 296 -64H24C10.745 -64 0 -53.255 0 -40V328C0 341.255 10.745 352 24 352H96V56C96 25.121 121.121 0 152 0H320zM320 344V448H152C138.745 448 128 437.255 128 424V56C128 42.745 138.745 32 152 32H424C437.255 32 448 42.745 448 56V320H344C330.8 320 320 330.8 320 344zM440.971 375.029L375.029 440.971A24 24 0 0 1 358.0590000000001 448H352V352H448V358.059A24 24 0 0 1 440.971 375.029z" />
+</font>
+</defs>
+</svg>

@@ -1,0 +1,27 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Airmiles Toast" class="cq-placeholder"></div>
+<sly data-sly-use.toastModel="com.aem.airmiles.web.core.models.AMToastsModel" />
+<template id="toast-template">
+    <div class="amtoast-box d-flex flex-columns">
+        <div class="amtoast-icon"></div>
+        <div class="amtoast-content my-auto">
+            <div class="amtoast-title"></div>
+            <div class="amtoast-body"></div>
+        </div>
+        <button class="amtoast-close mb-auto">
+            <em class='am-icon am-icon-functional-secondary-close' aria-label='icon'></em>
+        </button>
+    </div>
+</template>
+<template id="toast-template-info">
+    <ul data-sly-list.details="${toastModel.toastDetails}">
+        <li id="${details.toastUID}"
+            data-title="${details.toastTitle}"
+            data-message="${details.toastMessage}"
+            data-icon="${details.customIcon ? details.customIcon : details.icon}"
+            data-type="${details.style}"
+            data-duration="${details.duration}"
+            data-has-close="${details.hasCloseButton}">
+        </li>
+    </ul>
+</template>
+<div class="amtoast-container"></div>

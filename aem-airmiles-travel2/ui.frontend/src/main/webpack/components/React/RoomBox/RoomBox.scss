@@ -1,0 +1,38 @@
+@import '../../../site/variables';
+@import '../../../site/mixins';
+
+.room {
+  padding: amSizeUnit(1);
+  background-color: amGrey(7);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: amSizeUnit(2);
+  justify-content: space-between;
+}
+
+.room .heading {
+  display: flex;
+  justify-content: space-between;
+}
+.room .heading .room-title {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.room .heading .remove {
+  display: flex;
+  gap: amSizeUnit(1);
+  cursor: pointer;
+  p {
+    color: amSapphire(9);
+    font-family: amFontFamily(2);
+  }
+  p.am-icon {
+    font-size: amFontSize(3)
+  } 
+}
+
+.notice {
+  margin: amSizeUnit(2) 0;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Shell Page"
+        sling:resourceType="cq/gui/components/authoring/dialog"
+        extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties,granite.contexthub.configuration,cq.siteadmin.admin.properties]"
+        helpPath="https://www.adobe.com/go/aem_cmp_page_v2"
+        mode="edit"
+        trackingFeature="core-components:page:v2">
+    <content
+            granite:class="cq-dialog-content-page"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    granite:class="cq-siteadmin-admin-properties-tabs"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <airmilesconfig
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Airmiles - Configuration"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <loginConfig
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Contest Configuration"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <LoginOptions
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    emptyText="Select login URL based on language"
+                                                    fieldLabel="Login language URL"
+                                                    name="./loginURL">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <en
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="English -  /en/login"
+                                                            value="/en/login" />
+                                                    <fr
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="French -  /fr/login"
+                                                            value="/fr/login" />
+                                                </items>
+                                            </LoginOptions>
+                                        </items>
+                                    </loginConfig>
+                                    <contestID
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <contestID
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                    fieldDescription="Every contest will have a unique contestID"
+                                                    fieldLabel="Contest ID"
+                                                    name="./contestID" />
+                                        </items>
+                                    </contestID>
+                                    <adobeAnalyticsConfig
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Adobe Analytics Config"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <enableAdobeAnalytics
+                                                cq:showOnCreate="{Boolean}true"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Selection will include Adobe Analytics script."
+                                                name="./enableAdobeAnalytics"
+                                                text="Enable Adobe Analytics for this page"
+                                                value="{Boolean}true" />
+                                            <adobeAnalyticsPageName
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Adobe Analytics Page Name"
+                                                fieldDescription="Page name for Adobe Analytics. Example:am:offers:offer_details:shell:foo"
+                                                name="./adobeAnalyticsPageName"
+                                                renderReadOnly="{Boolean}true"
+                                                required="{Boolean}false" />
+                                            <adobeAnalyticsPageCategory
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Adobe Analytics Page Category"
+                                                fieldDescription="Category name for Adobe Analytics"
+                                                name="./adobeAnalyticsPageCategory"
+                                                renderReadOnly="{Boolean}true"
+                                                required="{Boolean}false" />
+                                            <analytics-id
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Analytics ID"
+                                                fieldLabel="Analytics ID"
+                                                name="./analyticsId"/>
+                                            <target-id
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Target ID"
+                                                fieldLabel="Target ID"
+                                                name="./targetId"/>    
+                                        </items>
+                                    </adobeAnalyticsConfig>
+                                </items>
+                            </column>
+                        </items>
+                    </airmilesconfig>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

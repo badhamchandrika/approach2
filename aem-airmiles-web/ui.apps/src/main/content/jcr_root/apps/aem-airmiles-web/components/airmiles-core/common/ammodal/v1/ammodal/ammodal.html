@@ -1,0 +1,74 @@
+<sly data-sly-use.modalModel="${'com.aem.airmiles.web.core.models.AMModal'}" />
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Airmiles Modal | ${modalModel.once?'once':'multiple'} | Type:${modalModel.typePicker} | ${modalModel.linkType}" class="cq-placeholder"></div>
+<div data-sly-test="${wcmmode.edit}">
+    <sly data-sly-resource="${@path='modal-container', resourceType='foundation/components/parsys'}"></sly>
+</div>
+
+<div data-sly-test="${!wcmmode.edit}" class="ammodal_js" id="modal_${modalModel.uniqueID}">
+    <sly data-sly-test="${modalModel.typePicker == 'pageload' && !wcmmode.edit}">
+        <div class="modal fade modal_js_pageload" id="${modalModel.uniqueID}" aria-hidden="true" aria-labelledby="modal_${modalModel.uniqueID}" tabindex="-1" data-run-once="${modalModel.once @ context='html'}">
+            <div class="modal-dialog modal-dialog-centered ${modalModel.sizePicker}">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 data-sly-test="${modalModel.modalTitle}">${modalModel.modalTitle}</h2>
+                        <div class='am-icon am-icon-functional-secondary-close' type="button" data-bs-dismiss="modal" aria-label="Close"
+                             data-track-id="${modalModel.dataTrackIDCloseBtn}" data-track-click="${modalModel.dataClickIDCloseBtn}" data-track-type="${modalModel.dataTrackTypeCloseBtn}"></div>
+                        <!--/*<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>*/-->
+                    </div>
+                    <div class="modal-body" data-sly-test="${!wcmmode.edit}">
+                        <sly data-sly-resource="${@path='modal-container', resourceType='foundation/components/parsys'}"></sly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sly>
+
+    <sly data-sly-test="${modalModel.typePicker == 'button'}">
+        <div class="modal fade" id="${modalModel.uniqueID}" aria-hidden="true" aria-labelledby="modal_${modalModel.uniqueID}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered ${modalModel.sizePicker}">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 data-sly-test="${modalModel.modalTitle}">${modalModel.modalTitle}</h2>
+                        <div class='am-icon am-icon-functional-secondary-close' type="button" data-bs-dismiss="modal" aria-label="Close"
+                             data-track-id="${modalModel.dataTrackIDCloseBtn}" data-track-click="${modalModel.dataClickIDCloseBtn}" data-track-type="${modalModel.dataTrackTypeCloseBtn}"></div>
+                    </div>
+                    <div class="modal-body" data-sly-test="${!wcmmode.edit}">
+                        <sly data-sly-resource="${@path='modal-container', resourceType='foundation/components/parsys'}"></sly>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+        <sly data-sly-call="${ctatemplate.ctalink @
+                  type=modalModel.linkType,
+                  href=modalModel.uniqueID,
+                  text=modalModel.buttonText,
+                  target='_self',
+                  hexText='',
+                  hexBtn='',
+                  classes='',
+                  dataTrackID=modalModel.dataTrackID,
+                  dataClickID=modalModel.dataClickID,
+                  dataTrackType=modalModel.dataTrackType,
+                  modalUniqueID=modalModel.uniqueID
+             }">
+        </sly>
+    </sly>
+
+    <sly data-sly-test="${modalModel.typePicker == 'id'}">
+        <div class="modal fade" id="${modalModel.uniqueID}" aria-hidden="true" aria-labelledby="modal_${modalModel.uniqueID}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered ${modalModel.sizePicker}">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 data-sly-test="${modalModel.modalTitle}">${modalModel.modalTitle}</h2>
+                        <div class='am-icon am-icon-functional-secondary-close' type="button" data-bs-dismiss="modal" aria-label="Close"
+                             data-track-id="${modalModel.dataTrackIDCloseBtn}" data-track-click="${modalModel.dataClickIDCloseBtn}" data-track-type="${modalModel.dataTrackTypeCloseBtn}"></div>
+                    </div>
+                    <div class="modal-body" data-sly-test="${!wcmmode.edit}">
+                        <sly data-sly-resource="${@path='modal-container', resourceType='foundation/components/parsys'}"></sly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sly>
+</div>

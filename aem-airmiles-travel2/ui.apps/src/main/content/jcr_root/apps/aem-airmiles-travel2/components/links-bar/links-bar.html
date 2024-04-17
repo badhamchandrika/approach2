@@ -1,0 +1,30 @@
+<sly data-sly-use.model="${'ca.airmiles.travel.core.models.LinksBarModel'}" />
+<div class="p-1 h-25 w-100 bg-light text-white" data-sly-test="${wcmmode.edit}">
+  <span class="am-icon am-icon-info p-1"></span>${component.title}
+</div>
+<div class="bsp-travel-container">
+  <div class="links-container">
+    <span
+      class="links-container__prev-button am-icon am-icon-functional-secondary-arrow-left none"
+    ></span>
+    <ul class="pills-container row justify-content-center">
+      <sly data-sly-list.link="${model.links}">
+        <li class="col col-4 col-md-3 col-lg-2 pill-container-wrapper">
+          <div class="pill-container ${link.active ? 'active' : ''}">
+            <span class="link-pill__icon am-icon am-icon-${link.icon}"></span>
+            <a class="link-pill"
+               href="${link.linkUrl @ extension='html'}"
+               data-track-id="${link.dataTrackID}"
+               data-track-click="${link.dataClickID}"
+               data-track-type="${link.dataTrackType}">
+              <span class="link-pill__text">${link.linkText}</span>
+            </a>
+          </div>
+        </li>
+      </sly>
+    </ul>
+    <span
+      class="links-container__next-button am-icon am-icon-functional-secondary-arrow-right none"
+    ></span>
+  </div>
+</div>

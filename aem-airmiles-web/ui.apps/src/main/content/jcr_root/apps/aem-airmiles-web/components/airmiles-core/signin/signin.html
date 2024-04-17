@@ -1,0 +1,36 @@
+<div class="bsp-container" data-sly-use.model="com.aem.airmiles.web.core.models.SignInModel" data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page">
+  <div class="col-12 alloffers-sign-in${!wcmmode.edit ? ' d-none':''}" data-lang="${page.language}" data-url-android="${model.androidURL}" data-deeplink-android="${model.androidDeeplink}" data-url-ios="${model.iosURL}" data-deeplink-ios="${model.iosDeeplink}" data-comp-class="${model.replaceCompClass}">
+    <iframe title="app-sandbox" id="airmiles-app-download" width="1" height="1" style="position: absolute;"></iframe>
+    <div class="alloffers-login__container bsp-container" role="region" aria-label="login banner">
+      <div class="row alloffers-login__buttons py-0 py-md-3">
+        <div class="col-12 col-md-8 alloffers-login__message d-flex">
+          <div class="alloffers-login__logo mb-auto my-md-0 d-md-flex">
+            <img src="${model.logoReference}" alt="${model.imageAltText}" style="width: 53px; height: 46px;">
+          </div>
+          <div class="my-auto">${model.loginMessage}</div>
+        </div>
+        <div class="col-12 col-md-4 my-auto">
+          <sly data-sly-list.ctaDetails="${model.loginButtons}">
+
+            <!--/* count 2 must be Download APP button to apply special class in CSS */-->
+            <div class="${ctaDetailsList.count==2?'d-md-none mt-3 d-flex justify-content-center':''}">
+              <sly data-sly-use.ctatemplate="/apps/aem-airmiles-web/components/cta-button/ctatemplate.html"/>
+              <sly data-sly-call="${ctatemplate.ctalink @
+                type=ctaDetails.linkType,
+                href=ctaDetails.linkUrl,
+                text=ctaDetails.linkText,
+                target=ctaDetails.linkTarget,
+                hexText=ctaDetails.hexTextColor,
+                hexBtn=ctaDetails.hexBtnColor,
+                dataTrackID=ctaDetails.dataTrackID,
+                dataClickID=ctaDetails.dataClickID,
+                dataTrackType=ctaDetails.dataTrackType,
+                classes=ctaDetailsList.count==2 ? 'signin-download':'signin-btn'}">
+              </sly>
+            </div>
+          </sly>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

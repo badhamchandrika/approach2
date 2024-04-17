@@ -1,0 +1,12 @@
+query getfaqlist{
+  faqList (_locale:"en",sort:"faqOrder"){
+    items{
+      _path
+      faqQuestion
+      faqAnswer {
+        html
+      } 
+      faqOrder
+    }
+  }
+}

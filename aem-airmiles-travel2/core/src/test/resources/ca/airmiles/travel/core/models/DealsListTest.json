@@ -1,0 +1,24 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "tagField": [
+    "we-retail:gender",
+    "we-retail:apparel"
+  ],
+  "jcr:created": "Tue Dec 06 2022 17:09:11 GMT+0000",
+  "variant": "deal",
+  "jcr:lastModified": "Thu Apr 13 2023 16:49:27 GMT+0000",
+  "sling:resourceType": "aem-airmiles-travel2/components/dealslist",
+  "rootPages": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "pagePath": "/content/aem-airmiles-travel2/ca/en/travel/deals"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "pagePath": "/content/aem-airmiles-travel2/ca/en/travel/deals"
+    }
+  }
+}

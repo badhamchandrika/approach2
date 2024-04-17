@@ -1,0 +1,12 @@
+{
+  "jcr:primaryType": "nt:file",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Dec 15 2022 19:06:43 GMT+0000",
+  "jcr:content": {
+    "jcr:primaryType": "oak:Resource",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "jcr:lastModified": "Thu Dec 15 2022 19:06:43 GMT+0000",
+    ":jcr:data": 15673
+  }
+}

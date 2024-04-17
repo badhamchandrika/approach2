@@ -1,0 +1,32 @@
+<sly data-sly-template.analytics="${@ item}">
+    <div class="coral-Well">
+        <div class="coral-Form-fieldwrapper">
+            <label class="coral-Form-fieldlabel">Analytics Tracking ID</label>
+            <input class="coral-Form-field coral3-Textfield" type="text" name="./${item.name}/dataTrackID"
+                   value="${item.dataTrackID}"
+                   is="coral-textfield" id="coral-id-719"></div>
+        <div class="coral-Form-fieldwrapper">
+            <label class="coral-Form-fieldlabel">Analytics Click ID</label>
+            <input class="coral-Form-field coral3-Textfield" type="text" name="./${item.name}/dataClickID"
+                   value="${item.dataClickID}"
+                   is="coral-textfield" id="coral-id-720"></div>
+        <div class="coral-Form-fieldwrapper">
+            <label class="coral-Form-fieldlabel">Analytics TrackType</label>
+            <coral-select class="coral-Form-field coral3-Select" name="./${item.name}/dataTrackType"
+                          placeholder="Track Type">
+                <coral-select-item selected="${item.dataTrackType == 'internal' ? 'selected' : ''}" value="internal"
+                                   trackingelement="">Internal
+                </coral-select-item>
+                <coral-select-item selected="${item.dataTrackType == 'button' ? 'selected' : ''}" value="button"
+                                   trackingelement="">Button
+                </coral-select-item>
+                <coral-select-item selected="${item.dataTrackType == 'exit' ? 'selected' : ''}" value="exit"
+                                   trackingelement="">Exit
+                </coral-select-item>
+                <coral-select-item selected="${item.dataTrackType == 'social' ? 'selected' : ''}" value="social"
+                                   trackingelement="">Social
+                </coral-select-item>
+            </coral-select>
+        </div>
+    </div>
+</sly>

@@ -1,0 +1,27 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "linkMobileType": "framebutton",
+  "jcr:lastModifiedBy": "admin",
+  "dataTrackType": "internal",
+  "source": "auto",
+  "ctaBreakpoint": "md",
+  "jcr:created": "Wed Sep 13 2023 14:11:07 GMT-0600",
+  "title": "TRAVEL WITH CONFIDENCE",
+  "linkUrl": "/content/aem-airmiles-web",
+  "variant": "deal",
+  "linkTarget": "_blank",
+  "cq:tags": "travel2:products/flight",
+  "jcr:lastModified": "Thu Sep 14 2023 09:30:44 GMT-0600",
+  "linkText": "Advanced search",
+  "linkType": "link",
+  "sling:resourceType": "aem-airmiles-travel2/components/card",
+  "btnStyle": "rebrand-blue",
+  "details": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "pageUrl": "/content/aem-airmiles-travel2/ca/en/travel/deals/test-flight-deal"
+    }
+  }
+}

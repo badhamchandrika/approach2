@@ -1,0 +1,43 @@
+
+- group_config:
+
+    - airmiles-web-content-authors:
+
+        - name: Airmiles Web Content Authors
+          description: Content Authors
+          path: airmiles-web
+          isMemberOf: airmiles_web_fragment_everyone
+
+    - airmiles-web-content-publishers:
+
+        - name: Airmiles Web Content Publishers
+          description: Content Publishers
+          path: airmiles-web
+          isMemberOf: airmiles_web_fragment_everyone
+
+    - airmiles-web-content-admins:
+
+        - name: Airmiles Web Content Admins
+          description: Web Publishing Team for airmiles. CA
+          path: airmiles-web
+          isMemberOf: airmiles_web_fragment_everyone
+
+- ace_config:
+
+    - airmiles-web-content-authors:
+
+        - path: '/content/aem-airmiles-web/ca'
+          permission: allow
+          actions: read,modify,create,delete,replicate,acl_read
+
+    - airmiles-web-content-publishers:
+
+        - path: '/content/aem-airmiles-web/ca'
+          permission: allow
+          actions: read,modify,create,delete,replicate,acl_read
+
+    - airmiles-web-content-admins:
+
+        - path: '/content/aem-airmiles-web/ca'
+          permission: allow
+          actions: read,modify,create,delete,replicate,acl_read

@@ -1,0 +1,53 @@
+.topnav{
+    &__height{
+        height: 3rem;
+        display: flex;
+    }
+    &__links{
+        padding: 10px;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__site{
+        white-space: nowrap;
+        a:hover {
+            text-decoration: underline;
+        }
+        b, strong{
+            font-weight: bold;
+        }
+        em, i {
+            font-style: italic;
+        }
+    }
+    &__branding{
+        font-size: .75rem;
+        display: flex;
+        text-decoration: none;
+        height: 50px;
+        align-items: center;
+    }
+    .active{
+        background-color: color('brand-blue');
+        a {
+            color: color('white');
+        }
+    }
+}
+
+@media (min-width: breakpoint('md')) {
+    .topnav {
+        &__height {
+            font-size: .875rem;
+        }
+    }
+}
+@media (min-width: breakpoint('lg')) {
+    .topnav {
+        &__height {
+            font-size: 1rem;
+        }
+    }
+}

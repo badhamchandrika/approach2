@@ -1,0 +1,45 @@
+.offers-clo-faq{
+  .modal-dialog {
+    overflow: hidden;
+    max-height: calc(100vh - 10rem);
+    &.modal-dialog-centered{
+      max-height: calc(100% - 1rem);
+    }
+    .modal-content {
+      .modal-header{
+        h1, h2, h3{
+          padding-top: 1rem;
+        }
+      }
+      .modal-body{
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: calc(100vh - 9rem);
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('md')) {
+  .offers-clo-faq{
+    .modal-dialog {
+      &.modal-dialog-centered{
+        max-height: calc(100% - 2.25rem);
+      }
+      .modal-content {
+        .modal-header{
+          h1, h2, h3{
+            padding-top: 1.5rem;
+          }
+        }
+        .modal-body{
+
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: breakpoint('lg')) {
+
+}

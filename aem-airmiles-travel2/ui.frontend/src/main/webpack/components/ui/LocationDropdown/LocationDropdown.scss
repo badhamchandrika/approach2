@@ -1,0 +1,241 @@
+@import "../../../site/variables";
+@import "../../../site/mixins";
+@import "../../../site/bootstrap/bootstrap-utilities.scss";
+
+$location-input-min-height: 48px;
+$location-mobile-width: 100%;
+
+.location-input {
+  font-family: amFontFamily(2);
+
+  &__wrapper {
+    height: 100%;
+    justify-content: space-between;
+    gap: $form-gap;
+
+    .crental-widget {
+      padding-left: 12px;
+      padding: 12px;
+    }
+
+    @include media-breakpoint-down("md") {
+      flex-direction: column;
+      width: $location-mobile-width;
+    }
+  }
+
+  &__suggestions {
+    div:first-child {
+      margin-top: 4px;
+    }
+    div:last-child {
+      margin-bottom: 4px;
+    }
+    background: white;
+    color: $--am-base-colour-grey-100;
+    left: -1px;
+    overflow-x: hidden;
+    position: absolute;
+    top: $location-input-min-height;
+    width: calc(100% + 2px);
+    z-index: 99;
+
+    &:has(> .location-input__suggestions-placeholder) {
+      padding: 12px 0;
+    }
+
+    @include media-breakpoint-up("md") {
+      border: 1px solid amBlue(2);
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top: 1px solid amGrey(5);
+    }
+
+    @include media-breakpoint-down("md") {
+      top: 70px;
+      width: $location-mobile-width;
+    }
+
+    &-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .suggestion-search-text {
+        font-size: 0.875rem;
+      }
+
+      .am-icon {
+        font-size: amSizeUnit(3);
+        color: amBlue(2);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    border: 1px solid amSteel(5);
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+
+    svg {
+      align-self: center;
+      color: amTierBlue(3);
+      display: flex;
+      padding: 0 1rem;
+      width: auto;
+    }
+
+    &:focus-within {
+      @include focus-outline();
+    }
+
+    &--active {
+      border-color: amBlue(2);
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    .location-search-icon {
+      position: absolute;
+      z-index: 40;
+    }
+  }
+
+  &__field {
+    // Adding an extra selector for increasing specificity
+    @at-root input#{&} {
+      border-radius: 4px;
+      border: none;
+      font-size: 0.875rem;
+      height: auto;
+      min-height: $location-input-min-height;
+      padding: 0;
+      width: 0;
+
+      &--filled{
+        width: 100%;
+        @include text-truncate();
+      }
+
+      @include media-breakpoint-up("md") {
+        font-size: 1rem;
+      }
+
+      @include media-breakpoint-up("xl") {
+        font-size: 1rem;
+        padding-left: 0;
+      }
+
+      &::placeholder {
+        white-space: pre-wrap;
+      }
+
+      &:focus {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+
+        &::placeholder {
+          overflow: visible;
+        }
+      }
+
+      .ReactModalPortal &--mobile {
+        border: none;
+        height: 65px;
+        padding: 0 amSizeUnit(1);
+        width: 90%;
+        font-size: amFontSize(5);
+
+        &:focus {
+          @include focus-outline();
+        }
+      }
+    }
+  }
+
+  &__suggestion {
+    cursor: pointer;
+    font-family: amFontFamily(2);
+    font-size: 0.875rem;
+    padding: amSizeUnit(2) 6px;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    &:hover {
+      background-color: amGrey(7);
+    }
+  }
+}
+
+.location-search-icon {
+  align-self: center;
+  border-radius: 4px;
+  color: amTierBlue(3);
+  line-height: 1;
+  padding: amSizeUnit(2) amSizeUnit(1) amSizeUnit(2) amSizeUnit(2);
+  z-index: 1;
+
+  @include media-breakpoint-down("md") {
+    z-index: 0;
+  }
+}
+
+.moving-label {
+  color: amSteel(9);
+  font-family: amFontFamily(2);
+  font-size: amFontSize(5);
+  left: 0;
+  line-height: 1.5;
+  margin: auto 0;
+  overflow: visible;
+  position: relative;
+  transform: translateY(0px) scale(1);
+  transition: all 0.2s ease-out;
+  width: 100%;
+  @include text-truncate();
+  z-index: 32;
+
+  &--focused {
+    overflow: visible;
+    transition: all 0.15s ease-out;
+    transform-origin: left top;
+    transform: translate(14px, -9px) scale(0.75);
+    width: auto;
+    background-color: $--am-base-colour-white-100;
+    position: absolute;
+    padding: 0 5px;
+    left: -3px;
+  }
+}
+
+.location-search-modal {
+  &__input {
+    border-bottom: 1px solid amGrey(5);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__exit {
+    $button-width: 33px;
+
+    background: amGrey(7);
+    border-radius: 50%;
+    border: 1px solid amBlue(2);
+    font-size: amFontSize(2);
+    height: $button-width;
+    line-height: 1;
+    margin: amSizeUnit(2) amSizeUnit(2) 0 0;
+    width: $button-width;
+
+    &::before {
+      color: amBlue(2);
+      margin: auto;
+    }
+  }
+}

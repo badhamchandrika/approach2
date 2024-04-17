@@ -1,0 +1,78 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "hexTextColor": "Blue",
+  "noTransText": "No transactions found",
+  "fullwidth": "false",
+  "linkColor": "primary",
+  "tableTitle": "Trasactions",
+  "jcr:lastModifiedBy": "admin",
+  "dataTrackType": "internal",
+  "shadow": "false",
+  "dataClickID": "transaction-click-id",
+  "hexBtnColor": "Green",
+  "jcr:created": "Thu Mar 09 2023 21:39:23 GMT+0530",
+  "uniqueId": "My component id",
+  "tableFooter": "false",
+  "tableHeader": "false",
+  "type": "static",
+  "apiErrorMessage": "Something went wrong",
+  "linkUrl": "/content/aem-airmiles-web/ca/en",
+  "linkTarget": "_blank",
+  "jcr:lastModified": "Thu Mar 09 2023 22:34:30 GMT+0530",
+  "linkText": "My Link",
+  "linkType": "link",
+  "sling:resourceType": "aem-airmiles-web/components/airmiles-core/transactiontable",
+  "backgroundcolor": "bg-transparent",
+  "rounded": "false",
+  "tableCTALink": "/content/aem-airmiles-web/ca/en/offers",
+  "tableCTAText": "My CTA",
+  "tableCTATrackID": "browse-all-offers",
+  "tableCTAClickID": "recent-transaction",
+  "tableCTATrackType": "internal",
+  "columnHead1": "Partner",
+  "columnHead2": "Description",
+  "columnHead3": "Date",
+  "columnHead4": "Miles",
+  "mockJson": "false",
+  "noLogoPath": "https://airmiles.ca/images/logo.jpg",
+  "id": "cmp-id",
+  "transactionValues": {
+    "item0": {
+      "activityType": "REDEMPTION",
+      "channelType": "POS",
+      "redemptionStatus": "MILES_CREDITED",
+      "channelLabel": "AIR MILES Cash – In-store",
+      "logoSrc": "https://airmiles.ca/images/logo.jpg",
+      "logoAltText": "logo",
+      "charitySection": {
+        "item0": {
+          "charityDescription": "80062423255",
+          "charityName": "Donation"
+        },
+        "item1": {
+          "charityDescription": "80078667548",
+          "charityName": "Donation"
+        }
+      }
+    },
+    "item1": {
+      "activityType": "REDEMPTION",
+      "channelType": "EVR",
+      "redemptionStatus": null,
+      "channelLabel": "AIR MILES Cash – eVoucher order",
+      "logoSrc": null,
+      "logoAltText": null,
+      "charityDetails": null
+    },
+    "item2": {
+      "activityType": "REDEMPTION",
+      "channelType": "MER",
+      "redemptionStatus": null,
+      "channelLabel": "Merchandise",
+      "logoSrc": null,
+      "logoAltText": null,
+      "charityDetails": null
+    }
+  }
+}

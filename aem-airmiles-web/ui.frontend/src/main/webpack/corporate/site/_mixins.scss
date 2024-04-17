@@ -1,0 +1,51 @@
+@use "sass:math";
+
+@mixin nav-link {
+  text-decoration: none;
+  font-family: $font-regular;
+  color: color("onyx");
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin focus-outline {
+  outline: none !important;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #169ba2;
+}
+
+//Convert px to rem
+@function px2rem($size) {
+  @return math.div($size, $base-font-size) * 1rem;
+}
+
+//Set line-height
+@function lineHeight($font-size, $line-height){
+  @return math.div($line-height, $font-size);
+}
+
+//Set font properties
+@mixin swh($size, $weight, $line-height) {
+  font-size: px2rem($size);
+  font-weight: $weight;
+  line-height: lineHeight($size, $line-height);
+}
+
+@mixin tablet {
+  @media (min-width: #{$s-screen}) and (max-width: #{$l-screen - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$s-screen}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$l-screen}) {
+    @content;
+  }
+}
